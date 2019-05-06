@@ -1,0 +1,94 @@
+---
+layout: index_default
+title: 区块链、技术、资讯
+---
+
+<style>
+  .pages {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pages a, .pages span{
+    padding: 4px 8px;
+  }
+  
+  .pages .active {
+    background-color: #069;
+    color: white;
+  }
+</style>
+
+<div style="margin:0 0 8px 0;">
+<style>
+table.gsc-input {
+    margin: 0;
+}
+.cse .gsc-control-cse, .gsc-control-cse {
+    padding: 0;
+    width: auto;
+}
+.gsc-search-box td {
+    border-bottom: none;
+}
+</style>
+<script>
+  (function() {
+    var cx = '004431708863642777669:qan2_6ugotw';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
+
+<h3>文章列表（共{{paginator.total_posts}}篇）</h3>
+<h5> --- 更多内容尽在 <a href="https://uzshare.com/">柚子社区</a></h5>
+<ul>
+  {% for post in paginator.posts %}
+    <li style="margin-bottom: 6px;"><a href="{{ site.baseurl }}{{ post.url }}" target="_blank">{{ post.title }}</a> <br /> {{ post.date | date: "%Y-%m-%d" }} </li>
+  {% endfor %}
+</ul>
+
+<div class="pages">
+  
+{% if paginator.previous_page %}
+    <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{"<< "}}</a>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{"< "}}</a>
+{% else %}
+    <span>{{"<<"}}</span>
+    <span>{{"<"}}</span>
+{% endif %}
+
+{% assign beginIndex = paginator.page | minus: 3 %}
+{% if beginIndex < 1 %}
+   {% assign beginIndex = 1 %}
+{% endif %}
+
+{% assign endIndex = beginIndex | plus: 5 %}
+{% if endIndex > paginator.total_pages %}
+   {% assign endIndex = paginator.total_pages %}
+{% endif %}
+
+{% for page in (beginIndex..endIndex) %}
+    {% if page == paginator.page %}
+      <span class="active">{{ page }}</span>
+    {% elsif page == 1 %}
+      <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+{% endfor %}
+
+{% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{" >"}}</a>
+    <a href="{{ site.paginate_path | replace: '//', '/' | replace: ':num', paginator.total_pages }}">{{" >>"}}</a>
+{% else %}
+    <span>{{">"}}</span>
+    <span>{{">>"}}</span>
+{% endif %}
+</div>

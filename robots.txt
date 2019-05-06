@@ -1,0 +1,6 @@
+User-agent: * 
+Disallow: /css/ 
+Disallow: /images/ 
+Disallow: /js/ 
+
+Sitemap: https://mlh.app/sitemap.xml
