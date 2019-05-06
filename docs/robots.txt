@@ -3,4 +3,4 @@ Disallow: /css/
 Disallow: /images/ 
 Disallow: /js/ 
 
-Sitemap: https://uzzz.org/sitemap.xml
+Sitemap: https://mlh.app/sitemap.xml
