@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="一、新建了一个trufflePro文件夹，使用truffle init命令生成一个demo，具体生成的demo文件夹的结构可以参考truffle的官方文档http://truffleframework.com/ 二、安装Ethereum客户端来支持JSON RPC API调用开发环境，推荐使用EthereumJS。 sudo npm install -g ethereumjs-testrpc 这里的安装还是很顺利的，一次通过，主要是前面安装truffle的时候把该折腾的地方都折腾好了！ 三、进行软连接 sudo ln -s /home/ubuntu/node-v7.4.0-linux-x64/lib/node_modules/ethereumjs-testrpc/bin/testrpc /usr/local/bin/testrpc 四、执行testrpc进行验证,执行成功会显示结果如下图。 这里有10个测试账户可供使用。 五、从这里开始试运行demo，启动testrpc，在项目根目录执行。 六、新开一个终端，查看truffle版本：truffle version 七、切换目录，执行truffle migrate进行发布（注意低版本可能是truffle deploy）。 八、启动服务：truffle serve 到这里，测试端、服务端都启动完成。 我们可以看到，测试端已经有内容打印出来了。 九、访问前端界面（写在app文件夹里），即http://localhost:8080，由于我用的是云主机，只有终端界面，所以选择在win10的环境下通过 http://[我的云主机公网ip]:8080/ 来访问这个网页，一开始的时候出现了如下错误： 解决方案是：修改了truffle.js文件（配置文件） 这次打开页面后，成功运行！ 十、demo已经运行成功，下面查看demo源码，希望能根据自己的需求加以修改。加油！ Lesson警戒：学会独立思考！寻找解决方案！ 阅读更多" />
 <meta property="og:description" content="一、新建了一个trufflePro文件夹，使用truffle init命令生成一个demo，具体生成的demo文件夹的结构可以参考truffle的官方文档http://truffleframework.com/ 二、安装Ethereum客户端来支持JSON RPC API调用开发环境，推荐使用EthereumJS。 sudo npm install -g ethereumjs-testrpc 这里的安装还是很顺利的，一次通过，主要是前面安装truffle的时候把该折腾的地方都折腾好了！ 三、进行软连接 sudo ln -s /home/ubuntu/node-v7.4.0-linux-x64/lib/node_modules/ethereumjs-testrpc/bin/testrpc /usr/local/bin/testrpc 四、执行testrpc进行验证,执行成功会显示结果如下图。 这里有10个测试账户可供使用。 五、从这里开始试运行demo，启动testrpc，在项目根目录执行。 六、新开一个终端，查看truffle版本：truffle version 七、切换目录，执行truffle migrate进行发布（注意低版本可能是truffle deploy）。 八、启动服务：truffle serve 到这里，测试端、服务端都启动完成。 我们可以看到，测试端已经有内容打印出来了。 九、访问前端界面（写在app文件夹里），即http://localhost:8080，由于我用的是云主机，只有终端界面，所以选择在win10的环境下通过 http://[我的云主机公网ip]:8080/ 来访问这个网页，一开始的时候出现了如下错误： 解决方案是：修改了truffle.js文件（配置文件） 这次打开页面后，成功运行！ 十、demo已经运行成功，下面查看demo源码，希望能根据自己的需求加以修改。加油！ Lesson警戒：学会独立思考！寻找解决方案！ 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2017/01/09/770aeed926e1fa0e5269332cbd5be9f8.html" />
+<meta property="og:url" content="https://mlh.app/2017/01/09/770aeed926e1fa0e5269332cbd5be9f8.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-01-09T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"一、新建了一个trufflePro文件夹，使用truffle init命令生成一个demo，具体生成的demo文件夹的结构可以参考truffle的官方文档http://truffleframework.com/ 二、安装Ethereum客户端来支持JSON RPC API调用开发环境，推荐使用EthereumJS。 sudo npm install -g ethereumjs-testrpc 这里的安装还是很顺利的，一次通过，主要是前面安装truffle的时候把该折腾的地方都折腾好了！ 三、进行软连接 sudo ln -s /home/ubuntu/node-v7.4.0-linux-x64/lib/node_modules/ethereumjs-testrpc/bin/testrpc /usr/local/bin/testrpc 四、执行testrpc进行验证,执行成功会显示结果如下图。 这里有10个测试账户可供使用。 五、从这里开始试运行demo，启动testrpc，在项目根目录执行。 六、新开一个终端，查看truffle版本：truffle version 七、切换目录，执行truffle migrate进行发布（注意低版本可能是truffle deploy）。 八、启动服务：truffle serve 到这里，测试端、服务端都启动完成。 我们可以看到，测试端已经有内容打印出来了。 九、访问前端界面（写在app文件夹里），即http://localhost:8080，由于我用的是云主机，只有终端界面，所以选择在win10的环境下通过 http://[我的云主机公网ip]:8080/ 来访问这个网页，一开始的时候出现了如下错误： 解决方案是：修改了truffle.js文件（配置文件） 这次打开页面后，成功运行！ 十、demo已经运行成功，下面查看demo源码，希望能根据自己的需求加以修改。加油！ Lesson警戒：学会独立思考！寻找解决方案！ 阅读更多","@type":"BlogPosting","url":"/2017/01/09/770aeed926e1fa0e5269332cbd5be9f8.html","headline":"试运行truffle框架下的一个demo程序","dateModified":"2017-01-09T00:00:00+08:00","datePublished":"2017-01-09T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2017/01/09/770aeed926e1fa0e5269332cbd5be9f8.html"},"@context":"http://schema.org"}</script>
+{"description":"一、新建了一个trufflePro文件夹，使用truffle init命令生成一个demo，具体生成的demo文件夹的结构可以参考truffle的官方文档http://truffleframework.com/ 二、安装Ethereum客户端来支持JSON RPC API调用开发环境，推荐使用EthereumJS。 sudo npm install -g ethereumjs-testrpc 这里的安装还是很顺利的，一次通过，主要是前面安装truffle的时候把该折腾的地方都折腾好了！ 三、进行软连接 sudo ln -s /home/ubuntu/node-v7.4.0-linux-x64/lib/node_modules/ethereumjs-testrpc/bin/testrpc /usr/local/bin/testrpc 四、执行testrpc进行验证,执行成功会显示结果如下图。 这里有10个测试账户可供使用。 五、从这里开始试运行demo，启动testrpc，在项目根目录执行。 六、新开一个终端，查看truffle版本：truffle version 七、切换目录，执行truffle migrate进行发布（注意低版本可能是truffle deploy）。 八、启动服务：truffle serve 到这里，测试端、服务端都启动完成。 我们可以看到，测试端已经有内容打印出来了。 九、访问前端界面（写在app文件夹里），即http://localhost:8080，由于我用的是云主机，只有终端界面，所以选择在win10的环境下通过 http://[我的云主机公网ip]:8080/ 来访问这个网页，一开始的时候出现了如下错误： 解决方案是：修改了truffle.js文件（配置文件） 这次打开页面后，成功运行！ 十、demo已经运行成功，下面查看demo源码，希望能根据自己的需求加以修改。加油！ Lesson警戒：学会独立思考！寻找解决方案！ 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2017/01/09/770aeed926e1fa0e5269332cbd5be9f8.html","headline":"试运行truffle框架下的一个demo程序","dateModified":"2017-01-09T00:00:00+08:00","datePublished":"2017-01-09T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2017/01/09/770aeed926e1fa0e5269332cbd5be9f8.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

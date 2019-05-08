@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/LNZ001/article/details/72842753 关于以太坊区块链余下问题的探索 一. 在对整个区块链有了较为清晰地理解之后,回过头来,我想到了以下的问题: 既然ETH交易不仅有转账的交易,还有部署合约,以及存储空间的使用, 那么,智能合约/存储空间如何实现,他们又在哪里,智能合约的地址又是放在哪里? 二. 先来解释以下为什么会有这个疑惑.我已经知道以太坊区块链的结构主要包含以下几个部分: 版本号; 前一区块哈希; 时间戳; 随机数; 目标哈希; MPT三棵树(交易树,状态树,收据树),树结构本身是key-value对,实际也只是哈希值; MPT中,交易树最底层是交易;状态树包含账户,账户允许有空间和代码(外部账户没有代码,有代码的是合约账户.);收据树保存的是交易的收据,虽然资料不足,但从架构思路上它也不会需要代码和空间,只是完善SPV快速索引. 其次,EVM只是用来执行字节码的,也不会保存智能合约或者存储空间,那么只能是在区块链中. 我们可以看到,ETH似乎并没有专门为智能合约的地址设计单独的存储结构,存储空间也是. 三. 也正基于此,我有了一个假设: 合约其实都是在合约账户中的,空间也是. 四. 结果 后来仔细看solidity文档才发现,其实里面就有说明,只是自己忽略了. 合约部署后会创建一个合约账户,合约账户里保存着智能合约的可执行字节码(编译之后的,在EVM里执行),并且有存储空间,合约能对合约账户的空间写入信息.而abi是一个接口结构,利用abiDefinition可以创建调用该合约的结构.abi应该由合约所有方自己保存和提供. (转载请注明出处~.~ http://blog.csdn.net/LNZ001/article/details/72842753 ) 阅读更多" />
 <meta property="og:description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/LNZ001/article/details/72842753 关于以太坊区块链余下问题的探索 一. 在对整个区块链有了较为清晰地理解之后,回过头来,我想到了以下的问题: 既然ETH交易不仅有转账的交易,还有部署合约,以及存储空间的使用, 那么,智能合约/存储空间如何实现,他们又在哪里,智能合约的地址又是放在哪里? 二. 先来解释以下为什么会有这个疑惑.我已经知道以太坊区块链的结构主要包含以下几个部分: 版本号; 前一区块哈希; 时间戳; 随机数; 目标哈希; MPT三棵树(交易树,状态树,收据树),树结构本身是key-value对,实际也只是哈希值; MPT中,交易树最底层是交易;状态树包含账户,账户允许有空间和代码(外部账户没有代码,有代码的是合约账户.);收据树保存的是交易的收据,虽然资料不足,但从架构思路上它也不会需要代码和空间,只是完善SPV快速索引. 其次,EVM只是用来执行字节码的,也不会保存智能合约或者存储空间,那么只能是在区块链中. 我们可以看到,ETH似乎并没有专门为智能合约的地址设计单独的存储结构,存储空间也是. 三. 也正基于此,我有了一个假设: 合约其实都是在合约账户中的,空间也是. 四. 结果 后来仔细看solidity文档才发现,其实里面就有说明,只是自己忽略了. 合约部署后会创建一个合约账户,合约账户里保存着智能合约的可执行字节码(编译之后的,在EVM里执行),并且有存储空间,合约能对合约账户的空间写入信息.而abi是一个接口结构,利用abiDefinition可以创建调用该合约的结构.abi应该由合约所有方自己保存和提供. (转载请注明出处~.~ http://blog.csdn.net/LNZ001/article/details/72842753 ) 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2017/06/02/8abedb296ccdfc9ac92c5f597cec249b.html" />
+<meta property="og:url" content="https://mlh.app/2017/06/02/8abedb296ccdfc9ac92c5f597cec249b.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-06-02T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/LNZ001/article/details/72842753 关于以太坊区块链余下问题的探索 一. 在对整个区块链有了较为清晰地理解之后,回过头来,我想到了以下的问题: 既然ETH交易不仅有转账的交易,还有部署合约,以及存储空间的使用, 那么,智能合约/存储空间如何实现,他们又在哪里,智能合约的地址又是放在哪里? 二. 先来解释以下为什么会有这个疑惑.我已经知道以太坊区块链的结构主要包含以下几个部分: 版本号; 前一区块哈希; 时间戳; 随机数; 目标哈希; MPT三棵树(交易树,状态树,收据树),树结构本身是key-value对,实际也只是哈希值; MPT中,交易树最底层是交易;状态树包含账户,账户允许有空间和代码(外部账户没有代码,有代码的是合约账户.);收据树保存的是交易的收据,虽然资料不足,但从架构思路上它也不会需要代码和空间,只是完善SPV快速索引. 其次,EVM只是用来执行字节码的,也不会保存智能合约或者存储空间,那么只能是在区块链中. 我们可以看到,ETH似乎并没有专门为智能合约的地址设计单独的存储结构,存储空间也是. 三. 也正基于此,我有了一个假设: 合约其实都是在合约账户中的,空间也是. 四. 结果 后来仔细看solidity文档才发现,其实里面就有说明,只是自己忽略了. 合约部署后会创建一个合约账户,合约账户里保存着智能合约的可执行字节码(编译之后的,在EVM里执行),并且有存储空间,合约能对合约账户的空间写入信息.而abi是一个接口结构,利用abiDefinition可以创建调用该合约的结构.abi应该由合约所有方自己保存和提供. (转载请注明出处~.~ http://blog.csdn.net/LNZ001/article/details/72842753 ) 阅读更多","@type":"BlogPosting","url":"/2017/06/02/8abedb296ccdfc9ac92c5f597cec249b.html","headline":"智能合约和存储空间在哪里?-lnz001的博客","dateModified":"2017-06-02T00:00:00+08:00","datePublished":"2017-06-02T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2017/06/02/8abedb296ccdfc9ac92c5f597cec249b.html"},"@context":"http://schema.org"}</script>
+{"description":"版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/LNZ001/article/details/72842753 关于以太坊区块链余下问题的探索 一. 在对整个区块链有了较为清晰地理解之后,回过头来,我想到了以下的问题: 既然ETH交易不仅有转账的交易,还有部署合约,以及存储空间的使用, 那么,智能合约/存储空间如何实现,他们又在哪里,智能合约的地址又是放在哪里? 二. 先来解释以下为什么会有这个疑惑.我已经知道以太坊区块链的结构主要包含以下几个部分: 版本号; 前一区块哈希; 时间戳; 随机数; 目标哈希; MPT三棵树(交易树,状态树,收据树),树结构本身是key-value对,实际也只是哈希值; MPT中,交易树最底层是交易;状态树包含账户,账户允许有空间和代码(外部账户没有代码,有代码的是合约账户.);收据树保存的是交易的收据,虽然资料不足,但从架构思路上它也不会需要代码和空间,只是完善SPV快速索引. 其次,EVM只是用来执行字节码的,也不会保存智能合约或者存储空间,那么只能是在区块链中. 我们可以看到,ETH似乎并没有专门为智能合约的地址设计单独的存储结构,存储空间也是. 三. 也正基于此,我有了一个假设: 合约其实都是在合约账户中的,空间也是. 四. 结果 后来仔细看solidity文档才发现,其实里面就有说明,只是自己忽略了. 合约部署后会创建一个合约账户,合约账户里保存着智能合约的可执行字节码(编译之后的,在EVM里执行),并且有存储空间,合约能对合约账户的空间写入信息.而abi是一个接口结构,利用abiDefinition可以创建调用该合约的结构.abi应该由合约所有方自己保存和提供. (转载请注明出处~.~ http://blog.csdn.net/LNZ001/article/details/72842753 ) 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2017/06/02/8abedb296ccdfc9ac92c5f597cec249b.html","headline":"智能合约和存储空间在哪里?-lnz001的博客","dateModified":"2017-06-02T00:00:00+08:00","datePublished":"2017-06-02T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2017/06/02/8abedb296ccdfc9ac92c5f597cec249b.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

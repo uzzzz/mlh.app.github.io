@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="关于异步同步，长连接短连接，半双工全双工单工概念的整理 同步：如：三次握手，需要请求-响应配对，才进行下一个请求-响应； 异步：如：UDP会话，只管自己做自己的，至于对端是否处理成功，没有关系； 长连接：一次三次握手，交易不握手； 家里的门，进一次； 短连接：每次会话都要三次握手； 银行的门，每次都要钥匙； 全双工： 打电话；既可以说也可以听，双向；如三环双向八车道 半双工：一条只有一根车道的路，可以双向行驶但同一时刻内只能单向行驶；如村道； 单工：如单行道，只能朝一个方向行驶；如新都单行道； 我们可以看到其中还包含着一些概念 先说三次握手 TCP(Transmission Control Protocol)传输控制协议&nbsp; SYN(synchronous建立连接)&nbsp; ACK(acknowledgement 确认) PSH(push传送) FIN(finish结束) RST(reset重置)&nbsp; URG(urgent紧急) Sequence number(顺序号码)&nbsp; Acknowledge number(确认号码) 以下是我自己的理解供参考 三次握手简单来说就是: 客户端请求建立连接,服务端确认建立连接并返回确认信息,客户端收到确认信息并返回--&gt;三次握手成功. 同步:经过三次握手,请求按顺序来,走流程不搞事 异步:比如说你煮了一锅饭,这期间你可以去打游戏,而不是等着饭煮熟再去玩 长连接:我们一起建立一个连接,然后维持着这个连接不断,这期间发起的任何交易都无需再进行握手 短连接:我们交易一次就建立一次连接,交易完就断掉. 因为我们项目中用到 异步全双工长连接 以上组合一下就是:首先我们建立长连接,并发送心跳包保持连接(长连接),并且建立一个请求阻塞队列和接收阻塞队列,请求阻塞队列等待我方请求进入,有请求进来就发送到远程方,接受阻塞队列一直接收返回包,如果接收到就返回到自己的请求方 (全双工).请求进来的时候发送和接受信息需要一定时间,这个时候我们可以去处理一些其它的事情(异步). 阅读更多" />
 <meta property="og:description" content="关于异步同步，长连接短连接，半双工全双工单工概念的整理 同步：如：三次握手，需要请求-响应配对，才进行下一个请求-响应； 异步：如：UDP会话，只管自己做自己的，至于对端是否处理成功，没有关系； 长连接：一次三次握手，交易不握手； 家里的门，进一次； 短连接：每次会话都要三次握手； 银行的门，每次都要钥匙； 全双工： 打电话；既可以说也可以听，双向；如三环双向八车道 半双工：一条只有一根车道的路，可以双向行驶但同一时刻内只能单向行驶；如村道； 单工：如单行道，只能朝一个方向行驶；如新都单行道； 我们可以看到其中还包含着一些概念 先说三次握手 TCP(Transmission Control Protocol)传输控制协议&nbsp; SYN(synchronous建立连接)&nbsp; ACK(acknowledgement 确认) PSH(push传送) FIN(finish结束) RST(reset重置)&nbsp; URG(urgent紧急) Sequence number(顺序号码)&nbsp; Acknowledge number(确认号码) 以下是我自己的理解供参考 三次握手简单来说就是: 客户端请求建立连接,服务端确认建立连接并返回确认信息,客户端收到确认信息并返回--&gt;三次握手成功. 同步:经过三次握手,请求按顺序来,走流程不搞事 异步:比如说你煮了一锅饭,这期间你可以去打游戏,而不是等着饭煮熟再去玩 长连接:我们一起建立一个连接,然后维持着这个连接不断,这期间发起的任何交易都无需再进行握手 短连接:我们交易一次就建立一次连接,交易完就断掉. 因为我们项目中用到 异步全双工长连接 以上组合一下就是:首先我们建立长连接,并发送心跳包保持连接(长连接),并且建立一个请求阻塞队列和接收阻塞队列,请求阻塞队列等待我方请求进入,有请求进来就发送到远程方,接受阻塞队列一直接收返回包,如果接收到就返回到自己的请求方 (全双工).请求进来的时候发送和接受信息需要一定时间,这个时候我们可以去处理一些其它的事情(异步). 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2017/06/23/d39735c42a44f7268cdc0ce94eaf9c60.html" />
+<meta property="og:url" content="https://mlh.app/2017/06/23/d39735c42a44f7268cdc0ce94eaf9c60.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-06-23T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"关于异步同步，长连接短连接，半双工全双工单工概念的整理 同步：如：三次握手，需要请求-响应配对，才进行下一个请求-响应； 异步：如：UDP会话，只管自己做自己的，至于对端是否处理成功，没有关系； 长连接：一次三次握手，交易不握手； 家里的门，进一次； 短连接：每次会话都要三次握手； 银行的门，每次都要钥匙； 全双工： 打电话；既可以说也可以听，双向；如三环双向八车道 半双工：一条只有一根车道的路，可以双向行驶但同一时刻内只能单向行驶；如村道； 单工：如单行道，只能朝一个方向行驶；如新都单行道； 我们可以看到其中还包含着一些概念 先说三次握手 TCP(Transmission Control Protocol)传输控制协议&nbsp; SYN(synchronous建立连接)&nbsp; ACK(acknowledgement 确认) PSH(push传送) FIN(finish结束) RST(reset重置)&nbsp; URG(urgent紧急) Sequence number(顺序号码)&nbsp; Acknowledge number(确认号码) 以下是我自己的理解供参考 三次握手简单来说就是: 客户端请求建立连接,服务端确认建立连接并返回确认信息,客户端收到确认信息并返回--&gt;三次握手成功. 同步:经过三次握手,请求按顺序来,走流程不搞事 异步:比如说你煮了一锅饭,这期间你可以去打游戏,而不是等着饭煮熟再去玩 长连接:我们一起建立一个连接,然后维持着这个连接不断,这期间发起的任何交易都无需再进行握手 短连接:我们交易一次就建立一次连接,交易完就断掉. 因为我们项目中用到 异步全双工长连接 以上组合一下就是:首先我们建立长连接,并发送心跳包保持连接(长连接),并且建立一个请求阻塞队列和接收阻塞队列,请求阻塞队列等待我方请求进入,有请求进来就发送到远程方,接受阻塞队列一直接收返回包,如果接收到就返回到自己的请求方 (全双工).请求进来的时候发送和接受信息需要一定时间,这个时候我们可以去处理一些其它的事情(异步). 阅读更多","@type":"BlogPosting","url":"/2017/06/23/d39735c42a44f7268cdc0ce94eaf9c60.html","headline":"异步同步，长连接短连接，半双工全双工单工看这一篇就够了","dateModified":"2017-06-23T00:00:00+08:00","datePublished":"2017-06-23T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2017/06/23/d39735c42a44f7268cdc0ce94eaf9c60.html"},"@context":"http://schema.org"}</script>
+{"description":"关于异步同步，长连接短连接，半双工全双工单工概念的整理 同步：如：三次握手，需要请求-响应配对，才进行下一个请求-响应； 异步：如：UDP会话，只管自己做自己的，至于对端是否处理成功，没有关系； 长连接：一次三次握手，交易不握手； 家里的门，进一次； 短连接：每次会话都要三次握手； 银行的门，每次都要钥匙； 全双工： 打电话；既可以说也可以听，双向；如三环双向八车道 半双工：一条只有一根车道的路，可以双向行驶但同一时刻内只能单向行驶；如村道； 单工：如单行道，只能朝一个方向行驶；如新都单行道； 我们可以看到其中还包含着一些概念 先说三次握手 TCP(Transmission Control Protocol)传输控制协议&nbsp; SYN(synchronous建立连接)&nbsp; ACK(acknowledgement 确认) PSH(push传送) FIN(finish结束) RST(reset重置)&nbsp; URG(urgent紧急) Sequence number(顺序号码)&nbsp; Acknowledge number(确认号码) 以下是我自己的理解供参考 三次握手简单来说就是: 客户端请求建立连接,服务端确认建立连接并返回确认信息,客户端收到确认信息并返回--&gt;三次握手成功. 同步:经过三次握手,请求按顺序来,走流程不搞事 异步:比如说你煮了一锅饭,这期间你可以去打游戏,而不是等着饭煮熟再去玩 长连接:我们一起建立一个连接,然后维持着这个连接不断,这期间发起的任何交易都无需再进行握手 短连接:我们交易一次就建立一次连接,交易完就断掉. 因为我们项目中用到 异步全双工长连接 以上组合一下就是:首先我们建立长连接,并发送心跳包保持连接(长连接),并且建立一个请求阻塞队列和接收阻塞队列,请求阻塞队列等待我方请求进入,有请求进来就发送到远程方,接受阻塞队列一直接收返回包,如果接收到就返回到自己的请求方 (全双工).请求进来的时候发送和接受信息需要一定时间,这个时候我们可以去处理一些其它的事情(异步). 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2017/06/23/d39735c42a44f7268cdc0ce94eaf9c60.html","headline":"异步同步，长连接短连接，半双工全双工单工看这一篇就够了","dateModified":"2017-06-23T00:00:00+08:00","datePublished":"2017-06-23T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2017/06/23/d39735c42a44f7268cdc0ce94eaf9c60.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

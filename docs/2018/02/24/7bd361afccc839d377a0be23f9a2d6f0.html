@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="下载OpenCV3.4，只下载Source code (zip)，解压。 下载opencv_contrib，只下载Source code (zip)，解压。 下载CMake3.9（不要下载3.10及之后的新版本），下载3.9版的便携版就好。 电脑上有MinGW(参考安装MinGW的其它资料，我的电脑上有DevC++自带的MinGW)，cmd命令行敲gcc查看环境变量是否配置好。 双击cmake-gui，配置成 点击Configure（提示创建build文件夹，点确定）。选择 点击finish。 修改一下红底色的某些配置选项：选中INSTALL_C_EXAMPLES，在OPENCV_EXTRA_MODULES_PATH中填上路径opencv_contrib-3.3.1/modules的路径。再次点击Configure。在win10中，要取消选中BUILD_opencv_saliency。 取消选中BUILD_opencv_world会得到一系列而不是单独的库文件（我们希望这样）。 Configure Done后点击Generate。Generate Done后进入build文件夹，在cmd中敲mingw32-make或mingw-make（哪个都行，只要能工作），如果一切顺利则会花费一个多小时时间完成，然后敲mingw32-make install或mingw-make install，安装到install目录下。如果mingw32-make过程出错则尝试取消选中ENABLE_PRECOMPILED_HEADERS重新Configure和Generate。 阅读更多" />
 <meta property="og:description" content="下载OpenCV3.4，只下载Source code (zip)，解压。 下载opencv_contrib，只下载Source code (zip)，解压。 下载CMake3.9（不要下载3.10及之后的新版本），下载3.9版的便携版就好。 电脑上有MinGW(参考安装MinGW的其它资料，我的电脑上有DevC++自带的MinGW)，cmd命令行敲gcc查看环境变量是否配置好。 双击cmake-gui，配置成 点击Configure（提示创建build文件夹，点确定）。选择 点击finish。 修改一下红底色的某些配置选项：选中INSTALL_C_EXAMPLES，在OPENCV_EXTRA_MODULES_PATH中填上路径opencv_contrib-3.3.1/modules的路径。再次点击Configure。在win10中，要取消选中BUILD_opencv_saliency。 取消选中BUILD_opencv_world会得到一系列而不是单独的库文件（我们希望这样）。 Configure Done后点击Generate。Generate Done后进入build文件夹，在cmd中敲mingw32-make或mingw-make（哪个都行，只要能工作），如果一切顺利则会花费一个多小时时间完成，然后敲mingw32-make install或mingw-make install，安装到install目录下。如果mingw32-make过程出错则尝试取消选中ENABLE_PRECOMPILED_HEADERS重新Configure和Generate。 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/02/24/7bd361afccc839d377a0be23f9a2d6f0.html" />
+<meta property="og:url" content="https://mlh.app/2018/02/24/7bd361afccc839d377a0be23f9a2d6f0.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-02-24T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"下载OpenCV3.4，只下载Source code (zip)，解压。 下载opencv_contrib，只下载Source code (zip)，解压。 下载CMake3.9（不要下载3.10及之后的新版本），下载3.9版的便携版就好。 电脑上有MinGW(参考安装MinGW的其它资料，我的电脑上有DevC++自带的MinGW)，cmd命令行敲gcc查看环境变量是否配置好。 双击cmake-gui，配置成 点击Configure（提示创建build文件夹，点确定）。选择 点击finish。 修改一下红底色的某些配置选项：选中INSTALL_C_EXAMPLES，在OPENCV_EXTRA_MODULES_PATH中填上路径opencv_contrib-3.3.1/modules的路径。再次点击Configure。在win10中，要取消选中BUILD_opencv_saliency。 取消选中BUILD_opencv_world会得到一系列而不是单独的库文件（我们希望这样）。 Configure Done后点击Generate。Generate Done后进入build文件夹，在cmd中敲mingw32-make或mingw-make（哪个都行，只要能工作），如果一切顺利则会花费一个多小时时间完成，然后敲mingw32-make install或mingw-make install，安装到install目录下。如果mingw32-make过程出错则尝试取消选中ENABLE_PRECOMPILED_HEADERS重新Configure和Generate。 阅读更多","@type":"BlogPosting","url":"/2018/02/24/7bd361afccc839d377a0be23f9a2d6f0.html","headline":"OpenCV 3.4+opencv_contrib在Windows上使用MinGW编译以及命令行编译opencv程序","dateModified":"2018-02-24T00:00:00+08:00","datePublished":"2018-02-24T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/02/24/7bd361afccc839d377a0be23f9a2d6f0.html"},"@context":"http://schema.org"}</script>
+{"description":"下载OpenCV3.4，只下载Source code (zip)，解压。 下载opencv_contrib，只下载Source code (zip)，解压。 下载CMake3.9（不要下载3.10及之后的新版本），下载3.9版的便携版就好。 电脑上有MinGW(参考安装MinGW的其它资料，我的电脑上有DevC++自带的MinGW)，cmd命令行敲gcc查看环境变量是否配置好。 双击cmake-gui，配置成 点击Configure（提示创建build文件夹，点确定）。选择 点击finish。 修改一下红底色的某些配置选项：选中INSTALL_C_EXAMPLES，在OPENCV_EXTRA_MODULES_PATH中填上路径opencv_contrib-3.3.1/modules的路径。再次点击Configure。在win10中，要取消选中BUILD_opencv_saliency。 取消选中BUILD_opencv_world会得到一系列而不是单独的库文件（我们希望这样）。 Configure Done后点击Generate。Generate Done后进入build文件夹，在cmd中敲mingw32-make或mingw-make（哪个都行，只要能工作），如果一切顺利则会花费一个多小时时间完成，然后敲mingw32-make install或mingw-make install，安装到install目录下。如果mingw32-make过程出错则尝试取消选中ENABLE_PRECOMPILED_HEADERS重新Configure和Generate。 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/02/24/7bd361afccc839d377a0be23f9a2d6f0.html","headline":"OpenCV 3.4+opencv_contrib在Windows上使用MinGW编译以及命令行编译opencv程序","dateModified":"2018-02-24T00:00:00+08:00","datePublished":"2018-02-24T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/02/24/7bd361afccc839d377a0be23f9a2d6f0.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

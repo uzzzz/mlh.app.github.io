@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="序言 &nbsp;前几年一则朋友圈把暗网炒火了... 其实暗网没那么神秘,就是一种特定的方式的部署与请求而已 请求方需要使用 tor browser 响应方 需要使用 tor 的hidden_service 话不多少,进入搭建阶段 环境 &nbsp;系统：一台三十块一个月的香港vps 自带centos7 所需：Nginx+tor 更新yum源 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm &nbsp;关闭防火墙 &amp; 禁用 //临时关闭 systemctl stop firewalld //禁止开机启动 systemctl disable firewalld Removed symlink /etc/systemd/system/multi-user.target.wants/firewalld.service. Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service. 安装 Nginx yum -y install nginx 安装 Tor yum -y install tor 配置 Nginx vi /etc/nginx/nginx.conf server{ listen 80 default_server; ... } 启动 Nginx service nginx restart 配置 tor vi /etc/tor/torrc 添加一下两行 HiddenServiceDir /var/lib/tor/hidden_service/ HiddenServicePort 80 服务器IP:8080 启动 tor service tor start 查看hostname cd /var/lib/tor/hidden_service/ cat hostname &nbsp;最后使用tor浏览器访问一下" />
 <meta property="og:description" content="序言 &nbsp;前几年一则朋友圈把暗网炒火了... 其实暗网没那么神秘,就是一种特定的方式的部署与请求而已 请求方需要使用 tor browser 响应方 需要使用 tor 的hidden_service 话不多少,进入搭建阶段 环境 &nbsp;系统：一台三十块一个月的香港vps 自带centos7 所需：Nginx+tor 更新yum源 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm &nbsp;关闭防火墙 &amp; 禁用 //临时关闭 systemctl stop firewalld //禁止开机启动 systemctl disable firewalld Removed symlink /etc/systemd/system/multi-user.target.wants/firewalld.service. Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service. 安装 Nginx yum -y install nginx 安装 Tor yum -y install tor 配置 Nginx vi /etc/nginx/nginx.conf server{ listen 80 default_server; ... } 启动 Nginx service nginx restart 配置 tor vi /etc/tor/torrc 添加一下两行 HiddenServiceDir /var/lib/tor/hidden_service/ HiddenServicePort 80 服务器IP:8080 启动 tor service tor start 查看hostname cd /var/lib/tor/hidden_service/ cat hostname &nbsp;最后使用tor浏览器访问一下" />
+<link rel="canonical" href="https://mlh.app/2018/09/12/729275.html" />
+<meta property="og:url" content="https://mlh.app/2018/09/12/729275.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-12T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"序言 &nbsp;前几年一则朋友圈把暗网炒火了... 其实暗网没那么神秘,就是一种特定的方式的部署与请求而已 请求方需要使用 tor browser 响应方 需要使用 tor 的hidden_service 话不多少,进入搭建阶段 环境 &nbsp;系统：一台三十块一个月的香港vps 自带centos7 所需：Nginx+tor 更新yum源 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm &nbsp;关闭防火墙 &amp; 禁用 //临时关闭 systemctl stop firewalld //禁止开机启动 systemctl disable firewalld Removed symlink /etc/systemd/system/multi-user.target.wants/firewalld.service. Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service. 安装 Nginx yum -y install nginx 安装 Tor yum -y install tor 配置 Nginx vi /etc/nginx/nginx.conf server{ listen 80 default_server; ... } 启动 Nginx service nginx restart 配置 tor vi /etc/tor/torrc 添加一下两行 HiddenServiceDir /var/lib/tor/hidden_service/ HiddenServicePort 80 服务器IP:8080 启动 tor service tor start 查看hostname cd /var/lib/tor/hidden_service/ cat hostname &nbsp;最后使用tor浏览器访问一下","@type":"BlogPosting","url":"/2018/09/12/729275.html","headline":"100% 搭建你自己的匿名网站(暗网网站)","dateModified":"2018-09-12T00:00:00+08:00","datePublished":"2018-09-12T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/09/12/729275.html"},"@context":"http://schema.org"}</script>
+{"description":"序言 &nbsp;前几年一则朋友圈把暗网炒火了... 其实暗网没那么神秘,就是一种特定的方式的部署与请求而已 请求方需要使用 tor browser 响应方 需要使用 tor 的hidden_service 话不多少,进入搭建阶段 环境 &nbsp;系统：一台三十块一个月的香港vps 自带centos7 所需：Nginx+tor 更新yum源 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm &nbsp;关闭防火墙 &amp; 禁用 //临时关闭 systemctl stop firewalld //禁止开机启动 systemctl disable firewalld Removed symlink /etc/systemd/system/multi-user.target.wants/firewalld.service. Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service. 安装 Nginx yum -y install nginx 安装 Tor yum -y install tor 配置 Nginx vi /etc/nginx/nginx.conf server{ listen 80 default_server; ... } 启动 Nginx service nginx restart 配置 tor vi /etc/tor/torrc 添加一下两行 HiddenServiceDir /var/lib/tor/hidden_service/ HiddenServicePort 80 服务器IP:8080 启动 tor service tor start 查看hostname cd /var/lib/tor/hidden_service/ cat hostname &nbsp;最后使用tor浏览器访问一下","@type":"BlogPosting","url":"https://mlh.app/2018/09/12/729275.html","headline":"100% 搭建你自己的匿名网站(暗网网站)","dateModified":"2018-09-12T00:00:00+08:00","datePublished":"2018-09-12T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/09/12/729275.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

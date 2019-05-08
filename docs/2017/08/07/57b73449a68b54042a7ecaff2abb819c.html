@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="方正证券_魏建榕_2017-05-01 蜘蛛网拥抱商品期货_CTA专题研究 1. 核心思想： 凡是做过，必留痕迹。从交易所每日公布的成交持仓表中，捕捉期货投资者的交易行为，构建CTA交易信号。 2. 策略构建： a. 计算会员机构的知情度： 设：会员机构 i 的多单持仓量为 Bi , 空单持仓量为 Si , 当日成家量为 Vi 。定义其知情度的统计量 Stati 为： Stati=(Bi+Si)/Vi Stati 的值越大，相当于当日换手率越小，则会员机构 i 中知情投资者的比例越高。 b. 计算会员机构的情绪指标： 设：会员机构 i 当日的多单增量为 ΔBi ，空单增量为 ΔSi 。其情绪指标 TS(TraderSentiment) 为： TSi=(ΔBi−ΔSi)/(|ΔSi|+|ΔBi|) TS 的值越大，表明该会员机构背后的交易者情绪越偏多，反之则偏空。 c. 计算知情交易者情绪与非知情交易者情绪： 首先剔除当日成交量小于M手的会员机构。剩余的会员机构，按照知情度 Stat 指标从大到小排序，将前 N 个会员机构归为知情组，其余为非知情组。在知情组内计算情绪指标 TS 的平均值，得到知情交易者情绪 ITS(InformedTraderSentiment) 。同样，在非知情组内取平均，可以得到非知情者情绪 UTS(UninformedTraderSentiment) 。( M 通常取30， N 通常取20） d. 构建交易信号： 若T日ITS&gt;UTS，则T+1日开盘开仓做多，T+2日开盘开仓； 若T日ITS&lt;UTS，则T+1日开盘开仓做多，T+2日开盘开仓； 若T日ITS=UTS，则T+1日空仓。 e. 策略组合: 单个品种上组合构建； 多品种资金算术均分构建； 多品种按前一交易日成交量加权均分构建。 3. 总结分析： a. M、N两参数敏感性测试: M取值范围设为 6-40，测试步长为2； N取值范围设为5-60，测试步长为5。 结果如下两图： b. 回测结果: 阅读更多" />
 <meta property="og:description" content="方正证券_魏建榕_2017-05-01 蜘蛛网拥抱商品期货_CTA专题研究 1. 核心思想： 凡是做过，必留痕迹。从交易所每日公布的成交持仓表中，捕捉期货投资者的交易行为，构建CTA交易信号。 2. 策略构建： a. 计算会员机构的知情度： 设：会员机构 i 的多单持仓量为 Bi , 空单持仓量为 Si , 当日成家量为 Vi 。定义其知情度的统计量 Stati 为： Stati=(Bi+Si)/Vi Stati 的值越大，相当于当日换手率越小，则会员机构 i 中知情投资者的比例越高。 b. 计算会员机构的情绪指标： 设：会员机构 i 当日的多单增量为 ΔBi ，空单增量为 ΔSi 。其情绪指标 TS(TraderSentiment) 为： TSi=(ΔBi−ΔSi)/(|ΔSi|+|ΔBi|) TS 的值越大，表明该会员机构背后的交易者情绪越偏多，反之则偏空。 c. 计算知情交易者情绪与非知情交易者情绪： 首先剔除当日成交量小于M手的会员机构。剩余的会员机构，按照知情度 Stat 指标从大到小排序，将前 N 个会员机构归为知情组，其余为非知情组。在知情组内计算情绪指标 TS 的平均值，得到知情交易者情绪 ITS(InformedTraderSentiment) 。同样，在非知情组内取平均，可以得到非知情者情绪 UTS(UninformedTraderSentiment) 。( M 通常取30， N 通常取20） d. 构建交易信号： 若T日ITS&gt;UTS，则T+1日开盘开仓做多，T+2日开盘开仓； 若T日ITS&lt;UTS，则T+1日开盘开仓做多，T+2日开盘开仓； 若T日ITS=UTS，则T+1日空仓。 e. 策略组合: 单个品种上组合构建； 多品种资金算术均分构建； 多品种按前一交易日成交量加权均分构建。 3. 总结分析： a. M、N两参数敏感性测试: M取值范围设为 6-40，测试步长为2； N取值范围设为5-60，测试步长为5。 结果如下两图： b. 回测结果: 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2017/08/07/57b73449a68b54042a7ecaff2abb819c.html" />
+<meta property="og:url" content="https://mlh.app/2017/08/07/57b73449a68b54042a7ecaff2abb819c.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-08-07T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"方正证券_魏建榕_2017-05-01 蜘蛛网拥抱商品期货_CTA专题研究 1. 核心思想： 凡是做过，必留痕迹。从交易所每日公布的成交持仓表中，捕捉期货投资者的交易行为，构建CTA交易信号。 2. 策略构建： a. 计算会员机构的知情度： 设：会员机构 i 的多单持仓量为 Bi , 空单持仓量为 Si , 当日成家量为 Vi 。定义其知情度的统计量 Stati 为： Stati=(Bi+Si)/Vi Stati 的值越大，相当于当日换手率越小，则会员机构 i 中知情投资者的比例越高。 b. 计算会员机构的情绪指标： 设：会员机构 i 当日的多单增量为 ΔBi ，空单增量为 ΔSi 。其情绪指标 TS(TraderSentiment) 为： TSi=(ΔBi−ΔSi)/(|ΔSi|+|ΔBi|) TS 的值越大，表明该会员机构背后的交易者情绪越偏多，反之则偏空。 c. 计算知情交易者情绪与非知情交易者情绪： 首先剔除当日成交量小于M手的会员机构。剩余的会员机构，按照知情度 Stat 指标从大到小排序，将前 N 个会员机构归为知情组，其余为非知情组。在知情组内计算情绪指标 TS 的平均值，得到知情交易者情绪 ITS(InformedTraderSentiment) 。同样，在非知情组内取平均，可以得到非知情者情绪 UTS(UninformedTraderSentiment) 。( M 通常取30， N 通常取20） d. 构建交易信号： 若T日ITS&gt;UTS，则T+1日开盘开仓做多，T+2日开盘开仓； 若T日ITS&lt;UTS，则T+1日开盘开仓做多，T+2日开盘开仓； 若T日ITS=UTS，则T+1日空仓。 e. 策略组合: 单个品种上组合构建； 多品种资金算术均分构建； 多品种按前一交易日成交量加权均分构建。 3. 总结分析： a. M、N两参数敏感性测试: M取值范围设为 6-40，测试步长为2； N取值范围设为5-60，测试步长为5。 结果如下两图： b. 回测结果: 阅读更多","@type":"BlogPosting","url":"/2017/08/07/57b73449a68b54042a7ecaff2abb819c.html","headline":"蜘蛛网拥抱商品期货_方正证券_CTA专题研究","dateModified":"2017-08-07T00:00:00+08:00","datePublished":"2017-08-07T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2017/08/07/57b73449a68b54042a7ecaff2abb819c.html"},"@context":"http://schema.org"}</script>
+{"description":"方正证券_魏建榕_2017-05-01 蜘蛛网拥抱商品期货_CTA专题研究 1. 核心思想： 凡是做过，必留痕迹。从交易所每日公布的成交持仓表中，捕捉期货投资者的交易行为，构建CTA交易信号。 2. 策略构建： a. 计算会员机构的知情度： 设：会员机构 i 的多单持仓量为 Bi , 空单持仓量为 Si , 当日成家量为 Vi 。定义其知情度的统计量 Stati 为： Stati=(Bi+Si)/Vi Stati 的值越大，相当于当日换手率越小，则会员机构 i 中知情投资者的比例越高。 b. 计算会员机构的情绪指标： 设：会员机构 i 当日的多单增量为 ΔBi ，空单增量为 ΔSi 。其情绪指标 TS(TraderSentiment) 为： TSi=(ΔBi−ΔSi)/(|ΔSi|+|ΔBi|) TS 的值越大，表明该会员机构背后的交易者情绪越偏多，反之则偏空。 c. 计算知情交易者情绪与非知情交易者情绪： 首先剔除当日成交量小于M手的会员机构。剩余的会员机构，按照知情度 Stat 指标从大到小排序，将前 N 个会员机构归为知情组，其余为非知情组。在知情组内计算情绪指标 TS 的平均值，得到知情交易者情绪 ITS(InformedTraderSentiment) 。同样，在非知情组内取平均，可以得到非知情者情绪 UTS(UninformedTraderSentiment) 。( M 通常取30， N 通常取20） d. 构建交易信号： 若T日ITS&gt;UTS，则T+1日开盘开仓做多，T+2日开盘开仓； 若T日ITS&lt;UTS，则T+1日开盘开仓做多，T+2日开盘开仓； 若T日ITS=UTS，则T+1日空仓。 e. 策略组合: 单个品种上组合构建； 多品种资金算术均分构建； 多品种按前一交易日成交量加权均分构建。 3. 总结分析： a. M、N两参数敏感性测试: M取值范围设为 6-40，测试步长为2； N取值范围设为5-60，测试步长为5。 结果如下两图： b. 回测结果: 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2017/08/07/57b73449a68b54042a7ecaff2abb819c.html","headline":"蜘蛛网拥抱商品期货_方正证券_CTA专题研究","dateModified":"2017-08-07T00:00:00+08:00","datePublished":"2017-08-07T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2017/08/07/57b73449a68b54042a7ecaff2abb819c.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

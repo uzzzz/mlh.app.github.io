@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="使用web3.js将数据保存到以太坊区块链中 实现数据上链的方法是使用web3.eth.sendTransaction()，我们可以借助一个简单的转账交易来完成任意数据上链，只要在交易对象中加入data字段即可。 我们可以利用truffle的开发者模式体验一下数据上链的过程 1.打开本地geth，然后再打开另一个powershell窗口 2.进入一个truffle项目目录(项目不重要，使用truffle init初始化的也可以) 3.truffle console //打开truffle控制台 4.web3.version.api //查看web3版本信息， truffle console命令会默认集成web3 5.web3.eth.accounts //查看geth上的账户信息 图中打印了我在geth上创建的两个账户地址 我们可以使用web3.toHex()方法将一个字符串转换为16进制字符串 6.let data = web3.toHex(‘你想储存的数据’) 我们需要借助一个转账交易来实现数据上链，因此设置的主要字段是转出账户from，转入账户to，转账金额value，还有我们需要的数据data 7.let txo = {from: web3.eth.accounts[0],to:web3.eth.accounts[1],value:’0x00’,data: data} 8.在geth中解锁主账户这一步很重要，否者转账无法进行 personal.unlockAccount(&#39;0x9fcE7F757600F054E45E99494b1793bF52686151&#39;, &#39;123456&#39;) 9.let address = web3.eth.sendTransaction(txo); 10.let transaction = web3.eth.getTransaction(address); 11.let inputData = transaction.input; 12.Buffer.from(inputData.replace(‘0x’,”),’hex’).toString(); //打印出inputData信息 到这里就完成了数据上链，这是在truffle开发者模式体验，大家可以完整的编写一个web3.js代码。 没有装geth可以使用 truffle development 进入开发者模式，默认生成9个账户和9个对应私钥 阅读更多" />
 <meta property="og:description" content="使用web3.js将数据保存到以太坊区块链中 实现数据上链的方法是使用web3.eth.sendTransaction()，我们可以借助一个简单的转账交易来完成任意数据上链，只要在交易对象中加入data字段即可。 我们可以利用truffle的开发者模式体验一下数据上链的过程 1.打开本地geth，然后再打开另一个powershell窗口 2.进入一个truffle项目目录(项目不重要，使用truffle init初始化的也可以) 3.truffle console //打开truffle控制台 4.web3.version.api //查看web3版本信息， truffle console命令会默认集成web3 5.web3.eth.accounts //查看geth上的账户信息 图中打印了我在geth上创建的两个账户地址 我们可以使用web3.toHex()方法将一个字符串转换为16进制字符串 6.let data = web3.toHex(‘你想储存的数据’) 我们需要借助一个转账交易来实现数据上链，因此设置的主要字段是转出账户from，转入账户to，转账金额value，还有我们需要的数据data 7.let txo = {from: web3.eth.accounts[0],to:web3.eth.accounts[1],value:’0x00’,data: data} 8.在geth中解锁主账户这一步很重要，否者转账无法进行 personal.unlockAccount(&#39;0x9fcE7F757600F054E45E99494b1793bF52686151&#39;, &#39;123456&#39;) 9.let address = web3.eth.sendTransaction(txo); 10.let transaction = web3.eth.getTransaction(address); 11.let inputData = transaction.input; 12.Buffer.from(inputData.replace(‘0x’,”),’hex’).toString(); //打印出inputData信息 到这里就完成了数据上链，这是在truffle开发者模式体验，大家可以完整的编写一个web3.js代码。 没有装geth可以使用 truffle development 进入开发者模式，默认生成9个账户和9个对应私钥 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/07/23/39bca0a8133760d4c5238d790e622d3d.html" />
+<meta property="og:url" content="https://mlh.app/2018/07/23/39bca0a8133760d4c5238d790e622d3d.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-07-23T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"使用web3.js将数据保存到以太坊区块链中 实现数据上链的方法是使用web3.eth.sendTransaction()，我们可以借助一个简单的转账交易来完成任意数据上链，只要在交易对象中加入data字段即可。 我们可以利用truffle的开发者模式体验一下数据上链的过程 1.打开本地geth，然后再打开另一个powershell窗口 2.进入一个truffle项目目录(项目不重要，使用truffle init初始化的也可以) 3.truffle console //打开truffle控制台 4.web3.version.api //查看web3版本信息， truffle console命令会默认集成web3 5.web3.eth.accounts //查看geth上的账户信息 图中打印了我在geth上创建的两个账户地址 我们可以使用web3.toHex()方法将一个字符串转换为16进制字符串 6.let data = web3.toHex(‘你想储存的数据’) 我们需要借助一个转账交易来实现数据上链，因此设置的主要字段是转出账户from，转入账户to，转账金额value，还有我们需要的数据data 7.let txo = {from: web3.eth.accounts[0],to:web3.eth.accounts[1],value:’0x00’,data: data} 8.在geth中解锁主账户这一步很重要，否者转账无法进行 personal.unlockAccount(&#39;0x9fcE7F757600F054E45E99494b1793bF52686151&#39;, &#39;123456&#39;) 9.let address = web3.eth.sendTransaction(txo); 10.let transaction = web3.eth.getTransaction(address); 11.let inputData = transaction.input; 12.Buffer.from(inputData.replace(‘0x’,”),’hex’).toString(); //打印出inputData信息 到这里就完成了数据上链，这是在truffle开发者模式体验，大家可以完整的编写一个web3.js代码。 没有装geth可以使用 truffle development 进入开发者模式，默认生成9个账户和9个对应私钥 阅读更多","@type":"BlogPosting","url":"/2018/07/23/39bca0a8133760d4c5238d790e622d3d.html","headline":"使用web3.js将数据保存到以太坊区块链中","dateModified":"2018-07-23T00:00:00+08:00","datePublished":"2018-07-23T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/07/23/39bca0a8133760d4c5238d790e622d3d.html"},"@context":"http://schema.org"}</script>
+{"description":"使用web3.js将数据保存到以太坊区块链中 实现数据上链的方法是使用web3.eth.sendTransaction()，我们可以借助一个简单的转账交易来完成任意数据上链，只要在交易对象中加入data字段即可。 我们可以利用truffle的开发者模式体验一下数据上链的过程 1.打开本地geth，然后再打开另一个powershell窗口 2.进入一个truffle项目目录(项目不重要，使用truffle init初始化的也可以) 3.truffle console //打开truffle控制台 4.web3.version.api //查看web3版本信息， truffle console命令会默认集成web3 5.web3.eth.accounts //查看geth上的账户信息 图中打印了我在geth上创建的两个账户地址 我们可以使用web3.toHex()方法将一个字符串转换为16进制字符串 6.let data = web3.toHex(‘你想储存的数据’) 我们需要借助一个转账交易来实现数据上链，因此设置的主要字段是转出账户from，转入账户to，转账金额value，还有我们需要的数据data 7.let txo = {from: web3.eth.accounts[0],to:web3.eth.accounts[1],value:’0x00’,data: data} 8.在geth中解锁主账户这一步很重要，否者转账无法进行 personal.unlockAccount(&#39;0x9fcE7F757600F054E45E99494b1793bF52686151&#39;, &#39;123456&#39;) 9.let address = web3.eth.sendTransaction(txo); 10.let transaction = web3.eth.getTransaction(address); 11.let inputData = transaction.input; 12.Buffer.from(inputData.replace(‘0x’,”),’hex’).toString(); //打印出inputData信息 到这里就完成了数据上链，这是在truffle开发者模式体验，大家可以完整的编写一个web3.js代码。 没有装geth可以使用 truffle development 进入开发者模式，默认生成9个账户和9个对应私钥 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/07/23/39bca0a8133760d4c5238d790e622d3d.html","headline":"使用web3.js将数据保存到以太坊区块链中","dateModified":"2018-07-23T00:00:00+08:00","datePublished":"2018-07-23T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/07/23/39bca0a8133760d4c5238d790e622d3d.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

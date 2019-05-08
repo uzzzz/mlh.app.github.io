@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="从Docker Registry获取镜像 参数：docker pull [选项] [Docker Registry地址] &lt;仓库名&gt;:&lt;标签&gt; 如果不写Registry地址则默认从官方仓库拉取 例如，使用国内镜像：docker pull registry.docker-cn.com/library/centos:6 查看已有的镜像文件 docker images docker生成容器 可以通过执行一个Nginx镜像来生成一个容器 参数：docker run --name [容器名] [选项] -p &lt;主机端&gt;:&lt;映射端口&gt; [仓库名] -d表示在后台运行 -p表示设置端口 &lt;主机端&gt;:&lt;映射端口&gt; 如上图中的，docker run --name webserver -d -p 80:80 nginx 查看容器是否启动，若要查看全部的，可在命令后加上，-a docker ps 验证nginx服务，打开浏览器，输入localhost，可以看到nginx的默认主页，如图。 当然，我们也可以进入容器，修改一些内容。 进入容器 参数：docker exec -it [containerName] bash 如，执行docker exec -it webserver bash 可以通过修改echo &#39;&lt;h1&gt;hello docker&lt;/h1&gt;&#39; &gt; /usr/share/nginx/html/index.html，改变nginx的默认显示主页。" />
 <meta property="og:description" content="从Docker Registry获取镜像 参数：docker pull [选项] [Docker Registry地址] &lt;仓库名&gt;:&lt;标签&gt; 如果不写Registry地址则默认从官方仓库拉取 例如，使用国内镜像：docker pull registry.docker-cn.com/library/centos:6 查看已有的镜像文件 docker images docker生成容器 可以通过执行一个Nginx镜像来生成一个容器 参数：docker run --name [容器名] [选项] -p &lt;主机端&gt;:&lt;映射端口&gt; [仓库名] -d表示在后台运行 -p表示设置端口 &lt;主机端&gt;:&lt;映射端口&gt; 如上图中的，docker run --name webserver -d -p 80:80 nginx 查看容器是否启动，若要查看全部的，可在命令后加上，-a docker ps 验证nginx服务，打开浏览器，输入localhost，可以看到nginx的默认主页，如图。 当然，我们也可以进入容器，修改一些内容。 进入容器 参数：docker exec -it [containerName] bash 如，执行docker exec -it webserver bash 可以通过修改echo &#39;&lt;h1&gt;hello docker&lt;/h1&gt;&#39; &gt; /usr/share/nginx/html/index.html，改变nginx的默认显示主页。" />
+<link rel="canonical" href="https://mlh.app/2019/04/09/728275.html" />
+<meta property="og:url" content="https://mlh.app/2019/04/09/728275.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-04-09T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"从Docker Registry获取镜像 参数：docker pull [选项] [Docker Registry地址] &lt;仓库名&gt;:&lt;标签&gt; 如果不写Registry地址则默认从官方仓库拉取 例如，使用国内镜像：docker pull registry.docker-cn.com/library/centos:6 查看已有的镜像文件 docker images docker生成容器 可以通过执行一个Nginx镜像来生成一个容器 参数：docker run --name [容器名] [选项] -p &lt;主机端&gt;:&lt;映射端口&gt; [仓库名] -d表示在后台运行 -p表示设置端口 &lt;主机端&gt;:&lt;映射端口&gt; 如上图中的，docker run --name webserver -d -p 80:80 nginx 查看容器是否启动，若要查看全部的，可在命令后加上，-a docker ps 验证nginx服务，打开浏览器，输入localhost，可以看到nginx的默认主页，如图。 当然，我们也可以进入容器，修改一些内容。 进入容器 参数：docker exec -it [containerName] bash 如，执行docker exec -it webserver bash 可以通过修改echo &#39;&lt;h1&gt;hello docker&lt;/h1&gt;&#39; &gt; /usr/share/nginx/html/index.html，改变nginx的默认显示主页。","@type":"BlogPosting","url":"/2019/04/09/728275.html","headline":"docker拉取镜像、生成容器","dateModified":"2019-04-09T00:00:00+08:00","datePublished":"2019-04-09T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2019/04/09/728275.html"},"@context":"http://schema.org"}</script>
+{"description":"从Docker Registry获取镜像 参数：docker pull [选项] [Docker Registry地址] &lt;仓库名&gt;:&lt;标签&gt; 如果不写Registry地址则默认从官方仓库拉取 例如，使用国内镜像：docker pull registry.docker-cn.com/library/centos:6 查看已有的镜像文件 docker images docker生成容器 可以通过执行一个Nginx镜像来生成一个容器 参数：docker run --name [容器名] [选项] -p &lt;主机端&gt;:&lt;映射端口&gt; [仓库名] -d表示在后台运行 -p表示设置端口 &lt;主机端&gt;:&lt;映射端口&gt; 如上图中的，docker run --name webserver -d -p 80:80 nginx 查看容器是否启动，若要查看全部的，可在命令后加上，-a docker ps 验证nginx服务，打开浏览器，输入localhost，可以看到nginx的默认主页，如图。 当然，我们也可以进入容器，修改一些内容。 进入容器 参数：docker exec -it [containerName] bash 如，执行docker exec -it webserver bash 可以通过修改echo &#39;&lt;h1&gt;hello docker&lt;/h1&gt;&#39; &gt; /usr/share/nginx/html/index.html，改变nginx的默认显示主页。","@type":"BlogPosting","url":"https://mlh.app/2019/04/09/728275.html","headline":"docker拉取镜像、生成容器","dateModified":"2019-04-09T00:00:00+08:00","datePublished":"2019-04-09T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2019/04/09/728275.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

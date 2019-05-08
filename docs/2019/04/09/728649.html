@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="1，当发现一台主机1上已经按装好一台虚拟机后，如何克隆虚拟机？ 克隆步骤： 1）在主机1查看已经安装好的虚拟机： ssh root@172.25.254.1 ## 切到该主机中 virsh list --all ##查看已经存在的虚拟机 2）在真机2中输入命令：scp root@172.25.254.1:/var/lib/libvirt/images/generic.qcow2 /var/lib/libvirt/images/ 注：该文件为虚拟机的硬盘管理文件，可以在virt-manager下察看虚拟机的硬盘信息 在真机2中输入命令：scp root@172.25.254.1:/etc/libvirt/qemu/generic.xml /mnt/generic.xml 注：如果不复制该文件则要在图形模式下自己添加虚拟机 virsh create /mnt/generic.xml 恢复虚拟机。 注：用虚拟机硬件文件一次性打开虚拟机，当在虚拟机管理中force off 虚拟机的时候，再次查看的时候发现没有虚拟机 virsh define /mnt/generic.xml ##永久恢复虚拟机 ##虚拟机的快照## ##脚本创建快照： 1，创建安装虚拟机脚本： #!/bin/bash qemu-img create -f qcow2 -b /var/lib/libvirt/images/$1.qcow2 /var/lib/libvirt/images/$2qcow2 &amp;&gt; /dev/null ##创建虚拟机快照硬盘 virt-install \ ##创建虚拟机命令 –import \ ##选择创建虚拟机快照方式 –memory 1000 \ ##设置内存 –vcpus 1 \ ##设置cpu内核数 –disk /var/lib/libvirt/images /$2.qcow2,bus=virtio ##设置硬盘 –network bridge=br0,model=virtio \ ##设置网卡 步骤： ##进入cd /opt 目录中，创建文件夹mkdir shell 进入文件夹shell , 编辑脚本文件：" />
 <meta property="og:description" content="1，当发现一台主机1上已经按装好一台虚拟机后，如何克隆虚拟机？ 克隆步骤： 1）在主机1查看已经安装好的虚拟机： ssh root@172.25.254.1 ## 切到该主机中 virsh list --all ##查看已经存在的虚拟机 2）在真机2中输入命令：scp root@172.25.254.1:/var/lib/libvirt/images/generic.qcow2 /var/lib/libvirt/images/ 注：该文件为虚拟机的硬盘管理文件，可以在virt-manager下察看虚拟机的硬盘信息 在真机2中输入命令：scp root@172.25.254.1:/etc/libvirt/qemu/generic.xml /mnt/generic.xml 注：如果不复制该文件则要在图形模式下自己添加虚拟机 virsh create /mnt/generic.xml 恢复虚拟机。 注：用虚拟机硬件文件一次性打开虚拟机，当在虚拟机管理中force off 虚拟机的时候，再次查看的时候发现没有虚拟机 virsh define /mnt/generic.xml ##永久恢复虚拟机 ##虚拟机的快照## ##脚本创建快照： 1，创建安装虚拟机脚本： #!/bin/bash qemu-img create -f qcow2 -b /var/lib/libvirt/images/$1.qcow2 /var/lib/libvirt/images/$2qcow2 &amp;&gt; /dev/null ##创建虚拟机快照硬盘 virt-install \ ##创建虚拟机命令 –import \ ##选择创建虚拟机快照方式 –memory 1000 \ ##设置内存 –vcpus 1 \ ##设置cpu内核数 –disk /var/lib/libvirt/images /$2.qcow2,bus=virtio ##设置硬盘 –network bridge=br0,model=virtio \ ##设置网卡 步骤： ##进入cd /opt 目录中，创建文件夹mkdir shell 进入文件夹shell , 编辑脚本文件：" />
+<link rel="canonical" href="https://mlh.app/2019/04/09/728649.html" />
+<meta property="og:url" content="https://mlh.app/2019/04/09/728649.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-04-09T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"1，当发现一台主机1上已经按装好一台虚拟机后，如何克隆虚拟机？ 克隆步骤： 1）在主机1查看已经安装好的虚拟机： ssh root@172.25.254.1 ## 切到该主机中 virsh list --all ##查看已经存在的虚拟机 2）在真机2中输入命令：scp root@172.25.254.1:/var/lib/libvirt/images/generic.qcow2 /var/lib/libvirt/images/ 注：该文件为虚拟机的硬盘管理文件，可以在virt-manager下察看虚拟机的硬盘信息 在真机2中输入命令：scp root@172.25.254.1:/etc/libvirt/qemu/generic.xml /mnt/generic.xml 注：如果不复制该文件则要在图形模式下自己添加虚拟机 virsh create /mnt/generic.xml 恢复虚拟机。 注：用虚拟机硬件文件一次性打开虚拟机，当在虚拟机管理中force off 虚拟机的时候，再次查看的时候发现没有虚拟机 virsh define /mnt/generic.xml ##永久恢复虚拟机 ##虚拟机的快照## ##脚本创建快照： 1，创建安装虚拟机脚本： #!/bin/bash qemu-img create -f qcow2 -b /var/lib/libvirt/images/$1.qcow2 /var/lib/libvirt/images/$2qcow2 &amp;&gt; /dev/null ##创建虚拟机快照硬盘 virt-install \\ ##创建虚拟机命令 –import \\ ##选择创建虚拟机快照方式 –memory 1000 \\ ##设置内存 –vcpus 1 \\ ##设置cpu内核数 –disk /var/lib/libvirt/images /$2.qcow2,bus=virtio ##设置硬盘 –network bridge=br0,model=virtio \\ ##设置网卡 步骤： ##进入cd /opt 目录中，创建文件夹mkdir shell 进入文件夹shell , 编辑脚本文件：","@type":"BlogPosting","url":"/2019/04/09/728649.html","headline":"728649","dateModified":"2019-04-09T00:00:00+08:00","datePublished":"2019-04-09T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2019/04/09/728649.html"},"@context":"http://schema.org"}</script>
+{"description":"1，当发现一台主机1上已经按装好一台虚拟机后，如何克隆虚拟机？ 克隆步骤： 1）在主机1查看已经安装好的虚拟机： ssh root@172.25.254.1 ## 切到该主机中 virsh list --all ##查看已经存在的虚拟机 2）在真机2中输入命令：scp root@172.25.254.1:/var/lib/libvirt/images/generic.qcow2 /var/lib/libvirt/images/ 注：该文件为虚拟机的硬盘管理文件，可以在virt-manager下察看虚拟机的硬盘信息 在真机2中输入命令：scp root@172.25.254.1:/etc/libvirt/qemu/generic.xml /mnt/generic.xml 注：如果不复制该文件则要在图形模式下自己添加虚拟机 virsh create /mnt/generic.xml 恢复虚拟机。 注：用虚拟机硬件文件一次性打开虚拟机，当在虚拟机管理中force off 虚拟机的时候，再次查看的时候发现没有虚拟机 virsh define /mnt/generic.xml ##永久恢复虚拟机 ##虚拟机的快照## ##脚本创建快照： 1，创建安装虚拟机脚本： #!/bin/bash qemu-img create -f qcow2 -b /var/lib/libvirt/images/$1.qcow2 /var/lib/libvirt/images/$2qcow2 &amp;&gt; /dev/null ##创建虚拟机快照硬盘 virt-install \\ ##创建虚拟机命令 –import \\ ##选择创建虚拟机快照方式 –memory 1000 \\ ##设置内存 –vcpus 1 \\ ##设置cpu内核数 –disk /var/lib/libvirt/images /$2.qcow2,bus=virtio ##设置硬盘 –network bridge=br0,model=virtio \\ ##设置网卡 步骤： ##进入cd /opt 目录中，创建文件夹mkdir shell 进入文件夹shell , 编辑脚本文件：","@type":"BlogPosting","url":"https://mlh.app/2019/04/09/728649.html","headline":"728649","dateModified":"2019-04-09T00:00:00+08:00","datePublished":"2019-04-09T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2019/04/09/728649.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

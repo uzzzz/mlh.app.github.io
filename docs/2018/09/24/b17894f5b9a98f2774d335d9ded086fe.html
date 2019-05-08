@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/chengqiuming/article/details/82831765 一&nbsp;点睛 假设发送者Alice要向接收者Bob发送消息，如果使用了消息认证码，接收者Bob就能够断定自己收到的消息与发送者Alice所发出的消息是一致的，这是因为消息中的MAC值只有用Alice和Bob之间共享的密钥才能够计算出来，即便主动攻击者Mallory篡改消息，或者伪装成Alice发送消息，Bob也能够识别出消息的篡改和伪装。 但是，消息认证码也不能解决所有的问题，例如“对第三方证明”和“防止否认”，这两个问题就无法通过消息认证码来解决。 二&nbsp;对第三方证明 假设Bob在接收了Alice的消息之后，想要向第三方验证者Victor证明这条消息的确是Alice发送的，但是消息认证码无法进行这样的证明，这是为什么呢？ 首先，Victor要校验MAC，就需要知道Alice和Bob之间共享的密钥。 假设Bob相信Victor，同意将密钥告诉Victor，即便如此，Victor也无法判断这条消息时由Alice发送的，因为Victor可以认为：“即使MAC值是正确的，发送者条消息的人也不一定是Alice，还有可能是Bob。” 能够计算出正确MAC值的人只有Alice和Bob，在它们两个人之间进行通信时，可以断定是对方计算了MAC值，这是因为共享这个密钥的双方之中，有一方就是自己。然而对于第三方Victor，Alice或Bob却无法证明是对方计算了MAC值，而不是自己。 三&nbsp;防止否认 假设Bob收到了包含MAC值的消息，这个MAC值是Alice和Bob共享的密钥计算出来的，因此Bob能够判断这条消息的确来自Alice。 但是，Bob无法向验证者Victor证明这一点，也就是说，发送者Alice可以向Victor声称：“我没有向Bob发送过这条消息”。这样的行为就称否认。 Alice可以说“这条消息时Bob自己编的吧”“说不定Bob的密钥被主动攻击者Mallory给盗取了，我的密钥可是妥善保管这呢”等。说白了，就是Alice和Bob吵起来了。 即便Bob拿MAC值来举证，Victor也无法判断Alice和Bob谁的主张才是正确的，也就是说，用消息认证码无法防止否认。&nbsp; 阅读更多" />
 <meta property="og:description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/chengqiuming/article/details/82831765 一&nbsp;点睛 假设发送者Alice要向接收者Bob发送消息，如果使用了消息认证码，接收者Bob就能够断定自己收到的消息与发送者Alice所发出的消息是一致的，这是因为消息中的MAC值只有用Alice和Bob之间共享的密钥才能够计算出来，即便主动攻击者Mallory篡改消息，或者伪装成Alice发送消息，Bob也能够识别出消息的篡改和伪装。 但是，消息认证码也不能解决所有的问题，例如“对第三方证明”和“防止否认”，这两个问题就无法通过消息认证码来解决。 二&nbsp;对第三方证明 假设Bob在接收了Alice的消息之后，想要向第三方验证者Victor证明这条消息的确是Alice发送的，但是消息认证码无法进行这样的证明，这是为什么呢？ 首先，Victor要校验MAC，就需要知道Alice和Bob之间共享的密钥。 假设Bob相信Victor，同意将密钥告诉Victor，即便如此，Victor也无法判断这条消息时由Alice发送的，因为Victor可以认为：“即使MAC值是正确的，发送者条消息的人也不一定是Alice，还有可能是Bob。” 能够计算出正确MAC值的人只有Alice和Bob，在它们两个人之间进行通信时，可以断定是对方计算了MAC值，这是因为共享这个密钥的双方之中，有一方就是自己。然而对于第三方Victor，Alice或Bob却无法证明是对方计算了MAC值，而不是自己。 三&nbsp;防止否认 假设Bob收到了包含MAC值的消息，这个MAC值是Alice和Bob共享的密钥计算出来的，因此Bob能够判断这条消息的确来自Alice。 但是，Bob无法向验证者Victor证明这一点，也就是说，发送者Alice可以向Victor声称：“我没有向Bob发送过这条消息”。这样的行为就称否认。 Alice可以说“这条消息时Bob自己编的吧”“说不定Bob的密钥被主动攻击者Mallory给盗取了，我的密钥可是妥善保管这呢”等。说白了，就是Alice和Bob吵起来了。 即便Bob拿MAC值来举证，Victor也无法判断Alice和Bob谁的主张才是正确的，也就是说，用消息认证码无法防止否认。&nbsp; 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/09/24/b17894f5b9a98f2774d335d9ded086fe.html" />
+<meta property="og:url" content="https://mlh.app/2018/09/24/b17894f5b9a98f2774d335d9ded086fe.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-24T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/chengqiuming/article/details/82831765 一&nbsp;点睛 假设发送者Alice要向接收者Bob发送消息，如果使用了消息认证码，接收者Bob就能够断定自己收到的消息与发送者Alice所发出的消息是一致的，这是因为消息中的MAC值只有用Alice和Bob之间共享的密钥才能够计算出来，即便主动攻击者Mallory篡改消息，或者伪装成Alice发送消息，Bob也能够识别出消息的篡改和伪装。 但是，消息认证码也不能解决所有的问题，例如“对第三方证明”和“防止否认”，这两个问题就无法通过消息认证码来解决。 二&nbsp;对第三方证明 假设Bob在接收了Alice的消息之后，想要向第三方验证者Victor证明这条消息的确是Alice发送的，但是消息认证码无法进行这样的证明，这是为什么呢？ 首先，Victor要校验MAC，就需要知道Alice和Bob之间共享的密钥。 假设Bob相信Victor，同意将密钥告诉Victor，即便如此，Victor也无法判断这条消息时由Alice发送的，因为Victor可以认为：“即使MAC值是正确的，发送者条消息的人也不一定是Alice，还有可能是Bob。” 能够计算出正确MAC值的人只有Alice和Bob，在它们两个人之间进行通信时，可以断定是对方计算了MAC值，这是因为共享这个密钥的双方之中，有一方就是自己。然而对于第三方Victor，Alice或Bob却无法证明是对方计算了MAC值，而不是自己。 三&nbsp;防止否认 假设Bob收到了包含MAC值的消息，这个MAC值是Alice和Bob共享的密钥计算出来的，因此Bob能够判断这条消息的确来自Alice。 但是，Bob无法向验证者Victor证明这一点，也就是说，发送者Alice可以向Victor声称：“我没有向Bob发送过这条消息”。这样的行为就称否认。 Alice可以说“这条消息时Bob自己编的吧”“说不定Bob的密钥被主动攻击者Mallory给盗取了，我的密钥可是妥善保管这呢”等。说白了，就是Alice和Bob吵起来了。 即便Bob拿MAC值来举证，Victor也无法判断Alice和Bob谁的主张才是正确的，也就是说，用消息认证码无法防止否认。&nbsp; 阅读更多","@type":"BlogPosting","url":"/2018/09/24/b17894f5b9a98f2774d335d9ded086fe.html","headline":"消息认证码无法解决的问题","dateModified":"2018-09-24T00:00:00+08:00","datePublished":"2018-09-24T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/09/24/b17894f5b9a98f2774d335d9ded086fe.html"},"@context":"http://schema.org"}</script>
+{"description":"版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/chengqiuming/article/details/82831765 一&nbsp;点睛 假设发送者Alice要向接收者Bob发送消息，如果使用了消息认证码，接收者Bob就能够断定自己收到的消息与发送者Alice所发出的消息是一致的，这是因为消息中的MAC值只有用Alice和Bob之间共享的密钥才能够计算出来，即便主动攻击者Mallory篡改消息，或者伪装成Alice发送消息，Bob也能够识别出消息的篡改和伪装。 但是，消息认证码也不能解决所有的问题，例如“对第三方证明”和“防止否认”，这两个问题就无法通过消息认证码来解决。 二&nbsp;对第三方证明 假设Bob在接收了Alice的消息之后，想要向第三方验证者Victor证明这条消息的确是Alice发送的，但是消息认证码无法进行这样的证明，这是为什么呢？ 首先，Victor要校验MAC，就需要知道Alice和Bob之间共享的密钥。 假设Bob相信Victor，同意将密钥告诉Victor，即便如此，Victor也无法判断这条消息时由Alice发送的，因为Victor可以认为：“即使MAC值是正确的，发送者条消息的人也不一定是Alice，还有可能是Bob。” 能够计算出正确MAC值的人只有Alice和Bob，在它们两个人之间进行通信时，可以断定是对方计算了MAC值，这是因为共享这个密钥的双方之中，有一方就是自己。然而对于第三方Victor，Alice或Bob却无法证明是对方计算了MAC值，而不是自己。 三&nbsp;防止否认 假设Bob收到了包含MAC值的消息，这个MAC值是Alice和Bob共享的密钥计算出来的，因此Bob能够判断这条消息的确来自Alice。 但是，Bob无法向验证者Victor证明这一点，也就是说，发送者Alice可以向Victor声称：“我没有向Bob发送过这条消息”。这样的行为就称否认。 Alice可以说“这条消息时Bob自己编的吧”“说不定Bob的密钥被主动攻击者Mallory给盗取了，我的密钥可是妥善保管这呢”等。说白了，就是Alice和Bob吵起来了。 即便Bob拿MAC值来举证，Victor也无法判断Alice和Bob谁的主张才是正确的，也就是说，用消息认证码无法防止否认。&nbsp; 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/09/24/b17894f5b9a98f2774d335d9ded086fe.html","headline":"消息认证码无法解决的问题","dateModified":"2018-09-24T00:00:00+08:00","datePublished":"2018-09-24T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/09/24/b17894f5b9a98f2774d335d9ded086fe.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

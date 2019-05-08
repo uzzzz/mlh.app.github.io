@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="今天第一天入职seven，很开心，同事很不错，shell人也很好 第一天我的任务很轻松，各种安装配置，讲实话linux的qq真是菜，go语言安装很让人纠结，幸好先前在centos下安装过，这种时常会连接国外网的东东，网络总让我无语 这感觉就像一路的芳香我不停琢磨 ok开始安装 1.安装gcc工具,因为golang有些功能是使用c写 sudo apt-get install bison gawk gcc libc6-dev make 2.安装Mercurial（若是用安装包可以忽略这步） 由于Go的源码是通过Mercurial进行管理的， 所以需要先安装Mercurial来实现Go源码的获取，一次执行一下命令： sudo apt-get install python-setuptools sudo apt-get install pythone-dev sudo apt-get install build-essential sudo apt-get install mercurial 获取代码 [plain] view plain copy $&nbsp;hg&nbsp;clone&nbsp;-r&nbsp;release&nbsp;https://go.googlecode.com/hg/&nbsp;go&nbsp; 若是用安装包直接解压 http://download.csdn.net/detail/u010026901/7592581 cd /usr/local tar -zxvf go1.1.2.linux-386.tar.gz（先把安装包移到这个目录） 3.安装 $ cd go/src，$ ./all.bash 运行bash脚本，如果运行正常会获得你的操作系统和cpu信息，自动编译安装 4.配置~/.bashrc(个人用户环境)或者/etc/profile（全局环境） 注意最后两行，地址GOROOT地址是根据实际情况来的 5.用go version查看下，有版本结果就是对的 go卸载 这次我的go安装既用了安装版也用了解压缩版，在make go的项目时候出现冲突 现在卸载安装版 man apt-get 查找卸载命令 卸载apt-get purge go 不成功 改用apt-get purge golang 提示删除多个子目录 后改用apt-get purge golang-go 阅读更多" />
 <meta property="og:description" content="今天第一天入职seven，很开心，同事很不错，shell人也很好 第一天我的任务很轻松，各种安装配置，讲实话linux的qq真是菜，go语言安装很让人纠结，幸好先前在centos下安装过，这种时常会连接国外网的东东，网络总让我无语 这感觉就像一路的芳香我不停琢磨 ok开始安装 1.安装gcc工具,因为golang有些功能是使用c写 sudo apt-get install bison gawk gcc libc6-dev make 2.安装Mercurial（若是用安装包可以忽略这步） 由于Go的源码是通过Mercurial进行管理的， 所以需要先安装Mercurial来实现Go源码的获取，一次执行一下命令： sudo apt-get install python-setuptools sudo apt-get install pythone-dev sudo apt-get install build-essential sudo apt-get install mercurial 获取代码 [plain] view plain copy $&nbsp;hg&nbsp;clone&nbsp;-r&nbsp;release&nbsp;https://go.googlecode.com/hg/&nbsp;go&nbsp; 若是用安装包直接解压 http://download.csdn.net/detail/u010026901/7592581 cd /usr/local tar -zxvf go1.1.2.linux-386.tar.gz（先把安装包移到这个目录） 3.安装 $ cd go/src，$ ./all.bash 运行bash脚本，如果运行正常会获得你的操作系统和cpu信息，自动编译安装 4.配置~/.bashrc(个人用户环境)或者/etc/profile（全局环境） 注意最后两行，地址GOROOT地址是根据实际情况来的 5.用go version查看下，有版本结果就是对的 go卸载 这次我的go安装既用了安装版也用了解压缩版，在make go的项目时候出现冲突 现在卸载安装版 man apt-get 查找卸载命令 卸载apt-get purge go 不成功 改用apt-get purge golang 提示删除多个子目录 后改用apt-get purge golang-go 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2014/07/04/3fa112d12dfe7a88d0fbce9173884cda.html" />
+<meta property="og:url" content="https://mlh.app/2014/07/04/3fa112d12dfe7a88d0fbce9173884cda.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2014-07-04T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"今天第一天入职seven，很开心，同事很不错，shell人也很好 第一天我的任务很轻松，各种安装配置，讲实话linux的qq真是菜，go语言安装很让人纠结，幸好先前在centos下安装过，这种时常会连接国外网的东东，网络总让我无语 这感觉就像一路的芳香我不停琢磨 ok开始安装 1.安装gcc工具,因为golang有些功能是使用c写 sudo apt-get install bison gawk gcc libc6-dev make 2.安装Mercurial（若是用安装包可以忽略这步） 由于Go的源码是通过Mercurial进行管理的， 所以需要先安装Mercurial来实现Go源码的获取，一次执行一下命令： sudo apt-get install python-setuptools sudo apt-get install pythone-dev sudo apt-get install build-essential sudo apt-get install mercurial 获取代码 [plain] view plain copy $&nbsp;hg&nbsp;clone&nbsp;-r&nbsp;release&nbsp;https://go.googlecode.com/hg/&nbsp;go&nbsp; 若是用安装包直接解压 http://download.csdn.net/detail/u010026901/7592581 cd /usr/local tar -zxvf go1.1.2.linux-386.tar.gz（先把安装包移到这个目录） 3.安装 $ cd go/src，$ ./all.bash 运行bash脚本，如果运行正常会获得你的操作系统和cpu信息，自动编译安装 4.配置~/.bashrc(个人用户环境)或者/etc/profile（全局环境） 注意最后两行，地址GOROOT地址是根据实际情况来的 5.用go version查看下，有版本结果就是对的 go卸载 这次我的go安装既用了安装版也用了解压缩版，在make go的项目时候出现冲突 现在卸载安装版 man apt-get 查找卸载命令 卸载apt-get purge go 不成功 改用apt-get purge golang 提示删除多个子目录 后改用apt-get purge golang-go 阅读更多","@type":"BlogPosting","url":"/2014/07/04/3fa112d12dfe7a88d0fbce9173884cda.html","headline":"ubuntu下安装go语言;sublime+gocode搭建；go的卸载和环境变量配个人.bashrc;2空位3个网","dateModified":"2014-07-04T00:00:00+08:00","datePublished":"2014-07-04T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2014/07/04/3fa112d12dfe7a88d0fbce9173884cda.html"},"@context":"http://schema.org"}</script>
+{"description":"今天第一天入职seven，很开心，同事很不错，shell人也很好 第一天我的任务很轻松，各种安装配置，讲实话linux的qq真是菜，go语言安装很让人纠结，幸好先前在centos下安装过，这种时常会连接国外网的东东，网络总让我无语 这感觉就像一路的芳香我不停琢磨 ok开始安装 1.安装gcc工具,因为golang有些功能是使用c写 sudo apt-get install bison gawk gcc libc6-dev make 2.安装Mercurial（若是用安装包可以忽略这步） 由于Go的源码是通过Mercurial进行管理的， 所以需要先安装Mercurial来实现Go源码的获取，一次执行一下命令： sudo apt-get install python-setuptools sudo apt-get install pythone-dev sudo apt-get install build-essential sudo apt-get install mercurial 获取代码 [plain] view plain copy $&nbsp;hg&nbsp;clone&nbsp;-r&nbsp;release&nbsp;https://go.googlecode.com/hg/&nbsp;go&nbsp; 若是用安装包直接解压 http://download.csdn.net/detail/u010026901/7592581 cd /usr/local tar -zxvf go1.1.2.linux-386.tar.gz（先把安装包移到这个目录） 3.安装 $ cd go/src，$ ./all.bash 运行bash脚本，如果运行正常会获得你的操作系统和cpu信息，自动编译安装 4.配置~/.bashrc(个人用户环境)或者/etc/profile（全局环境） 注意最后两行，地址GOROOT地址是根据实际情况来的 5.用go version查看下，有版本结果就是对的 go卸载 这次我的go安装既用了安装版也用了解压缩版，在make go的项目时候出现冲突 现在卸载安装版 man apt-get 查找卸载命令 卸载apt-get purge go 不成功 改用apt-get purge golang 提示删除多个子目录 后改用apt-get purge golang-go 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2014/07/04/3fa112d12dfe7a88d0fbce9173884cda.html","headline":"ubuntu下安装go语言;sublime+gocode搭建；go的卸载和环境变量配个人.bashrc;2空位3个网","dateModified":"2014-07-04T00:00:00+08:00","datePublished":"2014-07-04T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2014/07/04/3fa112d12dfe7a88d0fbce9173884cda.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

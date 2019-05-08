@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="原帖收藏于IT老兵驿站。 前言 接触base64有很久了，其实一直没有理解base64这种编码的根本原理，或者说是设计意图，今天又读了一遍，终于开窍了，请看下图。 Base64 table 原始值 显示值 原始值 显示值 原始值 显示值 原始值 显示值 0 A 16 Q 32 g 48 w 1 B 17 R 33 h 49 x 2 C 18 S 34 i 50 y 3 D 19 T 35 j 51 z 4 E 20 U 36 k 52 0 5 F 21 V 37 l 53 1 6 G 22 W 38 m 54 2 7 H 23 X 39 n 55 3 8 I 24 Y 40 o 56 4 9 J 25 Z 41 p 57 5 10 K 26 a 42 q 58 6 11 L 27 b 43 r 59 7 12 M 28 c 44 s 60 8 13 N 29 d 45 t 61 9 14 O 30 e 46 u 62 + 15 P 31 f 47 v 63 / 什么意思呢？我这样理解，在计算机里面，所有信息都是以二进制的方式承载的，即0和1，这二进制如何去表达我们想要显示（printable）的信息呢？这个时候ASCII码就出现了，以及后来的UniCode等等，它们是以字节为单位来处理，一个字节是8位，这也是计算机系统里面的一个标准处理单位。 而Base64的目的不是这个，它是要把一段信息显示成另外的一个形式，变成不可直接读，这样尤其是在邮件传输时，可以增加一点安全性。所以，它是以6位为一个单位来处理，对应上面的这个码表，来显示的。Base58是Base64的子集，它的码表元素就更少了，少了8个（ 0 , O (大写O)，I (大写i) ，l (小写L) ， + (加号) ，/ (后倒线)），现在被用于区块链领域。 6位的处理会造成有的时候，不够一个字节，后面需要多补一个到两个字节的0来补齐长度，统一用=显示。 以下这个例子取自维基百科： Source text (ASCII) M a Source octets 77 (0x4d) 97 (0x61) Bit pattern 0 1 0 0 1 1 0 1 0 1 1 0 Index 19 22 Base64-encoded T W Encoded octets 84 (0x54) 87 (0x57) 阅读更多" />
 <meta property="og:description" content="原帖收藏于IT老兵驿站。 前言 接触base64有很久了，其实一直没有理解base64这种编码的根本原理，或者说是设计意图，今天又读了一遍，终于开窍了，请看下图。 Base64 table 原始值 显示值 原始值 显示值 原始值 显示值 原始值 显示值 0 A 16 Q 32 g 48 w 1 B 17 R 33 h 49 x 2 C 18 S 34 i 50 y 3 D 19 T 35 j 51 z 4 E 20 U 36 k 52 0 5 F 21 V 37 l 53 1 6 G 22 W 38 m 54 2 7 H 23 X 39 n 55 3 8 I 24 Y 40 o 56 4 9 J 25 Z 41 p 57 5 10 K 26 a 42 q 58 6 11 L 27 b 43 r 59 7 12 M 28 c 44 s 60 8 13 N 29 d 45 t 61 9 14 O 30 e 46 u 62 + 15 P 31 f 47 v 63 / 什么意思呢？我这样理解，在计算机里面，所有信息都是以二进制的方式承载的，即0和1，这二进制如何去表达我们想要显示（printable）的信息呢？这个时候ASCII码就出现了，以及后来的UniCode等等，它们是以字节为单位来处理，一个字节是8位，这也是计算机系统里面的一个标准处理单位。 而Base64的目的不是这个，它是要把一段信息显示成另外的一个形式，变成不可直接读，这样尤其是在邮件传输时，可以增加一点安全性。所以，它是以6位为一个单位来处理，对应上面的这个码表，来显示的。Base58是Base64的子集，它的码表元素就更少了，少了8个（ 0 , O (大写O)，I (大写i) ，l (小写L) ， + (加号) ，/ (后倒线)），现在被用于区块链领域。 6位的处理会造成有的时候，不够一个字节，后面需要多补一个到两个字节的0来补齐长度，统一用=显示。 以下这个例子取自维基百科： Source text (ASCII) M a Source octets 77 (0x4d) 97 (0x61) Bit pattern 0 1 0 0 1 1 0 1 0 1 1 0 Index 19 22 Base64-encoded T W Encoded octets 84 (0x54) 87 (0x57) 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/07/27/f47cc82768ce12135397e0fda8ffc16f.html" />
+<meta property="og:url" content="https://mlh.app/2018/07/27/f47cc82768ce12135397e0fda8ffc16f.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-07-27T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"原帖收藏于IT老兵驿站。 前言 接触base64有很久了，其实一直没有理解base64这种编码的根本原理，或者说是设计意图，今天又读了一遍，终于开窍了，请看下图。 Base64 table 原始值 显示值 原始值 显示值 原始值 显示值 原始值 显示值 0 A 16 Q 32 g 48 w 1 B 17 R 33 h 49 x 2 C 18 S 34 i 50 y 3 D 19 T 35 j 51 z 4 E 20 U 36 k 52 0 5 F 21 V 37 l 53 1 6 G 22 W 38 m 54 2 7 H 23 X 39 n 55 3 8 I 24 Y 40 o 56 4 9 J 25 Z 41 p 57 5 10 K 26 a 42 q 58 6 11 L 27 b 43 r 59 7 12 M 28 c 44 s 60 8 13 N 29 d 45 t 61 9 14 O 30 e 46 u 62 + 15 P 31 f 47 v 63 / 什么意思呢？我这样理解，在计算机里面，所有信息都是以二进制的方式承载的，即0和1，这二进制如何去表达我们想要显示（printable）的信息呢？这个时候ASCII码就出现了，以及后来的UniCode等等，它们是以字节为单位来处理，一个字节是8位，这也是计算机系统里面的一个标准处理单位。 而Base64的目的不是这个，它是要把一段信息显示成另外的一个形式，变成不可直接读，这样尤其是在邮件传输时，可以增加一点安全性。所以，它是以6位为一个单位来处理，对应上面的这个码表，来显示的。Base58是Base64的子集，它的码表元素就更少了，少了8个（ 0 , O (大写O)，I (大写i) ，l (小写L) ， + (加号) ，/ (后倒线)），现在被用于区块链领域。 6位的处理会造成有的时候，不够一个字节，后面需要多补一个到两个字节的0来补齐长度，统一用=显示。 以下这个例子取自维基百科： Source text (ASCII) M a Source octets 77 (0x4d) 97 (0x61) Bit pattern 0 1 0 0 1 1 0 1 0 1 1 0 Index 19 22 Base64-encoded T W Encoded octets 84 (0x54) 87 (0x57) 阅读更多","@type":"BlogPosting","url":"/2018/07/27/f47cc82768ce12135397e0fda8ffc16f.html","headline":"区块链：Base64编码和Base58编码","dateModified":"2018-07-27T00:00:00+08:00","datePublished":"2018-07-27T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/07/27/f47cc82768ce12135397e0fda8ffc16f.html"},"@context":"http://schema.org"}</script>
+{"description":"原帖收藏于IT老兵驿站。 前言 接触base64有很久了，其实一直没有理解base64这种编码的根本原理，或者说是设计意图，今天又读了一遍，终于开窍了，请看下图。 Base64 table 原始值 显示值 原始值 显示值 原始值 显示值 原始值 显示值 0 A 16 Q 32 g 48 w 1 B 17 R 33 h 49 x 2 C 18 S 34 i 50 y 3 D 19 T 35 j 51 z 4 E 20 U 36 k 52 0 5 F 21 V 37 l 53 1 6 G 22 W 38 m 54 2 7 H 23 X 39 n 55 3 8 I 24 Y 40 o 56 4 9 J 25 Z 41 p 57 5 10 K 26 a 42 q 58 6 11 L 27 b 43 r 59 7 12 M 28 c 44 s 60 8 13 N 29 d 45 t 61 9 14 O 30 e 46 u 62 + 15 P 31 f 47 v 63 / 什么意思呢？我这样理解，在计算机里面，所有信息都是以二进制的方式承载的，即0和1，这二进制如何去表达我们想要显示（printable）的信息呢？这个时候ASCII码就出现了，以及后来的UniCode等等，它们是以字节为单位来处理，一个字节是8位，这也是计算机系统里面的一个标准处理单位。 而Base64的目的不是这个，它是要把一段信息显示成另外的一个形式，变成不可直接读，这样尤其是在邮件传输时，可以增加一点安全性。所以，它是以6位为一个单位来处理，对应上面的这个码表，来显示的。Base58是Base64的子集，它的码表元素就更少了，少了8个（ 0 , O (大写O)，I (大写i) ，l (小写L) ， + (加号) ，/ (后倒线)），现在被用于区块链领域。 6位的处理会造成有的时候，不够一个字节，后面需要多补一个到两个字节的0来补齐长度，统一用=显示。 以下这个例子取自维基百科： Source text (ASCII) M a Source octets 77 (0x4d) 97 (0x61) Bit pattern 0 1 0 0 1 1 0 1 0 1 1 0 Index 19 22 Base64-encoded T W Encoded octets 84 (0x54) 87 (0x57) 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/07/27/f47cc82768ce12135397e0fda8ffc16f.html","headline":"区块链：Base64编码和Base58编码","dateModified":"2018-07-27T00:00:00+08:00","datePublished":"2018-07-27T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/07/27/f47cc82768ce12135397e0fda8ffc16f.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

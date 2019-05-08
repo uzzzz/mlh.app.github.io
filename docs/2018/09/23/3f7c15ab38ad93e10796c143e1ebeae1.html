@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="下载安装golang 乌班图的话下载安装golang的过程比较容易。使用以下命令： sudo apt-get install golang 运行以上命令需要输入用户密码。然后等着安装完就可以了。 可以使用以下命令来确定安装成功。 go version 配置环境变量 然后我们需要建立一个go语言的工作区。并把它放到GOPATH里面。GOBIN是运行go install命令时告诉计算机应该把生成的可运行文件放到哪里。运行以下命令： mkdir ~/workspace mkdir ~/workspace/bin mkdir ~/workspace/pkg mkdir ~/workspace/src echo &#39;export GOPATH=&quot;$HOME/workspace&quot;&#39; &gt;&gt; ~/.bashrc echo &#39;export GOBIN=&quot;$HOME/workspace/bin&quot;&#39; &gt;&gt; ~/.bashrc source ~/.bashrc workspace是工作区的名字，你完全可以使用自己喜欢的名字。src用来保存源码。pkg用来保存各种包。bin用来保存可运行文件。然后运行 go env 上图我们看到GOPATH和GOBIN那里已经被修改为我们的创建的workspace文件夹以及bin文件夹。 helloworld编译运行 随便用个编辑器，写一段helloworld的代码。我用的sublime. package main import &quot;fmt&quot; func main() { fmt.Println(&quot;Hello, world&quot;) } 然后命令行进入代码保存位置的目录。 他说找不到go文件。go语言文件应该以.go的后缀名结尾才对。修改以下文件名然后： &nbsp;helloworld就可以运行起来了。 或者用&nbsp; go build hellogo.go 会在当前目录生成可运行文件。 ./hellogo 即可运行得到结果。 或者 go install hellogo.go 会把生成的可运行文件放到GOBIN指定的文件夹内。 进入我们设置的workspace/bin文件夹然后 ./hellogo 即可运行。 &nbsp; &nbsp; &nbsp; 阅读更多" />
 <meta property="og:description" content="下载安装golang 乌班图的话下载安装golang的过程比较容易。使用以下命令： sudo apt-get install golang 运行以上命令需要输入用户密码。然后等着安装完就可以了。 可以使用以下命令来确定安装成功。 go version 配置环境变量 然后我们需要建立一个go语言的工作区。并把它放到GOPATH里面。GOBIN是运行go install命令时告诉计算机应该把生成的可运行文件放到哪里。运行以下命令： mkdir ~/workspace mkdir ~/workspace/bin mkdir ~/workspace/pkg mkdir ~/workspace/src echo &#39;export GOPATH=&quot;$HOME/workspace&quot;&#39; &gt;&gt; ~/.bashrc echo &#39;export GOBIN=&quot;$HOME/workspace/bin&quot;&#39; &gt;&gt; ~/.bashrc source ~/.bashrc workspace是工作区的名字，你完全可以使用自己喜欢的名字。src用来保存源码。pkg用来保存各种包。bin用来保存可运行文件。然后运行 go env 上图我们看到GOPATH和GOBIN那里已经被修改为我们的创建的workspace文件夹以及bin文件夹。 helloworld编译运行 随便用个编辑器，写一段helloworld的代码。我用的sublime. package main import &quot;fmt&quot; func main() { fmt.Println(&quot;Hello, world&quot;) } 然后命令行进入代码保存位置的目录。 他说找不到go文件。go语言文件应该以.go的后缀名结尾才对。修改以下文件名然后： &nbsp;helloworld就可以运行起来了。 或者用&nbsp; go build hellogo.go 会在当前目录生成可运行文件。 ./hellogo 即可运行得到结果。 或者 go install hellogo.go 会把生成的可运行文件放到GOBIN指定的文件夹内。 进入我们设置的workspace/bin文件夹然后 ./hellogo 即可运行。 &nbsp; &nbsp; &nbsp; 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/09/23/3f7c15ab38ad93e10796c143e1ebeae1.html" />
+<meta property="og:url" content="https://mlh.app/2018/09/23/3f7c15ab38ad93e10796c143e1ebeae1.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-23T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"下载安装golang 乌班图的话下载安装golang的过程比较容易。使用以下命令： sudo apt-get install golang 运行以上命令需要输入用户密码。然后等着安装完就可以了。 可以使用以下命令来确定安装成功。 go version 配置环境变量 然后我们需要建立一个go语言的工作区。并把它放到GOPATH里面。GOBIN是运行go install命令时告诉计算机应该把生成的可运行文件放到哪里。运行以下命令： mkdir ~/workspace mkdir ~/workspace/bin mkdir ~/workspace/pkg mkdir ~/workspace/src echo &#39;export GOPATH=&quot;$HOME/workspace&quot;&#39; &gt;&gt; ~/.bashrc echo &#39;export GOBIN=&quot;$HOME/workspace/bin&quot;&#39; &gt;&gt; ~/.bashrc source ~/.bashrc workspace是工作区的名字，你完全可以使用自己喜欢的名字。src用来保存源码。pkg用来保存各种包。bin用来保存可运行文件。然后运行 go env 上图我们看到GOPATH和GOBIN那里已经被修改为我们的创建的workspace文件夹以及bin文件夹。 helloworld编译运行 随便用个编辑器，写一段helloworld的代码。我用的sublime. package main import &quot;fmt&quot; func main() { fmt.Println(&quot;Hello, world&quot;) } 然后命令行进入代码保存位置的目录。 他说找不到go文件。go语言文件应该以.go的后缀名结尾才对。修改以下文件名然后： &nbsp;helloworld就可以运行起来了。 或者用&nbsp; go build hellogo.go 会在当前目录生成可运行文件。 ./hellogo 即可运行得到结果。 或者 go install hellogo.go 会把生成的可运行文件放到GOBIN指定的文件夹内。 进入我们设置的workspace/bin文件夹然后 ./hellogo 即可运行。 &nbsp; &nbsp; &nbsp; 阅读更多","@type":"BlogPosting","url":"/2018/09/23/3f7c15ab38ad93e10796c143e1ebeae1.html","headline":"ubuntu 16.04 go语言开发环境搭建以及helloworld运行","dateModified":"2018-09-23T00:00:00+08:00","datePublished":"2018-09-23T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/09/23/3f7c15ab38ad93e10796c143e1ebeae1.html"},"@context":"http://schema.org"}</script>
+{"description":"下载安装golang 乌班图的话下载安装golang的过程比较容易。使用以下命令： sudo apt-get install golang 运行以上命令需要输入用户密码。然后等着安装完就可以了。 可以使用以下命令来确定安装成功。 go version 配置环境变量 然后我们需要建立一个go语言的工作区。并把它放到GOPATH里面。GOBIN是运行go install命令时告诉计算机应该把生成的可运行文件放到哪里。运行以下命令： mkdir ~/workspace mkdir ~/workspace/bin mkdir ~/workspace/pkg mkdir ~/workspace/src echo &#39;export GOPATH=&quot;$HOME/workspace&quot;&#39; &gt;&gt; ~/.bashrc echo &#39;export GOBIN=&quot;$HOME/workspace/bin&quot;&#39; &gt;&gt; ~/.bashrc source ~/.bashrc workspace是工作区的名字，你完全可以使用自己喜欢的名字。src用来保存源码。pkg用来保存各种包。bin用来保存可运行文件。然后运行 go env 上图我们看到GOPATH和GOBIN那里已经被修改为我们的创建的workspace文件夹以及bin文件夹。 helloworld编译运行 随便用个编辑器，写一段helloworld的代码。我用的sublime. package main import &quot;fmt&quot; func main() { fmt.Println(&quot;Hello, world&quot;) } 然后命令行进入代码保存位置的目录。 他说找不到go文件。go语言文件应该以.go的后缀名结尾才对。修改以下文件名然后： &nbsp;helloworld就可以运行起来了。 或者用&nbsp; go build hellogo.go 会在当前目录生成可运行文件。 ./hellogo 即可运行得到结果。 或者 go install hellogo.go 会把生成的可运行文件放到GOBIN指定的文件夹内。 进入我们设置的workspace/bin文件夹然后 ./hellogo 即可运行。 &nbsp; &nbsp; &nbsp; 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/09/23/3f7c15ab38ad93e10796c143e1ebeae1.html","headline":"ubuntu 16.04 go语言开发环境搭建以及helloworld运行","dateModified":"2018-09-23T00:00:00+08:00","datePublished":"2018-09-23T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/09/23/3f7c15ab38ad93e10796c143e1ebeae1.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

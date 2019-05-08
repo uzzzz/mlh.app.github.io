@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="0.前言 &nbsp; &nbsp; 最近对开源编译平台和编译器产生了兴趣，借博客平台总结一些东西（包括minGW，eclipse，sourcery和GDB调试等内容）。总感觉时间一长某些东西自己都会忘记，过段时间回头看看自己的博客也会有很多的收获。突然想起来初中和高中老师的教导——要多做总结，就这样总结来了。 1.MinGw下载和安装 【下载地址】 http://sourceforge.net/projects/mingw/ &nbsp; &nbsp; 该下载可执行文件其实为在线安装包，选择编译器之后便会开始下载，可选择的编译器包括C编译器和C++编译器。 强烈建议选择一个简单的安装路径，例如D:\MinGW 图1 选择安装路径 &nbsp; &nbsp; 这里指选择了C编译器，如果以后要选择C++编译器可以再次运行此在线安装包，添加C++编译器。简单起见，这里指安装C编译器。 图2&nbsp;选择编译器种类 安装过程请保持耐心，可能会遇到网络不通畅的问题。如果遇到这个问题，请休息一会再次尝试。 图3 安装过程 2.MinGW设置验证 2.1 设置环境变量 图4 设置环境变量 把“D:\MinGW\bin”添加至PATH。请注意添加之前应先输入“;” 2.2 查看版本号 &nbsp; &nbsp; 验证安装是否成功 gcc -v，这是尝试编译链接之前的基本步骤。 图5 查看版本号 2.3 尝试make #include &lt;stdio.h&gt; int main(void) { printf(&quot;Hello MinGW!\r\n&quot;); &nbsp; &nbsp; while(1) &nbsp; &nbsp; { &nbsp; &nbsp; &nbsp; &nbsp; ; &nbsp; &nbsp; } &nbsp; &nbsp; return 1; } 保存至E:\c_works，文件名为hello.c 通过控制台尝试编译连接，先修改盘符至E: 接着cd进入c_works目录，输入以下指令 &lt;span style=&quot;font-size:18px;&quot;&gt;gcc -o hello hello.c&lt;/span&gt; 图6 make过程 由于mingw在windows平台上提供了gcc编译环境，更多的内容可参考ubuntu wiki百科中关于GCC入门的资料，必定可以收获更多 阅读更多" />
 <meta property="og:description" content="0.前言 &nbsp; &nbsp; 最近对开源编译平台和编译器产生了兴趣，借博客平台总结一些东西（包括minGW，eclipse，sourcery和GDB调试等内容）。总感觉时间一长某些东西自己都会忘记，过段时间回头看看自己的博客也会有很多的收获。突然想起来初中和高中老师的教导——要多做总结，就这样总结来了。 1.MinGw下载和安装 【下载地址】 http://sourceforge.net/projects/mingw/ &nbsp; &nbsp; 该下载可执行文件其实为在线安装包，选择编译器之后便会开始下载，可选择的编译器包括C编译器和C++编译器。 强烈建议选择一个简单的安装路径，例如D:\MinGW 图1 选择安装路径 &nbsp; &nbsp; 这里指选择了C编译器，如果以后要选择C++编译器可以再次运行此在线安装包，添加C++编译器。简单起见，这里指安装C编译器。 图2&nbsp;选择编译器种类 安装过程请保持耐心，可能会遇到网络不通畅的问题。如果遇到这个问题，请休息一会再次尝试。 图3 安装过程 2.MinGW设置验证 2.1 设置环境变量 图4 设置环境变量 把“D:\MinGW\bin”添加至PATH。请注意添加之前应先输入“;” 2.2 查看版本号 &nbsp; &nbsp; 验证安装是否成功 gcc -v，这是尝试编译链接之前的基本步骤。 图5 查看版本号 2.3 尝试make #include &lt;stdio.h&gt; int main(void) { printf(&quot;Hello MinGW!\r\n&quot;); &nbsp; &nbsp; while(1) &nbsp; &nbsp; { &nbsp; &nbsp; &nbsp; &nbsp; ; &nbsp; &nbsp; } &nbsp; &nbsp; return 1; } 保存至E:\c_works，文件名为hello.c 通过控制台尝试编译连接，先修改盘符至E: 接着cd进入c_works目录，输入以下指令 &lt;span style=&quot;font-size:18px;&quot;&gt;gcc -o hello hello.c&lt;/span&gt; 图6 make过程 由于mingw在windows平台上提供了gcc编译环境，更多的内容可参考ubuntu wiki百科中关于GCC入门的资料，必定可以收获更多 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2013/07/11/019377083857719caa6830ffabbcdf8b.html" />
+<meta property="og:url" content="https://mlh.app/2013/07/11/019377083857719caa6830ffabbcdf8b.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2013-07-11T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"0.前言 &nbsp; &nbsp; 最近对开源编译平台和编译器产生了兴趣，借博客平台总结一些东西（包括minGW，eclipse，sourcery和GDB调试等内容）。总感觉时间一长某些东西自己都会忘记，过段时间回头看看自己的博客也会有很多的收获。突然想起来初中和高中老师的教导——要多做总结，就这样总结来了。 1.MinGw下载和安装 【下载地址】 http://sourceforge.net/projects/mingw/ &nbsp; &nbsp; 该下载可执行文件其实为在线安装包，选择编译器之后便会开始下载，可选择的编译器包括C编译器和C++编译器。 强烈建议选择一个简单的安装路径，例如D:\\MinGW 图1 选择安装路径 &nbsp; &nbsp; 这里指选择了C编译器，如果以后要选择C++编译器可以再次运行此在线安装包，添加C++编译器。简单起见，这里指安装C编译器。 图2&nbsp;选择编译器种类 安装过程请保持耐心，可能会遇到网络不通畅的问题。如果遇到这个问题，请休息一会再次尝试。 图3 安装过程 2.MinGW设置验证 2.1 设置环境变量 图4 设置环境变量 把“D:\\MinGW\\bin”添加至PATH。请注意添加之前应先输入“;” 2.2 查看版本号 &nbsp; &nbsp; 验证安装是否成功 gcc -v，这是尝试编译链接之前的基本步骤。 图5 查看版本号 2.3 尝试make #include &lt;stdio.h&gt; int main(void) { printf(&quot;Hello MinGW!\\r\\n&quot;); &nbsp; &nbsp; while(1) &nbsp; &nbsp; { &nbsp; &nbsp; &nbsp; &nbsp; ; &nbsp; &nbsp; } &nbsp; &nbsp; return 1; } 保存至E:\\c_works，文件名为hello.c 通过控制台尝试编译连接，先修改盘符至E: 接着cd进入c_works目录，输入以下指令 &lt;span style=&quot;font-size:18px;&quot;&gt;gcc -o hello hello.c&lt;/span&gt; 图6 make过程 由于mingw在windows平台上提供了gcc编译环境，更多的内容可参考ubuntu wiki百科中关于GCC入门的资料，必定可以收获更多 阅读更多","@type":"BlogPosting","url":"/2013/07/11/019377083857719caa6830ffabbcdf8b.html","headline":"MinGW安装和使用总结-物联网 iot 经验分享小站(三傻大闹宝莱坞——追求卓越)","dateModified":"2013-07-11T00:00:00+08:00","datePublished":"2013-07-11T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2013/07/11/019377083857719caa6830ffabbcdf8b.html"},"@context":"http://schema.org"}</script>
+{"description":"0.前言 &nbsp; &nbsp; 最近对开源编译平台和编译器产生了兴趣，借博客平台总结一些东西（包括minGW，eclipse，sourcery和GDB调试等内容）。总感觉时间一长某些东西自己都会忘记，过段时间回头看看自己的博客也会有很多的收获。突然想起来初中和高中老师的教导——要多做总结，就这样总结来了。 1.MinGw下载和安装 【下载地址】 http://sourceforge.net/projects/mingw/ &nbsp; &nbsp; 该下载可执行文件其实为在线安装包，选择编译器之后便会开始下载，可选择的编译器包括C编译器和C++编译器。 强烈建议选择一个简单的安装路径，例如D:\\MinGW 图1 选择安装路径 &nbsp; &nbsp; 这里指选择了C编译器，如果以后要选择C++编译器可以再次运行此在线安装包，添加C++编译器。简单起见，这里指安装C编译器。 图2&nbsp;选择编译器种类 安装过程请保持耐心，可能会遇到网络不通畅的问题。如果遇到这个问题，请休息一会再次尝试。 图3 安装过程 2.MinGW设置验证 2.1 设置环境变量 图4 设置环境变量 把“D:\\MinGW\\bin”添加至PATH。请注意添加之前应先输入“;” 2.2 查看版本号 &nbsp; &nbsp; 验证安装是否成功 gcc -v，这是尝试编译链接之前的基本步骤。 图5 查看版本号 2.3 尝试make #include &lt;stdio.h&gt; int main(void) { printf(&quot;Hello MinGW!\\r\\n&quot;); &nbsp; &nbsp; while(1) &nbsp; &nbsp; { &nbsp; &nbsp; &nbsp; &nbsp; ; &nbsp; &nbsp; } &nbsp; &nbsp; return 1; } 保存至E:\\c_works，文件名为hello.c 通过控制台尝试编译连接，先修改盘符至E: 接着cd进入c_works目录，输入以下指令 &lt;span style=&quot;font-size:18px;&quot;&gt;gcc -o hello hello.c&lt;/span&gt; 图6 make过程 由于mingw在windows平台上提供了gcc编译环境，更多的内容可参考ubuntu wiki百科中关于GCC入门的资料，必定可以收获更多 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2013/07/11/019377083857719caa6830ffabbcdf8b.html","headline":"MinGW安装和使用总结-物联网 iot 经验分享小站(三傻大闹宝莱坞——追求卓越)","dateModified":"2013-07-11T00:00:00+08:00","datePublished":"2013-07-11T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2013/07/11/019377083857719caa6830ffabbcdf8b.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

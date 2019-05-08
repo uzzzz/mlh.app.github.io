@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="ceph-dokan编译使用 以下是在win7 64位机器上编译，运行的 1.下载源码，编译时可以参考里面的README.md https://github.com/ketor/ceph-dokan 2.下载tdm-gcc并安装, 安装时选择32位(默认的) https://sourceforge.net/projects/tdm-gcc/files/TDM-GCC%20Installer/tdm-gcc-5.1.0-3.exe/download 3.下载并安装dokan，这里选择版本0.6.0 https://github.com/dokan-dev/dokany/wiki/Installation#choose-a-version 4.下载boost_1_63_0源码,将源码解压到c盘，C:\boost_1_63_0 http://www.boost.org/users/history/version_1_63_0.html 5.可以选择编译boost_1_63_0源码，也可以不编译, 编译完成后可以在目录 C:\boost_1_63_0\stage\lib 下发现编译生成的包 &nbsp; 6.编译ceph-dokan.exe 修改makefile:在libcephfs.dll后添加$ (BOOST_SYSTEM_LIB) &nbsp; C:\ceph-dokan&gt;mingw32-make ceph-dokan.exe C:\ceph-dokan&gt;mingw32-make libcephfs.dll C:\ceph-dokan&gt;mingw32-make test-cephfs.exe 7.运行ceph-dokan C:\ceph-dokan&gt;ceph-dokan.exe -c ceph.conf -l m 阅读更多" />
 <meta property="og:description" content="ceph-dokan编译使用 以下是在win7 64位机器上编译，运行的 1.下载源码，编译时可以参考里面的README.md https://github.com/ketor/ceph-dokan 2.下载tdm-gcc并安装, 安装时选择32位(默认的) https://sourceforge.net/projects/tdm-gcc/files/TDM-GCC%20Installer/tdm-gcc-5.1.0-3.exe/download 3.下载并安装dokan，这里选择版本0.6.0 https://github.com/dokan-dev/dokany/wiki/Installation#choose-a-version 4.下载boost_1_63_0源码,将源码解压到c盘，C:\boost_1_63_0 http://www.boost.org/users/history/version_1_63_0.html 5.可以选择编译boost_1_63_0源码，也可以不编译, 编译完成后可以在目录 C:\boost_1_63_0\stage\lib 下发现编译生成的包 &nbsp; 6.编译ceph-dokan.exe 修改makefile:在libcephfs.dll后添加$ (BOOST_SYSTEM_LIB) &nbsp; C:\ceph-dokan&gt;mingw32-make ceph-dokan.exe C:\ceph-dokan&gt;mingw32-make libcephfs.dll C:\ceph-dokan&gt;mingw32-make test-cephfs.exe 7.运行ceph-dokan C:\ceph-dokan&gt;ceph-dokan.exe -c ceph.conf -l m 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2017/06/21/7b3d920b852dbc832519bafe4d0e8117.html" />
+<meta property="og:url" content="https://mlh.app/2017/06/21/7b3d920b852dbc832519bafe4d0e8117.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-06-21T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"ceph-dokan编译使用 以下是在win7 64位机器上编译，运行的 1.下载源码，编译时可以参考里面的README.md https://github.com/ketor/ceph-dokan 2.下载tdm-gcc并安装, 安装时选择32位(默认的) https://sourceforge.net/projects/tdm-gcc/files/TDM-GCC%20Installer/tdm-gcc-5.1.0-3.exe/download 3.下载并安装dokan，这里选择版本0.6.0 https://github.com/dokan-dev/dokany/wiki/Installation#choose-a-version 4.下载boost_1_63_0源码,将源码解压到c盘，C:\\boost_1_63_0 http://www.boost.org/users/history/version_1_63_0.html 5.可以选择编译boost_1_63_0源码，也可以不编译, 编译完成后可以在目录 C:\\boost_1_63_0\\stage\\lib 下发现编译生成的包 &nbsp; 6.编译ceph-dokan.exe 修改makefile:在libcephfs.dll后添加$ (BOOST_SYSTEM_LIB) &nbsp; C:\\ceph-dokan&gt;mingw32-make ceph-dokan.exe C:\\ceph-dokan&gt;mingw32-make libcephfs.dll C:\\ceph-dokan&gt;mingw32-make test-cephfs.exe 7.运行ceph-dokan C:\\ceph-dokan&gt;ceph-dokan.exe -c ceph.conf -l m 阅读更多","@type":"BlogPosting","url":"/2017/06/21/7b3d920b852dbc832519bafe4d0e8117.html","headline":"CEPH-DOKAN编译使用","dateModified":"2017-06-21T00:00:00+08:00","datePublished":"2017-06-21T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2017/06/21/7b3d920b852dbc832519bafe4d0e8117.html"},"@context":"http://schema.org"}</script>
+{"description":"ceph-dokan编译使用 以下是在win7 64位机器上编译，运行的 1.下载源码，编译时可以参考里面的README.md https://github.com/ketor/ceph-dokan 2.下载tdm-gcc并安装, 安装时选择32位(默认的) https://sourceforge.net/projects/tdm-gcc/files/TDM-GCC%20Installer/tdm-gcc-5.1.0-3.exe/download 3.下载并安装dokan，这里选择版本0.6.0 https://github.com/dokan-dev/dokany/wiki/Installation#choose-a-version 4.下载boost_1_63_0源码,将源码解压到c盘，C:\\boost_1_63_0 http://www.boost.org/users/history/version_1_63_0.html 5.可以选择编译boost_1_63_0源码，也可以不编译, 编译完成后可以在目录 C:\\boost_1_63_0\\stage\\lib 下发现编译生成的包 &nbsp; 6.编译ceph-dokan.exe 修改makefile:在libcephfs.dll后添加$ (BOOST_SYSTEM_LIB) &nbsp; C:\\ceph-dokan&gt;mingw32-make ceph-dokan.exe C:\\ceph-dokan&gt;mingw32-make libcephfs.dll C:\\ceph-dokan&gt;mingw32-make test-cephfs.exe 7.运行ceph-dokan C:\\ceph-dokan&gt;ceph-dokan.exe -c ceph.conf -l m 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2017/06/21/7b3d920b852dbc832519bafe4d0e8117.html","headline":"CEPH-DOKAN编译使用","dateModified":"2017-06-21T00:00:00+08:00","datePublished":"2017-06-21T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2017/06/21/7b3d920b852dbc832519bafe4d0e8117.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="最近在改以太坊源码，在执行internal/jsre/deps/deps.go的go-bindata -nometadata -pkg deps -o bindata.go bignumber.js web3.js命令出现了一些问题，下面给大家提供一下解决办法。 步骤1：执行 go-bindata -nometadata -pkg deps -o bindata.go bignumber.js web3.js 步骤2：执行sudo apt install go-bindata 安装go-bindata 安装成功！ 再次执行步骤1的命令 go-bindata -nometadata -pkg deps -o bindata.go bignumber.js web3.js 报错了！找不到-nometadata参数。下面我执行了go-bindata 。 并没有-onamedata参数。上网搜了一下，发现go-bindata最新release版本代码并没有nometadata，看了一下最新代码有nometadata。所以果断下载代码。 只有两个文件，进入go-bindata执行：go build会生成go-bindata的可执行文件。（这里默认大家已经搭建好golang环境） 步骤3：将生成的可执行文件go-bindata加入环境变量 再次执行步骤1操作，执行：geth console进入控制台，输入自己的命令。如：eth改成test，输入test.会发现补全了，命令更改成功！ go-bindata：go-bindata 希望大家在以太坊研究道路少踩一些没必要的坑！！！" />
 <meta property="og:description" content="最近在改以太坊源码，在执行internal/jsre/deps/deps.go的go-bindata -nometadata -pkg deps -o bindata.go bignumber.js web3.js命令出现了一些问题，下面给大家提供一下解决办法。 步骤1：执行 go-bindata -nometadata -pkg deps -o bindata.go bignumber.js web3.js 步骤2：执行sudo apt install go-bindata 安装go-bindata 安装成功！ 再次执行步骤1的命令 go-bindata -nometadata -pkg deps -o bindata.go bignumber.js web3.js 报错了！找不到-nometadata参数。下面我执行了go-bindata 。 并没有-onamedata参数。上网搜了一下，发现go-bindata最新release版本代码并没有nometadata，看了一下最新代码有nometadata。所以果断下载代码。 只有两个文件，进入go-bindata执行：go build会生成go-bindata的可执行文件。（这里默认大家已经搭建好golang环境） 步骤3：将生成的可执行文件go-bindata加入环境变量 再次执行步骤1操作，执行：geth console进入控制台，输入自己的命令。如：eth改成test，输入test.会发现补全了，命令更改成功！ go-bindata：go-bindata 希望大家在以太坊研究道路少踩一些没必要的坑！！！" />
+<link rel="canonical" href="https://mlh.app/2018/11/24/3d4f5873653307e546dab22b4d51a490.html" />
+<meta property="og:url" content="https://mlh.app/2018/11/24/3d4f5873653307e546dab22b4d51a490.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-24T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"最近在改以太坊源码，在执行internal/jsre/deps/deps.go的go-bindata -nometadata -pkg deps -o bindata.go bignumber.js web3.js命令出现了一些问题，下面给大家提供一下解决办法。 步骤1：执行 go-bindata -nometadata -pkg deps -o bindata.go bignumber.js web3.js 步骤2：执行sudo apt install go-bindata 安装go-bindata 安装成功！ 再次执行步骤1的命令 go-bindata -nometadata -pkg deps -o bindata.go bignumber.js web3.js 报错了！找不到-nometadata参数。下面我执行了go-bindata 。 并没有-onamedata参数。上网搜了一下，发现go-bindata最新release版本代码并没有nometadata，看了一下最新代码有nometadata。所以果断下载代码。 只有两个文件，进入go-bindata执行：go build会生成go-bindata的可执行文件。（这里默认大家已经搭建好golang环境） 步骤3：将生成的可执行文件go-bindata加入环境变量 再次执行步骤1操作，执行：geth console进入控制台，输入自己的命令。如：eth改成test，输入test.会发现补全了，命令更改成功！ go-bindata：go-bindata 希望大家在以太坊研究道路少踩一些没必要的坑！！！","@type":"BlogPosting","url":"/2018/11/24/3d4f5873653307e546dab22b4d51a490.html","headline":"以太坊——重新编译静态文件bindata.go文件","dateModified":"2018-11-24T00:00:00+08:00","datePublished":"2018-11-24T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/11/24/3d4f5873653307e546dab22b4d51a490.html"},"@context":"http://schema.org"}</script>
+{"description":"最近在改以太坊源码，在执行internal/jsre/deps/deps.go的go-bindata -nometadata -pkg deps -o bindata.go bignumber.js web3.js命令出现了一些问题，下面给大家提供一下解决办法。 步骤1：执行 go-bindata -nometadata -pkg deps -o bindata.go bignumber.js web3.js 步骤2：执行sudo apt install go-bindata 安装go-bindata 安装成功！ 再次执行步骤1的命令 go-bindata -nometadata -pkg deps -o bindata.go bignumber.js web3.js 报错了！找不到-nometadata参数。下面我执行了go-bindata 。 并没有-onamedata参数。上网搜了一下，发现go-bindata最新release版本代码并没有nometadata，看了一下最新代码有nometadata。所以果断下载代码。 只有两个文件，进入go-bindata执行：go build会生成go-bindata的可执行文件。（这里默认大家已经搭建好golang环境） 步骤3：将生成的可执行文件go-bindata加入环境变量 再次执行步骤1操作，执行：geth console进入控制台，输入自己的命令。如：eth改成test，输入test.会发现补全了，命令更改成功！ go-bindata：go-bindata 希望大家在以太坊研究道路少踩一些没必要的坑！！！","@type":"BlogPosting","url":"https://mlh.app/2018/11/24/3d4f5873653307e546dab22b4d51a490.html","headline":"以太坊——重新编译静态文件bindata.go文件","dateModified":"2018-11-24T00:00:00+08:00","datePublished":"2018-11-24T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/11/24/3d4f5873653307e546dab22b4d51a490.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

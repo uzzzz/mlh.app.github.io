@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="题目： 经过锦囊相助，海东集团终于度过了危机，从此，HDU的发展就一直顺风顺水，到了2050年，集团已经相当规模了，据说进入了钱江肉丝经济开发区500强。这时候，XHD夫妇也退居了二线，并在风景秀美的诸暨市浬浦镇陶姚村买了个房子，开始安度晚年了。 这样住了一段时间，徐总对当地的交通还是不太了解。有时很郁闷，想去一个地方又不知道应该乘什么公交车，在什么地方转车，在什么地方下车（其实徐总自己有车，却一定要与民同乐，这就是徐总的性格）。 徐总经常会问蹩脚的英文问路：“Can you help me?”。看着他那迷茫而又无助的眼神，热心的你能帮帮他吗？ 请帮助他用最短的时间到达目的地（假设每一路公交车都只在起点站和终点站停，而且随时都会开）。 输入： 输入数据有多组，每组的第一行是公交车的总数N(0&lt;=N&lt;=10000)； 第二行有徐总的所在地start，他的目的地end； 接着有n行，每行有站名s，站名e，以及从s到e的时间整数t(0&lt;t&lt;100)(每个地名是一个长度不超过30的字符串)。 note：一组数据中地名数不会超过150个。 如果N==-1，表示输入结束。 输出： 如果徐总能到达目的地，输出最短的时间；否则，输出“-1”。 样例输入： 6 xiasha westlake xiasha station 60 xiasha ShoppingCenterofHangZhou 30 station westlake 20 ShoppingCenterofHangZhou supermarket 10 xiasha supermarket 50 supermarket westlake 10 -1 样例输出： 50 Hint: The best route is: xiasha-&gt;ShoppingCenterofHangZhou-&gt;supermarket-&gt;westlake 虽然偶尔会迷路，但是因为有了你的帮助 **和**从此还是过上了幸福的生活。 ――全剧终―― 我的代码：https://u19012589.pipipan.com/fs/19012589-325479813 备注：用的最简单的floyd" />
 <meta property="og:description" content="题目： 经过锦囊相助，海东集团终于度过了危机，从此，HDU的发展就一直顺风顺水，到了2050年，集团已经相当规模了，据说进入了钱江肉丝经济开发区500强。这时候，XHD夫妇也退居了二线，并在风景秀美的诸暨市浬浦镇陶姚村买了个房子，开始安度晚年了。 这样住了一段时间，徐总对当地的交通还是不太了解。有时很郁闷，想去一个地方又不知道应该乘什么公交车，在什么地方转车，在什么地方下车（其实徐总自己有车，却一定要与民同乐，这就是徐总的性格）。 徐总经常会问蹩脚的英文问路：“Can you help me?”。看着他那迷茫而又无助的眼神，热心的你能帮帮他吗？ 请帮助他用最短的时间到达目的地（假设每一路公交车都只在起点站和终点站停，而且随时都会开）。 输入： 输入数据有多组，每组的第一行是公交车的总数N(0&lt;=N&lt;=10000)； 第二行有徐总的所在地start，他的目的地end； 接着有n行，每行有站名s，站名e，以及从s到e的时间整数t(0&lt;t&lt;100)(每个地名是一个长度不超过30的字符串)。 note：一组数据中地名数不会超过150个。 如果N==-1，表示输入结束。 输出： 如果徐总能到达目的地，输出最短的时间；否则，输出“-1”。 样例输入： 6 xiasha westlake xiasha station 60 xiasha ShoppingCenterofHangZhou 30 station westlake 20 ShoppingCenterofHangZhou supermarket 10 xiasha supermarket 50 supermarket westlake 10 -1 样例输出： 50 Hint: The best route is: xiasha-&gt;ShoppingCenterofHangZhou-&gt;supermarket-&gt;westlake 虽然偶尔会迷路，但是因为有了你的帮助 **和**从此还是过上了幸福的生活。 ――全剧终―― 我的代码：https://u19012589.pipipan.com/fs/19012589-325479813 备注：用的最简单的floyd" />
+<link rel="canonical" href="https://mlh.app/2018/12/09/f2bf6f16e675fcb9227ebd707e7895f5.html" />
+<meta property="og:url" content="https://mlh.app/2018/12/09/f2bf6f16e675fcb9227ebd707e7895f5.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-12-09T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"题目： 经过锦囊相助，海东集团终于度过了危机，从此，HDU的发展就一直顺风顺水，到了2050年，集团已经相当规模了，据说进入了钱江肉丝经济开发区500强。这时候，XHD夫妇也退居了二线，并在风景秀美的诸暨市浬浦镇陶姚村买了个房子，开始安度晚年了。 这样住了一段时间，徐总对当地的交通还是不太了解。有时很郁闷，想去一个地方又不知道应该乘什么公交车，在什么地方转车，在什么地方下车（其实徐总自己有车，却一定要与民同乐，这就是徐总的性格）。 徐总经常会问蹩脚的英文问路：“Can you help me?”。看着他那迷茫而又无助的眼神，热心的你能帮帮他吗？ 请帮助他用最短的时间到达目的地（假设每一路公交车都只在起点站和终点站停，而且随时都会开）。 输入： 输入数据有多组，每组的第一行是公交车的总数N(0&lt;=N&lt;=10000)； 第二行有徐总的所在地start，他的目的地end； 接着有n行，每行有站名s，站名e，以及从s到e的时间整数t(0&lt;t&lt;100)(每个地名是一个长度不超过30的字符串)。 note：一组数据中地名数不会超过150个。 如果N==-1，表示输入结束。 输出： 如果徐总能到达目的地，输出最短的时间；否则，输出“-1”。 样例输入： 6 xiasha westlake xiasha station 60 xiasha ShoppingCenterofHangZhou 30 station westlake 20 ShoppingCenterofHangZhou supermarket 10 xiasha supermarket 50 supermarket westlake 10 -1 样例输出： 50 Hint: The best route is: xiasha-&gt;ShoppingCenterofHangZhou-&gt;supermarket-&gt;westlake 虽然偶尔会迷路，但是因为有了你的帮助 **和**从此还是过上了幸福的生活。 ――全剧终―― 我的代码：https://u19012589.pipipan.com/fs/19012589-325479813 备注：用的最简单的floyd","@type":"BlogPosting","url":"/2018/12/09/f2bf6f16e675fcb9227ebd707e7895f5.html","headline":"解题记录：J - HDU Today","dateModified":"2018-12-09T00:00:00+08:00","datePublished":"2018-12-09T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/12/09/f2bf6f16e675fcb9227ebd707e7895f5.html"},"@context":"http://schema.org"}</script>
+{"description":"题目： 经过锦囊相助，海东集团终于度过了危机，从此，HDU的发展就一直顺风顺水，到了2050年，集团已经相当规模了，据说进入了钱江肉丝经济开发区500强。这时候，XHD夫妇也退居了二线，并在风景秀美的诸暨市浬浦镇陶姚村买了个房子，开始安度晚年了。 这样住了一段时间，徐总对当地的交通还是不太了解。有时很郁闷，想去一个地方又不知道应该乘什么公交车，在什么地方转车，在什么地方下车（其实徐总自己有车，却一定要与民同乐，这就是徐总的性格）。 徐总经常会问蹩脚的英文问路：“Can you help me?”。看着他那迷茫而又无助的眼神，热心的你能帮帮他吗？ 请帮助他用最短的时间到达目的地（假设每一路公交车都只在起点站和终点站停，而且随时都会开）。 输入： 输入数据有多组，每组的第一行是公交车的总数N(0&lt;=N&lt;=10000)； 第二行有徐总的所在地start，他的目的地end； 接着有n行，每行有站名s，站名e，以及从s到e的时间整数t(0&lt;t&lt;100)(每个地名是一个长度不超过30的字符串)。 note：一组数据中地名数不会超过150个。 如果N==-1，表示输入结束。 输出： 如果徐总能到达目的地，输出最短的时间；否则，输出“-1”。 样例输入： 6 xiasha westlake xiasha station 60 xiasha ShoppingCenterofHangZhou 30 station westlake 20 ShoppingCenterofHangZhou supermarket 10 xiasha supermarket 50 supermarket westlake 10 -1 样例输出： 50 Hint: The best route is: xiasha-&gt;ShoppingCenterofHangZhou-&gt;supermarket-&gt;westlake 虽然偶尔会迷路，但是因为有了你的帮助 **和**从此还是过上了幸福的生活。 ――全剧终―― 我的代码：https://u19012589.pipipan.com/fs/19012589-325479813 备注：用的最简单的floyd","@type":"BlogPosting","url":"https://mlh.app/2018/12/09/f2bf6f16e675fcb9227ebd707e7895f5.html","headline":"解题记录：J - HDU Today","dateModified":"2018-12-09T00:00:00+08:00","datePublished":"2018-12-09T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/12/09/f2bf6f16e675fcb9227ebd707e7895f5.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

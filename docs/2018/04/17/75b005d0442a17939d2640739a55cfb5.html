@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="目录 目录 背景 第三方平台 代码开发 结束语 背景   由于平台对接的用户不断增加，微信会进行一个检测。如果你对接的微信公众平台多次使用同一个地址进行开发者对接。那么它会认为你这个网站存在风险-官方解释，或者你对接微信公众号平台时，开发者配置信息保存时出现下图，这个时候就需要对接第三方平台（也就是微信的开放平台） 第三方平台   开始按照微信的惯例进行操作。   1. 注册第三方账号，拥有开发者资质验证，即交300块   2. 管理中心 – 第三方平台 – 创建一个第三方平台（此处可以先看 代码开发 在继续向下看以下几点）   3. 进行一系列的数据配置，这里就不详细说了。后面在说一下对应关系   4. 开发资料中 – 涂掉部分为域名公众号域名，及部署位置既访问地址。   5. 点击全网发布 代码开发   这里开发的代码已经上传到了 CSDN就不进行详细的解释了 - 源码下载   主要的说明一下其中重要参数和第三方平台中对应关系 下载源文件进行以下参数变更，部署tomcat, 运行即可： COMPONENT_APPID ： 第三方平台中的AppID（创建后第三方平台提供） COMPONENT_APPSECRET ： 第三方平台中的密钥（创建后第三方平台提供） COMPONENT_ENCODINGAESKEY ： 消息加解密KEY（自己在第三方平台设置） COMPONENT_TOKEN ： 消息校验TOKEN（自己在第三方平台设置） FILE ： 写入和读取文件的地址，这里为了方便就不适用数据库之类的 结束语 以上环境需要特别注意： 1. 部署环境时需要对jdk进行一些jar更替，因为国内的jdk是阉割过了。听说是出口限制，不处理的话解密加密的时候出错。 2. 源码下载中包含的jar为jdk1.7的，别的版本自行下载 3. 可以参考JCE无限制权限策略文件进行部署 阅读更多" />
 <meta property="og:description" content="目录 目录 背景 第三方平台 代码开发 结束语 背景   由于平台对接的用户不断增加，微信会进行一个检测。如果你对接的微信公众平台多次使用同一个地址进行开发者对接。那么它会认为你这个网站存在风险-官方解释，或者你对接微信公众号平台时，开发者配置信息保存时出现下图，这个时候就需要对接第三方平台（也就是微信的开放平台） 第三方平台   开始按照微信的惯例进行操作。   1. 注册第三方账号，拥有开发者资质验证，即交300块   2. 管理中心 – 第三方平台 – 创建一个第三方平台（此处可以先看 代码开发 在继续向下看以下几点）   3. 进行一系列的数据配置，这里就不详细说了。后面在说一下对应关系   4. 开发资料中 – 涂掉部分为域名公众号域名，及部署位置既访问地址。   5. 点击全网发布 代码开发   这里开发的代码已经上传到了 CSDN就不进行详细的解释了 - 源码下载   主要的说明一下其中重要参数和第三方平台中对应关系 下载源文件进行以下参数变更，部署tomcat, 运行即可： COMPONENT_APPID ： 第三方平台中的AppID（创建后第三方平台提供） COMPONENT_APPSECRET ： 第三方平台中的密钥（创建后第三方平台提供） COMPONENT_ENCODINGAESKEY ： 消息加解密KEY（自己在第三方平台设置） COMPONENT_TOKEN ： 消息校验TOKEN（自己在第三方平台设置） FILE ： 写入和读取文件的地址，这里为了方便就不适用数据库之类的 结束语 以上环境需要特别注意： 1. 部署环境时需要对jdk进行一些jar更替，因为国内的jdk是阉割过了。听说是出口限制，不处理的话解密加密的时候出错。 2. 源码下载中包含的jar为jdk1.7的，别的版本自行下载 3. 可以参考JCE无限制权限策略文件进行部署 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/04/17/75b005d0442a17939d2640739a55cfb5.html" />
+<meta property="og:url" content="https://mlh.app/2018/04/17/75b005d0442a17939d2640739a55cfb5.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-04-17T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"目录 目录 背景 第三方平台 代码开发 结束语 背景   由于平台对接的用户不断增加，微信会进行一个检测。如果你对接的微信公众平台多次使用同一个地址进行开发者对接。那么它会认为你这个网站存在风险-官方解释，或者你对接微信公众号平台时，开发者配置信息保存时出现下图，这个时候就需要对接第三方平台（也就是微信的开放平台） 第三方平台   开始按照微信的惯例进行操作。   1. 注册第三方账号，拥有开发者资质验证，即交300块   2. 管理中心 – 第三方平台 – 创建一个第三方平台（此处可以先看 代码开发 在继续向下看以下几点）   3. 进行一系列的数据配置，这里就不详细说了。后面在说一下对应关系   4. 开发资料中 – 涂掉部分为域名公众号域名，及部署位置既访问地址。   5. 点击全网发布 代码开发   这里开发的代码已经上传到了 CSDN就不进行详细的解释了 - 源码下载   主要的说明一下其中重要参数和第三方平台中对应关系 下载源文件进行以下参数变更，部署tomcat, 运行即可： COMPONENT_APPID ： 第三方平台中的AppID（创建后第三方平台提供） COMPONENT_APPSECRET ： 第三方平台中的密钥（创建后第三方平台提供） COMPONENT_ENCODINGAESKEY ： 消息加解密KEY（自己在第三方平台设置） COMPONENT_TOKEN ： 消息校验TOKEN（自己在第三方平台设置） FILE ： 写入和读取文件的地址，这里为了方便就不适用数据库之类的 结束语 以上环境需要特别注意： 1. 部署环境时需要对jdk进行一些jar更替，因为国内的jdk是阉割过了。听说是出口限制，不处理的话解密加密的时候出错。 2. 源码下载中包含的jar为jdk1.7的，别的版本自行下载 3. 可以参考JCE无限制权限策略文件进行部署 阅读更多","@type":"BlogPosting","url":"/2018/04/17/75b005d0442a17939d2640739a55cfb5.html","headline":"微信公众号对接第三方平台（全网发布 java）","dateModified":"2018-04-17T00:00:00+08:00","datePublished":"2018-04-17T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/04/17/75b005d0442a17939d2640739a55cfb5.html"},"@context":"http://schema.org"}</script>
+{"description":"目录 目录 背景 第三方平台 代码开发 结束语 背景   由于平台对接的用户不断增加，微信会进行一个检测。如果你对接的微信公众平台多次使用同一个地址进行开发者对接。那么它会认为你这个网站存在风险-官方解释，或者你对接微信公众号平台时，开发者配置信息保存时出现下图，这个时候就需要对接第三方平台（也就是微信的开放平台） 第三方平台   开始按照微信的惯例进行操作。   1. 注册第三方账号，拥有开发者资质验证，即交300块   2. 管理中心 – 第三方平台 – 创建一个第三方平台（此处可以先看 代码开发 在继续向下看以下几点）   3. 进行一系列的数据配置，这里就不详细说了。后面在说一下对应关系   4. 开发资料中 – 涂掉部分为域名公众号域名，及部署位置既访问地址。   5. 点击全网发布 代码开发   这里开发的代码已经上传到了 CSDN就不进行详细的解释了 - 源码下载   主要的说明一下其中重要参数和第三方平台中对应关系 下载源文件进行以下参数变更，部署tomcat, 运行即可： COMPONENT_APPID ： 第三方平台中的AppID（创建后第三方平台提供） COMPONENT_APPSECRET ： 第三方平台中的密钥（创建后第三方平台提供） COMPONENT_ENCODINGAESKEY ： 消息加解密KEY（自己在第三方平台设置） COMPONENT_TOKEN ： 消息校验TOKEN（自己在第三方平台设置） FILE ： 写入和读取文件的地址，这里为了方便就不适用数据库之类的 结束语 以上环境需要特别注意： 1. 部署环境时需要对jdk进行一些jar更替，因为国内的jdk是阉割过了。听说是出口限制，不处理的话解密加密的时候出错。 2. 源码下载中包含的jar为jdk1.7的，别的版本自行下载 3. 可以参考JCE无限制权限策略文件进行部署 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/04/17/75b005d0442a17939d2640739a55cfb5.html","headline":"微信公众号对接第三方平台（全网发布 java）","dateModified":"2018-04-17T00:00:00+08:00","datePublished":"2018-04-17T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/04/17/75b005d0442a17939d2640739a55cfb5.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

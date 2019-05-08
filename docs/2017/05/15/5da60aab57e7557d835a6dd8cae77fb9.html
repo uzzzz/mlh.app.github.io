@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="MinGW（Minimalist GNU for Windows），又称mingw32，是将GCC编译器和GNU Binutils移植到Win32平台下的产物，包括一系列头文件（Win32API）、库和可执行文件。在Windows上使用MInGW可以直接从官网下载，但这种方法存在一个很严重的问题–因为官网只提供网络安装，因此下载速度慢而且经常出现某部分下载失败不断重新下载的情况。下面介绍几种其他办法： 使用TDM-GCC TDM-GCC是Windows上的编译套件，最新版本带有GCC 5.1.0和GDB 7.9.1，支持Windows98以后的Windows版本，但它只提供了命令行界面，如果你想要的是一个可视化的IDE的话推荐使用Code::Blocks,它使用的也是TDM-GCC，不过版本不是TDM-GCC的官网提供的最新版，而是GCC4.9.2。 使用Qt自带的MinGW 自Qt5以后，Qt公司将Qt开发环境的3个基本部分：Qt Framework（Qt库）、QtCreator（IDE）和MinGW（编译调试）打包到了一起，不用像Qt4那样分别安装，因此如果你使用最新的Qt5开发环境在安装时又选上了MinGW的话，安装完成以后就直接把MinGW安装下来了，而且现在Qt自带的MinGW基本能和MinGW官网提供的同步，也是用最新的GCC 5.3.0和GDB 7.10.1。 最新的Qt下载地址：http://download.qt.io/archive/qt/ 使用Mingw-w64 Mingw-w64这个项目是从MinGW分离出来的，特点是支持开发32位和64位的程序，不少知名开源项目如VLC，GIMP等都使用了它。 设置环境变量 安装完成MinGW以后，还需要设置环境变量才能使用，以下以Qt自带的MinGW为例 变量名 变量值 PATH： C:\Qt\Tools\mingw530_32\bin LIBRARY_PATH： C:\Qt\Tools\mingw530_32\lib C_INCLUDE_PATH： C:\Qt\Tools\mingw530_32\include 其中，LIBRARY_PATH和C_INCLUDE_PATH需要新建。 阅读更多" />
 <meta property="og:description" content="MinGW（Minimalist GNU for Windows），又称mingw32，是将GCC编译器和GNU Binutils移植到Win32平台下的产物，包括一系列头文件（Win32API）、库和可执行文件。在Windows上使用MInGW可以直接从官网下载，但这种方法存在一个很严重的问题–因为官网只提供网络安装，因此下载速度慢而且经常出现某部分下载失败不断重新下载的情况。下面介绍几种其他办法： 使用TDM-GCC TDM-GCC是Windows上的编译套件，最新版本带有GCC 5.1.0和GDB 7.9.1，支持Windows98以后的Windows版本，但它只提供了命令行界面，如果你想要的是一个可视化的IDE的话推荐使用Code::Blocks,它使用的也是TDM-GCC，不过版本不是TDM-GCC的官网提供的最新版，而是GCC4.9.2。 使用Qt自带的MinGW 自Qt5以后，Qt公司将Qt开发环境的3个基本部分：Qt Framework（Qt库）、QtCreator（IDE）和MinGW（编译调试）打包到了一起，不用像Qt4那样分别安装，因此如果你使用最新的Qt5开发环境在安装时又选上了MinGW的话，安装完成以后就直接把MinGW安装下来了，而且现在Qt自带的MinGW基本能和MinGW官网提供的同步，也是用最新的GCC 5.3.0和GDB 7.10.1。 最新的Qt下载地址：http://download.qt.io/archive/qt/ 使用Mingw-w64 Mingw-w64这个项目是从MinGW分离出来的，特点是支持开发32位和64位的程序，不少知名开源项目如VLC，GIMP等都使用了它。 设置环境变量 安装完成MinGW以后，还需要设置环境变量才能使用，以下以Qt自带的MinGW为例 变量名 变量值 PATH： C:\Qt\Tools\mingw530_32\bin LIBRARY_PATH： C:\Qt\Tools\mingw530_32\lib C_INCLUDE_PATH： C:\Qt\Tools\mingw530_32\include 其中，LIBRARY_PATH和C_INCLUDE_PATH需要新建。 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2017/05/15/5da60aab57e7557d835a6dd8cae77fb9.html" />
+<meta property="og:url" content="https://mlh.app/2017/05/15/5da60aab57e7557d835a6dd8cae77fb9.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-05-15T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"MinGW（Minimalist GNU for Windows），又称mingw32，是将GCC编译器和GNU Binutils移植到Win32平台下的产物，包括一系列头文件（Win32API）、库和可执行文件。在Windows上使用MInGW可以直接从官网下载，但这种方法存在一个很严重的问题–因为官网只提供网络安装，因此下载速度慢而且经常出现某部分下载失败不断重新下载的情况。下面介绍几种其他办法： 使用TDM-GCC TDM-GCC是Windows上的编译套件，最新版本带有GCC 5.1.0和GDB 7.9.1，支持Windows98以后的Windows版本，但它只提供了命令行界面，如果你想要的是一个可视化的IDE的话推荐使用Code::Blocks,它使用的也是TDM-GCC，不过版本不是TDM-GCC的官网提供的最新版，而是GCC4.9.2。 使用Qt自带的MinGW 自Qt5以后，Qt公司将Qt开发环境的3个基本部分：Qt Framework（Qt库）、QtCreator（IDE）和MinGW（编译调试）打包到了一起，不用像Qt4那样分别安装，因此如果你使用最新的Qt5开发环境在安装时又选上了MinGW的话，安装完成以后就直接把MinGW安装下来了，而且现在Qt自带的MinGW基本能和MinGW官网提供的同步，也是用最新的GCC 5.3.0和GDB 7.10.1。 最新的Qt下载地址：http://download.qt.io/archive/qt/ 使用Mingw-w64 Mingw-w64这个项目是从MinGW分离出来的，特点是支持开发32位和64位的程序，不少知名开源项目如VLC，GIMP等都使用了它。 设置环境变量 安装完成MinGW以后，还需要设置环境变量才能使用，以下以Qt自带的MinGW为例 变量名 变量值 PATH： C:\\Qt\\Tools\\mingw530_32\\bin LIBRARY_PATH： C:\\Qt\\Tools\\mingw530_32\\lib C_INCLUDE_PATH： C:\\Qt\\Tools\\mingw530_32\\include 其中，LIBRARY_PATH和C_INCLUDE_PATH需要新建。 阅读更多","@type":"BlogPosting","url":"/2017/05/15/5da60aab57e7557d835a6dd8cae77fb9.html","headline":"Windows安装MinGW解决方案","dateModified":"2017-05-15T00:00:00+08:00","datePublished":"2017-05-15T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2017/05/15/5da60aab57e7557d835a6dd8cae77fb9.html"},"@context":"http://schema.org"}</script>
+{"description":"MinGW（Minimalist GNU for Windows），又称mingw32，是将GCC编译器和GNU Binutils移植到Win32平台下的产物，包括一系列头文件（Win32API）、库和可执行文件。在Windows上使用MInGW可以直接从官网下载，但这种方法存在一个很严重的问题–因为官网只提供网络安装，因此下载速度慢而且经常出现某部分下载失败不断重新下载的情况。下面介绍几种其他办法： 使用TDM-GCC TDM-GCC是Windows上的编译套件，最新版本带有GCC 5.1.0和GDB 7.9.1，支持Windows98以后的Windows版本，但它只提供了命令行界面，如果你想要的是一个可视化的IDE的话推荐使用Code::Blocks,它使用的也是TDM-GCC，不过版本不是TDM-GCC的官网提供的最新版，而是GCC4.9.2。 使用Qt自带的MinGW 自Qt5以后，Qt公司将Qt开发环境的3个基本部分：Qt Framework（Qt库）、QtCreator（IDE）和MinGW（编译调试）打包到了一起，不用像Qt4那样分别安装，因此如果你使用最新的Qt5开发环境在安装时又选上了MinGW的话，安装完成以后就直接把MinGW安装下来了，而且现在Qt自带的MinGW基本能和MinGW官网提供的同步，也是用最新的GCC 5.3.0和GDB 7.10.1。 最新的Qt下载地址：http://download.qt.io/archive/qt/ 使用Mingw-w64 Mingw-w64这个项目是从MinGW分离出来的，特点是支持开发32位和64位的程序，不少知名开源项目如VLC，GIMP等都使用了它。 设置环境变量 安装完成MinGW以后，还需要设置环境变量才能使用，以下以Qt自带的MinGW为例 变量名 变量值 PATH： C:\\Qt\\Tools\\mingw530_32\\bin LIBRARY_PATH： C:\\Qt\\Tools\\mingw530_32\\lib C_INCLUDE_PATH： C:\\Qt\\Tools\\mingw530_32\\include 其中，LIBRARY_PATH和C_INCLUDE_PATH需要新建。 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2017/05/15/5da60aab57e7557d835a6dd8cae77fb9.html","headline":"Windows安装MinGW解决方案","dateModified":"2017-05-15T00:00:00+08:00","datePublished":"2017-05-15T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2017/05/15/5da60aab57e7557d835a6dd8cae77fb9.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

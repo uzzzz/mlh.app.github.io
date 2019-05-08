@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="啊...eos更新换代是真快，转眼间当年的教程就不能用里，今天闲着没事，做个eos最新版的本地环境搭建的教程，简单轻快版的 首先呢，是下载源码 git clone https://github.com/EOSIO/eos —recursive 然后就会在主目录下生成eos文件夹 cd eos ，进入eos文件夹 输入ls 我们来看看里面都有什么 &nbsp; 理论上呢，里面没有build文件夹的，现在这个是我搞好了的，好了进入eos文件夹 ./eosio_build.sh 自动构建源码 之后就会出现build文件夹了 进入build&nbsp; 输入sudo make install 然后cd返回主文件夹 cd .local/share/eosio/nodeos/config vim config.ini 开始修改config.ini文件 enable-stale-production=false,这里要把false改成true，也就是enable-stale-production=true. producer-name =&nbsp;&nbsp; eosio, 在produce-name后面加上eosio就可以 注意producer-name是被注释掉的，要把#去掉 最后在后面加这几行 &nbsp; plugin = eosio::producer_plugin plugin = eosio::wallet_api_plugin plugin = eosio::chain_api_plugin plugin = eosio::http_plugin 然后去eos/build/programs/nodoes里./nodeos 就开始生产区块了，没有报错，这就是eosio的最新版本地配置方法 阅读更多" />
 <meta property="og:description" content="啊...eos更新换代是真快，转眼间当年的教程就不能用里，今天闲着没事，做个eos最新版的本地环境搭建的教程，简单轻快版的 首先呢，是下载源码 git clone https://github.com/EOSIO/eos —recursive 然后就会在主目录下生成eos文件夹 cd eos ，进入eos文件夹 输入ls 我们来看看里面都有什么 &nbsp; 理论上呢，里面没有build文件夹的，现在这个是我搞好了的，好了进入eos文件夹 ./eosio_build.sh 自动构建源码 之后就会出现build文件夹了 进入build&nbsp; 输入sudo make install 然后cd返回主文件夹 cd .local/share/eosio/nodeos/config vim config.ini 开始修改config.ini文件 enable-stale-production=false,这里要把false改成true，也就是enable-stale-production=true. producer-name =&nbsp;&nbsp; eosio, 在produce-name后面加上eosio就可以 注意producer-name是被注释掉的，要把#去掉 最后在后面加这几行 &nbsp; plugin = eosio::producer_plugin plugin = eosio::wallet_api_plugin plugin = eosio::chain_api_plugin plugin = eosio::http_plugin 然后去eos/build/programs/nodoes里./nodeos 就开始生产区块了，没有报错，这就是eosio的最新版本地配置方法 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/08/03/4578988bd4faecfe65026efb992d67bb.html" />
+<meta property="og:url" content="https://mlh.app/2018/08/03/4578988bd4faecfe65026efb992d67bb.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-03T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"啊...eos更新换代是真快，转眼间当年的教程就不能用里，今天闲着没事，做个eos最新版的本地环境搭建的教程，简单轻快版的 首先呢，是下载源码 git clone https://github.com/EOSIO/eos —recursive 然后就会在主目录下生成eos文件夹 cd eos ，进入eos文件夹 输入ls 我们来看看里面都有什么 &nbsp; 理论上呢，里面没有build文件夹的，现在这个是我搞好了的，好了进入eos文件夹 ./eosio_build.sh 自动构建源码 之后就会出现build文件夹了 进入build&nbsp; 输入sudo make install 然后cd返回主文件夹 cd .local/share/eosio/nodeos/config vim config.ini 开始修改config.ini文件 enable-stale-production=false,这里要把false改成true，也就是enable-stale-production=true. producer-name =&nbsp;&nbsp; eosio, 在produce-name后面加上eosio就可以 注意producer-name是被注释掉的，要把#去掉 最后在后面加这几行 &nbsp; plugin = eosio::producer_plugin plugin = eosio::wallet_api_plugin plugin = eosio::chain_api_plugin plugin = eosio::http_plugin 然后去eos/build/programs/nodoes里./nodeos 就开始生产区块了，没有报错，这就是eosio的最新版本地配置方法 阅读更多","@type":"BlogPosting","url":"/2018/08/03/4578988bd4faecfe65026efb992d67bb.html","headline":"eos最新版的本地环境搭建（v1.0）","dateModified":"2018-08-03T00:00:00+08:00","datePublished":"2018-08-03T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/08/03/4578988bd4faecfe65026efb992d67bb.html"},"@context":"http://schema.org"}</script>
+{"description":"啊...eos更新换代是真快，转眼间当年的教程就不能用里，今天闲着没事，做个eos最新版的本地环境搭建的教程，简单轻快版的 首先呢，是下载源码 git clone https://github.com/EOSIO/eos —recursive 然后就会在主目录下生成eos文件夹 cd eos ，进入eos文件夹 输入ls 我们来看看里面都有什么 &nbsp; 理论上呢，里面没有build文件夹的，现在这个是我搞好了的，好了进入eos文件夹 ./eosio_build.sh 自动构建源码 之后就会出现build文件夹了 进入build&nbsp; 输入sudo make install 然后cd返回主文件夹 cd .local/share/eosio/nodeos/config vim config.ini 开始修改config.ini文件 enable-stale-production=false,这里要把false改成true，也就是enable-stale-production=true. producer-name =&nbsp;&nbsp; eosio, 在produce-name后面加上eosio就可以 注意producer-name是被注释掉的，要把#去掉 最后在后面加这几行 &nbsp; plugin = eosio::producer_plugin plugin = eosio::wallet_api_plugin plugin = eosio::chain_api_plugin plugin = eosio::http_plugin 然后去eos/build/programs/nodoes里./nodeos 就开始生产区块了，没有报错，这就是eosio的最新版本地配置方法 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/08/03/4578988bd4faecfe65026efb992d67bb.html","headline":"eos最新版的本地环境搭建（v1.0）","dateModified":"2018-08-03T00:00:00+08:00","datePublished":"2018-08-03T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/08/03/4578988bd4faecfe65026efb992d67bb.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

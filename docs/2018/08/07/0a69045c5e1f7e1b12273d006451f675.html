@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="通过solc编译器编译solidity代码到字节码。你可以参考solidity安装文档在本地安装编译器。 编写solidity代码运行： $ solc &lt;contract&gt;.sol --bin --abi --optimize -o &lt;output-dir&gt;/ 1 bin和ABI编译器参数都需要充分利用web3j中的智能合约。 bin，输出包含十六进制编码的solidity二进制文件以提供交易请求。 ABI，输出一个solidity的应用程序二进制接口（ABI）文件，它详细描述了所有可公开访问的合约方法及其相关参数。这些细节和合约地址对于智能合约的交互是至关重要的。ABI文件也用于封装solidity的智能合约。 这里也有一个gas论证，用来提供智能合约所需gas的估计值，并用它的方法进行交易。 你可以通过solidity的浏览器项目Remix在浏览器中编写和编译solidity代码。使用solidity浏览器项目Remix IDE对于较小的智能合约来说是很好的，但是你遇到与较大的智能合约相关的问题。 还可以通过以太坊客户端（如geth和Parity）编译solidity代码，web3j中也支持使用JSON-RPC方法&nbsp;eth_compileSolidity。然而，必须在客户端上安装solidity编译器，这样它才能正常工作。 还有更多的选择，请参阅官网文档中的相关章节。 原文《Java以太坊类库web3j官网中文翻译》中的:&nbsp;http://cw.hubwiz.com/card/c/web3j/1/12/6/ 另外推荐几个很受欢迎全网稀缺的互动教程： web3j，主要是针对java和android程序员围绕web3j库进行区块链以太坊开发的讲解。 python以太坊，主要是针对python围绕web3.py进行区块链以太坊应用开发的讲解。 php以太坊，主要是介绍使用php进行智能合约开发交互，进行账号创建、交易、转账、代币开发以及过滤器和事件等内容。 以太坊开发，主要是介绍使用node.js、mongodb、区块链、ipfs实现去中心化电商DApp实战，适合进阶。 以太坊教程，主要介绍智能合约与dapp应用开发，适合入门。 阅读更多" />
 <meta property="og:description" content="通过solc编译器编译solidity代码到字节码。你可以参考solidity安装文档在本地安装编译器。 编写solidity代码运行： $ solc &lt;contract&gt;.sol --bin --abi --optimize -o &lt;output-dir&gt;/ 1 bin和ABI编译器参数都需要充分利用web3j中的智能合约。 bin，输出包含十六进制编码的solidity二进制文件以提供交易请求。 ABI，输出一个solidity的应用程序二进制接口（ABI）文件，它详细描述了所有可公开访问的合约方法及其相关参数。这些细节和合约地址对于智能合约的交互是至关重要的。ABI文件也用于封装solidity的智能合约。 这里也有一个gas论证，用来提供智能合约所需gas的估计值，并用它的方法进行交易。 你可以通过solidity的浏览器项目Remix在浏览器中编写和编译solidity代码。使用solidity浏览器项目Remix IDE对于较小的智能合约来说是很好的，但是你遇到与较大的智能合约相关的问题。 还可以通过以太坊客户端（如geth和Parity）编译solidity代码，web3j中也支持使用JSON-RPC方法&nbsp;eth_compileSolidity。然而，必须在客户端上安装solidity编译器，这样它才能正常工作。 还有更多的选择，请参阅官网文档中的相关章节。 原文《Java以太坊类库web3j官网中文翻译》中的:&nbsp;http://cw.hubwiz.com/card/c/web3j/1/12/6/ 另外推荐几个很受欢迎全网稀缺的互动教程： web3j，主要是针对java和android程序员围绕web3j库进行区块链以太坊开发的讲解。 python以太坊，主要是针对python围绕web3.py进行区块链以太坊应用开发的讲解。 php以太坊，主要是介绍使用php进行智能合约开发交互，进行账号创建、交易、转账、代币开发以及过滤器和事件等内容。 以太坊开发，主要是介绍使用node.js、mongodb、区块链、ipfs实现去中心化电商DApp实战，适合进阶。 以太坊教程，主要介绍智能合约与dapp应用开发，适合入门。 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/08/07/0a69045c5e1f7e1b12273d006451f675.html" />
+<meta property="og:url" content="https://mlh.app/2018/08/07/0a69045c5e1f7e1b12273d006451f675.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-07T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"通过solc编译器编译solidity代码到字节码。你可以参考solidity安装文档在本地安装编译器。 编写solidity代码运行： $ solc &lt;contract&gt;.sol --bin --abi --optimize -o &lt;output-dir&gt;/ 1 bin和ABI编译器参数都需要充分利用web3j中的智能合约。 bin，输出包含十六进制编码的solidity二进制文件以提供交易请求。 ABI，输出一个solidity的应用程序二进制接口（ABI）文件，它详细描述了所有可公开访问的合约方法及其相关参数。这些细节和合约地址对于智能合约的交互是至关重要的。ABI文件也用于封装solidity的智能合约。 这里也有一个gas论证，用来提供智能合约所需gas的估计值，并用它的方法进行交易。 你可以通过solidity的浏览器项目Remix在浏览器中编写和编译solidity代码。使用solidity浏览器项目Remix IDE对于较小的智能合约来说是很好的，但是你遇到与较大的智能合约相关的问题。 还可以通过以太坊客户端（如geth和Parity）编译solidity代码，web3j中也支持使用JSON-RPC方法&nbsp;eth_compileSolidity。然而，必须在客户端上安装solidity编译器，这样它才能正常工作。 还有更多的选择，请参阅官网文档中的相关章节。 原文《Java以太坊类库web3j官网中文翻译》中的:&nbsp;http://cw.hubwiz.com/card/c/web3j/1/12/6/ 另外推荐几个很受欢迎全网稀缺的互动教程： web3j，主要是针对java和android程序员围绕web3j库进行区块链以太坊开发的讲解。 python以太坊，主要是针对python围绕web3.py进行区块链以太坊应用开发的讲解。 php以太坊，主要是介绍使用php进行智能合约开发交互，进行账号创建、交易、转账、代币开发以及过滤器和事件等内容。 以太坊开发，主要是介绍使用node.js、mongodb、区块链、ipfs实现去中心化电商DApp实战，适合进阶。 以太坊教程，主要介绍智能合约与dapp应用开发，适合入门。 阅读更多","@type":"BlogPosting","url":"/2018/08/07/0a69045c5e1f7e1b12273d006451f675.html","headline":"如何用web3j编译solidity智能合约源代码","dateModified":"2018-08-07T00:00:00+08:00","datePublished":"2018-08-07T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/08/07/0a69045c5e1f7e1b12273d006451f675.html"},"@context":"http://schema.org"}</script>
+{"description":"通过solc编译器编译solidity代码到字节码。你可以参考solidity安装文档在本地安装编译器。 编写solidity代码运行： $ solc &lt;contract&gt;.sol --bin --abi --optimize -o &lt;output-dir&gt;/ 1 bin和ABI编译器参数都需要充分利用web3j中的智能合约。 bin，输出包含十六进制编码的solidity二进制文件以提供交易请求。 ABI，输出一个solidity的应用程序二进制接口（ABI）文件，它详细描述了所有可公开访问的合约方法及其相关参数。这些细节和合约地址对于智能合约的交互是至关重要的。ABI文件也用于封装solidity的智能合约。 这里也有一个gas论证，用来提供智能合约所需gas的估计值，并用它的方法进行交易。 你可以通过solidity的浏览器项目Remix在浏览器中编写和编译solidity代码。使用solidity浏览器项目Remix IDE对于较小的智能合约来说是很好的，但是你遇到与较大的智能合约相关的问题。 还可以通过以太坊客户端（如geth和Parity）编译solidity代码，web3j中也支持使用JSON-RPC方法&nbsp;eth_compileSolidity。然而，必须在客户端上安装solidity编译器，这样它才能正常工作。 还有更多的选择，请参阅官网文档中的相关章节。 原文《Java以太坊类库web3j官网中文翻译》中的:&nbsp;http://cw.hubwiz.com/card/c/web3j/1/12/6/ 另外推荐几个很受欢迎全网稀缺的互动教程： web3j，主要是针对java和android程序员围绕web3j库进行区块链以太坊开发的讲解。 python以太坊，主要是针对python围绕web3.py进行区块链以太坊应用开发的讲解。 php以太坊，主要是介绍使用php进行智能合约开发交互，进行账号创建、交易、转账、代币开发以及过滤器和事件等内容。 以太坊开发，主要是介绍使用node.js、mongodb、区块链、ipfs实现去中心化电商DApp实战，适合进阶。 以太坊教程，主要介绍智能合约与dapp应用开发，适合入门。 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/08/07/0a69045c5e1f7e1b12273d006451f675.html","headline":"如何用web3j编译solidity智能合约源代码","dateModified":"2018-08-07T00:00:00+08:00","datePublished":"2018-08-07T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/08/07/0a69045c5e1f7e1b12273d006451f675.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

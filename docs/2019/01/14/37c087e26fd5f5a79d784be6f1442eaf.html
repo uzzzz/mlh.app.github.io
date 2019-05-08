@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="第一节 tensor - 第一部分 tensor简介 导包 构造矩阵 两个矩阵加和（四种方法） 操作 注意 tensor简介 tensor类似于NumPy的ndarray，另外还有Tensors也可用于GPU以加速计算。 导包 from __future__ import print_function import torch 构造矩阵 #构造一个未初始化的5*3矩阵 x = torch.empty(5, 3) print(x) #构造一个随机初始化的5*3矩阵 x = torch.rand(5, 3) print(x) #构造一个矩阵填充的0和的dtype long x = torch.zeros(5, 3, dtype=torch.long) print(x) #直接从数据构造tensor x = torch.tensor([5.5, 3]) print(x) #根据现有的tensor创建tensor。除非用户提供新值，否则这些方法将重用输入tensor的属性，例如dtype x = x.new_ones(5, 3, dtype=torch.double) print(x) x = torch.randn_like(x, dtype=torch.float) print(x) print(x.size()) y = torch.rand(5,3) print(y) 运行结果： 两个矩阵加和（四种方法） #add方法一 print(x + y) #add方法二 print(torch.add(x, y)) #add方法三 result = torch.empty(5, 3) torch.add(x, y, out=result) print(result) #add方法四 y.add_(x) print(y) 运行结果： 操作 #访问第一列，与numpy用法相似 print(y[:, 1]) #调整大小 x = torch.randn(4, 4) y = x.view(16) z = x.view(-1, 8) print(x.size(), y.size(), z.size()) #如果你的tensor只有一个元素，可以用.item()获取值作为python数字 x = torch.randn(1) print(x) print(x.item()) 运行结果： 注意 任何改变原tensor的操作都是用‘’后实现的。（如：add())" />
 <meta property="og:description" content="第一节 tensor - 第一部分 tensor简介 导包 构造矩阵 两个矩阵加和（四种方法） 操作 注意 tensor简介 tensor类似于NumPy的ndarray，另外还有Tensors也可用于GPU以加速计算。 导包 from __future__ import print_function import torch 构造矩阵 #构造一个未初始化的5*3矩阵 x = torch.empty(5, 3) print(x) #构造一个随机初始化的5*3矩阵 x = torch.rand(5, 3) print(x) #构造一个矩阵填充的0和的dtype long x = torch.zeros(5, 3, dtype=torch.long) print(x) #直接从数据构造tensor x = torch.tensor([5.5, 3]) print(x) #根据现有的tensor创建tensor。除非用户提供新值，否则这些方法将重用输入tensor的属性，例如dtype x = x.new_ones(5, 3, dtype=torch.double) print(x) x = torch.randn_like(x, dtype=torch.float) print(x) print(x.size()) y = torch.rand(5,3) print(y) 运行结果： 两个矩阵加和（四种方法） #add方法一 print(x + y) #add方法二 print(torch.add(x, y)) #add方法三 result = torch.empty(5, 3) torch.add(x, y, out=result) print(result) #add方法四 y.add_(x) print(y) 运行结果： 操作 #访问第一列，与numpy用法相似 print(y[:, 1]) #调整大小 x = torch.randn(4, 4) y = x.view(16) z = x.view(-1, 8) print(x.size(), y.size(), z.size()) #如果你的tensor只有一个元素，可以用.item()获取值作为python数字 x = torch.randn(1) print(x) print(x.item()) 运行结果： 注意 任何改变原tensor的操作都是用‘’后实现的。（如：add())" />
+<link rel="canonical" href="https://mlh.app/2019/01/14/37c087e26fd5f5a79d784be6f1442eaf.html" />
+<meta property="og:url" content="https://mlh.app/2019/01/14/37c087e26fd5f5a79d784be6f1442eaf.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-01-14T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"第一节 tensor - 第一部分 tensor简介 导包 构造矩阵 两个矩阵加和（四种方法） 操作 注意 tensor简介 tensor类似于NumPy的ndarray，另外还有Tensors也可用于GPU以加速计算。 导包 from __future__ import print_function import torch 构造矩阵 #构造一个未初始化的5*3矩阵 x = torch.empty(5, 3) print(x) #构造一个随机初始化的5*3矩阵 x = torch.rand(5, 3) print(x) #构造一个矩阵填充的0和的dtype long x = torch.zeros(5, 3, dtype=torch.long) print(x) #直接从数据构造tensor x = torch.tensor([5.5, 3]) print(x) #根据现有的tensor创建tensor。除非用户提供新值，否则这些方法将重用输入tensor的属性，例如dtype x = x.new_ones(5, 3, dtype=torch.double) print(x) x = torch.randn_like(x, dtype=torch.float) print(x) print(x.size()) y = torch.rand(5,3) print(y) 运行结果： 两个矩阵加和（四种方法） #add方法一 print(x + y) #add方法二 print(torch.add(x, y)) #add方法三 result = torch.empty(5, 3) torch.add(x, y, out=result) print(result) #add方法四 y.add_(x) print(y) 运行结果： 操作 #访问第一列，与numpy用法相似 print(y[:, 1]) #调整大小 x = torch.randn(4, 4) y = x.view(16) z = x.view(-1, 8) print(x.size(), y.size(), z.size()) #如果你的tensor只有一个元素，可以用.item()获取值作为python数字 x = torch.randn(1) print(x) print(x.item()) 运行结果： 注意 任何改变原tensor的操作都是用‘’后实现的。（如：add())","@type":"BlogPosting","url":"/2019/01/14/37c087e26fd5f5a79d784be6f1442eaf.html","headline":"pytorch官方教程—代码&amp;中文注释&amp;运行截图（1）","dateModified":"2019-01-14T00:00:00+08:00","datePublished":"2019-01-14T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2019/01/14/37c087e26fd5f5a79d784be6f1442eaf.html"},"@context":"http://schema.org"}</script>
+{"description":"第一节 tensor - 第一部分 tensor简介 导包 构造矩阵 两个矩阵加和（四种方法） 操作 注意 tensor简介 tensor类似于NumPy的ndarray，另外还有Tensors也可用于GPU以加速计算。 导包 from __future__ import print_function import torch 构造矩阵 #构造一个未初始化的5*3矩阵 x = torch.empty(5, 3) print(x) #构造一个随机初始化的5*3矩阵 x = torch.rand(5, 3) print(x) #构造一个矩阵填充的0和的dtype long x = torch.zeros(5, 3, dtype=torch.long) print(x) #直接从数据构造tensor x = torch.tensor([5.5, 3]) print(x) #根据现有的tensor创建tensor。除非用户提供新值，否则这些方法将重用输入tensor的属性，例如dtype x = x.new_ones(5, 3, dtype=torch.double) print(x) x = torch.randn_like(x, dtype=torch.float) print(x) print(x.size()) y = torch.rand(5,3) print(y) 运行结果： 两个矩阵加和（四种方法） #add方法一 print(x + y) #add方法二 print(torch.add(x, y)) #add方法三 result = torch.empty(5, 3) torch.add(x, y, out=result) print(result) #add方法四 y.add_(x) print(y) 运行结果： 操作 #访问第一列，与numpy用法相似 print(y[:, 1]) #调整大小 x = torch.randn(4, 4) y = x.view(16) z = x.view(-1, 8) print(x.size(), y.size(), z.size()) #如果你的tensor只有一个元素，可以用.item()获取值作为python数字 x = torch.randn(1) print(x) print(x.item()) 运行结果： 注意 任何改变原tensor的操作都是用‘’后实现的。（如：add())","@type":"BlogPosting","url":"https://mlh.app/2019/01/14/37c087e26fd5f5a79d784be6f1442eaf.html","headline":"pytorch官方教程—代码&amp;中文注释&amp;运行截图（1）","dateModified":"2019-01-14T00:00:00+08:00","datePublished":"2019-01-14T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2019/01/14/37c087e26fd5f5a79d784be6f1442eaf.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

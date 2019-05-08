@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="第十五章 规则学习 此系列文章旨在提炼周志华《机器学习》的核心要点，不断完善中… 15.1 基本概念 规则：语义明确，能描述数据分布所隐含的客观规律或领域概念 规则学习：从训练数据中学习一种能用于未见示例进行判别的规则 优点：有更好的可解释性、有冲突可进行冲突消解 15.2 序贯覆盖（分治策略） 原因：规则学习的目标是产生一个能覆盖尽可能多的样例的规则集，最直接做法——序贯覆盖（逐条归纳） 产生规则的两种策略 自顶向下：特化（generate-then-test：生成-测试，由大到小，更容易产生泛化性能较好的规则） 自底向上：泛化（data-driven：数据驱动，适用于训练样本较少的情形） 15.3 剪枝优化 概述：规则生成——贪心搜索过程（需要一定的机制来缓解过拟合风险，如剪枝） 可借助统计显著性检验（如CN2算法） 使用似然率统计量(Likelihood Ratio Statistic, LRS)： 剪枝 预剪枝 后剪枝：常用减错剪枝（Reduced Error Pruning，REP） 结合后处理手段优化 著名规则学习算法RIPPER 15.4 一阶规则学习 问题：命题规则难以处理对象之间的关系 常用算法：FOIL(First-Order Inductive Learner) 使用FOIL增益选择文字：（仅考虑正例的信息量） 15.5 逻辑归纳程序设计 0、概述 归纳逻辑程序设计（ILP）在一阶学习引入函数和逻辑表达式嵌套：采用自底向上的生成策略 使机器学习系统有更强大的表达能力 可看做机器学习技术来解决背景知识的逻辑程序 1、最小一般泛化 将特殊规则变为一般规则最基础技术 2、逆归结 背景知识 演绎：一般到具体（如数字定理证明）、归结原理 归纳：个别到一般（如机器学习）、逆归结 归结原理图示 逆归结四种操作 一阶逻辑的归结、逆归结通常需要进行合一置换操作 置换(substitution)：用某些项来替换逻辑表达式中的变量 合一(unification)：用一种变量置换令两个或多个逻辑表达式相等" />
 <meta property="og:description" content="第十五章 规则学习 此系列文章旨在提炼周志华《机器学习》的核心要点，不断完善中… 15.1 基本概念 规则：语义明确，能描述数据分布所隐含的客观规律或领域概念 规则学习：从训练数据中学习一种能用于未见示例进行判别的规则 优点：有更好的可解释性、有冲突可进行冲突消解 15.2 序贯覆盖（分治策略） 原因：规则学习的目标是产生一个能覆盖尽可能多的样例的规则集，最直接做法——序贯覆盖（逐条归纳） 产生规则的两种策略 自顶向下：特化（generate-then-test：生成-测试，由大到小，更容易产生泛化性能较好的规则） 自底向上：泛化（data-driven：数据驱动，适用于训练样本较少的情形） 15.3 剪枝优化 概述：规则生成——贪心搜索过程（需要一定的机制来缓解过拟合风险，如剪枝） 可借助统计显著性检验（如CN2算法） 使用似然率统计量(Likelihood Ratio Statistic, LRS)： 剪枝 预剪枝 后剪枝：常用减错剪枝（Reduced Error Pruning，REP） 结合后处理手段优化 著名规则学习算法RIPPER 15.4 一阶规则学习 问题：命题规则难以处理对象之间的关系 常用算法：FOIL(First-Order Inductive Learner) 使用FOIL增益选择文字：（仅考虑正例的信息量） 15.5 逻辑归纳程序设计 0、概述 归纳逻辑程序设计（ILP）在一阶学习引入函数和逻辑表达式嵌套：采用自底向上的生成策略 使机器学习系统有更强大的表达能力 可看做机器学习技术来解决背景知识的逻辑程序 1、最小一般泛化 将特殊规则变为一般规则最基础技术 2、逆归结 背景知识 演绎：一般到具体（如数字定理证明）、归结原理 归纳：个别到一般（如机器学习）、逆归结 归结原理图示 逆归结四种操作 一阶逻辑的归结、逆归结通常需要进行合一置换操作 置换(substitution)：用某些项来替换逻辑表达式中的变量 合一(unification)：用一种变量置换令两个或多个逻辑表达式相等" />
+<link rel="canonical" href="https://mlh.app/2019/04/07/727257.html" />
+<meta property="og:url" content="https://mlh.app/2019/04/07/727257.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-04-07T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"第十五章 规则学习 此系列文章旨在提炼周志华《机器学习》的核心要点，不断完善中… 15.1 基本概念 规则：语义明确，能描述数据分布所隐含的客观规律或领域概念 规则学习：从训练数据中学习一种能用于未见示例进行判别的规则 优点：有更好的可解释性、有冲突可进行冲突消解 15.2 序贯覆盖（分治策略） 原因：规则学习的目标是产生一个能覆盖尽可能多的样例的规则集，最直接做法——序贯覆盖（逐条归纳） 产生规则的两种策略 自顶向下：特化（generate-then-test：生成-测试，由大到小，更容易产生泛化性能较好的规则） 自底向上：泛化（data-driven：数据驱动，适用于训练样本较少的情形） 15.3 剪枝优化 概述：规则生成——贪心搜索过程（需要一定的机制来缓解过拟合风险，如剪枝） 可借助统计显著性检验（如CN2算法） 使用似然率统计量(Likelihood Ratio Statistic, LRS)： 剪枝 预剪枝 后剪枝：常用减错剪枝（Reduced Error Pruning，REP） 结合后处理手段优化 著名规则学习算法RIPPER 15.4 一阶规则学习 问题：命题规则难以处理对象之间的关系 常用算法：FOIL(First-Order Inductive Learner) 使用FOIL增益选择文字：（仅考虑正例的信息量） 15.5 逻辑归纳程序设计 0、概述 归纳逻辑程序设计（ILP）在一阶学习引入函数和逻辑表达式嵌套：采用自底向上的生成策略 使机器学习系统有更强大的表达能力 可看做机器学习技术来解决背景知识的逻辑程序 1、最小一般泛化 将特殊规则变为一般规则最基础技术 2、逆归结 背景知识 演绎：一般到具体（如数字定理证明）、归结原理 归纳：个别到一般（如机器学习）、逆归结 归结原理图示 逆归结四种操作 一阶逻辑的归结、逆归结通常需要进行合一置换操作 置换(substitution)：用某些项来替换逻辑表达式中的变量 合一(unification)：用一种变量置换令两个或多个逻辑表达式相等","@type":"BlogPosting","url":"/2019/04/07/727257.html","headline":"MLb-015 58 《机器学习》周志华 第十五章：规则学习","dateModified":"2019-04-07T00:00:00+08:00","datePublished":"2019-04-07T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2019/04/07/727257.html"},"@context":"http://schema.org"}</script>
+{"description":"第十五章 规则学习 此系列文章旨在提炼周志华《机器学习》的核心要点，不断完善中… 15.1 基本概念 规则：语义明确，能描述数据分布所隐含的客观规律或领域概念 规则学习：从训练数据中学习一种能用于未见示例进行判别的规则 优点：有更好的可解释性、有冲突可进行冲突消解 15.2 序贯覆盖（分治策略） 原因：规则学习的目标是产生一个能覆盖尽可能多的样例的规则集，最直接做法——序贯覆盖（逐条归纳） 产生规则的两种策略 自顶向下：特化（generate-then-test：生成-测试，由大到小，更容易产生泛化性能较好的规则） 自底向上：泛化（data-driven：数据驱动，适用于训练样本较少的情形） 15.3 剪枝优化 概述：规则生成——贪心搜索过程（需要一定的机制来缓解过拟合风险，如剪枝） 可借助统计显著性检验（如CN2算法） 使用似然率统计量(Likelihood Ratio Statistic, LRS)： 剪枝 预剪枝 后剪枝：常用减错剪枝（Reduced Error Pruning，REP） 结合后处理手段优化 著名规则学习算法RIPPER 15.4 一阶规则学习 问题：命题规则难以处理对象之间的关系 常用算法：FOIL(First-Order Inductive Learner) 使用FOIL增益选择文字：（仅考虑正例的信息量） 15.5 逻辑归纳程序设计 0、概述 归纳逻辑程序设计（ILP）在一阶学习引入函数和逻辑表达式嵌套：采用自底向上的生成策略 使机器学习系统有更强大的表达能力 可看做机器学习技术来解决背景知识的逻辑程序 1、最小一般泛化 将特殊规则变为一般规则最基础技术 2、逆归结 背景知识 演绎：一般到具体（如数字定理证明）、归结原理 归纳：个别到一般（如机器学习）、逆归结 归结原理图示 逆归结四种操作 一阶逻辑的归结、逆归结通常需要进行合一置换操作 置换(substitution)：用某些项来替换逻辑表达式中的变量 合一(unification)：用一种变量置换令两个或多个逻辑表达式相等","@type":"BlogPosting","url":"https://mlh.app/2019/04/07/727257.html","headline":"MLb-015 58 《机器学习》周志华 第十五章：规则学习","dateModified":"2019-04-07T00:00:00+08:00","datePublished":"2019-04-07T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2019/04/07/727257.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

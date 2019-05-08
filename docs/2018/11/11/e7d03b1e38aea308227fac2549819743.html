@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="视频dapp应用 目的 架构 实现 智能合约 目的 基于区块链技术背景下的视频应用。 git：https://github.com/bill080307/douyinWithEth 架构 ipfs网络负责视频文件的储存、分发； eth网络负责数据检索和同步； 实现 为了在代码书写上有良好的效率，dapp端操作ipfs储存和eth数据库使用中间件，用插件的形式，这样不需要编写轮子，底层代码。 注1：eth层面：账号管理、转账、网络连接等基础操作不在本dapp中实现，插件：MetaMask 注2：ipfs层面：目前ipfs还是测试网络，编写此dapp连filecoin测试网络都还没启动，因此此部分未来改动较大，在本例中直接使用ipfs的api，插件：ipfs-companion 注3：前端技术选型：本例使用vue作为前端，虽然react以及js中有较多框架适合做，本案例中无条件使用vue作为前端。 因此在上图中加入中间件： 由于ipfs还在测试阶段，eth的描述语言solidity对不定长度数据结构返回处理和浮点型数据不够友好，以太坊智能合约部署在Kovan网络之上。 智能合约 https://github.com/bill080307/douyinWithEth/blob/master/VideoShare.sol 其中头像储存的是图片文件在ipfs空间中的CID值。 struct User { string nickname; string profile; string avatar; } mapping(address =&gt; User) users; 更新说明：本例不会以连载的方式更新，直接更新本文。 阅读更多" />
 <meta property="og:description" content="视频dapp应用 目的 架构 实现 智能合约 目的 基于区块链技术背景下的视频应用。 git：https://github.com/bill080307/douyinWithEth 架构 ipfs网络负责视频文件的储存、分发； eth网络负责数据检索和同步； 实现 为了在代码书写上有良好的效率，dapp端操作ipfs储存和eth数据库使用中间件，用插件的形式，这样不需要编写轮子，底层代码。 注1：eth层面：账号管理、转账、网络连接等基础操作不在本dapp中实现，插件：MetaMask 注2：ipfs层面：目前ipfs还是测试网络，编写此dapp连filecoin测试网络都还没启动，因此此部分未来改动较大，在本例中直接使用ipfs的api，插件：ipfs-companion 注3：前端技术选型：本例使用vue作为前端，虽然react以及js中有较多框架适合做，本案例中无条件使用vue作为前端。 因此在上图中加入中间件： 由于ipfs还在测试阶段，eth的描述语言solidity对不定长度数据结构返回处理和浮点型数据不够友好，以太坊智能合约部署在Kovan网络之上。 智能合约 https://github.com/bill080307/douyinWithEth/blob/master/VideoShare.sol 其中头像储存的是图片文件在ipfs空间中的CID值。 struct User { string nickname; string profile; string avatar; } mapping(address =&gt; User) users; 更新说明：本例不会以连载的方式更新，直接更新本文。 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/11/11/e7d03b1e38aea308227fac2549819743.html" />
+<meta property="og:url" content="https://mlh.app/2018/11/11/e7d03b1e38aea308227fac2549819743.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-11T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"视频dapp应用 目的 架构 实现 智能合约 目的 基于区块链技术背景下的视频应用。 git：https://github.com/bill080307/douyinWithEth 架构 ipfs网络负责视频文件的储存、分发； eth网络负责数据检索和同步； 实现 为了在代码书写上有良好的效率，dapp端操作ipfs储存和eth数据库使用中间件，用插件的形式，这样不需要编写轮子，底层代码。 注1：eth层面：账号管理、转账、网络连接等基础操作不在本dapp中实现，插件：MetaMask 注2：ipfs层面：目前ipfs还是测试网络，编写此dapp连filecoin测试网络都还没启动，因此此部分未来改动较大，在本例中直接使用ipfs的api，插件：ipfs-companion 注3：前端技术选型：本例使用vue作为前端，虽然react以及js中有较多框架适合做，本案例中无条件使用vue作为前端。 因此在上图中加入中间件： 由于ipfs还在测试阶段，eth的描述语言solidity对不定长度数据结构返回处理和浮点型数据不够友好，以太坊智能合约部署在Kovan网络之上。 智能合约 https://github.com/bill080307/douyinWithEth/blob/master/VideoShare.sol 其中头像储存的是图片文件在ipfs空间中的CID值。 struct User { string nickname; string profile; string avatar; } mapping(address =&gt; User) users; 更新说明：本例不会以连载的方式更新，直接更新本文。 阅读更多","@type":"BlogPosting","url":"/2018/11/11/e7d03b1e38aea308227fac2549819743.html","headline":"基于ipfs和eth的视频分享应用开发","dateModified":"2018-11-11T00:00:00+08:00","datePublished":"2018-11-11T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/11/11/e7d03b1e38aea308227fac2549819743.html"},"@context":"http://schema.org"}</script>
+{"description":"视频dapp应用 目的 架构 实现 智能合约 目的 基于区块链技术背景下的视频应用。 git：https://github.com/bill080307/douyinWithEth 架构 ipfs网络负责视频文件的储存、分发； eth网络负责数据检索和同步； 实现 为了在代码书写上有良好的效率，dapp端操作ipfs储存和eth数据库使用中间件，用插件的形式，这样不需要编写轮子，底层代码。 注1：eth层面：账号管理、转账、网络连接等基础操作不在本dapp中实现，插件：MetaMask 注2：ipfs层面：目前ipfs还是测试网络，编写此dapp连filecoin测试网络都还没启动，因此此部分未来改动较大，在本例中直接使用ipfs的api，插件：ipfs-companion 注3：前端技术选型：本例使用vue作为前端，虽然react以及js中有较多框架适合做，本案例中无条件使用vue作为前端。 因此在上图中加入中间件： 由于ipfs还在测试阶段，eth的描述语言solidity对不定长度数据结构返回处理和浮点型数据不够友好，以太坊智能合约部署在Kovan网络之上。 智能合约 https://github.com/bill080307/douyinWithEth/blob/master/VideoShare.sol 其中头像储存的是图片文件在ipfs空间中的CID值。 struct User { string nickname; string profile; string avatar; } mapping(address =&gt; User) users; 更新说明：本例不会以连载的方式更新，直接更新本文。 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/11/11/e7d03b1e38aea308227fac2549819743.html","headline":"基于ipfs和eth的视频分享应用开发","dateModified":"2018-11-11T00:00:00+08:00","datePublished":"2018-11-11T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/11/11/e7d03b1e38aea308227fac2549819743.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

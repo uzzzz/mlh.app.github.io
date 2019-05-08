@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Geth 控制台使用及 Web3.js 使用实战 在开发以太坊去中心化应用，免不了和以太坊进行交互，那就离不开Web3。 Geth 控制台（REPL）实现了所有的 web3 API及 Admin API， 使用好 Geth 就是必修课。结合 Geth命令用法阅读效果更佳。 geth控制台初探 - 启动、退出 安装参考 智能合约开发环境搭建 最简单启动方式如下： $ geth console geth控制台启动成功之后，可以看到 &gt;提示符。 退出输入exit geth 日志控制 重定向日志到文件 使用 geth console启动是，会在当前的交互界面下时不时出现日志。 可以使用以下方式把日志输出到文件。 $ geth console 2&gt;&gt;geth.log 可以新开一个命令行终端输入以下命令查看日志： $ tail -f geth.log 重定向另一个终端 也可以把日志重定向到另一个终端，先在想要看日志的终端输入： $ tty 就可以获取到终端编号，如：/dev/ttys003 然后另一个终端使用： $ geth console 2&gt;&gt; /dev/ttys003 启动geth, 这是日志就输出到另一个终端。 如果不想看到日志还可以重定向到空终端： $ geth console 2&gt;&gt; /dev/null 日志级别控制 使用–verbosity可以控制日志级别，如不想看到日志还可以使用： $ geth --verbosity 0 console 启动一个开发模式测试节点 geth --datadir /home/xxx/testNet --dev console 技巧：如果我们经常使用一个方式来启动，可以把命令存为一个bash脚本。 ~/bin你可以放一些常用的脚本，并把~/bin加入到环境变量PATH里。 geth --datadir /home/xxx/testNet --dev console 连接geth节点 另外一个启动geth的方法是连接到一个geth节点： $ geth attach ipc:/some/custom/path $ geth attach http://191.168.1.1:8545 $ geth attach ws://191.168.1.1:8546 如连接刚刚打开的开发模式节点使用： geth attach ipc:testNet/geth.ipc 阅读更多" />
 <meta property="og:description" content="Geth 控制台使用及 Web3.js 使用实战 在开发以太坊去中心化应用，免不了和以太坊进行交互，那就离不开Web3。 Geth 控制台（REPL）实现了所有的 web3 API及 Admin API， 使用好 Geth 就是必修课。结合 Geth命令用法阅读效果更佳。 geth控制台初探 - 启动、退出 安装参考 智能合约开发环境搭建 最简单启动方式如下： $ geth console geth控制台启动成功之后，可以看到 &gt;提示符。 退出输入exit geth 日志控制 重定向日志到文件 使用 geth console启动是，会在当前的交互界面下时不时出现日志。 可以使用以下方式把日志输出到文件。 $ geth console 2&gt;&gt;geth.log 可以新开一个命令行终端输入以下命令查看日志： $ tail -f geth.log 重定向另一个终端 也可以把日志重定向到另一个终端，先在想要看日志的终端输入： $ tty 就可以获取到终端编号，如：/dev/ttys003 然后另一个终端使用： $ geth console 2&gt;&gt; /dev/ttys003 启动geth, 这是日志就输出到另一个终端。 如果不想看到日志还可以重定向到空终端： $ geth console 2&gt;&gt; /dev/null 日志级别控制 使用–verbosity可以控制日志级别，如不想看到日志还可以使用： $ geth --verbosity 0 console 启动一个开发模式测试节点 geth --datadir /home/xxx/testNet --dev console 技巧：如果我们经常使用一个方式来启动，可以把命令存为一个bash脚本。 ~/bin你可以放一些常用的脚本，并把~/bin加入到环境变量PATH里。 geth --datadir /home/xxx/testNet --dev console 连接geth节点 另外一个启动geth的方法是连接到一个geth节点： $ geth attach ipc:/some/custom/path $ geth attach http://191.168.1.1:8545 $ geth attach ws://191.168.1.1:8546 如连接刚刚打开的开发模式节点使用： geth attach ipc:testNet/geth.ipc 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/07/05/d5b880c00b20241cadd6133282dbd021.html" />
+<meta property="og:url" content="https://mlh.app/2018/07/05/d5b880c00b20241cadd6133282dbd021.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-07-05T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"Geth 控制台使用及 Web3.js 使用实战 在开发以太坊去中心化应用，免不了和以太坊进行交互，那就离不开Web3。 Geth 控制台（REPL）实现了所有的 web3 API及 Admin API， 使用好 Geth 就是必修课。结合 Geth命令用法阅读效果更佳。 geth控制台初探 - 启动、退出 安装参考 智能合约开发环境搭建 最简单启动方式如下： $ geth console geth控制台启动成功之后，可以看到 &gt;提示符。 退出输入exit geth 日志控制 重定向日志到文件 使用 geth console启动是，会在当前的交互界面下时不时出现日志。 可以使用以下方式把日志输出到文件。 $ geth console 2&gt;&gt;geth.log 可以新开一个命令行终端输入以下命令查看日志： $ tail -f geth.log 重定向另一个终端 也可以把日志重定向到另一个终端，先在想要看日志的终端输入： $ tty 就可以获取到终端编号，如：/dev/ttys003 然后另一个终端使用： $ geth console 2&gt;&gt; /dev/ttys003 启动geth, 这是日志就输出到另一个终端。 如果不想看到日志还可以重定向到空终端： $ geth console 2&gt;&gt; /dev/null 日志级别控制 使用–verbosity可以控制日志级别，如不想看到日志还可以使用： $ geth --verbosity 0 console 启动一个开发模式测试节点 geth --datadir /home/xxx/testNet --dev console 技巧：如果我们经常使用一个方式来启动，可以把命令存为一个bash脚本。 ~/bin你可以放一些常用的脚本，并把~/bin加入到环境变量PATH里。 geth --datadir /home/xxx/testNet --dev console 连接geth节点 另外一个启动geth的方法是连接到一个geth节点： $ geth attach ipc:/some/custom/path $ geth attach http://191.168.1.1:8545 $ geth attach ws://191.168.1.1:8546 如连接刚刚打开的开发模式节点使用： geth attach ipc:testNet/geth.ipc 阅读更多","@type":"BlogPosting","url":"/2018/07/05/d5b880c00b20241cadd6133282dbd021.html","headline":"Geth 控制台使用及 Web3.js 使用实战","dateModified":"2018-07-05T00:00:00+08:00","datePublished":"2018-07-05T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/07/05/d5b880c00b20241cadd6133282dbd021.html"},"@context":"http://schema.org"}</script>
+{"description":"Geth 控制台使用及 Web3.js 使用实战 在开发以太坊去中心化应用，免不了和以太坊进行交互，那就离不开Web3。 Geth 控制台（REPL）实现了所有的 web3 API及 Admin API， 使用好 Geth 就是必修课。结合 Geth命令用法阅读效果更佳。 geth控制台初探 - 启动、退出 安装参考 智能合约开发环境搭建 最简单启动方式如下： $ geth console geth控制台启动成功之后，可以看到 &gt;提示符。 退出输入exit geth 日志控制 重定向日志到文件 使用 geth console启动是，会在当前的交互界面下时不时出现日志。 可以使用以下方式把日志输出到文件。 $ geth console 2&gt;&gt;geth.log 可以新开一个命令行终端输入以下命令查看日志： $ tail -f geth.log 重定向另一个终端 也可以把日志重定向到另一个终端，先在想要看日志的终端输入： $ tty 就可以获取到终端编号，如：/dev/ttys003 然后另一个终端使用： $ geth console 2&gt;&gt; /dev/ttys003 启动geth, 这是日志就输出到另一个终端。 如果不想看到日志还可以重定向到空终端： $ geth console 2&gt;&gt; /dev/null 日志级别控制 使用–verbosity可以控制日志级别，如不想看到日志还可以使用： $ geth --verbosity 0 console 启动一个开发模式测试节点 geth --datadir /home/xxx/testNet --dev console 技巧：如果我们经常使用一个方式来启动，可以把命令存为一个bash脚本。 ~/bin你可以放一些常用的脚本，并把~/bin加入到环境变量PATH里。 geth --datadir /home/xxx/testNet --dev console 连接geth节点 另外一个启动geth的方法是连接到一个geth节点： $ geth attach ipc:/some/custom/path $ geth attach http://191.168.1.1:8545 $ geth attach ws://191.168.1.1:8546 如连接刚刚打开的开发模式节点使用： geth attach ipc:testNet/geth.ipc 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/07/05/d5b880c00b20241cadd6133282dbd021.html","headline":"Geth 控制台使用及 Web3.js 使用实战","dateModified":"2018-07-05T00:00:00+08:00","datePublished":"2018-07-05T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/07/05/d5b880c00b20241cadd6133282dbd021.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

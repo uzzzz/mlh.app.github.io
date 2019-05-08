@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="本人最近想要搭建ES集群玩玩，于是开始尝试安装虚拟机，才有了这篇博客，过程都是跟网上大神们请教学习的，只是为了记录一下学习的过程以便以后能够回顾。非常感谢这篇文章给与的指导：https://www.veryarm.com/1258.html 下载ubuntu镜像文件，注意下载的是32位还是64位 http://releases.ubuntu.com/ 2.打开VitualBox，按以下步骤操作 点击新建 给虚拟机命名（本人要建集群，所以以01，02，03…区分） 无脑下一步，视个人电脑情况定内存和磁盘空间。 3.选中新建的虚拟机，点击设置： 选中存储 --&gt;控制器：IDE下面的&quot;没有盘片&quot; --&gt;分配光驱，选择step1下载好的镜像文件，点击ok保存设置 4.回到VirtualBox界面，选中虚拟机然后启动 选择 Install Ubuntu 安装完成后移除虚拟盘然后restart，linux系统就装好啦(这个过程有时候快有时候慢，看心情，为什么我知道，因为我装了四遍（微笑脸）) 5.这个时候屏幕大小还不能自动适配，需要进行以下操作： 设备 --&gt;安装增强功能 --&gt;Run 按回车结束，重新启动，然后就可以全屏幕啦~" />
 <meta property="og:description" content="本人最近想要搭建ES集群玩玩，于是开始尝试安装虚拟机，才有了这篇博客，过程都是跟网上大神们请教学习的，只是为了记录一下学习的过程以便以后能够回顾。非常感谢这篇文章给与的指导：https://www.veryarm.com/1258.html 下载ubuntu镜像文件，注意下载的是32位还是64位 http://releases.ubuntu.com/ 2.打开VitualBox，按以下步骤操作 点击新建 给虚拟机命名（本人要建集群，所以以01，02，03…区分） 无脑下一步，视个人电脑情况定内存和磁盘空间。 3.选中新建的虚拟机，点击设置： 选中存储 --&gt;控制器：IDE下面的&quot;没有盘片&quot; --&gt;分配光驱，选择step1下载好的镜像文件，点击ok保存设置 4.回到VirtualBox界面，选中虚拟机然后启动 选择 Install Ubuntu 安装完成后移除虚拟盘然后restart，linux系统就装好啦(这个过程有时候快有时候慢，看心情，为什么我知道，因为我装了四遍（微笑脸）) 5.这个时候屏幕大小还不能自动适配，需要进行以下操作： 设备 --&gt;安装增强功能 --&gt;Run 按回车结束，重新启动，然后就可以全屏幕啦~" />
+<link rel="canonical" href="https://mlh.app/2019/04/07/728711.html" />
+<meta property="og:url" content="https://mlh.app/2019/04/07/728711.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-04-07T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"本人最近想要搭建ES集群玩玩，于是开始尝试安装虚拟机，才有了这篇博客，过程都是跟网上大神们请教学习的，只是为了记录一下学习的过程以便以后能够回顾。非常感谢这篇文章给与的指导：https://www.veryarm.com/1258.html 下载ubuntu镜像文件，注意下载的是32位还是64位 http://releases.ubuntu.com/ 2.打开VitualBox，按以下步骤操作 点击新建 给虚拟机命名（本人要建集群，所以以01，02，03…区分） 无脑下一步，视个人电脑情况定内存和磁盘空间。 3.选中新建的虚拟机，点击设置： 选中存储 --&gt;控制器：IDE下面的&quot;没有盘片&quot; --&gt;分配光驱，选择step1下载好的镜像文件，点击ok保存设置 4.回到VirtualBox界面，选中虚拟机然后启动 选择 Install Ubuntu 安装完成后移除虚拟盘然后restart，linux系统就装好啦(这个过程有时候快有时候慢，看心情，为什么我知道，因为我装了四遍（微笑脸）) 5.这个时候屏幕大小还不能自动适配，需要进行以下操作： 设备 --&gt;安装增强功能 --&gt;Run 按回车结束，重新启动，然后就可以全屏幕啦~","@type":"BlogPosting","url":"/2019/04/07/728711.html","headline":"VirtualBox安装Linux虚拟机","dateModified":"2019-04-07T00:00:00+08:00","datePublished":"2019-04-07T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2019/04/07/728711.html"},"@context":"http://schema.org"}</script>
+{"description":"本人最近想要搭建ES集群玩玩，于是开始尝试安装虚拟机，才有了这篇博客，过程都是跟网上大神们请教学习的，只是为了记录一下学习的过程以便以后能够回顾。非常感谢这篇文章给与的指导：https://www.veryarm.com/1258.html 下载ubuntu镜像文件，注意下载的是32位还是64位 http://releases.ubuntu.com/ 2.打开VitualBox，按以下步骤操作 点击新建 给虚拟机命名（本人要建集群，所以以01，02，03…区分） 无脑下一步，视个人电脑情况定内存和磁盘空间。 3.选中新建的虚拟机，点击设置： 选中存储 --&gt;控制器：IDE下面的&quot;没有盘片&quot; --&gt;分配光驱，选择step1下载好的镜像文件，点击ok保存设置 4.回到VirtualBox界面，选中虚拟机然后启动 选择 Install Ubuntu 安装完成后移除虚拟盘然后restart，linux系统就装好啦(这个过程有时候快有时候慢，看心情，为什么我知道，因为我装了四遍（微笑脸）) 5.这个时候屏幕大小还不能自动适配，需要进行以下操作： 设备 --&gt;安装增强功能 --&gt;Run 按回车结束，重新启动，然后就可以全屏幕啦~","@type":"BlogPosting","url":"https://mlh.app/2019/04/07/728711.html","headline":"VirtualBox安装Linux虚拟机","dateModified":"2019-04-07T00:00:00+08:00","datePublished":"2019-04-07T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2019/04/07/728711.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="写在最前 最近因为某些原因开始搞区块链算法的研究，主要的着力点就是以太坊eth，所以写一下eth挖矿入门，面向啥也不懂的小白 申请钱包 从 https://www.myetherwallet.com/ 这个网址创建自己的eth钱包 首先输入密码就可以创建钱包，然后会生成一个keystore文件： 第二步，很重要的是，会给出一个私钥，有了这个私钥就相当于有了你的钱包，十分重要！！！ 点击保存你的地址，就会看到登录方式，这里可以选择用keystore文件和密码登录，或者直接用私钥登录，这里我们选择文件和密码登录 登录之后就会获得你的以太币地址，记住这个，以后你挖的矿都会跑到这里 查看挖到的矿 只需访问 https://www.f2pool.com/eth/0x197771172B53B816C5718AEBc23fbf0b8D78aA45 (后面就是你的钱包地址)，就可以看到自己的钱包中有多少以太币了 如何挖矿 当然 www.f2pool.com 上提供了挖矿的软件，但是我们需要开源的（主要是可能是人家要求用的），地址在这：https://github.com/ethereum-mining/ethminer git clone https://github.com/ethereum-mining/ethminer.gitdown下来，不过里面好像有个cmake/cable文件夹需要单独clone，否则无法编译 我们的环境是ubuntu16.04上，然后GPU是gtx1060 3G版，这里注意，一定要把驱动更新到396，否则会找不到设备。 实际上这里是build教程 : https://github.com/ethereum-mining/ethminer/blob/master/docs/BUILD.md 编译完成之后，cd **/build/ethminer这个目录下，执行 ./ethminer -U -P stratum+tcp://0x8f24720480e1F682760BcCA743680AF8CCd5EeAe.miner_1060@eth.f2pool.com:8008 这里的-U表示是cuda,-P代表你的url，url的格式要注意使用 www.f2pool.com 首页的地址： 中间为 “你的钱包地址.矿工代号”，其中代号可以随便起。 当然，还有许多参数的设置需要再研究，等以后再更深一步的探索，到这里，我们的矿工就可以把矿放到你的钱包里啦～ 阅读更多" />
 <meta property="og:description" content="写在最前 最近因为某些原因开始搞区块链算法的研究，主要的着力点就是以太坊eth，所以写一下eth挖矿入门，面向啥也不懂的小白 申请钱包 从 https://www.myetherwallet.com/ 这个网址创建自己的eth钱包 首先输入密码就可以创建钱包，然后会生成一个keystore文件： 第二步，很重要的是，会给出一个私钥，有了这个私钥就相当于有了你的钱包，十分重要！！！ 点击保存你的地址，就会看到登录方式，这里可以选择用keystore文件和密码登录，或者直接用私钥登录，这里我们选择文件和密码登录 登录之后就会获得你的以太币地址，记住这个，以后你挖的矿都会跑到这里 查看挖到的矿 只需访问 https://www.f2pool.com/eth/0x197771172B53B816C5718AEBc23fbf0b8D78aA45 (后面就是你的钱包地址)，就可以看到自己的钱包中有多少以太币了 如何挖矿 当然 www.f2pool.com 上提供了挖矿的软件，但是我们需要开源的（主要是可能是人家要求用的），地址在这：https://github.com/ethereum-mining/ethminer git clone https://github.com/ethereum-mining/ethminer.gitdown下来，不过里面好像有个cmake/cable文件夹需要单独clone，否则无法编译 我们的环境是ubuntu16.04上，然后GPU是gtx1060 3G版，这里注意，一定要把驱动更新到396，否则会找不到设备。 实际上这里是build教程 : https://github.com/ethereum-mining/ethminer/blob/master/docs/BUILD.md 编译完成之后，cd **/build/ethminer这个目录下，执行 ./ethminer -U -P stratum+tcp://0x8f24720480e1F682760BcCA743680AF8CCd5EeAe.miner_1060@eth.f2pool.com:8008 这里的-U表示是cuda,-P代表你的url，url的格式要注意使用 www.f2pool.com 首页的地址： 中间为 “你的钱包地址.矿工代号”，其中代号可以随便起。 当然，还有许多参数的设置需要再研究，等以后再更深一步的探索，到这里，我们的矿工就可以把矿放到你的钱包里啦～ 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/08/01/3d61f386c11cd67089a66dc72fb847d3.html" />
+<meta property="og:url" content="https://mlh.app/2018/08/01/3d61f386c11cd67089a66dc72fb847d3.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-01T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"写在最前 最近因为某些原因开始搞区块链算法的研究，主要的着力点就是以太坊eth，所以写一下eth挖矿入门，面向啥也不懂的小白 申请钱包 从 https://www.myetherwallet.com/ 这个网址创建自己的eth钱包 首先输入密码就可以创建钱包，然后会生成一个keystore文件： 第二步，很重要的是，会给出一个私钥，有了这个私钥就相当于有了你的钱包，十分重要！！！ 点击保存你的地址，就会看到登录方式，这里可以选择用keystore文件和密码登录，或者直接用私钥登录，这里我们选择文件和密码登录 登录之后就会获得你的以太币地址，记住这个，以后你挖的矿都会跑到这里 查看挖到的矿 只需访问 https://www.f2pool.com/eth/0x197771172B53B816C5718AEBc23fbf0b8D78aA45 (后面就是你的钱包地址)，就可以看到自己的钱包中有多少以太币了 如何挖矿 当然 www.f2pool.com 上提供了挖矿的软件，但是我们需要开源的（主要是可能是人家要求用的），地址在这：https://github.com/ethereum-mining/ethminer git clone https://github.com/ethereum-mining/ethminer.gitdown下来，不过里面好像有个cmake/cable文件夹需要单独clone，否则无法编译 我们的环境是ubuntu16.04上，然后GPU是gtx1060 3G版，这里注意，一定要把驱动更新到396，否则会找不到设备。 实际上这里是build教程 : https://github.com/ethereum-mining/ethminer/blob/master/docs/BUILD.md 编译完成之后，cd **/build/ethminer这个目录下，执行 ./ethminer -U -P stratum+tcp://0x8f24720480e1F682760BcCA743680AF8CCd5EeAe.miner_1060@eth.f2pool.com:8008 这里的-U表示是cuda,-P代表你的url，url的格式要注意使用 www.f2pool.com 首页的地址： 中间为 “你的钱包地址.矿工代号”，其中代号可以随便起。 当然，还有许多参数的设置需要再研究，等以后再更深一步的探索，到这里，我们的矿工就可以把矿放到你的钱包里啦～ 阅读更多","@type":"BlogPosting","url":"/2018/08/01/3d61f386c11cd67089a66dc72fb847d3.html","headline":"如何挖矿以太坊","dateModified":"2018-08-01T00:00:00+08:00","datePublished":"2018-08-01T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/08/01/3d61f386c11cd67089a66dc72fb847d3.html"},"@context":"http://schema.org"}</script>
+{"description":"写在最前 最近因为某些原因开始搞区块链算法的研究，主要的着力点就是以太坊eth，所以写一下eth挖矿入门，面向啥也不懂的小白 申请钱包 从 https://www.myetherwallet.com/ 这个网址创建自己的eth钱包 首先输入密码就可以创建钱包，然后会生成一个keystore文件： 第二步，很重要的是，会给出一个私钥，有了这个私钥就相当于有了你的钱包，十分重要！！！ 点击保存你的地址，就会看到登录方式，这里可以选择用keystore文件和密码登录，或者直接用私钥登录，这里我们选择文件和密码登录 登录之后就会获得你的以太币地址，记住这个，以后你挖的矿都会跑到这里 查看挖到的矿 只需访问 https://www.f2pool.com/eth/0x197771172B53B816C5718AEBc23fbf0b8D78aA45 (后面就是你的钱包地址)，就可以看到自己的钱包中有多少以太币了 如何挖矿 当然 www.f2pool.com 上提供了挖矿的软件，但是我们需要开源的（主要是可能是人家要求用的），地址在这：https://github.com/ethereum-mining/ethminer git clone https://github.com/ethereum-mining/ethminer.gitdown下来，不过里面好像有个cmake/cable文件夹需要单独clone，否则无法编译 我们的环境是ubuntu16.04上，然后GPU是gtx1060 3G版，这里注意，一定要把驱动更新到396，否则会找不到设备。 实际上这里是build教程 : https://github.com/ethereum-mining/ethminer/blob/master/docs/BUILD.md 编译完成之后，cd **/build/ethminer这个目录下，执行 ./ethminer -U -P stratum+tcp://0x8f24720480e1F682760BcCA743680AF8CCd5EeAe.miner_1060@eth.f2pool.com:8008 这里的-U表示是cuda,-P代表你的url，url的格式要注意使用 www.f2pool.com 首页的地址： 中间为 “你的钱包地址.矿工代号”，其中代号可以随便起。 当然，还有许多参数的设置需要再研究，等以后再更深一步的探索，到这里，我们的矿工就可以把矿放到你的钱包里啦～ 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/08/01/3d61f386c11cd67089a66dc72fb847d3.html","headline":"如何挖矿以太坊","dateModified":"2018-08-01T00:00:00+08:00","datePublished":"2018-08-01T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/08/01/3d61f386c11cd67089a66dc72fb847d3.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

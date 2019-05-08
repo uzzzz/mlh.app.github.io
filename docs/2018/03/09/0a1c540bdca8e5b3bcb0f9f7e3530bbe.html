@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="使用rippled建立私有总账很容易，RL的JoelKatz很早就在论坛提到过： y&nbsp;JoelKatz&nbsp;» Tue Apr 07, 2015 6:30 pm There&#39;s actually nothing special you need to do. If you just launch rippled without &quot;--net&quot;, it will create a brand new ledger. If other servers trust that server, they&#39;ll follow its ledgers. 从上我们可以知道，如果你的rippled节点想连接ripple的mainnet，启动时最好加上--net参数。 除了mainnet，RL还运行了测试网络altnet和开发网络devnet，个人也可以利用rippled建立自己的私有网络和私有总账。 如果想建立私有总账，则不需改动代码，只修改cfg文件：不去连接（信任）RL的IPS和UNL，只连接和信任自己的节点，即可创建一个私有总账。 1、首先通过rippled validation_create生成validation_seed和validation_public_key。 2、修改cfg文件，删除IPS里的r.ripple.com 51235，改成自己的节点地址。如果自己就一个节点，可以留空。 3、修改cfg文件，填入第一步生成的 validation_seed 4、修改cfg文件，删除validators里的RL1~5，填入第一步生成的 validation_public_key。 5、修改cfg文件，修改validation_quorum，如果自己只建一个 validators节点， validation_quorum设为1，如果自建多个 validator节点， validation_quorum的设置值建议超过半数。 启动rippled，就建立了自己的私有总账。那么私有总账里的XRP在哪里呢？ 打开rippled生成的debug log，第二三行就是root account的私钥和地址，该地址存有创世账单的一千亿私有XRP。 &nbsp; 可以用工具查看一下私有账单号 博主QQ: 122209017 阅读更多" />
 <meta property="og:description" content="使用rippled建立私有总账很容易，RL的JoelKatz很早就在论坛提到过： y&nbsp;JoelKatz&nbsp;» Tue Apr 07, 2015 6:30 pm There&#39;s actually nothing special you need to do. If you just launch rippled without &quot;--net&quot;, it will create a brand new ledger. If other servers trust that server, they&#39;ll follow its ledgers. 从上我们可以知道，如果你的rippled节点想连接ripple的mainnet，启动时最好加上--net参数。 除了mainnet，RL还运行了测试网络altnet和开发网络devnet，个人也可以利用rippled建立自己的私有网络和私有总账。 如果想建立私有总账，则不需改动代码，只修改cfg文件：不去连接（信任）RL的IPS和UNL，只连接和信任自己的节点，即可创建一个私有总账。 1、首先通过rippled validation_create生成validation_seed和validation_public_key。 2、修改cfg文件，删除IPS里的r.ripple.com 51235，改成自己的节点地址。如果自己就一个节点，可以留空。 3、修改cfg文件，填入第一步生成的 validation_seed 4、修改cfg文件，删除validators里的RL1~5，填入第一步生成的 validation_public_key。 5、修改cfg文件，修改validation_quorum，如果自己只建一个 validators节点， validation_quorum设为1，如果自建多个 validator节点， validation_quorum的设置值建议超过半数。 启动rippled，就建立了自己的私有总账。那么私有总账里的XRP在哪里呢？ 打开rippled生成的debug log，第二三行就是root account的私钥和地址，该地址存有创世账单的一千亿私有XRP。 &nbsp; 可以用工具查看一下私有账单号 博主QQ: 122209017 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/03/09/0a1c540bdca8e5b3bcb0f9f7e3530bbe.html" />
+<meta property="og:url" content="https://mlh.app/2018/03/09/0a1c540bdca8e5b3bcb0f9f7e3530bbe.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-03-09T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"使用rippled建立私有总账很容易，RL的JoelKatz很早就在论坛提到过： y&nbsp;JoelKatz&nbsp;» Tue Apr 07, 2015 6:30 pm There&#39;s actually nothing special you need to do. If you just launch rippled without &quot;--net&quot;, it will create a brand new ledger. If other servers trust that server, they&#39;ll follow its ledgers. 从上我们可以知道，如果你的rippled节点想连接ripple的mainnet，启动时最好加上--net参数。 除了mainnet，RL还运行了测试网络altnet和开发网络devnet，个人也可以利用rippled建立自己的私有网络和私有总账。 如果想建立私有总账，则不需改动代码，只修改cfg文件：不去连接（信任）RL的IPS和UNL，只连接和信任自己的节点，即可创建一个私有总账。 1、首先通过rippled validation_create生成validation_seed和validation_public_key。 2、修改cfg文件，删除IPS里的r.ripple.com 51235，改成自己的节点地址。如果自己就一个节点，可以留空。 3、修改cfg文件，填入第一步生成的 validation_seed 4、修改cfg文件，删除validators里的RL1~5，填入第一步生成的 validation_public_key。 5、修改cfg文件，修改validation_quorum，如果自己只建一个 validators节点， validation_quorum设为1，如果自建多个 validator节点， validation_quorum的设置值建议超过半数。 启动rippled，就建立了自己的私有总账。那么私有总账里的XRP在哪里呢？ 打开rippled生成的debug log，第二三行就是root account的私钥和地址，该地址存有创世账单的一千亿私有XRP。 &nbsp; 可以用工具查看一下私有账单号 博主QQ: 122209017 阅读更多","@type":"BlogPosting","url":"/2018/03/09/0a1c540bdca8e5b3bcb0f9f7e3530bbe.html","headline":"如何利用ripple建立私有总账","dateModified":"2018-03-09T00:00:00+08:00","datePublished":"2018-03-09T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/03/09/0a1c540bdca8e5b3bcb0f9f7e3530bbe.html"},"@context":"http://schema.org"}</script>
+{"description":"使用rippled建立私有总账很容易，RL的JoelKatz很早就在论坛提到过： y&nbsp;JoelKatz&nbsp;» Tue Apr 07, 2015 6:30 pm There&#39;s actually nothing special you need to do. If you just launch rippled without &quot;--net&quot;, it will create a brand new ledger. If other servers trust that server, they&#39;ll follow its ledgers. 从上我们可以知道，如果你的rippled节点想连接ripple的mainnet，启动时最好加上--net参数。 除了mainnet，RL还运行了测试网络altnet和开发网络devnet，个人也可以利用rippled建立自己的私有网络和私有总账。 如果想建立私有总账，则不需改动代码，只修改cfg文件：不去连接（信任）RL的IPS和UNL，只连接和信任自己的节点，即可创建一个私有总账。 1、首先通过rippled validation_create生成validation_seed和validation_public_key。 2、修改cfg文件，删除IPS里的r.ripple.com 51235，改成自己的节点地址。如果自己就一个节点，可以留空。 3、修改cfg文件，填入第一步生成的 validation_seed 4、修改cfg文件，删除validators里的RL1~5，填入第一步生成的 validation_public_key。 5、修改cfg文件，修改validation_quorum，如果自己只建一个 validators节点， validation_quorum设为1，如果自建多个 validator节点， validation_quorum的设置值建议超过半数。 启动rippled，就建立了自己的私有总账。那么私有总账里的XRP在哪里呢？ 打开rippled生成的debug log，第二三行就是root account的私钥和地址，该地址存有创世账单的一千亿私有XRP。 &nbsp; 可以用工具查看一下私有账单号 博主QQ: 122209017 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/03/09/0a1c540bdca8e5b3bcb0f9f7e3530bbe.html","headline":"如何利用ripple建立私有总账","dateModified":"2018-03-09T00:00:00+08:00","datePublished":"2018-03-09T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/03/09/0a1c540bdca8e5b3bcb0f9f7e3530bbe.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

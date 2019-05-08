@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="上一张说到把docker 以及docker-compose的安装，现在开始下载源代码以及加入通道 下载并安装 Curl 工具 1、 创建 Fabric 工程和项目目录. mkdir -p work cd work 然后, 执行如下代码: curl -L https://raw.githubusercontent.com/voodoo12345/polaris/master/fabpre.tar.gz -o fabpre.tar.gz 2&gt; /dev/null; tar -xvf fabpre.tar.gz 执行完这条命令，会下载并解压缩部署Fabric网络的相关组件 ，包括Docker Compose 脚本, 通道创建/加入脚本, 认证使用的加密要素等. 你当前目录看上去是这样的: ls ccenv channel_test.sh docker-compose.yml fabpre.tar.gz src tmp 2、使用Docker 创建Fabric网络 1）确保 hyperledger/fabric-ccenv 镜像的标签是 latest: 执行docker-compose build 2）创建Fabric网络,创建通道（正本）, 将Peer节点加入通道: 在up前，先修改 这两个文件的 地址为order容器地址，地址可以通过 ps -ef查看 否则会导致cli grpc超时 执行docker-compose up 3）查看你的容器: docker ps 4）确保通道已成功创建，并且节点都成功加入: 执行docker exec -it cli sh 5）查看通道创建/节点加入的结果: cat results.txt 屏幕显示的结果如下: 6）验证成功创建了创世块，执行如下命令: ls -ltr myc1.block 阅读更多" />
 <meta property="og:description" content="上一张说到把docker 以及docker-compose的安装，现在开始下载源代码以及加入通道 下载并安装 Curl 工具 1、 创建 Fabric 工程和项目目录. mkdir -p work cd work 然后, 执行如下代码: curl -L https://raw.githubusercontent.com/voodoo12345/polaris/master/fabpre.tar.gz -o fabpre.tar.gz 2&gt; /dev/null; tar -xvf fabpre.tar.gz 执行完这条命令，会下载并解压缩部署Fabric网络的相关组件 ，包括Docker Compose 脚本, 通道创建/加入脚本, 认证使用的加密要素等. 你当前目录看上去是这样的: ls ccenv channel_test.sh docker-compose.yml fabpre.tar.gz src tmp 2、使用Docker 创建Fabric网络 1）确保 hyperledger/fabric-ccenv 镜像的标签是 latest: 执行docker-compose build 2）创建Fabric网络,创建通道（正本）, 将Peer节点加入通道: 在up前，先修改 这两个文件的 地址为order容器地址，地址可以通过 ps -ef查看 否则会导致cli grpc超时 执行docker-compose up 3）查看你的容器: docker ps 4）确保通道已成功创建，并且节点都成功加入: 执行docker exec -it cli sh 5）查看通道创建/节点加入的结果: cat results.txt 屏幕显示的结果如下: 6）验证成功创建了创世块，执行如下命令: ls -ltr myc1.block 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2017/06/22/a989b6e20d8b7a612aa003b3b88a4399.html" />
+<meta property="og:url" content="https://mlh.app/2017/06/22/a989b6e20d8b7a612aa003b3b88a4399.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-06-22T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"上一张说到把docker 以及docker-compose的安装，现在开始下载源代码以及加入通道 下载并安装 Curl 工具 1、 创建 Fabric 工程和项目目录. mkdir -p work cd work 然后, 执行如下代码: curl -L https://raw.githubusercontent.com/voodoo12345/polaris/master/fabpre.tar.gz -o fabpre.tar.gz 2&gt; /dev/null; tar -xvf fabpre.tar.gz 执行完这条命令，会下载并解压缩部署Fabric网络的相关组件 ，包括Docker Compose 脚本, 通道创建/加入脚本, 认证使用的加密要素等. 你当前目录看上去是这样的: ls ccenv channel_test.sh docker-compose.yml fabpre.tar.gz src tmp 2、使用Docker 创建Fabric网络 1）确保 hyperledger/fabric-ccenv 镜像的标签是 latest: 执行docker-compose build 2）创建Fabric网络,创建通道（正本）, 将Peer节点加入通道: 在up前，先修改 这两个文件的 地址为order容器地址，地址可以通过 ps -ef查看 否则会导致cli grpc超时 执行docker-compose up 3）查看你的容器: docker ps 4）确保通道已成功创建，并且节点都成功加入: 执行docker exec -it cli sh 5）查看通道创建/节点加入的结果: cat results.txt 屏幕显示的结果如下: 6）验证成功创建了创世块，执行如下命令: ls -ltr myc1.block 阅读更多","@type":"BlogPosting","url":"/2017/06/22/a989b6e20d8b7a612aa003b3b88a4399.html","headline":"区块链之Hyperledgerd搭建（二、下载fabric源代码并用Docker 创建Fabric网络 &amp; 创建/加入通道（账本））","dateModified":"2017-06-22T00:00:00+08:00","datePublished":"2017-06-22T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2017/06/22/a989b6e20d8b7a612aa003b3b88a4399.html"},"@context":"http://schema.org"}</script>
+{"description":"上一张说到把docker 以及docker-compose的安装，现在开始下载源代码以及加入通道 下载并安装 Curl 工具 1、 创建 Fabric 工程和项目目录. mkdir -p work cd work 然后, 执行如下代码: curl -L https://raw.githubusercontent.com/voodoo12345/polaris/master/fabpre.tar.gz -o fabpre.tar.gz 2&gt; /dev/null; tar -xvf fabpre.tar.gz 执行完这条命令，会下载并解压缩部署Fabric网络的相关组件 ，包括Docker Compose 脚本, 通道创建/加入脚本, 认证使用的加密要素等. 你当前目录看上去是这样的: ls ccenv channel_test.sh docker-compose.yml fabpre.tar.gz src tmp 2、使用Docker 创建Fabric网络 1）确保 hyperledger/fabric-ccenv 镜像的标签是 latest: 执行docker-compose build 2）创建Fabric网络,创建通道（正本）, 将Peer节点加入通道: 在up前，先修改 这两个文件的 地址为order容器地址，地址可以通过 ps -ef查看 否则会导致cli grpc超时 执行docker-compose up 3）查看你的容器: docker ps 4）确保通道已成功创建，并且节点都成功加入: 执行docker exec -it cli sh 5）查看通道创建/节点加入的结果: cat results.txt 屏幕显示的结果如下: 6）验证成功创建了创世块，执行如下命令: ls -ltr myc1.block 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2017/06/22/a989b6e20d8b7a612aa003b3b88a4399.html","headline":"区块链之Hyperledgerd搭建（二、下载fabric源代码并用Docker 创建Fabric网络 &amp; 创建/加入通道（账本））","dateModified":"2017-06-22T00:00:00+08:00","datePublished":"2017-06-22T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2017/06/22/a989b6e20d8b7a612aa003b3b88a4399.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

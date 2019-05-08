@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="本文记录了fedora20下安装gotty的过程。 根据网上各种关于gotty的安装说明，如文：https://linux.cn/article-8445-1.html，基本上gotty的安装可以分为三部分： (1)安装Go语言环境 (2)配置环境变量 (3)安装gotty 下面记录一下自己在安装配置过程中遇到的问题和解决方法。 由于直接从Go官网上下载相关安装包网速很慢，所以第一次选择了直接yum安装golang(在fedora20下不建议这么做，因为这样安装的golang版本太低，在后面安装gotty时会遇到问题，报找不到context)。后面直接下载了go的tar包，解压到/usr/local下。同时配置环境变量，在~/.bashrc中添加： export GOPATH=/Home/xxx/workspace/go export PATH=$PATH:/usr/local/go/bin 其中，GOPATH用于指定自己的go工作目录，不要和go的安装目录相同即可。 可以通过go version来查看go是否安装好。 go version &nbsp; 接下去是安装gotty。有go get直接安装和go install安装两种方式，都能成功(前提是go版本不要太低)。 先说go get。 go get -v github.com/yudai/gotty 这种方式下直接装成功可用。此时会在之前配置的工作目录的bin下有gotty。进行简单测试： 终端 网页 在shell中输入以下命令则可在网页上像操作普通shell一样进行操作. 下面说第二种方法，go install安装。方法为：将github下载的东西放到之前配置的GOPATH的src路径下，进行go install即可。若安装过程中出现找不到package的时候，将对应的package移动到其要求的路径下即可，package都在src中。 顺便将自己这次用的Go安装包和gotty包整理了一下。https://download.csdn.net/download/huihui199003/10552940 &nbsp; &nbsp; 阅读更多" />
 <meta property="og:description" content="本文记录了fedora20下安装gotty的过程。 根据网上各种关于gotty的安装说明，如文：https://linux.cn/article-8445-1.html，基本上gotty的安装可以分为三部分： (1)安装Go语言环境 (2)配置环境变量 (3)安装gotty 下面记录一下自己在安装配置过程中遇到的问题和解决方法。 由于直接从Go官网上下载相关安装包网速很慢，所以第一次选择了直接yum安装golang(在fedora20下不建议这么做，因为这样安装的golang版本太低，在后面安装gotty时会遇到问题，报找不到context)。后面直接下载了go的tar包，解压到/usr/local下。同时配置环境变量，在~/.bashrc中添加： export GOPATH=/Home/xxx/workspace/go export PATH=$PATH:/usr/local/go/bin 其中，GOPATH用于指定自己的go工作目录，不要和go的安装目录相同即可。 可以通过go version来查看go是否安装好。 go version &nbsp; 接下去是安装gotty。有go get直接安装和go install安装两种方式，都能成功(前提是go版本不要太低)。 先说go get。 go get -v github.com/yudai/gotty 这种方式下直接装成功可用。此时会在之前配置的工作目录的bin下有gotty。进行简单测试： 终端 网页 在shell中输入以下命令则可在网页上像操作普通shell一样进行操作. 下面说第二种方法，go install安装。方法为：将github下载的东西放到之前配置的GOPATH的src路径下，进行go install即可。若安装过程中出现找不到package的时候，将对应的package移动到其要求的路径下即可，package都在src中。 顺便将自己这次用的Go安装包和gotty包整理了一下。https://download.csdn.net/download/huihui199003/10552940 &nbsp; &nbsp; 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/07/20/af898c66b0619f2c884af55b7e3cb21b.html" />
+<meta property="og:url" content="https://mlh.app/2018/07/20/af898c66b0619f2c884af55b7e3cb21b.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-07-20T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"本文记录了fedora20下安装gotty的过程。 根据网上各种关于gotty的安装说明，如文：https://linux.cn/article-8445-1.html，基本上gotty的安装可以分为三部分： (1)安装Go语言环境 (2)配置环境变量 (3)安装gotty 下面记录一下自己在安装配置过程中遇到的问题和解决方法。 由于直接从Go官网上下载相关安装包网速很慢，所以第一次选择了直接yum安装golang(在fedora20下不建议这么做，因为这样安装的golang版本太低，在后面安装gotty时会遇到问题，报找不到context)。后面直接下载了go的tar包，解压到/usr/local下。同时配置环境变量，在~/.bashrc中添加： export GOPATH=/Home/xxx/workspace/go export PATH=$PATH:/usr/local/go/bin 其中，GOPATH用于指定自己的go工作目录，不要和go的安装目录相同即可。 可以通过go version来查看go是否安装好。 go version &nbsp; 接下去是安装gotty。有go get直接安装和go install安装两种方式，都能成功(前提是go版本不要太低)。 先说go get。 go get -v github.com/yudai/gotty 这种方式下直接装成功可用。此时会在之前配置的工作目录的bin下有gotty。进行简单测试： 终端 网页 在shell中输入以下命令则可在网页上像操作普通shell一样进行操作. 下面说第二种方法，go install安装。方法为：将github下载的东西放到之前配置的GOPATH的src路径下，进行go install即可。若安装过程中出现找不到package的时候，将对应的package移动到其要求的路径下即可，package都在src中。 顺便将自己这次用的Go安装包和gotty包整理了一下。https://download.csdn.net/download/huihui199003/10552940 &nbsp; &nbsp; 阅读更多","@type":"BlogPosting","url":"/2018/07/20/af898c66b0619f2c884af55b7e3cb21b.html","headline":"fedora20 下安装gotty的步骤","dateModified":"2018-07-20T00:00:00+08:00","datePublished":"2018-07-20T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/07/20/af898c66b0619f2c884af55b7e3cb21b.html"},"@context":"http://schema.org"}</script>
+{"description":"本文记录了fedora20下安装gotty的过程。 根据网上各种关于gotty的安装说明，如文：https://linux.cn/article-8445-1.html，基本上gotty的安装可以分为三部分： (1)安装Go语言环境 (2)配置环境变量 (3)安装gotty 下面记录一下自己在安装配置过程中遇到的问题和解决方法。 由于直接从Go官网上下载相关安装包网速很慢，所以第一次选择了直接yum安装golang(在fedora20下不建议这么做，因为这样安装的golang版本太低，在后面安装gotty时会遇到问题，报找不到context)。后面直接下载了go的tar包，解压到/usr/local下。同时配置环境变量，在~/.bashrc中添加： export GOPATH=/Home/xxx/workspace/go export PATH=$PATH:/usr/local/go/bin 其中，GOPATH用于指定自己的go工作目录，不要和go的安装目录相同即可。 可以通过go version来查看go是否安装好。 go version &nbsp; 接下去是安装gotty。有go get直接安装和go install安装两种方式，都能成功(前提是go版本不要太低)。 先说go get。 go get -v github.com/yudai/gotty 这种方式下直接装成功可用。此时会在之前配置的工作目录的bin下有gotty。进行简单测试： 终端 网页 在shell中输入以下命令则可在网页上像操作普通shell一样进行操作. 下面说第二种方法，go install安装。方法为：将github下载的东西放到之前配置的GOPATH的src路径下，进行go install即可。若安装过程中出现找不到package的时候，将对应的package移动到其要求的路径下即可，package都在src中。 顺便将自己这次用的Go安装包和gotty包整理了一下。https://download.csdn.net/download/huihui199003/10552940 &nbsp; &nbsp; 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/07/20/af898c66b0619f2c884af55b7e3cb21b.html","headline":"fedora20 下安装gotty的步骤","dateModified":"2018-07-20T00:00:00+08:00","datePublished":"2018-07-20T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/07/20/af898c66b0619f2c884af55b7e3cb21b.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

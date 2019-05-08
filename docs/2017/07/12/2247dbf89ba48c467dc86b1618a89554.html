@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="这个问题一般是公私钥不匹配问题，但是由于程序猿一般没有权限去修改支付宝账号的应用以及配置，导致一些重要创建流程我们并不是很清晰，遇到问题也很难去排查，今天借着这个问题，将创建流程与步骤在做一下讲述，算是对之前文章的一个补充。 步骤1：创建应用 这个不需要多讲，但是要注意，1：应用是否上线，没上线只可以用沙箱测试，上线即可用线上测试。2：支付功能是否签约，签约是否生效，这里如果没有签约或者不生效都会导致无法支付 一：检查应用是否上线 二：是否签约支付功能，是否生效 步骤2：配置公私钥，并提交公钥 生成公钥私钥，需要去下载一键生成RSA密钥工具。下载地址：https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.pohUoc&amp;treeId=291&amp;articleId=106097&amp;docType=1 这里对应PKCS8，生成1024或者2048（官方推荐），点击生成秘钥即可，生成后点击打开秘钥文件路径，即可找到对应的公私钥文件 公钥上传，私钥官方推荐服务器返回，本地代码不要保留私钥，但是一般都是在本地保留，这个看需求了。 这里需要注意，如果你采用RSA2，你必须生成2048位长度，如果是RSA，则对长度无限制 当然并不仅仅是在配置上做处理，在代码中也一样要做处理 如果sign_type采用RSA2，这里sign_type需要改成RSA2,。 这里sign_type也需要改成RSA2，和SHA256withRsa 上传公钥需要注意 在应用管理中，有三个地方需要传，开放平台秘钥，mapi，老版wap都需要传入同一个公钥，切记，都需要传入，请检测传入后的是否一致。 然后创建异常问题就解决了，一般都是公私钥不匹配问题。如果有问题请查看一下步骤排查一下吧 阅读更多" />
 <meta property="og:description" content="这个问题一般是公私钥不匹配问题，但是由于程序猿一般没有权限去修改支付宝账号的应用以及配置，导致一些重要创建流程我们并不是很清晰，遇到问题也很难去排查，今天借着这个问题，将创建流程与步骤在做一下讲述，算是对之前文章的一个补充。 步骤1：创建应用 这个不需要多讲，但是要注意，1：应用是否上线，没上线只可以用沙箱测试，上线即可用线上测试。2：支付功能是否签约，签约是否生效，这里如果没有签约或者不生效都会导致无法支付 一：检查应用是否上线 二：是否签约支付功能，是否生效 步骤2：配置公私钥，并提交公钥 生成公钥私钥，需要去下载一键生成RSA密钥工具。下载地址：https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.pohUoc&amp;treeId=291&amp;articleId=106097&amp;docType=1 这里对应PKCS8，生成1024或者2048（官方推荐），点击生成秘钥即可，生成后点击打开秘钥文件路径，即可找到对应的公私钥文件 公钥上传，私钥官方推荐服务器返回，本地代码不要保留私钥，但是一般都是在本地保留，这个看需求了。 这里需要注意，如果你采用RSA2，你必须生成2048位长度，如果是RSA，则对长度无限制 当然并不仅仅是在配置上做处理，在代码中也一样要做处理 如果sign_type采用RSA2，这里sign_type需要改成RSA2,。 这里sign_type也需要改成RSA2，和SHA256withRsa 上传公钥需要注意 在应用管理中，有三个地方需要传，开放平台秘钥，mapi，老版wap都需要传入同一个公钥，切记，都需要传入，请检测传入后的是否一致。 然后创建异常问题就解决了，一般都是公私钥不匹配问题。如果有问题请查看一下步骤排查一下吧 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2017/07/12/2247dbf89ba48c467dc86b1618a89554.html" />
+<meta property="og:url" content="https://mlh.app/2017/07/12/2247dbf89ba48c467dc86b1618a89554.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-07-12T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"这个问题一般是公私钥不匹配问题，但是由于程序猿一般没有权限去修改支付宝账号的应用以及配置，导致一些重要创建流程我们并不是很清晰，遇到问题也很难去排查，今天借着这个问题，将创建流程与步骤在做一下讲述，算是对之前文章的一个补充。 步骤1：创建应用 这个不需要多讲，但是要注意，1：应用是否上线，没上线只可以用沙箱测试，上线即可用线上测试。2：支付功能是否签约，签约是否生效，这里如果没有签约或者不生效都会导致无法支付 一：检查应用是否上线 二：是否签约支付功能，是否生效 步骤2：配置公私钥，并提交公钥 生成公钥私钥，需要去下载一键生成RSA密钥工具。下载地址：https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.pohUoc&amp;treeId=291&amp;articleId=106097&amp;docType=1 这里对应PKCS8，生成1024或者2048（官方推荐），点击生成秘钥即可，生成后点击打开秘钥文件路径，即可找到对应的公私钥文件 公钥上传，私钥官方推荐服务器返回，本地代码不要保留私钥，但是一般都是在本地保留，这个看需求了。 这里需要注意，如果你采用RSA2，你必须生成2048位长度，如果是RSA，则对长度无限制 当然并不仅仅是在配置上做处理，在代码中也一样要做处理 如果sign_type采用RSA2，这里sign_type需要改成RSA2,。 这里sign_type也需要改成RSA2，和SHA256withRsa 上传公钥需要注意 在应用管理中，有三个地方需要传，开放平台秘钥，mapi，老版wap都需要传入同一个公钥，切记，都需要传入，请检测传入后的是否一致。 然后创建异常问题就解决了，一般都是公私钥不匹配问题。如果有问题请查看一下步骤排查一下吧 阅读更多","@type":"BlogPosting","url":"/2017/07/12/2247dbf89ba48c467dc86b1618a89554.html","headline":"Android集成支付宝“创建交易异常，请重新创建后付款”问题","dateModified":"2017-07-12T00:00:00+08:00","datePublished":"2017-07-12T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2017/07/12/2247dbf89ba48c467dc86b1618a89554.html"},"@context":"http://schema.org"}</script>
+{"description":"这个问题一般是公私钥不匹配问题，但是由于程序猿一般没有权限去修改支付宝账号的应用以及配置，导致一些重要创建流程我们并不是很清晰，遇到问题也很难去排查，今天借着这个问题，将创建流程与步骤在做一下讲述，算是对之前文章的一个补充。 步骤1：创建应用 这个不需要多讲，但是要注意，1：应用是否上线，没上线只可以用沙箱测试，上线即可用线上测试。2：支付功能是否签约，签约是否生效，这里如果没有签约或者不生效都会导致无法支付 一：检查应用是否上线 二：是否签约支付功能，是否生效 步骤2：配置公私钥，并提交公钥 生成公钥私钥，需要去下载一键生成RSA密钥工具。下载地址：https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7629140.0.0.pohUoc&amp;treeId=291&amp;articleId=106097&amp;docType=1 这里对应PKCS8，生成1024或者2048（官方推荐），点击生成秘钥即可，生成后点击打开秘钥文件路径，即可找到对应的公私钥文件 公钥上传，私钥官方推荐服务器返回，本地代码不要保留私钥，但是一般都是在本地保留，这个看需求了。 这里需要注意，如果你采用RSA2，你必须生成2048位长度，如果是RSA，则对长度无限制 当然并不仅仅是在配置上做处理，在代码中也一样要做处理 如果sign_type采用RSA2，这里sign_type需要改成RSA2,。 这里sign_type也需要改成RSA2，和SHA256withRsa 上传公钥需要注意 在应用管理中，有三个地方需要传，开放平台秘钥，mapi，老版wap都需要传入同一个公钥，切记，都需要传入，请检测传入后的是否一致。 然后创建异常问题就解决了，一般都是公私钥不匹配问题。如果有问题请查看一下步骤排查一下吧 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2017/07/12/2247dbf89ba48c467dc86b1618a89554.html","headline":"Android集成支付宝“创建交易异常，请重新创建后付款”问题","dateModified":"2017-07-12T00:00:00+08:00","datePublished":"2017-07-12T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2017/07/12/2247dbf89ba48c467dc86b1618a89554.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

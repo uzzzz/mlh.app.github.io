@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/IOT_victor/article/details/87896620 相较于前两节介绍的词法分析（分词、词性标注或命名实体识别等），句法分析属于NLP较为高阶的问题。本节着重介绍基于统计的句法分析方法，主要介绍基于上下文无关文法的句法分析。 在自然语言学习过程中，每个人一定都学过语法，例如句子可以用主语、谓语、宾语来表示。在自然语言的处理过程中，有许多应用场景都需要考虑句子的语法，因此研究语法解析变得非常重要。 我们可以用树状结构图来表示，S表示句子；NP、VP、PP是名词、动词、介词短语（短语级别）；N、V、P分别是名词、动词、介词。 一、基于PCFG的句法分析 上下文无关语法（Context-Free Grammer） 为了生成句子的语法树，我们可以定义如下的一套上下文无关语法。 1）N表示一组非叶子节点的标注，例如{S、NP、VP、N...} 2）Σ表示一组叶子结点的标注，例如{the、is...} 3）R表示一组规则，每条觃则可以表示为 4）S表示语法树开始的标注 举例来说，语法的一个语法子集可以表示为下图所示。当给定一个句子时，我们便可以按照从左到右的顺序来解析语法。例如，句子the man sleeps就可以表示为(S (NP (DT the) (NN man)) (VP sleeps))。 概率分布的上下文无关语法（Probabilistic Context-Free Grammar） PCFG是CFG的扩展，是一种生成式的方法。 上下文无关的语法可以很容易的推导出一个句子的语法结构，但是缺点是推导出的结构可能存在二义性。由于语法的解析存在二义性，我们就需要找到一种方法从多种可能的语法树种找出最可能的一棵树。一种常见的方法既是PCFG （Probabilistic Context-Free Grammar）。如下图所示，除了常规的语法规则以外，我们还对每一条规则赋予了一个概率。对于每一棵生成的语法树，我们将其中所以规则的概率的乘积作为语法树的出现概率。 当我们获得多棵语法树时，我们可以分别计算每棵语法树的概率p(t)，出现概率最大的那棵语法树就是我们希望得到的结果，即arg max p(t)。 二、基于CRF的句法分析 待续…… &nbsp;" />
 <meta property="og:description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/IOT_victor/article/details/87896620 相较于前两节介绍的词法分析（分词、词性标注或命名实体识别等），句法分析属于NLP较为高阶的问题。本节着重介绍基于统计的句法分析方法，主要介绍基于上下文无关文法的句法分析。 在自然语言学习过程中，每个人一定都学过语法，例如句子可以用主语、谓语、宾语来表示。在自然语言的处理过程中，有许多应用场景都需要考虑句子的语法，因此研究语法解析变得非常重要。 我们可以用树状结构图来表示，S表示句子；NP、VP、PP是名词、动词、介词短语（短语级别）；N、V、P分别是名词、动词、介词。 一、基于PCFG的句法分析 上下文无关语法（Context-Free Grammer） 为了生成句子的语法树，我们可以定义如下的一套上下文无关语法。 1）N表示一组非叶子节点的标注，例如{S、NP、VP、N...} 2）Σ表示一组叶子结点的标注，例如{the、is...} 3）R表示一组规则，每条觃则可以表示为 4）S表示语法树开始的标注 举例来说，语法的一个语法子集可以表示为下图所示。当给定一个句子时，我们便可以按照从左到右的顺序来解析语法。例如，句子the man sleeps就可以表示为(S (NP (DT the) (NN man)) (VP sleeps))。 概率分布的上下文无关语法（Probabilistic Context-Free Grammar） PCFG是CFG的扩展，是一种生成式的方法。 上下文无关的语法可以很容易的推导出一个句子的语法结构，但是缺点是推导出的结构可能存在二义性。由于语法的解析存在二义性，我们就需要找到一种方法从多种可能的语法树种找出最可能的一棵树。一种常见的方法既是PCFG （Probabilistic Context-Free Grammar）。如下图所示，除了常规的语法规则以外，我们还对每一条规则赋予了一个概率。对于每一棵生成的语法树，我们将其中所以规则的概率的乘积作为语法树的出现概率。 当我们获得多棵语法树时，我们可以分别计算每棵语法树的概率p(t)，出现概率最大的那棵语法树就是我们希望得到的结果，即arg max p(t)。 二、基于CRF的句法分析 待续…… &nbsp;" />
+<link rel="canonical" href="https://mlh.app/2019/02/23/22279cdb21108e8304b3ac4993aec216.html" />
+<meta property="og:url" content="https://mlh.app/2019/02/23/22279cdb21108e8304b3ac4993aec216.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-02-23T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/IOT_victor/article/details/87896620 相较于前两节介绍的词法分析（分词、词性标注或命名实体识别等），句法分析属于NLP较为高阶的问题。本节着重介绍基于统计的句法分析方法，主要介绍基于上下文无关文法的句法分析。 在自然语言学习过程中，每个人一定都学过语法，例如句子可以用主语、谓语、宾语来表示。在自然语言的处理过程中，有许多应用场景都需要考虑句子的语法，因此研究语法解析变得非常重要。 我们可以用树状结构图来表示，S表示句子；NP、VP、PP是名词、动词、介词短语（短语级别）；N、V、P分别是名词、动词、介词。 一、基于PCFG的句法分析 上下文无关语法（Context-Free Grammer） 为了生成句子的语法树，我们可以定义如下的一套上下文无关语法。 1）N表示一组非叶子节点的标注，例如{S、NP、VP、N...} 2）Σ表示一组叶子结点的标注，例如{the、is...} 3）R表示一组规则，每条觃则可以表示为 4）S表示语法树开始的标注 举例来说，语法的一个语法子集可以表示为下图所示。当给定一个句子时，我们便可以按照从左到右的顺序来解析语法。例如，句子the man sleeps就可以表示为(S (NP (DT the) (NN man)) (VP sleeps))。 概率分布的上下文无关语法（Probabilistic Context-Free Grammar） PCFG是CFG的扩展，是一种生成式的方法。 上下文无关的语法可以很容易的推导出一个句子的语法结构，但是缺点是推导出的结构可能存在二义性。由于语法的解析存在二义性，我们就需要找到一种方法从多种可能的语法树种找出最可能的一棵树。一种常见的方法既是PCFG （Probabilistic Context-Free Grammar）。如下图所示，除了常规的语法规则以外，我们还对每一条规则赋予了一个概率。对于每一棵生成的语法树，我们将其中所以规则的概率的乘积作为语法树的出现概率。 当我们获得多棵语法树时，我们可以分别计算每棵语法树的概率p(t)，出现概率最大的那棵语法树就是我们希望得到的结果，即arg max p(t)。 二、基于CRF的句法分析 待续…… &nbsp;","@type":"BlogPosting","url":"/2019/02/23/22279cdb21108e8304b3ac4993aec216.html","headline":"NLP基础笔记3——句法分析","dateModified":"2019-02-23T00:00:00+08:00","datePublished":"2019-02-23T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2019/02/23/22279cdb21108e8304b3ac4993aec216.html"},"@context":"http://schema.org"}</script>
+{"description":"版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/IOT_victor/article/details/87896620 相较于前两节介绍的词法分析（分词、词性标注或命名实体识别等），句法分析属于NLP较为高阶的问题。本节着重介绍基于统计的句法分析方法，主要介绍基于上下文无关文法的句法分析。 在自然语言学习过程中，每个人一定都学过语法，例如句子可以用主语、谓语、宾语来表示。在自然语言的处理过程中，有许多应用场景都需要考虑句子的语法，因此研究语法解析变得非常重要。 我们可以用树状结构图来表示，S表示句子；NP、VP、PP是名词、动词、介词短语（短语级别）；N、V、P分别是名词、动词、介词。 一、基于PCFG的句法分析 上下文无关语法（Context-Free Grammer） 为了生成句子的语法树，我们可以定义如下的一套上下文无关语法。 1）N表示一组非叶子节点的标注，例如{S、NP、VP、N...} 2）Σ表示一组叶子结点的标注，例如{the、is...} 3）R表示一组规则，每条觃则可以表示为 4）S表示语法树开始的标注 举例来说，语法的一个语法子集可以表示为下图所示。当给定一个句子时，我们便可以按照从左到右的顺序来解析语法。例如，句子the man sleeps就可以表示为(S (NP (DT the) (NN man)) (VP sleeps))。 概率分布的上下文无关语法（Probabilistic Context-Free Grammar） PCFG是CFG的扩展，是一种生成式的方法。 上下文无关的语法可以很容易的推导出一个句子的语法结构，但是缺点是推导出的结构可能存在二义性。由于语法的解析存在二义性，我们就需要找到一种方法从多种可能的语法树种找出最可能的一棵树。一种常见的方法既是PCFG （Probabilistic Context-Free Grammar）。如下图所示，除了常规的语法规则以外，我们还对每一条规则赋予了一个概率。对于每一棵生成的语法树，我们将其中所以规则的概率的乘积作为语法树的出现概率。 当我们获得多棵语法树时，我们可以分别计算每棵语法树的概率p(t)，出现概率最大的那棵语法树就是我们希望得到的结果，即arg max p(t)。 二、基于CRF的句法分析 待续…… &nbsp;","@type":"BlogPosting","url":"https://mlh.app/2019/02/23/22279cdb21108e8304b3ac4993aec216.html","headline":"NLP基础笔记3——句法分析","dateModified":"2019-02-23T00:00:00+08:00","datePublished":"2019-02-23T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2019/02/23/22279cdb21108e8304b3ac4993aec216.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

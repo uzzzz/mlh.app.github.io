@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="过程详解 启动6台节点(每个节点可以理解为一台电脑) org1 机构1里面的peer0 和 peer1 org2 机构2里面的peer0 和 peer1 orderer是排序节点 cli 是client(命令行客户端,后续cli进行的操作会替换成java,或者node sdk的调用) 创建channel 让每个peer加入channel org1的peer0加入 org1的peer1加入 org2的peer0加入 org2的peer1加入 更新锚节点 (anchor peer) 锚节点的作用就是让两个不同的机构(org)可以彼此通讯 在org1的peer0上安装链码(智能合约) 在org2的peer0上安装链码 在org2的peer0上实例化链码 在org1的peer0上执行查询 在org1的peer0上执行invoke事物 进行转账 在org2的peer1上安装链码 在org2的peer1上进行查询 大功告成" />
 <meta property="og:description" content="过程详解 启动6台节点(每个节点可以理解为一台电脑) org1 机构1里面的peer0 和 peer1 org2 机构2里面的peer0 和 peer1 orderer是排序节点 cli 是client(命令行客户端,后续cli进行的操作会替换成java,或者node sdk的调用) 创建channel 让每个peer加入channel org1的peer0加入 org1的peer1加入 org2的peer0加入 org2的peer1加入 更新锚节点 (anchor peer) 锚节点的作用就是让两个不同的机构(org)可以彼此通讯 在org1的peer0上安装链码(智能合约) 在org2的peer0上安装链码 在org2的peer0上实例化链码 在org1的peer0上执行查询 在org1的peer0上执行invoke事物 进行转账 在org2的peer1上安装链码 在org2的peer1上进行查询 大功告成" />
+<link rel="canonical" href="https://mlh.app/2018/12/02/d2edee442224dc391f165cfcd2c48183.html" />
+<meta property="og:url" content="https://mlh.app/2018/12/02/d2edee442224dc391f165cfcd2c48183.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-12-02T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"过程详解 启动6台节点(每个节点可以理解为一台电脑) org1 机构1里面的peer0 和 peer1 org2 机构2里面的peer0 和 peer1 orderer是排序节点 cli 是client(命令行客户端,后续cli进行的操作会替换成java,或者node sdk的调用) 创建channel 让每个peer加入channel org1的peer0加入 org1的peer1加入 org2的peer0加入 org2的peer1加入 更新锚节点 (anchor peer) 锚节点的作用就是让两个不同的机构(org)可以彼此通讯 在org1的peer0上安装链码(智能合约) 在org2的peer0上安装链码 在org2的peer0上实例化链码 在org1的peer0上执行查询 在org1的peer0上执行invoke事物 进行转账 在org2的peer1上安装链码 在org2的peer1上进行查询 大功告成","@type":"BlogPosting","url":"/2018/12/02/d2edee442224dc391f165cfcd2c48183.html","headline":"hyperledger环境搭建解析","dateModified":"2018-12-02T00:00:00+08:00","datePublished":"2018-12-02T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/12/02/d2edee442224dc391f165cfcd2c48183.html"},"@context":"http://schema.org"}</script>
+{"description":"过程详解 启动6台节点(每个节点可以理解为一台电脑) org1 机构1里面的peer0 和 peer1 org2 机构2里面的peer0 和 peer1 orderer是排序节点 cli 是client(命令行客户端,后续cli进行的操作会替换成java,或者node sdk的调用) 创建channel 让每个peer加入channel org1的peer0加入 org1的peer1加入 org2的peer0加入 org2的peer1加入 更新锚节点 (anchor peer) 锚节点的作用就是让两个不同的机构(org)可以彼此通讯 在org1的peer0上安装链码(智能合约) 在org2的peer0上安装链码 在org2的peer0上实例化链码 在org1的peer0上执行查询 在org1的peer0上执行invoke事物 进行转账 在org2的peer1上安装链码 在org2的peer1上进行查询 大功告成","@type":"BlogPosting","url":"https://mlh.app/2018/12/02/d2edee442224dc391f165cfcd2c48183.html","headline":"hyperledger环境搭建解析","dateModified":"2018-12-02T00:00:00+08:00","datePublished":"2018-12-02T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/12/02/d2edee442224dc391f165cfcd2c48183.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="&nbsp;&nbsp;&nbsp;&nbsp;上一节跟大家大体上聊了下什么是ArcGIS API for JavaScript是什么，大体上能做什么？谈的比较浅，但是别急，凡是都是从易到难。这一节我们就开始进入开发工程师的世界，从部署开始说起。 &nbsp;&nbsp;&nbsp;&nbsp;要部署API，首先得知道从哪里可以下载API，因为现在很多系统的应用场景都是在机构内部使用，也就是说需要在离线的环境下使用API，所以我们需要在本地部署一套API。当然，如果你的应用是在互联网上跑的，那么可以直接使用Esri提供的在线API。Esri提供了一个离线的版本，我们可以在开发者网站上下载(https://developers.arcgis.com/)。对于老司机来说，下载个API应该是很容易的事。为了方便大家，我把API和SDK都已经下载下来（最新的版本是3.20），放在了百度网盘上，下载地址如下： 链接: https://pan.baidu.com/s/1gf7nkVT 密码: zqqn 下载并解压，拷贝3.20和SDK目录到IIS或者Tomcat下，如下图所示： 接下来我们需要修改3.20目录下的init.js及dojo\dojo.js文件：找到这两个文件中的[HOSTNAME_AND_PATH_TO_JSAPI]，并替换成&lt;myserver&gt;:&lt;port&gt;/3.20/，如果端口号为80则可省略。我这里是本机，端口是80，所以替换成了localhost/3.20/，如下图所示： 图-替换前 图-替换后 dojo.js文件的替换一样。至于SDK文件夹就不需要做任何修改了，那到这里API和SDK都已经部署好了。 &nbsp; &nbsp; 阅读更多" />
 <meta property="og:description" content="&nbsp;&nbsp;&nbsp;&nbsp;上一节跟大家大体上聊了下什么是ArcGIS API for JavaScript是什么，大体上能做什么？谈的比较浅，但是别急，凡是都是从易到难。这一节我们就开始进入开发工程师的世界，从部署开始说起。 &nbsp;&nbsp;&nbsp;&nbsp;要部署API，首先得知道从哪里可以下载API，因为现在很多系统的应用场景都是在机构内部使用，也就是说需要在离线的环境下使用API，所以我们需要在本地部署一套API。当然，如果你的应用是在互联网上跑的，那么可以直接使用Esri提供的在线API。Esri提供了一个离线的版本，我们可以在开发者网站上下载(https://developers.arcgis.com/)。对于老司机来说，下载个API应该是很容易的事。为了方便大家，我把API和SDK都已经下载下来（最新的版本是3.20），放在了百度网盘上，下载地址如下： 链接: https://pan.baidu.com/s/1gf7nkVT 密码: zqqn 下载并解压，拷贝3.20和SDK目录到IIS或者Tomcat下，如下图所示： 接下来我们需要修改3.20目录下的init.js及dojo\dojo.js文件：找到这两个文件中的[HOSTNAME_AND_PATH_TO_JSAPI]，并替换成&lt;myserver&gt;:&lt;port&gt;/3.20/，如果端口号为80则可省略。我这里是本机，端口是80，所以替换成了localhost/3.20/，如下图所示： 图-替换前 图-替换后 dojo.js文件的替换一样。至于SDK文件夹就不需要做任何修改了，那到这里API和SDK都已经部署好了。 &nbsp; &nbsp; 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2017/05/19/3ad406fb5f690f85ab0d9a217f68367f.html" />
+<meta property="og:url" content="https://mlh.app/2017/05/19/3ad406fb5f690f85ab0d9a217f68367f.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-05-19T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"&nbsp;&nbsp;&nbsp;&nbsp;上一节跟大家大体上聊了下什么是ArcGIS API for JavaScript是什么，大体上能做什么？谈的比较浅，但是别急，凡是都是从易到难。这一节我们就开始进入开发工程师的世界，从部署开始说起。 &nbsp;&nbsp;&nbsp;&nbsp;要部署API，首先得知道从哪里可以下载API，因为现在很多系统的应用场景都是在机构内部使用，也就是说需要在离线的环境下使用API，所以我们需要在本地部署一套API。当然，如果你的应用是在互联网上跑的，那么可以直接使用Esri提供的在线API。Esri提供了一个离线的版本，我们可以在开发者网站上下载(https://developers.arcgis.com/)。对于老司机来说，下载个API应该是很容易的事。为了方便大家，我把API和SDK都已经下载下来（最新的版本是3.20），放在了百度网盘上，下载地址如下： 链接: https://pan.baidu.com/s/1gf7nkVT 密码: zqqn 下载并解压，拷贝3.20和SDK目录到IIS或者Tomcat下，如下图所示： 接下来我们需要修改3.20目录下的init.js及dojo\\dojo.js文件：找到这两个文件中的[HOSTNAME_AND_PATH_TO_JSAPI]，并替换成&lt;myserver&gt;:&lt;port&gt;/3.20/，如果端口号为80则可省略。我这里是本机，端口是80，所以替换成了localhost/3.20/，如下图所示： 图-替换前 图-替换后 dojo.js文件的替换一样。至于SDK文件夹就不需要做任何修改了，那到这里API和SDK都已经部署好了。 &nbsp; &nbsp; 阅读更多","@type":"BlogPosting","url":"/2017/05/19/3ad406fb5f690f85ab0d9a217f68367f.html","headline":"API及SDK离线部署,一分钟搞定","dateModified":"2017-05-19T00:00:00+08:00","datePublished":"2017-05-19T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2017/05/19/3ad406fb5f690f85ab0d9a217f68367f.html"},"@context":"http://schema.org"}</script>
+{"description":"&nbsp;&nbsp;&nbsp;&nbsp;上一节跟大家大体上聊了下什么是ArcGIS API for JavaScript是什么，大体上能做什么？谈的比较浅，但是别急，凡是都是从易到难。这一节我们就开始进入开发工程师的世界，从部署开始说起。 &nbsp;&nbsp;&nbsp;&nbsp;要部署API，首先得知道从哪里可以下载API，因为现在很多系统的应用场景都是在机构内部使用，也就是说需要在离线的环境下使用API，所以我们需要在本地部署一套API。当然，如果你的应用是在互联网上跑的，那么可以直接使用Esri提供的在线API。Esri提供了一个离线的版本，我们可以在开发者网站上下载(https://developers.arcgis.com/)。对于老司机来说，下载个API应该是很容易的事。为了方便大家，我把API和SDK都已经下载下来（最新的版本是3.20），放在了百度网盘上，下载地址如下： 链接: https://pan.baidu.com/s/1gf7nkVT 密码: zqqn 下载并解压，拷贝3.20和SDK目录到IIS或者Tomcat下，如下图所示： 接下来我们需要修改3.20目录下的init.js及dojo\\dojo.js文件：找到这两个文件中的[HOSTNAME_AND_PATH_TO_JSAPI]，并替换成&lt;myserver&gt;:&lt;port&gt;/3.20/，如果端口号为80则可省略。我这里是本机，端口是80，所以替换成了localhost/3.20/，如下图所示： 图-替换前 图-替换后 dojo.js文件的替换一样。至于SDK文件夹就不需要做任何修改了，那到这里API和SDK都已经部署好了。 &nbsp; &nbsp; 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2017/05/19/3ad406fb5f690f85ab0d9a217f68367f.html","headline":"API及SDK离线部署,一分钟搞定","dateModified":"2017-05-19T00:00:00+08:00","datePublished":"2017-05-19T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2017/05/19/3ad406fb5f690f85ab0d9a217f68367f.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

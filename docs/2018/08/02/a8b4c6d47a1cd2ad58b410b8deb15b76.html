@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="RAM兑换公式 RAM和EOS之间的兑换通过一个中间货币来中转，代码里称之为RAMCORE，我们这里不用太多关注它，之前首页上展示过一个简单的RAM兑换EOS的公式，下面推导一下这个公式是怎么来的： 变量 含义 初始值 A RAMCORE的发行总量 100亿RAMCORE B EOS池子里EOS的数量 100万EOS C RAM池子里可用RAM的容量 64G X 韭菜准备投入用于购买RAM的EOS数量 &nbsp; Y 大佬收割韭菜时出售的RAM容量 &nbsp; 根据这里的代码，翻译成数学语言： 先兑换成中间货币RAMCORE： 最后再用RAMCORE兑换成想要的RAM： &nbsp; 一般情况下RAMCORE都是远远小于A的，所以为了后续计算方便可以理解为，那么将第一个式子代入第二个式子就有： &nbsp; 同理可知，RAM兑换EOS简要公式推导为： 所以，当有用户买入RAM时，B和C的变化情况为: 那么，就有： 同理也可证明卖出RAM也是一样的结论，感兴趣的同学可以去试试~ 所以可以得出一个组略的结论： 无论RAM市场如何波动，B和C的乘积是几乎保持不变的。 这个乘积就是64*1024*1024 KiB*100万EOS，即67108864000000，设为G，那么： 所以，最终的RAM兑换公式即： 当计算1个EOS能兑换多少RAM时，X=1，此时RAM就是汇率了： 考虑到1远远小于B，有： &nbsp; &nbsp; &nbsp; 阅读更多" />
 <meta property="og:description" content="RAM兑换公式 RAM和EOS之间的兑换通过一个中间货币来中转，代码里称之为RAMCORE，我们这里不用太多关注它，之前首页上展示过一个简单的RAM兑换EOS的公式，下面推导一下这个公式是怎么来的： 变量 含义 初始值 A RAMCORE的发行总量 100亿RAMCORE B EOS池子里EOS的数量 100万EOS C RAM池子里可用RAM的容量 64G X 韭菜准备投入用于购买RAM的EOS数量 &nbsp; Y 大佬收割韭菜时出售的RAM容量 &nbsp; 根据这里的代码，翻译成数学语言： 先兑换成中间货币RAMCORE： 最后再用RAMCORE兑换成想要的RAM： &nbsp; 一般情况下RAMCORE都是远远小于A的，所以为了后续计算方便可以理解为，那么将第一个式子代入第二个式子就有： &nbsp; 同理可知，RAM兑换EOS简要公式推导为： 所以，当有用户买入RAM时，B和C的变化情况为: 那么，就有： 同理也可证明卖出RAM也是一样的结论，感兴趣的同学可以去试试~ 所以可以得出一个组略的结论： 无论RAM市场如何波动，B和C的乘积是几乎保持不变的。 这个乘积就是64*1024*1024 KiB*100万EOS，即67108864000000，设为G，那么： 所以，最终的RAM兑换公式即： 当计算1个EOS能兑换多少RAM时，X=1，此时RAM就是汇率了： 考虑到1远远小于B，有： &nbsp; &nbsp; &nbsp; 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/08/02/a8b4c6d47a1cd2ad58b410b8deb15b76.html" />
+<meta property="og:url" content="https://mlh.app/2018/08/02/a8b4c6d47a1cd2ad58b410b8deb15b76.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-02T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"RAM兑换公式 RAM和EOS之间的兑换通过一个中间货币来中转，代码里称之为RAMCORE，我们这里不用太多关注它，之前首页上展示过一个简单的RAM兑换EOS的公式，下面推导一下这个公式是怎么来的： 变量 含义 初始值 A RAMCORE的发行总量 100亿RAMCORE B EOS池子里EOS的数量 100万EOS C RAM池子里可用RAM的容量 64G X 韭菜准备投入用于购买RAM的EOS数量 &nbsp; Y 大佬收割韭菜时出售的RAM容量 &nbsp; 根据这里的代码，翻译成数学语言： 先兑换成中间货币RAMCORE： 最后再用RAMCORE兑换成想要的RAM： &nbsp; 一般情况下RAMCORE都是远远小于A的，所以为了后续计算方便可以理解为，那么将第一个式子代入第二个式子就有： &nbsp; 同理可知，RAM兑换EOS简要公式推导为： 所以，当有用户买入RAM时，B和C的变化情况为: 那么，就有： 同理也可证明卖出RAM也是一样的结论，感兴趣的同学可以去试试~ 所以可以得出一个组略的结论： 无论RAM市场如何波动，B和C的乘积是几乎保持不变的。 这个乘积就是64*1024*1024 KiB*100万EOS，即67108864000000，设为G，那么： 所以，最终的RAM兑换公式即： 当计算1个EOS能兑换多少RAM时，X=1，此时RAM就是汇率了： 考虑到1远远小于B，有： &nbsp; &nbsp; &nbsp; 阅读更多","@type":"BlogPosting","url":"/2018/08/02/a8b4c6d47a1cd2ad58b410b8deb15b76.html","headline":"EOS智能合约开发（十二）EOSIO购买RAM中Bancor协议算法分析","dateModified":"2018-08-02T00:00:00+08:00","datePublished":"2018-08-02T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/08/02/a8b4c6d47a1cd2ad58b410b8deb15b76.html"},"@context":"http://schema.org"}</script>
+{"description":"RAM兑换公式 RAM和EOS之间的兑换通过一个中间货币来中转，代码里称之为RAMCORE，我们这里不用太多关注它，之前首页上展示过一个简单的RAM兑换EOS的公式，下面推导一下这个公式是怎么来的： 变量 含义 初始值 A RAMCORE的发行总量 100亿RAMCORE B EOS池子里EOS的数量 100万EOS C RAM池子里可用RAM的容量 64G X 韭菜准备投入用于购买RAM的EOS数量 &nbsp; Y 大佬收割韭菜时出售的RAM容量 &nbsp; 根据这里的代码，翻译成数学语言： 先兑换成中间货币RAMCORE： 最后再用RAMCORE兑换成想要的RAM： &nbsp; 一般情况下RAMCORE都是远远小于A的，所以为了后续计算方便可以理解为，那么将第一个式子代入第二个式子就有： &nbsp; 同理可知，RAM兑换EOS简要公式推导为： 所以，当有用户买入RAM时，B和C的变化情况为: 那么，就有： 同理也可证明卖出RAM也是一样的结论，感兴趣的同学可以去试试~ 所以可以得出一个组略的结论： 无论RAM市场如何波动，B和C的乘积是几乎保持不变的。 这个乘积就是64*1024*1024 KiB*100万EOS，即67108864000000，设为G，那么： 所以，最终的RAM兑换公式即： 当计算1个EOS能兑换多少RAM时，X=1，此时RAM就是汇率了： 考虑到1远远小于B，有： &nbsp; &nbsp; &nbsp; 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/08/02/a8b4c6d47a1cd2ad58b410b8deb15b76.html","headline":"EOS智能合约开发（十二）EOSIO购买RAM中Bancor协议算法分析","dateModified":"2018-08-02T00:00:00+08:00","datePublished":"2018-08-02T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/08/02/a8b4c6d47a1cd2ad58b410b8deb15b76.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="商户后台系统先调用微信支付的统一下单接口，微信后台系统返回链接参数code_url，商户后台系统将code_url值生成二维码图片，用户使用微信客户端扫码后发起支付。注意：code_url有效期为2小时，过期后扫码不能再发起支付。 业务流程时序图 图6.9 原生支付模式二时序图 业务流程说明： （1）商户后台系统根据用户选购的商品生成订单。 （2）用户确认支付后调用微信支付【统一下单API】生成预支付交易； （3）微信支付系统收到请求后生成预支付交易单，并返回交易会话的二维码链接code_url。 （4）商户后台系统根据返回的code_url生成二维码。 （5）用户打开微信“扫一扫”扫描二维码，微信客户端将扫码内容发送到微信支付系统。 （6）微信支付系统收到客户端请求，验证链接有效性后发起用户支付，要求用户授权。 （7）用户在微信客户端输入密码，确认支付后，微信客户端提交授权。 （8）微信支付系统根据用户授权完成支付交易。 （9）微信支付系统完成支付交易后给微信客户端返回交易结果，并将交易结果通过短信、微信消息提示用户。微信客户端展示支付交易结果页面。 （10）微信支付系统通过发送异步消息通知商户后台系统支付结果。商户后台系统需回复接收情况，通知微信后台系统不再发送该单的支付通知。 （11）未收到支付通知的情况，商户后台系统调用【查询订单API】。 （12）商户确认订单已支付后给用户发货。 生成二维码规则 对应链接格式：weixin：//wxpay/bizpayurl?sr=XXXXX。请商户调用第三方库将code_url生成二维码图片。该模式链接较短，生成的二维码打印到结账小票上的识别率较高。 例如，将weixin：//wxpay/s/An4baqw生成二维码见图6.10。 图6.10 原生支付“模式二”二维码示例 二维码相关知识 二维码背景知识介绍： http://www.thonky.com/qr-code-tutorial/ http://coolshell.cn/articles/10590.html 阅读更多" />
 <meta property="og:description" content="商户后台系统先调用微信支付的统一下单接口，微信后台系统返回链接参数code_url，商户后台系统将code_url值生成二维码图片，用户使用微信客户端扫码后发起支付。注意：code_url有效期为2小时，过期后扫码不能再发起支付。 业务流程时序图 图6.9 原生支付模式二时序图 业务流程说明： （1）商户后台系统根据用户选购的商品生成订单。 （2）用户确认支付后调用微信支付【统一下单API】生成预支付交易； （3）微信支付系统收到请求后生成预支付交易单，并返回交易会话的二维码链接code_url。 （4）商户后台系统根据返回的code_url生成二维码。 （5）用户打开微信“扫一扫”扫描二维码，微信客户端将扫码内容发送到微信支付系统。 （6）微信支付系统收到客户端请求，验证链接有效性后发起用户支付，要求用户授权。 （7）用户在微信客户端输入密码，确认支付后，微信客户端提交授权。 （8）微信支付系统根据用户授权完成支付交易。 （9）微信支付系统完成支付交易后给微信客户端返回交易结果，并将交易结果通过短信、微信消息提示用户。微信客户端展示支付交易结果页面。 （10）微信支付系统通过发送异步消息通知商户后台系统支付结果。商户后台系统需回复接收情况，通知微信后台系统不再发送该单的支付通知。 （11）未收到支付通知的情况，商户后台系统调用【查询订单API】。 （12）商户确认订单已支付后给用户发货。 生成二维码规则 对应链接格式：weixin：//wxpay/bizpayurl?sr=XXXXX。请商户调用第三方库将code_url生成二维码图片。该模式链接较短，生成的二维码打印到结账小票上的识别率较高。 例如，将weixin：//wxpay/s/An4baqw生成二维码见图6.10。 图6.10 原生支付“模式二”二维码示例 二维码相关知识 二维码背景知识介绍： http://www.thonky.com/qr-code-tutorial/ http://coolshell.cn/articles/10590.html 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2015/11/11/6a6d7bcfb976760b2d8e8160f073576f.html" />
+<meta property="og:url" content="https://mlh.app/2015/11/11/6a6d7bcfb976760b2d8e8160f073576f.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-11-11T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"商户后台系统先调用微信支付的统一下单接口，微信后台系统返回链接参数code_url，商户后台系统将code_url值生成二维码图片，用户使用微信客户端扫码后发起支付。注意：code_url有效期为2小时，过期后扫码不能再发起支付。 业务流程时序图 图6.9 原生支付模式二时序图 业务流程说明： （1）商户后台系统根据用户选购的商品生成订单。 （2）用户确认支付后调用微信支付【统一下单API】生成预支付交易； （3）微信支付系统收到请求后生成预支付交易单，并返回交易会话的二维码链接code_url。 （4）商户后台系统根据返回的code_url生成二维码。 （5）用户打开微信“扫一扫”扫描二维码，微信客户端将扫码内容发送到微信支付系统。 （6）微信支付系统收到客户端请求，验证链接有效性后发起用户支付，要求用户授权。 （7）用户在微信客户端输入密码，确认支付后，微信客户端提交授权。 （8）微信支付系统根据用户授权完成支付交易。 （9）微信支付系统完成支付交易后给微信客户端返回交易结果，并将交易结果通过短信、微信消息提示用户。微信客户端展示支付交易结果页面。 （10）微信支付系统通过发送异步消息通知商户后台系统支付结果。商户后台系统需回复接收情况，通知微信后台系统不再发送该单的支付通知。 （11）未收到支付通知的情况，商户后台系统调用【查询订单API】。 （12）商户确认订单已支付后给用户发货。 生成二维码规则 对应链接格式：weixin：//wxpay/bizpayurl?sr=XXXXX。请商户调用第三方库将code_url生成二维码图片。该模式链接较短，生成的二维码打印到结账小票上的识别率较高。 例如，将weixin：//wxpay/s/An4baqw生成二维码见图6.10。 图6.10 原生支付“模式二”二维码示例 二维码相关知识 二维码背景知识介绍： http://www.thonky.com/qr-code-tutorial/ http://coolshell.cn/articles/10590.html 阅读更多","@type":"BlogPosting","url":"/2015/11/11/6a6d7bcfb976760b2d8e8160f073576f.html","headline":"微信扫码支付-原生支付-流程图","dateModified":"2015-11-11T00:00:00+08:00","datePublished":"2015-11-11T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2015/11/11/6a6d7bcfb976760b2d8e8160f073576f.html"},"@context":"http://schema.org"}</script>
+{"description":"商户后台系统先调用微信支付的统一下单接口，微信后台系统返回链接参数code_url，商户后台系统将code_url值生成二维码图片，用户使用微信客户端扫码后发起支付。注意：code_url有效期为2小时，过期后扫码不能再发起支付。 业务流程时序图 图6.9 原生支付模式二时序图 业务流程说明： （1）商户后台系统根据用户选购的商品生成订单。 （2）用户确认支付后调用微信支付【统一下单API】生成预支付交易； （3）微信支付系统收到请求后生成预支付交易单，并返回交易会话的二维码链接code_url。 （4）商户后台系统根据返回的code_url生成二维码。 （5）用户打开微信“扫一扫”扫描二维码，微信客户端将扫码内容发送到微信支付系统。 （6）微信支付系统收到客户端请求，验证链接有效性后发起用户支付，要求用户授权。 （7）用户在微信客户端输入密码，确认支付后，微信客户端提交授权。 （8）微信支付系统根据用户授权完成支付交易。 （9）微信支付系统完成支付交易后给微信客户端返回交易结果，并将交易结果通过短信、微信消息提示用户。微信客户端展示支付交易结果页面。 （10）微信支付系统通过发送异步消息通知商户后台系统支付结果。商户后台系统需回复接收情况，通知微信后台系统不再发送该单的支付通知。 （11）未收到支付通知的情况，商户后台系统调用【查询订单API】。 （12）商户确认订单已支付后给用户发货。 生成二维码规则 对应链接格式：weixin：//wxpay/bizpayurl?sr=XXXXX。请商户调用第三方库将code_url生成二维码图片。该模式链接较短，生成的二维码打印到结账小票上的识别率较高。 例如，将weixin：//wxpay/s/An4baqw生成二维码见图6.10。 图6.10 原生支付“模式二”二维码示例 二维码相关知识 二维码背景知识介绍： http://www.thonky.com/qr-code-tutorial/ http://coolshell.cn/articles/10590.html 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2015/11/11/6a6d7bcfb976760b2d8e8160f073576f.html","headline":"微信扫码支付-原生支付-流程图","dateModified":"2015-11-11T00:00:00+08:00","datePublished":"2015-11-11T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2015/11/11/6a6d7bcfb976760b2d8e8160f073576f.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

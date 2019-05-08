@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="在学习tensorflow过程中遇到的问题 Tensorboard报错 No dashboards are active for the current data set 运行完tensorflow代码后，进行tensorboard可视化时出现上述问题。 图1 No dashboards are active for the current data set 报错 首先，碰到这种报错情况，我们先去程序找是否自己定义了summary对象，并将相关数据保存下来了。自己的代码中是有相关定义的，同时在保存路径下有相关文件产生。 图2 代码中定义summary对象并保存相关参数 图3 文件中生成了相关参数文件 然后，那就是路径保存的方式不对。一般情况下，我们是通过以下方式去启动tensorboard。tensorboard –logdir=log_dir，log_dir是程序中FileWriter函数的参数，即上图中的dev_summary_dir 我第一次使用的路径是，所以就报上面的错误： 经过百度之后，发现是路径的方式不对。于是修改成如下方式： 结果就有显示了！！！ 当碰到如下问题时，也是路径方式不对造成的。" />
 <meta property="og:description" content="在学习tensorflow过程中遇到的问题 Tensorboard报错 No dashboards are active for the current data set 运行完tensorflow代码后，进行tensorboard可视化时出现上述问题。 图1 No dashboards are active for the current data set 报错 首先，碰到这种报错情况，我们先去程序找是否自己定义了summary对象，并将相关数据保存下来了。自己的代码中是有相关定义的，同时在保存路径下有相关文件产生。 图2 代码中定义summary对象并保存相关参数 图3 文件中生成了相关参数文件 然后，那就是路径保存的方式不对。一般情况下，我们是通过以下方式去启动tensorboard。tensorboard –logdir=log_dir，log_dir是程序中FileWriter函数的参数，即上图中的dev_summary_dir 我第一次使用的路径是，所以就报上面的错误： 经过百度之后，发现是路径的方式不对。于是修改成如下方式： 结果就有显示了！！！ 当碰到如下问题时，也是路径方式不对造成的。" />
+<link rel="canonical" href="https://mlh.app/2019/01/14/2293b315ac1e38ed838a65e410154118.html" />
+<meta property="og:url" content="https://mlh.app/2019/01/14/2293b315ac1e38ed838a65e410154118.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-01-14T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"在学习tensorflow过程中遇到的问题 Tensorboard报错 No dashboards are active for the current data set 运行完tensorflow代码后，进行tensorboard可视化时出现上述问题。 图1 No dashboards are active for the current data set 报错 首先，碰到这种报错情况，我们先去程序找是否自己定义了summary对象，并将相关数据保存下来了。自己的代码中是有相关定义的，同时在保存路径下有相关文件产生。 图2 代码中定义summary对象并保存相关参数 图3 文件中生成了相关参数文件 然后，那就是路径保存的方式不对。一般情况下，我们是通过以下方式去启动tensorboard。tensorboard –logdir=log_dir，log_dir是程序中FileWriter函数的参数，即上图中的dev_summary_dir 我第一次使用的路径是，所以就报上面的错误： 经过百度之后，发现是路径的方式不对。于是修改成如下方式： 结果就有显示了！！！ 当碰到如下问题时，也是路径方式不对造成的。","@type":"BlogPosting","url":"/2019/01/14/2293b315ac1e38ed838a65e410154118.html","headline":"在学习tensorflow过程中遇到的问题","dateModified":"2019-01-14T00:00:00+08:00","datePublished":"2019-01-14T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2019/01/14/2293b315ac1e38ed838a65e410154118.html"},"@context":"http://schema.org"}</script>
+{"description":"在学习tensorflow过程中遇到的问题 Tensorboard报错 No dashboards are active for the current data set 运行完tensorflow代码后，进行tensorboard可视化时出现上述问题。 图1 No dashboards are active for the current data set 报错 首先，碰到这种报错情况，我们先去程序找是否自己定义了summary对象，并将相关数据保存下来了。自己的代码中是有相关定义的，同时在保存路径下有相关文件产生。 图2 代码中定义summary对象并保存相关参数 图3 文件中生成了相关参数文件 然后，那就是路径保存的方式不对。一般情况下，我们是通过以下方式去启动tensorboard。tensorboard –logdir=log_dir，log_dir是程序中FileWriter函数的参数，即上图中的dev_summary_dir 我第一次使用的路径是，所以就报上面的错误： 经过百度之后，发现是路径的方式不对。于是修改成如下方式： 结果就有显示了！！！ 当碰到如下问题时，也是路径方式不对造成的。","@type":"BlogPosting","url":"https://mlh.app/2019/01/14/2293b315ac1e38ed838a65e410154118.html","headline":"在学习tensorflow过程中遇到的问题","dateModified":"2019-01-14T00:00:00+08:00","datePublished":"2019-01-14T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2019/01/14/2293b315ac1e38ed838a65e410154118.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

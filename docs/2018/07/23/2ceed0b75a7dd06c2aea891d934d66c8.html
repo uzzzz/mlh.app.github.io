@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="一笔交易包括输入部分和输出部分，假设A向B发起一笔转账，那么 in：A（pk，sig） out：B（addr） 其中，someone.addr = HASH160(some.pk) 接下来，B要向C转账，那么 in：B（pk，sig） out：C（addr） 矿工要检查以下两点： 1. H160(B.pk) = B.addr ? （地址和公钥是否相符） 2. B.pk&nbsp;&nbsp;B.sig ? （公钥和签名是否相符） 由以上两点即可得出地址和签名是否相符。 具体的检查过程如下： &lt;PushData&gt;&lt;B.sig&gt;&lt;PushData&gt;&lt;B.pk&gt; &lt;OP_DUP&gt;&lt;OP_HASH160&gt;&lt;PushData&gt;&lt;B.addr&gt;&lt;OP_EQUALVERIFY&gt;&lt;OP_CHECKSIG&gt; OP是对数据进行操作的指令，经过汇编会变成0x76这种形式，为了防止&lt;B.sig&gt; &lt;B.pk&gt; &lt;B.addr&gt;中含有此类数字而被误认为是指令，故在其前面进行&lt;PushData&gt;这样的标记，&lt;PushData&gt;是16进制数，记录了后面数据的长度，通过一些手段使得&lt;PushData&gt;不会与汇编出来的指令产生重复。 基于堆栈的验证过程如下： 1. B.sig 入栈 2.&nbsp;B.pk&nbsp;入栈 3.&nbsp;&nbsp;&lt;OP_DUP&gt;复制栈顶，即B.pk 4. 令a =&nbsp;B.pk, 再令 a = Hash160(a),&nbsp;B.pk出栈 5.&nbsp;B.addr 入栈，b =&nbsp;B.addr,&nbsp;B.addr 出栈 6. 比较a 和 b，即为B.pk&nbsp;和&nbsp;B.addr 7.用B.pk解开B.sig的内容，进行验证，验证出的内容应该是交易单2的in替换为交易单1的out，然后对替换后的交易单2的整个in和out做哈希（也就是说，B在签名的时候就是这么做的） 这中间可能进行了一些简化 关于矿工收入 阅读更多" />
 <meta property="og:description" content="一笔交易包括输入部分和输出部分，假设A向B发起一笔转账，那么 in：A（pk，sig） out：B（addr） 其中，someone.addr = HASH160(some.pk) 接下来，B要向C转账，那么 in：B（pk，sig） out：C（addr） 矿工要检查以下两点： 1. H160(B.pk) = B.addr ? （地址和公钥是否相符） 2. B.pk&nbsp;&nbsp;B.sig ? （公钥和签名是否相符） 由以上两点即可得出地址和签名是否相符。 具体的检查过程如下： &lt;PushData&gt;&lt;B.sig&gt;&lt;PushData&gt;&lt;B.pk&gt; &lt;OP_DUP&gt;&lt;OP_HASH160&gt;&lt;PushData&gt;&lt;B.addr&gt;&lt;OP_EQUALVERIFY&gt;&lt;OP_CHECKSIG&gt; OP是对数据进行操作的指令，经过汇编会变成0x76这种形式，为了防止&lt;B.sig&gt; &lt;B.pk&gt; &lt;B.addr&gt;中含有此类数字而被误认为是指令，故在其前面进行&lt;PushData&gt;这样的标记，&lt;PushData&gt;是16进制数，记录了后面数据的长度，通过一些手段使得&lt;PushData&gt;不会与汇编出来的指令产生重复。 基于堆栈的验证过程如下： 1. B.sig 入栈 2.&nbsp;B.pk&nbsp;入栈 3.&nbsp;&nbsp;&lt;OP_DUP&gt;复制栈顶，即B.pk 4. 令a =&nbsp;B.pk, 再令 a = Hash160(a),&nbsp;B.pk出栈 5.&nbsp;B.addr 入栈，b =&nbsp;B.addr,&nbsp;B.addr 出栈 6. 比较a 和 b，即为B.pk&nbsp;和&nbsp;B.addr 7.用B.pk解开B.sig的内容，进行验证，验证出的内容应该是交易单2的in替换为交易单1的out，然后对替换后的交易单2的整个in和out做哈希（也就是说，B在签名的时候就是这么做的） 这中间可能进行了一些简化 关于矿工收入 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/07/23/2ceed0b75a7dd06c2aea891d934d66c8.html" />
+<meta property="og:url" content="https://mlh.app/2018/07/23/2ceed0b75a7dd06c2aea891d934d66c8.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-07-23T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"一笔交易包括输入部分和输出部分，假设A向B发起一笔转账，那么 in：A（pk，sig） out：B（addr） 其中，someone.addr = HASH160(some.pk) 接下来，B要向C转账，那么 in：B（pk，sig） out：C（addr） 矿工要检查以下两点： 1. H160(B.pk) = B.addr ? （地址和公钥是否相符） 2. B.pk&nbsp;&nbsp;B.sig ? （公钥和签名是否相符） 由以上两点即可得出地址和签名是否相符。 具体的检查过程如下： &lt;PushData&gt;&lt;B.sig&gt;&lt;PushData&gt;&lt;B.pk&gt; &lt;OP_DUP&gt;&lt;OP_HASH160&gt;&lt;PushData&gt;&lt;B.addr&gt;&lt;OP_EQUALVERIFY&gt;&lt;OP_CHECKSIG&gt; OP是对数据进行操作的指令，经过汇编会变成0x76这种形式，为了防止&lt;B.sig&gt; &lt;B.pk&gt; &lt;B.addr&gt;中含有此类数字而被误认为是指令，故在其前面进行&lt;PushData&gt;这样的标记，&lt;PushData&gt;是16进制数，记录了后面数据的长度，通过一些手段使得&lt;PushData&gt;不会与汇编出来的指令产生重复。 基于堆栈的验证过程如下： 1. B.sig 入栈 2.&nbsp;B.pk&nbsp;入栈 3.&nbsp;&nbsp;&lt;OP_DUP&gt;复制栈顶，即B.pk 4. 令a =&nbsp;B.pk, 再令 a = Hash160(a),&nbsp;B.pk出栈 5.&nbsp;B.addr 入栈，b =&nbsp;B.addr,&nbsp;B.addr 出栈 6. 比较a 和 b，即为B.pk&nbsp;和&nbsp;B.addr 7.用B.pk解开B.sig的内容，进行验证，验证出的内容应该是交易单2的in替换为交易单1的out，然后对替换后的交易单2的整个in和out做哈希（也就是说，B在签名的时候就是这么做的） 这中间可能进行了一些简化 关于矿工收入 阅读更多","@type":"BlogPosting","url":"/2018/07/23/2ceed0b75a7dd06c2aea891d934d66c8.html","headline":"比特币交易中矿工检查交易单的细节","dateModified":"2018-07-23T00:00:00+08:00","datePublished":"2018-07-23T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/07/23/2ceed0b75a7dd06c2aea891d934d66c8.html"},"@context":"http://schema.org"}</script>
+{"description":"一笔交易包括输入部分和输出部分，假设A向B发起一笔转账，那么 in：A（pk，sig） out：B（addr） 其中，someone.addr = HASH160(some.pk) 接下来，B要向C转账，那么 in：B（pk，sig） out：C（addr） 矿工要检查以下两点： 1. H160(B.pk) = B.addr ? （地址和公钥是否相符） 2. B.pk&nbsp;&nbsp;B.sig ? （公钥和签名是否相符） 由以上两点即可得出地址和签名是否相符。 具体的检查过程如下： &lt;PushData&gt;&lt;B.sig&gt;&lt;PushData&gt;&lt;B.pk&gt; &lt;OP_DUP&gt;&lt;OP_HASH160&gt;&lt;PushData&gt;&lt;B.addr&gt;&lt;OP_EQUALVERIFY&gt;&lt;OP_CHECKSIG&gt; OP是对数据进行操作的指令，经过汇编会变成0x76这种形式，为了防止&lt;B.sig&gt; &lt;B.pk&gt; &lt;B.addr&gt;中含有此类数字而被误认为是指令，故在其前面进行&lt;PushData&gt;这样的标记，&lt;PushData&gt;是16进制数，记录了后面数据的长度，通过一些手段使得&lt;PushData&gt;不会与汇编出来的指令产生重复。 基于堆栈的验证过程如下： 1. B.sig 入栈 2.&nbsp;B.pk&nbsp;入栈 3.&nbsp;&nbsp;&lt;OP_DUP&gt;复制栈顶，即B.pk 4. 令a =&nbsp;B.pk, 再令 a = Hash160(a),&nbsp;B.pk出栈 5.&nbsp;B.addr 入栈，b =&nbsp;B.addr,&nbsp;B.addr 出栈 6. 比较a 和 b，即为B.pk&nbsp;和&nbsp;B.addr 7.用B.pk解开B.sig的内容，进行验证，验证出的内容应该是交易单2的in替换为交易单1的out，然后对替换后的交易单2的整个in和out做哈希（也就是说，B在签名的时候就是这么做的） 这中间可能进行了一些简化 关于矿工收入 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/07/23/2ceed0b75a7dd06c2aea891d934d66c8.html","headline":"比特币交易中矿工检查交易单的细节","dateModified":"2018-07-23T00:00:00+08:00","datePublished":"2018-07-23T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/07/23/2ceed0b75a7dd06c2aea891d934d66c8.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

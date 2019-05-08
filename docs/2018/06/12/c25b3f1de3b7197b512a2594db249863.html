@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="https://graph.qq.com/oauth2.0/me?access_token=DGKFDJGJDF8346GFNF34BDF8DDF4&amp;unionid=1 开始我们用上面的链接去获取unionid，报错， 如果access_token是正确的会报下面的错误 如果access_token不正确会报下面的错误 经查询，是unionID没有申请，于是去申请 我们线上已经有两个应用，由于每个应用的openid不一样，所以不能将不同应用的用户统一起来，后来知道有一个unionID是唯一的，所以我们自然想到用unionID来统一用户，我们之前用户qq登录获取的是unionID,之前的qq登录不是我做的，不知道这个unionID还要去申请，找了好久才找到怎么样去申请，登录qq互联（https://connect.qq.com）-》文档资料 -》问题&amp;解答 -》unionID 介绍中我们知道要怎么样去申请。 注：1，如果线上目前已经有一个应用在QQ登录时可以获取到unionID，在申请的时候应该是要填一个这样的key和appid，将这个和需要申请的应用的key和appid一起提交上去。（这种做法应该是要将已经有应用和需要的应用统一起来） 2，如果线上目前已经没有应用在QQ登录时可以获取到unionID（也有可能第一次不需要申请，我觉得要申请的可能性很大），只需要将需要申请的应用的key和appid提交上去。 登录QQ互联之后：点击文档资料 点击点此申请后： 我们看到有一个应用打通后面有个下载按钮，将表格下载下来，填好，将表格通过邮箱发送到QQ，等待审核 阅读更多" />
 <meta property="og:description" content="https://graph.qq.com/oauth2.0/me?access_token=DGKFDJGJDF8346GFNF34BDF8DDF4&amp;unionid=1 开始我们用上面的链接去获取unionid，报错， 如果access_token是正确的会报下面的错误 如果access_token不正确会报下面的错误 经查询，是unionID没有申请，于是去申请 我们线上已经有两个应用，由于每个应用的openid不一样，所以不能将不同应用的用户统一起来，后来知道有一个unionID是唯一的，所以我们自然想到用unionID来统一用户，我们之前用户qq登录获取的是unionID,之前的qq登录不是我做的，不知道这个unionID还要去申请，找了好久才找到怎么样去申请，登录qq互联（https://connect.qq.com）-》文档资料 -》问题&amp;解答 -》unionID 介绍中我们知道要怎么样去申请。 注：1，如果线上目前已经有一个应用在QQ登录时可以获取到unionID，在申请的时候应该是要填一个这样的key和appid，将这个和需要申请的应用的key和appid一起提交上去。（这种做法应该是要将已经有应用和需要的应用统一起来） 2，如果线上目前已经没有应用在QQ登录时可以获取到unionID（也有可能第一次不需要申请，我觉得要申请的可能性很大），只需要将需要申请的应用的key和appid提交上去。 登录QQ互联之后：点击文档资料 点击点此申请后： 我们看到有一个应用打通后面有个下载按钮，将表格下载下来，填好，将表格通过邮箱发送到QQ，等待审核 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/06/12/c25b3f1de3b7197b512a2594db249863.html" />
+<meta property="og:url" content="https://mlh.app/2018/06/12/c25b3f1de3b7197b512a2594db249863.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-06-12T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"https://graph.qq.com/oauth2.0/me?access_token=DGKFDJGJDF8346GFNF34BDF8DDF4&amp;unionid=1 开始我们用上面的链接去获取unionid，报错， 如果access_token是正确的会报下面的错误 如果access_token不正确会报下面的错误 经查询，是unionID没有申请，于是去申请 我们线上已经有两个应用，由于每个应用的openid不一样，所以不能将不同应用的用户统一起来，后来知道有一个unionID是唯一的，所以我们自然想到用unionID来统一用户，我们之前用户qq登录获取的是unionID,之前的qq登录不是我做的，不知道这个unionID还要去申请，找了好久才找到怎么样去申请，登录qq互联（https://connect.qq.com）-》文档资料 -》问题&amp;解答 -》unionID 介绍中我们知道要怎么样去申请。 注：1，如果线上目前已经有一个应用在QQ登录时可以获取到unionID，在申请的时候应该是要填一个这样的key和appid，将这个和需要申请的应用的key和appid一起提交上去。（这种做法应该是要将已经有应用和需要的应用统一起来） 2，如果线上目前已经没有应用在QQ登录时可以获取到unionID（也有可能第一次不需要申请，我觉得要申请的可能性很大），只需要将需要申请的应用的key和appid提交上去。 登录QQ互联之后：点击文档资料 点击点此申请后： 我们看到有一个应用打通后面有个下载按钮，将表格下载下来，填好，将表格通过邮箱发送到QQ，等待审核 阅读更多","@type":"BlogPosting","url":"/2018/06/12/c25b3f1de3b7197b512a2594db249863.html","headline":"第三方QQ登录时，获取unionID的问题","dateModified":"2018-06-12T00:00:00+08:00","datePublished":"2018-06-12T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/06/12/c25b3f1de3b7197b512a2594db249863.html"},"@context":"http://schema.org"}</script>
+{"description":"https://graph.qq.com/oauth2.0/me?access_token=DGKFDJGJDF8346GFNF34BDF8DDF4&amp;unionid=1 开始我们用上面的链接去获取unionid，报错， 如果access_token是正确的会报下面的错误 如果access_token不正确会报下面的错误 经查询，是unionID没有申请，于是去申请 我们线上已经有两个应用，由于每个应用的openid不一样，所以不能将不同应用的用户统一起来，后来知道有一个unionID是唯一的，所以我们自然想到用unionID来统一用户，我们之前用户qq登录获取的是unionID,之前的qq登录不是我做的，不知道这个unionID还要去申请，找了好久才找到怎么样去申请，登录qq互联（https://connect.qq.com）-》文档资料 -》问题&amp;解答 -》unionID 介绍中我们知道要怎么样去申请。 注：1，如果线上目前已经有一个应用在QQ登录时可以获取到unionID，在申请的时候应该是要填一个这样的key和appid，将这个和需要申请的应用的key和appid一起提交上去。（这种做法应该是要将已经有应用和需要的应用统一起来） 2，如果线上目前已经没有应用在QQ登录时可以获取到unionID（也有可能第一次不需要申请，我觉得要申请的可能性很大），只需要将需要申请的应用的key和appid提交上去。 登录QQ互联之后：点击文档资料 点击点此申请后： 我们看到有一个应用打通后面有个下载按钮，将表格下载下来，填好，将表格通过邮箱发送到QQ，等待审核 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/06/12/c25b3f1de3b7197b512a2594db249863.html","headline":"第三方QQ登录时，获取unionID的问题","dateModified":"2018-06-12T00:00:00+08:00","datePublished":"2018-06-12T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/06/12/c25b3f1de3b7197b512a2594db249863.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

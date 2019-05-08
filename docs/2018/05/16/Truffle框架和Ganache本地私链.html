@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Truffle框架和Ganache本地私链 安装Truffle Truffle是一个世界级的开发环境，测试框架，以太坊的资源管理通道，致力于让以太坊上的开发变得简单。 Github源码地址 https://github.com/trufflesuite/truffle 安装Npm和NodeJS 安装Truffle npm install -g truffle 创建工程 创建一个空工程 truffle init 创建包含metacoin的工程 新版本truffle引入了box的概念，所有的示例代码都以box的形式提供。下载metacoin的示例代码： truffle unbox metacoin 工程结构 工程结构如图： contracts 目录中包含 Solidity 合约代码，其中 Migrations.sol 是必须的，其他的是合约代码（这里是示例的 MetaCoin 代码）。 migrations 目录中包含合约部署脚本， 1_initial_migration.js 用来部署 Migrations.sol ，其他的脚本会按照顺序依次执行。 test 目录中是测试代码。 MetaCoin MetaCoin的代码主要实现了三个接口：发币，查看余额，查看Eth余额。 contract MetaCoin { mapping (address =&gt; uint) balances;" />
 <meta property="og:description" content="Truffle框架和Ganache本地私链 安装Truffle Truffle是一个世界级的开发环境，测试框架，以太坊的资源管理通道，致力于让以太坊上的开发变得简单。 Github源码地址 https://github.com/trufflesuite/truffle 安装Npm和NodeJS 安装Truffle npm install -g truffle 创建工程 创建一个空工程 truffle init 创建包含metacoin的工程 新版本truffle引入了box的概念，所有的示例代码都以box的形式提供。下载metacoin的示例代码： truffle unbox metacoin 工程结构 工程结构如图： contracts 目录中包含 Solidity 合约代码，其中 Migrations.sol 是必须的，其他的是合约代码（这里是示例的 MetaCoin 代码）。 migrations 目录中包含合约部署脚本， 1_initial_migration.js 用来部署 Migrations.sol ，其他的脚本会按照顺序依次执行。 test 目录中是测试代码。 MetaCoin MetaCoin的代码主要实现了三个接口：发币，查看余额，查看Eth余额。 contract MetaCoin { mapping (address =&gt; uint) balances;" />
+<link rel="canonical" href="https://mlh.app/2018/05/16/Truffle%E6%A1%86%E6%9E%B6%E5%92%8CGanache%E6%9C%AC%E5%9C%B0%E7%A7%81%E9%93%BE.html" />
+<meta property="og:url" content="https://mlh.app/2018/05/16/Truffle%E6%A1%86%E6%9E%B6%E5%92%8CGanache%E6%9C%AC%E5%9C%B0%E7%A7%81%E9%93%BE.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-05-16T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"Truffle框架和Ganache本地私链 安装Truffle Truffle是一个世界级的开发环境，测试框架，以太坊的资源管理通道，致力于让以太坊上的开发变得简单。 Github源码地址 https://github.com/trufflesuite/truffle 安装Npm和NodeJS 安装Truffle npm install -g truffle 创建工程 创建一个空工程 truffle init 创建包含metacoin的工程 新版本truffle引入了box的概念，所有的示例代码都以box的形式提供。下载metacoin的示例代码： truffle unbox metacoin 工程结构 工程结构如图： contracts 目录中包含 Solidity 合约代码，其中 Migrations.sol 是必须的，其他的是合约代码（这里是示例的 MetaCoin 代码）。 migrations 目录中包含合约部署脚本， 1_initial_migration.js 用来部署 Migrations.sol ，其他的脚本会按照顺序依次执行。 test 目录中是测试代码。 MetaCoin \bMetaCoin的代码\b主要实现了三个接口：发币，查看余额，查看Eth余额。 contract MetaCoin { mapping (address =&gt; uint) balances;","@type":"BlogPosting","url":"/2018/05/16/Truffle%E6%A1%86%E6%9E%B6%E5%92%8CGanache%E6%9C%AC%E5%9C%B0%E7%A7%81%E9%93%BE.html","headline":"Truffle框架和Ganache本地私链","dateModified":"2018-05-16T00:00:00+08:00","datePublished":"2018-05-16T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/05/16/Truffle%E6%A1%86%E6%9E%B6%E5%92%8CGanache%E6%9C%AC%E5%9C%B0%E7%A7%81%E9%93%BE.html"},"@context":"http://schema.org"}</script>
+{"description":"Truffle框架和Ganache本地私链 安装Truffle Truffle是一个世界级的开发环境，测试框架，以太坊的资源管理通道，致力于让以太坊上的开发变得简单。 Github源码地址 https://github.com/trufflesuite/truffle 安装Npm和NodeJS 安装Truffle npm install -g truffle 创建工程 创建一个空工程 truffle init 创建包含metacoin的工程 新版本truffle引入了box的概念，所有的示例代码都以box的形式提供。下载metacoin的示例代码： truffle unbox metacoin 工程结构 工程结构如图： contracts 目录中包含 Solidity 合约代码，其中 Migrations.sol 是必须的，其他的是合约代码（这里是示例的 MetaCoin 代码）。 migrations 目录中包含合约部署脚本， 1_initial_migration.js 用来部署 Migrations.sol ，其他的脚本会按照顺序依次执行。 test 目录中是测试代码。 MetaCoin \bMetaCoin的代码\b主要实现了三个接口：发币，查看余额，查看Eth余额。 contract MetaCoin { mapping (address =&gt; uint) balances;","@type":"BlogPosting","url":"https://mlh.app/2018/05/16/Truffle%E6%A1%86%E6%9E%B6%E5%92%8CGanache%E6%9C%AC%E5%9C%B0%E7%A7%81%E9%93%BE.html","headline":"Truffle框架和Ganache本地私链","dateModified":"2018-05-16T00:00:00+08:00","datePublished":"2018-05-16T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/05/16/Truffle%E6%A1%86%E6%9E%B6%E5%92%8CGanache%E6%9C%AC%E5%9C%B0%E7%A7%81%E9%93%BE.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

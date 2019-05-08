@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="这个文章只是提供个思路，不会提供源码，毕竟公信宝是一个落地落得不错的区块链公司，要求大家每天登陆一下APP手动点几下矿也是希望通过app做更多的推广，当然，如果不登陆app就没有收入这点是有点坑爹的。。。不知道这个文章写了之后多久公信宝会改，who care。。。 我在上一篇文章中已经很简陋的提过褥app羊毛的步骤，请移步查阅。这里再重复一遍，现在http是绝大多数app和服务器端进行通信的协议，只要知道url和具体的参数构成，你都可以通过挂载一段代码到阿里云上模拟app，每天去自动完成一些本该登陆app才可以完成的操作，比如公信宝的矿，京东的京豆，支付宝的积分，苏宁易购的云钻。 其实代码都不难写，知识不是每个人都闲得发慌来干这些无聊的事，幸好这个公信宝只花了我半个小时做POC。。。 在测试之前，先看看我的公信宝账户的截图吧，BDB: 1.73655： 用模拟器登陆公信宝获取api 请移步查阅 mumu上安装公信宝 用模拟器上的公信宝登陆（这时，你手机端会掉线） 用charles或fiddlers抓包 做一些操作，查看所有生成的url、url参数和返回值 url参数的包括: url里的用户token，在header里的：authentication，eferer，x-requested-with等参数 注意，这里的参数都重要，因为下面的每个链接基本都需要填入这些参数 获取待提取的币列表 每天都有这么多币可以提取 来自于这个地址：https://walletgateway.gxb.io/miner/yourtoken/mine/list/v2 下面是接口返回值（请移步我的POSTMAN教程，快速验证一下）： id：用于后续的采矿 symbol：币种 amount：可采数量 采矿 通过以下api，采矿，需调用两次, 一次OPTIONS，一次GET https://walletgateway.gxb.io/miner/yourtoken/mine/id/v2 填入你的user地址和刚才列表里的id GET的返回值，代表成功了收取了0.03502个BDB 查看你的账户： 循环采集 既然我们已经有了一个可提取列表，又知道通过简单的两个接口调用就可以提取，写一个简单的for in循环就可以做到提取所有今天可提取的币了 阅读更多" />
 <meta property="og:description" content="这个文章只是提供个思路，不会提供源码，毕竟公信宝是一个落地落得不错的区块链公司，要求大家每天登陆一下APP手动点几下矿也是希望通过app做更多的推广，当然，如果不登陆app就没有收入这点是有点坑爹的。。。不知道这个文章写了之后多久公信宝会改，who care。。。 我在上一篇文章中已经很简陋的提过褥app羊毛的步骤，请移步查阅。这里再重复一遍，现在http是绝大多数app和服务器端进行通信的协议，只要知道url和具体的参数构成，你都可以通过挂载一段代码到阿里云上模拟app，每天去自动完成一些本该登陆app才可以完成的操作，比如公信宝的矿，京东的京豆，支付宝的积分，苏宁易购的云钻。 其实代码都不难写，知识不是每个人都闲得发慌来干这些无聊的事，幸好这个公信宝只花了我半个小时做POC。。。 在测试之前，先看看我的公信宝账户的截图吧，BDB: 1.73655： 用模拟器登陆公信宝获取api 请移步查阅 mumu上安装公信宝 用模拟器上的公信宝登陆（这时，你手机端会掉线） 用charles或fiddlers抓包 做一些操作，查看所有生成的url、url参数和返回值 url参数的包括: url里的用户token，在header里的：authentication，eferer，x-requested-with等参数 注意，这里的参数都重要，因为下面的每个链接基本都需要填入这些参数 获取待提取的币列表 每天都有这么多币可以提取 来自于这个地址：https://walletgateway.gxb.io/miner/yourtoken/mine/list/v2 下面是接口返回值（请移步我的POSTMAN教程，快速验证一下）： id：用于后续的采矿 symbol：币种 amount：可采数量 采矿 通过以下api，采矿，需调用两次, 一次OPTIONS，一次GET https://walletgateway.gxb.io/miner/yourtoken/mine/id/v2 填入你的user地址和刚才列表里的id GET的返回值，代表成功了收取了0.03502个BDB 查看你的账户： 循环采集 既然我们已经有了一个可提取列表，又知道通过简单的两个接口调用就可以提取，写一个简单的for in循环就可以做到提取所有今天可提取的币了 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/08/01/2f97bdfb7b81fdb415ba178c04c86914.html" />
+<meta property="og:url" content="https://mlh.app/2018/08/01/2f97bdfb7b81fdb415ba178c04c86914.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-01T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"这个文章只是提供个思路，不会提供源码，毕竟公信宝是一个落地落得不错的区块链公司，要求大家每天登陆一下APP手动点几下矿也是希望通过app做更多的推广，当然，如果不登陆app就没有收入这点是有点坑爹的。。。不知道这个文章写了之后多久公信宝会改，who care。。。 我在上一篇文章中已经很简陋的提过褥app羊毛的步骤，请移步查阅。这里再重复一遍，现在http是绝大多数app和服务器端进行通信的协议，只要知道url和具体的参数构成，你都可以通过挂载一段代码到阿里云上模拟app，每天去自动完成一些本该登陆app才可以完成的操作，比如公信宝的矿，京东的京豆，支付宝的积分，苏宁易购的云钻。 其实代码都不难写，知识不是每个人都闲得发慌来干这些无聊的事，幸好这个公信宝只花了我半个小时做POC。。。 在测试之前，先看看我的公信宝账户的截图吧，BDB: 1.73655： 用模拟器登陆公信宝获取api 请移步查阅 mumu上安装公信宝 用模拟器上的公信宝登陆（这时，你手机端会掉线） 用charles或fiddlers抓包 做一些操作，查看所有生成的url、url参数和返回值 url参数的包括: url里的用户token，在header里的：authentication，eferer，x-requested-with等参数 注意，这里的参数都重要，因为下面的每个链接基本都需要填入这些参数 获取待提取的币列表 每天都有这么多币可以提取 来自于这个地址：https://walletgateway.gxb.io/miner/yourtoken/mine/list/v2 下面是接口返回值（请移步我的POSTMAN教程，快速验证一下）： id：用于后续的采矿 symbol：币种 amount：可采数量 采矿 通过以下api，采矿，需调用两次, 一次OPTIONS，一次GET https://walletgateway.gxb.io/miner/yourtoken/mine/id/v2 填入你的user地址和刚才列表里的id GET的返回值，代表成功了收取了0.03502个BDB 查看你的账户： 循环采集 既然我们已经有了一个可提取列表，又知道通过简单的两个接口调用就可以提取，写一个简单的for in循环就可以做到提取所有今天可提取的币了 阅读更多","@type":"BlogPosting","url":"/2018/08/01/2f97bdfb7b81fdb415ba178c04c86914.html","headline":"如何写个爬虫自动褥公信宝的羊毛（公信宝自动采矿）","dateModified":"2018-08-01T00:00:00+08:00","datePublished":"2018-08-01T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/08/01/2f97bdfb7b81fdb415ba178c04c86914.html"},"@context":"http://schema.org"}</script>
+{"description":"这个文章只是提供个思路，不会提供源码，毕竟公信宝是一个落地落得不错的区块链公司，要求大家每天登陆一下APP手动点几下矿也是希望通过app做更多的推广，当然，如果不登陆app就没有收入这点是有点坑爹的。。。不知道这个文章写了之后多久公信宝会改，who care。。。 我在上一篇文章中已经很简陋的提过褥app羊毛的步骤，请移步查阅。这里再重复一遍，现在http是绝大多数app和服务器端进行通信的协议，只要知道url和具体的参数构成，你都可以通过挂载一段代码到阿里云上模拟app，每天去自动完成一些本该登陆app才可以完成的操作，比如公信宝的矿，京东的京豆，支付宝的积分，苏宁易购的云钻。 其实代码都不难写，知识不是每个人都闲得发慌来干这些无聊的事，幸好这个公信宝只花了我半个小时做POC。。。 在测试之前，先看看我的公信宝账户的截图吧，BDB: 1.73655： 用模拟器登陆公信宝获取api 请移步查阅 mumu上安装公信宝 用模拟器上的公信宝登陆（这时，你手机端会掉线） 用charles或fiddlers抓包 做一些操作，查看所有生成的url、url参数和返回值 url参数的包括: url里的用户token，在header里的：authentication，eferer，x-requested-with等参数 注意，这里的参数都重要，因为下面的每个链接基本都需要填入这些参数 获取待提取的币列表 每天都有这么多币可以提取 来自于这个地址：https://walletgateway.gxb.io/miner/yourtoken/mine/list/v2 下面是接口返回值（请移步我的POSTMAN教程，快速验证一下）： id：用于后续的采矿 symbol：币种 amount：可采数量 采矿 通过以下api，采矿，需调用两次, 一次OPTIONS，一次GET https://walletgateway.gxb.io/miner/yourtoken/mine/id/v2 填入你的user地址和刚才列表里的id GET的返回值，代表成功了收取了0.03502个BDB 查看你的账户： 循环采集 既然我们已经有了一个可提取列表，又知道通过简单的两个接口调用就可以提取，写一个简单的for in循环就可以做到提取所有今天可提取的币了 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/08/01/2f97bdfb7b81fdb415ba178c04c86914.html","headline":"如何写个爬虫自动褥公信宝的羊毛（公信宝自动采矿）","dateModified":"2018-08-01T00:00:00+08:00","datePublished":"2018-08-01T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/08/01/2f97bdfb7b81fdb415ba178c04c86914.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

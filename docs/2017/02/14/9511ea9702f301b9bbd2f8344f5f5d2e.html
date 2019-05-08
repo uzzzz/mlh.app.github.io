@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="使用 Qt 5.8 online installer 在 ubantu Kylin 上安装完毕后。 用 Qt Creator 创建一个默认的 Qt Widgets Application. 项目Wizard运行到 Kit Selection 就进行不下去了。 错误提示如下图： No valid kits found. 按照提示点击“options”，看到 手动设置/桌面（默认）前面有个叹号。说明这个 kit 有问题。 细看其内容，在 Qt 版本参数值为：&nbsp; Qt 5.6.1 in PATH（qt5)( invalid) 可见Qt Creator 默认查找 Qt 5.6.1 , 但找不到。 Click 右侧对应的 “Manage....”, 到下图， 自动检测中有带叹号的一行&nbsp; Qt 5.6.1 in PATH(qt5) /usr/lib/x86_64-linux-gun/qt5/bin/qmak 进一步说明找不到合适的 qmake. 考虑到在安装 Qt时，安装路径是 opt/Qt, 默认仅安装了 Qt 5.8, 故点击“添加” 将“/opt/Qt/5.8/gcc_64/bin/qmake” 加入到 Qt Versions 中。 这样，Qt Versions 的手动设置中就多了一项，&nbsp;&nbsp; Qt 5.8.0(gcc_64)&nbsp;&nbsp;&nbsp; /opt/Qt/5.8/gcc_64/bin/qmake 然后回到“构建套件（Kit）”页面，将 Qt Version 参数设定为 Qt 5.8.0(gcc_64). 这样，手动设置/桌面（默认）前面的叹号就消失了。 点击“Ok”保存，回到 Kit Selection 界面，点击“上一步”，再“下一步”，Kit Selection 界面中出现“桌面”这个kit选项。选中它， 便可进行下去了。 阅读更多" />
 <meta property="og:description" content="使用 Qt 5.8 online installer 在 ubantu Kylin 上安装完毕后。 用 Qt Creator 创建一个默认的 Qt Widgets Application. 项目Wizard运行到 Kit Selection 就进行不下去了。 错误提示如下图： No valid kits found. 按照提示点击“options”，看到 手动设置/桌面（默认）前面有个叹号。说明这个 kit 有问题。 细看其内容，在 Qt 版本参数值为：&nbsp; Qt 5.6.1 in PATH（qt5)( invalid) 可见Qt Creator 默认查找 Qt 5.6.1 , 但找不到。 Click 右侧对应的 “Manage....”, 到下图， 自动检测中有带叹号的一行&nbsp; Qt 5.6.1 in PATH(qt5) /usr/lib/x86_64-linux-gun/qt5/bin/qmak 进一步说明找不到合适的 qmake. 考虑到在安装 Qt时，安装路径是 opt/Qt, 默认仅安装了 Qt 5.8, 故点击“添加” 将“/opt/Qt/5.8/gcc_64/bin/qmake” 加入到 Qt Versions 中。 这样，Qt Versions 的手动设置中就多了一项，&nbsp;&nbsp; Qt 5.8.0(gcc_64)&nbsp;&nbsp;&nbsp; /opt/Qt/5.8/gcc_64/bin/qmake 然后回到“构建套件（Kit）”页面，将 Qt Version 参数设定为 Qt 5.8.0(gcc_64). 这样，手动设置/桌面（默认）前面的叹号就消失了。 点击“Ok”保存，回到 Kit Selection 界面，点击“上一步”，再“下一步”，Kit Selection 界面中出现“桌面”这个kit选项。选中它， 便可进行下去了。 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2017/02/14/9511ea9702f301b9bbd2f8344f5f5d2e.html" />
+<meta property="og:url" content="https://mlh.app/2017/02/14/9511ea9702f301b9bbd2f8344f5f5d2e.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-02-14T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"使用 Qt 5.8 online installer 在 ubantu Kylin 上安装完毕后。 用 Qt Creator 创建一个默认的 Qt Widgets Application. 项目Wizard运行到 Kit Selection 就进行不下去了。 错误提示如下图： No valid kits found. 按照提示点击“options”，看到 手动设置/桌面（默认）前面有个叹号。说明这个 kit 有问题。 细看其内容，在 Qt 版本参数值为：&nbsp; Qt 5.6.1 in PATH（qt5)( invalid) 可见Qt Creator 默认查找 Qt 5.6.1 , 但找不到。 Click 右侧对应的 “Manage....”, 到下图， 自动检测中有带叹号的一行&nbsp; Qt 5.6.1 in PATH(qt5) /usr/lib/x86_64-linux-gun/qt5/bin/qmak 进一步说明找不到合适的 qmake. 考虑到在安装 Qt时，安装路径是 opt/Qt, 默认仅安装了 Qt 5.8, 故点击“添加” 将“/opt/Qt/5.8/gcc_64/bin/qmake” 加入到 Qt Versions 中。 这样，Qt Versions 的手动设置中就多了一项，&nbsp;&nbsp; Qt 5.8.0(gcc_64)&nbsp;&nbsp;&nbsp; /opt/Qt/5.8/gcc_64/bin/qmake 然后回到“构建套件（Kit）”页面，将 Qt Version 参数设定为 Qt 5.8.0(gcc_64). 这样，手动设置/桌面（默认）前面的叹号就消失了。 点击“Ok”保存，回到 Kit Selection 界面，点击“上一步”，再“下一步”，Kit Selection 界面中出现“桌面”这个kit选项。选中它， 便可进行下去了。 阅读更多","@type":"BlogPosting","url":"/2017/02/14/9511ea9702f301b9bbd2f8344f5f5d2e.html","headline":"首次安装Qt后，创建项目时出现“No valid kits found” 的解决办法","dateModified":"2017-02-14T00:00:00+08:00","datePublished":"2017-02-14T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2017/02/14/9511ea9702f301b9bbd2f8344f5f5d2e.html"},"@context":"http://schema.org"}</script>
+{"description":"使用 Qt 5.8 online installer 在 ubantu Kylin 上安装完毕后。 用 Qt Creator 创建一个默认的 Qt Widgets Application. 项目Wizard运行到 Kit Selection 就进行不下去了。 错误提示如下图： No valid kits found. 按照提示点击“options”，看到 手动设置/桌面（默认）前面有个叹号。说明这个 kit 有问题。 细看其内容，在 Qt 版本参数值为：&nbsp; Qt 5.6.1 in PATH（qt5)( invalid) 可见Qt Creator 默认查找 Qt 5.6.1 , 但找不到。 Click 右侧对应的 “Manage....”, 到下图， 自动检测中有带叹号的一行&nbsp; Qt 5.6.1 in PATH(qt5) /usr/lib/x86_64-linux-gun/qt5/bin/qmak 进一步说明找不到合适的 qmake. 考虑到在安装 Qt时，安装路径是 opt/Qt, 默认仅安装了 Qt 5.8, 故点击“添加” 将“/opt/Qt/5.8/gcc_64/bin/qmake” 加入到 Qt Versions 中。 这样，Qt Versions 的手动设置中就多了一项，&nbsp;&nbsp; Qt 5.8.0(gcc_64)&nbsp;&nbsp;&nbsp; /opt/Qt/5.8/gcc_64/bin/qmake 然后回到“构建套件（Kit）”页面，将 Qt Version 参数设定为 Qt 5.8.0(gcc_64). 这样，手动设置/桌面（默认）前面的叹号就消失了。 点击“Ok”保存，回到 Kit Selection 界面，点击“上一步”，再“下一步”，Kit Selection 界面中出现“桌面”这个kit选项。选中它， 便可进行下去了。 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2017/02/14/9511ea9702f301b9bbd2f8344f5f5d2e.html","headline":"首次安装Qt后，创建项目时出现“No valid kits found” 的解决办法","dateModified":"2017-02-14T00:00:00+08:00","datePublished":"2017-02-14T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2017/02/14/9511ea9702f301b9bbd2f8344f5f5d2e.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

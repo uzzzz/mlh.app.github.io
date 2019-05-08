@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="最简单的智能合约 最简单的一个智能合约 pragma solidity 0.4.9; contract DemoTypes { function f(uint a) returns (uint b) { uint result = a * 8; return result; } } 以上就是一个最简单的一个智能合约, 该智能合约实现了一个最基本的功能，也就是输入N，返回8*N。 那么我们需要如何执行他呢？这个就涉及到一个很有用的工具，browser-solidity了。 官方地址：https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.9+commit.364da425.js 注意这里目前用到的solidity版本为0.4.9， 因此pragma solidity 后面也要跟上0.4.9版本，否则会报错。 将我们上面的代码贴上去，可以看到结果如下图所示： 这个时候点击红色 Create按钮 就可以将这份最简单的智能合约部署到区块链网络上（内存上的） 在这里我们可以看到几个东西 Trasaction/Execution Cost: 这个代表Create一个合约所消耗的成本，单位为Gas。Gas和Ether币有一个兑换关系，兑换比例由Oracle决定 这里可以看到我们的合约名称DemoTypes, 注册在了一个地址上面。这个代表该合约已经被挖矿出来了。 第三个就是我们上方的合约代码，f(n) {return 8 * n} 这个时候我们输入100，然后点击f按钮，我们可以看到结果 这样的结果很清楚 结果是800，符合预期 执行f()这个function消耗的Gas Cost是21698+800 上面介绍了一个最简单的智能合约，下一章将给大家介绍智能合约的语言 Solidity。也是全书的重心。 原文链接：http://www.ethchinese.com/?p=614 获取最新区块链咨询，请关注《以太中文网》微信公众号：以太中文网 阅读更多" />
 <meta property="og:description" content="最简单的智能合约 最简单的一个智能合约 pragma solidity 0.4.9; contract DemoTypes { function f(uint a) returns (uint b) { uint result = a * 8; return result; } } 以上就是一个最简单的一个智能合约, 该智能合约实现了一个最基本的功能，也就是输入N，返回8*N。 那么我们需要如何执行他呢？这个就涉及到一个很有用的工具，browser-solidity了。 官方地址：https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.9+commit.364da425.js 注意这里目前用到的solidity版本为0.4.9， 因此pragma solidity 后面也要跟上0.4.9版本，否则会报错。 将我们上面的代码贴上去，可以看到结果如下图所示： 这个时候点击红色 Create按钮 就可以将这份最简单的智能合约部署到区块链网络上（内存上的） 在这里我们可以看到几个东西 Trasaction/Execution Cost: 这个代表Create一个合约所消耗的成本，单位为Gas。Gas和Ether币有一个兑换关系，兑换比例由Oracle决定 这里可以看到我们的合约名称DemoTypes, 注册在了一个地址上面。这个代表该合约已经被挖矿出来了。 第三个就是我们上方的合约代码，f(n) {return 8 * n} 这个时候我们输入100，然后点击f按钮，我们可以看到结果 这样的结果很清楚 结果是800，符合预期 执行f()这个function消耗的Gas Cost是21698+800 上面介绍了一个最简单的智能合约，下一章将给大家介绍智能合约的语言 Solidity。也是全书的重心。 原文链接：http://www.ethchinese.com/?p=614 获取最新区块链咨询，请关注《以太中文网》微信公众号：以太中文网 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2017/02/27/0000c8793f6d7340356574cd4dbc0456.html" />
+<meta property="og:url" content="https://mlh.app/2017/02/27/0000c8793f6d7340356574cd4dbc0456.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-02-27T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"最简单的智能合约 最简单的一个智能合约 pragma solidity 0.4.9; contract DemoTypes { function f(uint a) returns (uint b) { uint result = a * 8; return result; } } 以上就是一个最简单的一个智能合约, 该智能合约实现了一个最基本的功能，也就是输入N，返回8*N。 那么我们需要如何执行他呢？这个就涉及到一个很有用的工具，browser-solidity了。 官方地址：https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.9+commit.364da425.js 注意这里目前用到的solidity版本为0.4.9， 因此pragma solidity 后面也要跟上0.4.9版本，否则会报错。 将我们上面的代码贴上去，可以看到结果如下图所示： 这个时候点击红色 Create按钮 就可以将这份最简单的智能合约部署到区块链网络上（内存上的） 在这里我们可以看到几个东西 Trasaction/Execution Cost: 这个代表Create一个合约所消耗的成本，单位为Gas。Gas和Ether币有一个兑换关系，兑换比例由Oracle决定 这里可以看到我们的合约名称DemoTypes, 注册在了一个地址上面。这个代表该合约已经被挖矿出来了。 第三个就是我们上方的合约代码，f(n) {return 8 * n} 这个时候我们输入100，然后点击f按钮，我们可以看到结果 这样的结果很清楚 结果是800，符合预期 执行f()这个function消耗的Gas Cost是21698+800 上面介绍了一个最简单的智能合约，下一章将给大家介绍智能合约的语言 Solidity。也是全书的重心。 原文链接：http://www.ethchinese.com/?p=614 获取最新区块链咨询，请关注《以太中文网》微信公众号：以太中文网 阅读更多","@type":"BlogPosting","url":"/2017/02/27/0000c8793f6d7340356574cd4dbc0456.html","headline":"区块链学堂（2）：最简单的智能合约","dateModified":"2017-02-27T00:00:00+08:00","datePublished":"2017-02-27T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2017/02/27/0000c8793f6d7340356574cd4dbc0456.html"},"@context":"http://schema.org"}</script>
+{"description":"最简单的智能合约 最简单的一个智能合约 pragma solidity 0.4.9; contract DemoTypes { function f(uint a) returns (uint b) { uint result = a * 8; return result; } } 以上就是一个最简单的一个智能合约, 该智能合约实现了一个最基本的功能，也就是输入N，返回8*N。 那么我们需要如何执行他呢？这个就涉及到一个很有用的工具，browser-solidity了。 官方地址：https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.9+commit.364da425.js 注意这里目前用到的solidity版本为0.4.9， 因此pragma solidity 后面也要跟上0.4.9版本，否则会报错。 将我们上面的代码贴上去，可以看到结果如下图所示： 这个时候点击红色 Create按钮 就可以将这份最简单的智能合约部署到区块链网络上（内存上的） 在这里我们可以看到几个东西 Trasaction/Execution Cost: 这个代表Create一个合约所消耗的成本，单位为Gas。Gas和Ether币有一个兑换关系，兑换比例由Oracle决定 这里可以看到我们的合约名称DemoTypes, 注册在了一个地址上面。这个代表该合约已经被挖矿出来了。 第三个就是我们上方的合约代码，f(n) {return 8 * n} 这个时候我们输入100，然后点击f按钮，我们可以看到结果 这样的结果很清楚 结果是800，符合预期 执行f()这个function消耗的Gas Cost是21698+800 上面介绍了一个最简单的智能合约，下一章将给大家介绍智能合约的语言 Solidity。也是全书的重心。 原文链接：http://www.ethchinese.com/?p=614 获取最新区块链咨询，请关注《以太中文网》微信公众号：以太中文网 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2017/02/27/0000c8793f6d7340356574cd4dbc0456.html","headline":"区块链学堂（2）：最简单的智能合约","dateModified":"2017-02-27T00:00:00+08:00","datePublished":"2017-02-27T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2017/02/27/0000c8793f6d7340356574cd4dbc0456.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

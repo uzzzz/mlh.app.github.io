@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="转载请注明出处 http://blog.csdn.net/pony_maggie/article/details/39780825 作者:小马 假设条件: 1 圈存1000元 2 第一货币9F79 3 卡片子密钥:4F343BCB34859BD58FFED96EE0D09BA4 4 当笔交易的应用密文(tag 9F26):36C32B02876030D1 5 当笔交易的交易计数器(tag 9F36):0005 首先明确是put data命令， 这样一个不带MAC的脚本应该可以形成: 04DA9F790A000000100000XXXXXXXX MAC如何计算呢？ 第一步，得到MAC卡片子密钥: 4F343BCB34859BD58FFED96EE0D09BA4 如果得到的是发卡行主密钥MDK-MAC，需要联合卡号以及卡片序列号分散成卡片子密钥，具体步骤参见安全规范11.1.4部分。这里不再详述。 第二步，计算过程密钥 需要ATC值， 左补0得到左半部分输入数据： ZL = 0000000000000005 与FFFF导或并左补0，得到右半部分输入数据: ZR = 000000000000FFFA 用工具分散得到过程密钥: 2E4D818E14CAE2348FA5E820A8A5E65E 注意到上图，我并没有按照规范分别对左右部分8字节计算，也可以合成16字节一起算，但要注意一定要选择ECB模式。 第三步，组织脚本命令的输入数据, 下列数据按顺序排列得到一个数据块D： ——CLA、INS、P1、P2 和Lc（Lc 的长度包括MAC 的长度）； ——ATC（对于发卡行脚本处理，此ATC 在请求中报文中上送）； ——应用密文（对于发卡行脚本处理，此应用密文通常是ARQC，或AAC，在请求报文中上送）； ——命令数据域中的明文或密文数据（如果存在）。 如果最终的数据不是8的整数倍，就补80 00 ...., 得到输入数据: 04DA9F790A000536C32B02876030D1000000100000800000 用工具计算MAC 得到最终下发的脚本命令: 04DA9F790A0000001000009C612F54 阅读更多" />
 <meta property="og:description" content="转载请注明出处 http://blog.csdn.net/pony_maggie/article/details/39780825 作者:小马 假设条件: 1 圈存1000元 2 第一货币9F79 3 卡片子密钥:4F343BCB34859BD58FFED96EE0D09BA4 4 当笔交易的应用密文(tag 9F26):36C32B02876030D1 5 当笔交易的交易计数器(tag 9F36):0005 首先明确是put data命令， 这样一个不带MAC的脚本应该可以形成: 04DA9F790A000000100000XXXXXXXX MAC如何计算呢？ 第一步，得到MAC卡片子密钥: 4F343BCB34859BD58FFED96EE0D09BA4 如果得到的是发卡行主密钥MDK-MAC，需要联合卡号以及卡片序列号分散成卡片子密钥，具体步骤参见安全规范11.1.4部分。这里不再详述。 第二步，计算过程密钥 需要ATC值， 左补0得到左半部分输入数据： ZL = 0000000000000005 与FFFF导或并左补0，得到右半部分输入数据: ZR = 000000000000FFFA 用工具分散得到过程密钥: 2E4D818E14CAE2348FA5E820A8A5E65E 注意到上图，我并没有按照规范分别对左右部分8字节计算，也可以合成16字节一起算，但要注意一定要选择ECB模式。 第三步，组织脚本命令的输入数据, 下列数据按顺序排列得到一个数据块D： ——CLA、INS、P1、P2 和Lc（Lc 的长度包括MAC 的长度）； ——ATC（对于发卡行脚本处理，此ATC 在请求中报文中上送）； ——应用密文（对于发卡行脚本处理，此应用密文通常是ARQC，或AAC，在请求报文中上送）； ——命令数据域中的明文或密文数据（如果存在）。 如果最终的数据不是8的整数倍，就补80 00 ...., 得到输入数据: 04DA9F790A000536C32B02876030D1000000100000800000 用工具计算MAC 得到最终下发的脚本命令: 04DA9F790A0000001000009C612F54 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2015/03/23/176ae32e26032a9f5cd52388186545aa.html" />
+<meta property="og:url" content="https://mlh.app/2015/03/23/176ae32e26032a9f5cd52388186545aa.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-03-23T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"转载请注明出处 http://blog.csdn.net/pony_maggie/article/details/39780825 作者:小马 假设条件: 1 圈存1000元 2 第一货币9F79 3 卡片子密钥:4F343BCB34859BD58FFED96EE0D09BA4 4 当笔交易的应用密文(tag 9F26):36C32B02876030D1 5 当笔交易的交易计数器(tag 9F36):0005 首先明确是put data命令， 这样一个不带MAC的脚本应该可以形成: 04DA9F790A000000100000XXXXXXXX MAC如何计算呢？ 第一步，得到MAC卡片子密钥: 4F343BCB34859BD58FFED96EE0D09BA4 如果得到的是发卡行主密钥MDK-MAC，需要联合卡号以及卡片序列号分散成卡片子密钥，具体步骤参见安全规范11.1.4部分。这里不再详述。 第二步，计算过程密钥 需要ATC值， 左补0得到左半部分输入数据： ZL = 0000000000000005 与FFFF导或并左补0，得到右半部分输入数据: ZR = 000000000000FFFA 用工具分散得到过程密钥: 2E4D818E14CAE2348FA5E820A8A5E65E 注意到上图，我并没有按照规范分别对左右部分8字节计算，也可以合成16字节一起算，但要注意一定要选择ECB模式。 第三步，组织脚本命令的输入数据, 下列数据按顺序排列得到一个数据块D： ——CLA、INS、P1、P2 和Lc（Lc 的长度包括MAC 的长度）； ——ATC（对于发卡行脚本处理，此ATC 在请求中报文中上送）； ——应用密文（对于发卡行脚本处理，此应用密文通常是ARQC，或AAC，在请求报文中上送）； ——命令数据域中的明文或密文数据（如果存在）。 如果最终的数据不是8的整数倍，就补80 00 ...., 得到输入数据: 04DA9F790A000536C32B02876030D1000000100000800000 用工具计算MAC 得到最终下发的脚本命令: 04DA9F790A0000001000009C612F54 阅读更多","@type":"BlogPosting","url":"/2015/03/23/176ae32e26032a9f5cd52388186545aa.html","headline":"发卡行圈存脚本是如何生成的","dateModified":"2015-03-23T00:00:00+08:00","datePublished":"2015-03-23T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2015/03/23/176ae32e26032a9f5cd52388186545aa.html"},"@context":"http://schema.org"}</script>
+{"description":"转载请注明出处 http://blog.csdn.net/pony_maggie/article/details/39780825 作者:小马 假设条件: 1 圈存1000元 2 第一货币9F79 3 卡片子密钥:4F343BCB34859BD58FFED96EE0D09BA4 4 当笔交易的应用密文(tag 9F26):36C32B02876030D1 5 当笔交易的交易计数器(tag 9F36):0005 首先明确是put data命令， 这样一个不带MAC的脚本应该可以形成: 04DA9F790A000000100000XXXXXXXX MAC如何计算呢？ 第一步，得到MAC卡片子密钥: 4F343BCB34859BD58FFED96EE0D09BA4 如果得到的是发卡行主密钥MDK-MAC，需要联合卡号以及卡片序列号分散成卡片子密钥，具体步骤参见安全规范11.1.4部分。这里不再详述。 第二步，计算过程密钥 需要ATC值， 左补0得到左半部分输入数据： ZL = 0000000000000005 与FFFF导或并左补0，得到右半部分输入数据: ZR = 000000000000FFFA 用工具分散得到过程密钥: 2E4D818E14CAE2348FA5E820A8A5E65E 注意到上图，我并没有按照规范分别对左右部分8字节计算，也可以合成16字节一起算，但要注意一定要选择ECB模式。 第三步，组织脚本命令的输入数据, 下列数据按顺序排列得到一个数据块D： ——CLA、INS、P1、P2 和Lc（Lc 的长度包括MAC 的长度）； ——ATC（对于发卡行脚本处理，此ATC 在请求中报文中上送）； ——应用密文（对于发卡行脚本处理，此应用密文通常是ARQC，或AAC，在请求报文中上送）； ——命令数据域中的明文或密文数据（如果存在）。 如果最终的数据不是8的整数倍，就补80 00 ...., 得到输入数据: 04DA9F790A000536C32B02876030D1000000100000800000 用工具计算MAC 得到最终下发的脚本命令: 04DA9F790A0000001000009C612F54 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2015/03/23/176ae32e26032a9f5cd52388186545aa.html","headline":"发卡行圈存脚本是如何生成的","dateModified":"2015-03-23T00:00:00+08:00","datePublished":"2015-03-23T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2015/03/23/176ae32e26032a9f5cd52388186545aa.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

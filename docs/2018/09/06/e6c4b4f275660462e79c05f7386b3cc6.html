@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/cbb944131226/article/details/82468611 Windows10 通过MinGW下载gcc/g++编译器 完成流程步骤： 1.MinGW下载 MinGW官网 mingw-get-setup.exe下载地址 2.MinGW安装 打开下载好的mingw-get-setup.exe ，这里选择安装目录为F:\MinGW。 3.下载安装gcc/g++ ​ 通过MinGW Installation Manager下载gcc/g++。勾选mingw32-gcc-g++-bin，点击Apply Changes，下载安装gcc/g++。 4.配置环境变量： ​ 编辑系统变量Path，添加一个环境变量F:\MinGW\bin，具体为MinGW根目录下的\bin目录，用英文分号隔开。 5.检验是否成功下载安装gcc/g++： ​ 打开cmd终端，输入gcc -v和g++ -v检验gcc与g++是否安装并配置变量成功。若如下图所示，则成功。 出现的问题： 1.在步骤3（下载安装gcc/g++）时，出现部分package无法成功下载： 具体是因为URL的问题丢失libgmp-6.1.2-2-mingw32-dll-10.tar.xz，libmpfr-3.1.5-1-mingw32-dll-4.tar.xz 两个package包，从而导致在进行g++编译的时候出现重要组件libgmp-10.dll与libmpfr-4.dll的丢失。 解决方案： ​ 跟已经下载安装好的同学拷贝这两个package包，又或者从搭配有MinGW的轻便型IDE如Dev-cpp、Code Blocks路径下拷贝这两个package包，其路径为MinGW根目录下的\var\cache\mingw-get\packages。 ​ 然后解压缩这两个压缩包，将其中的组件libgmp-10.dll与libmpfr-4.dll复制到MinGW根目录下的\bin。 阅读更多 登录后自动展开" />
 <meta property="og:description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/cbb944131226/article/details/82468611 Windows10 通过MinGW下载gcc/g++编译器 完成流程步骤： 1.MinGW下载 MinGW官网 mingw-get-setup.exe下载地址 2.MinGW安装 打开下载好的mingw-get-setup.exe ，这里选择安装目录为F:\MinGW。 3.下载安装gcc/g++ ​ 通过MinGW Installation Manager下载gcc/g++。勾选mingw32-gcc-g++-bin，点击Apply Changes，下载安装gcc/g++。 4.配置环境变量： ​ 编辑系统变量Path，添加一个环境变量F:\MinGW\bin，具体为MinGW根目录下的\bin目录，用英文分号隔开。 5.检验是否成功下载安装gcc/g++： ​ 打开cmd终端，输入gcc -v和g++ -v检验gcc与g++是否安装并配置变量成功。若如下图所示，则成功。 出现的问题： 1.在步骤3（下载安装gcc/g++）时，出现部分package无法成功下载： 具体是因为URL的问题丢失libgmp-6.1.2-2-mingw32-dll-10.tar.xz，libmpfr-3.1.5-1-mingw32-dll-4.tar.xz 两个package包，从而导致在进行g++编译的时候出现重要组件libgmp-10.dll与libmpfr-4.dll的丢失。 解决方案： ​ 跟已经下载安装好的同学拷贝这两个package包，又或者从搭配有MinGW的轻便型IDE如Dev-cpp、Code Blocks路径下拷贝这两个package包，其路径为MinGW根目录下的\var\cache\mingw-get\packages。 ​ 然后解压缩这两个压缩包，将其中的组件libgmp-10.dll与libmpfr-4.dll复制到MinGW根目录下的\bin。 阅读更多 登录后自动展开" />
+<link rel="canonical" href="https://mlh.app/2018/09/06/e6c4b4f275660462e79c05f7386b3cc6.html" />
+<meta property="og:url" content="https://mlh.app/2018/09/06/e6c4b4f275660462e79c05f7386b3cc6.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-06T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/cbb944131226/article/details/82468611 Windows10 通过MinGW下载gcc/g++编译器 完成流程步骤： 1.MinGW下载 MinGW官网 mingw-get-setup.exe下载地址 2.MinGW安装 打开下载好的mingw-get-setup.exe ，这里选择安装目录为F:\\MinGW。 3.下载安装gcc/g++ ​ 通过MinGW Installation Manager下载gcc/g++。勾选mingw32-gcc-g++-bin，点击Apply Changes，下载安装gcc/g++。 4.配置环境变量： ​ 编辑系统变量Path，添加一个环境变量F:\\MinGW\\bin，具体为MinGW根目录下的\\bin目录，用英文分号隔开。 5.检验是否成功下载安装gcc/g++： ​ 打开cmd终端，输入gcc -v和g++ -v检验gcc与g++是否安装并配置变量成功。若如下图所示，则成功。 出现的问题： 1.在步骤3（下载安装gcc/g++）时，出现部分package无法成功下载： 具体是因为URL的问题丢失libgmp-6.1.2-2-mingw32-dll-10.tar.xz，libmpfr-3.1.5-1-mingw32-dll-4.tar.xz 两个package包，从而导致在进行g++编译的时候出现重要组件libgmp-10.dll与libmpfr-4.dll的丢失。 解决方案： ​ 跟已经下载安装好的同学拷贝这两个package包，又或者从搭配有MinGW的轻便型IDE如Dev-cpp、Code Blocks路径下拷贝这两个package包，其路径为MinGW根目录下的\\var\\cache\\mingw-get\\packages。 ​ 然后解压缩这两个压缩包，将其中的组件libgmp-10.dll与libmpfr-4.dll复制到MinGW根目录下的\\bin。 阅读更多 登录后自动展开","@type":"BlogPosting","url":"/2018/09/06/e6c4b4f275660462e79c05f7386b3cc6.html","headline":"Windows10 通过MinGW安装下载gcc,g++编译器","dateModified":"2018-09-06T00:00:00+08:00","datePublished":"2018-09-06T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/09/06/e6c4b4f275660462e79c05f7386b3cc6.html"},"@context":"http://schema.org"}</script>
+{"description":"版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/cbb944131226/article/details/82468611 Windows10 通过MinGW下载gcc/g++编译器 完成流程步骤： 1.MinGW下载 MinGW官网 mingw-get-setup.exe下载地址 2.MinGW安装 打开下载好的mingw-get-setup.exe ，这里选择安装目录为F:\\MinGW。 3.下载安装gcc/g++ ​ 通过MinGW Installation Manager下载gcc/g++。勾选mingw32-gcc-g++-bin，点击Apply Changes，下载安装gcc/g++。 4.配置环境变量： ​ 编辑系统变量Path，添加一个环境变量F:\\MinGW\\bin，具体为MinGW根目录下的\\bin目录，用英文分号隔开。 5.检验是否成功下载安装gcc/g++： ​ 打开cmd终端，输入gcc -v和g++ -v检验gcc与g++是否安装并配置变量成功。若如下图所示，则成功。 出现的问题： 1.在步骤3（下载安装gcc/g++）时，出现部分package无法成功下载： 具体是因为URL的问题丢失libgmp-6.1.2-2-mingw32-dll-10.tar.xz，libmpfr-3.1.5-1-mingw32-dll-4.tar.xz 两个package包，从而导致在进行g++编译的时候出现重要组件libgmp-10.dll与libmpfr-4.dll的丢失。 解决方案： ​ 跟已经下载安装好的同学拷贝这两个package包，又或者从搭配有MinGW的轻便型IDE如Dev-cpp、Code Blocks路径下拷贝这两个package包，其路径为MinGW根目录下的\\var\\cache\\mingw-get\\packages。 ​ 然后解压缩这两个压缩包，将其中的组件libgmp-10.dll与libmpfr-4.dll复制到MinGW根目录下的\\bin。 阅读更多 登录后自动展开","@type":"BlogPosting","url":"https://mlh.app/2018/09/06/e6c4b4f275660462e79c05f7386b3cc6.html","headline":"Windows10 通过MinGW安装下载gcc,g++编译器","dateModified":"2018-09-06T00:00:00+08:00","datePublished":"2018-09-06T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/09/06/e6c4b4f275660462e79c05f7386b3cc6.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

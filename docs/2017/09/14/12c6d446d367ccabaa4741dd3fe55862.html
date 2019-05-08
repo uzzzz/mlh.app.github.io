@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="一、虚机架设篇 # 首先在Windows10下安装VMWare Workstations，然后下载最新的Centos最简版的镜像文件创建Centos7的虚机。具体折腾的过程就不说了，提供以下下载信息： # VMWare WorkStations 12下载地址（注册码问度娘）：https://download3.vmware.com/software/wkst/file/VMware-workstation-full-12.5.7-5813279.exe # Centos7最简版本镜像文件下载地址：http://centos.cs.nctu.edu.tw/7/isos/x86_64/CentOS-7-x86_64-Minimal-1708.iso # 估计很多兄弟们第一次架设Centos虚机是上不了网的，原因是网络未配置 # 最简单的配置方式是使用桥接模式 # 同时使用vi（此时vim还未安装无法使用）编辑网络配置。 # vi/vim操作短训班：进入界面后，按“i””进入编辑状态，修改完后按“esc”键退出修改，并按“：”键进入cmd状态，在cmd下输入“wq”完成保存退出。长训班请联系度娘。 cd /etc/sysconfig/network-scripts ll | grep ifcfg # 修改网络配置，注意红框的内容，需将IPADDR和GATEWAY设置为与主机IP同网段的未占用的IP地址以及网关 vi ifcfg-ens33 # 直接使用虚机console很不爽，开放SSH服务直接使用SSH登录虚机。vi中是没有颜色的，我是图方便直接使用后续提到的vim打开的。注意红色框内的内容修改。 vi /etc/ssh/sshd_config # 别忘了放开防火墙22端口 firewall-cmd --zone=public --add-port=22/tcp --permanent # 重启网络 systemctl restart network #重启防火墙 systemctl restart firewalld # 试试看是否可以ping同度娘 ping baidu.com # OK，虚机架设篇就到这里。接下来就是激动人心的在虚机上建以太坊的框架了。 阅读更多" />
 <meta property="og:description" content="一、虚机架设篇 # 首先在Windows10下安装VMWare Workstations，然后下载最新的Centos最简版的镜像文件创建Centos7的虚机。具体折腾的过程就不说了，提供以下下载信息： # VMWare WorkStations 12下载地址（注册码问度娘）：https://download3.vmware.com/software/wkst/file/VMware-workstation-full-12.5.7-5813279.exe # Centos7最简版本镜像文件下载地址：http://centos.cs.nctu.edu.tw/7/isos/x86_64/CentOS-7-x86_64-Minimal-1708.iso # 估计很多兄弟们第一次架设Centos虚机是上不了网的，原因是网络未配置 # 最简单的配置方式是使用桥接模式 # 同时使用vi（此时vim还未安装无法使用）编辑网络配置。 # vi/vim操作短训班：进入界面后，按“i””进入编辑状态，修改完后按“esc”键退出修改，并按“：”键进入cmd状态，在cmd下输入“wq”完成保存退出。长训班请联系度娘。 cd /etc/sysconfig/network-scripts ll | grep ifcfg # 修改网络配置，注意红框的内容，需将IPADDR和GATEWAY设置为与主机IP同网段的未占用的IP地址以及网关 vi ifcfg-ens33 # 直接使用虚机console很不爽，开放SSH服务直接使用SSH登录虚机。vi中是没有颜色的，我是图方便直接使用后续提到的vim打开的。注意红色框内的内容修改。 vi /etc/ssh/sshd_config # 别忘了放开防火墙22端口 firewall-cmd --zone=public --add-port=22/tcp --permanent # 重启网络 systemctl restart network #重启防火墙 systemctl restart firewalld # 试试看是否可以ping同度娘 ping baidu.com # OK，虚机架设篇就到这里。接下来就是激动人心的在虚机上建以太坊的框架了。 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2017/09/14/12c6d446d367ccabaa4741dd3fe55862.html" />
+<meta property="og:url" content="https://mlh.app/2017/09/14/12c6d446d367ccabaa4741dd3fe55862.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-09-14T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"一、虚机架设篇 # 首先在Windows10下安装VMWare Workstations，然后下载最新的Centos最简版的镜像文件创建Centos7的虚机。具体折腾的过程就不说了，提供以下下载信息： # VMWare WorkStations 12下载地址（注册码问度娘）：https://download3.vmware.com/software/wkst/file/VMware-workstation-full-12.5.7-5813279.exe # Centos7最简版本镜像文件下载地址：http://centos.cs.nctu.edu.tw/7/isos/x86_64/CentOS-7-x86_64-Minimal-1708.iso # 估计很多兄弟们第一次架设Centos虚机是上不了网的，原因是网络未配置 # 最简单的配置方式是使用桥接模式 # 同时使用vi（此时vim还未安装无法使用）编辑网络配置。 # vi/vim操作短训班：进入界面后，按“i””进入编辑状态，修改完后按“esc”键退出修改，并按“：”键进入cmd状态，在cmd下输入“wq”完成保存退出。长训班请联系度娘。 cd /etc/sysconfig/network-scripts ll | grep ifcfg # 修改网络配置，注意红框的内容，需将IPADDR和GATEWAY设置为与主机IP同网段的未占用的IP地址以及网关 vi ifcfg-ens33 # 直接使用虚机console很不爽，开放SSH服务直接使用SSH登录虚机。vi中是没有颜色的，我是图方便直接使用后续提到的vim打开的。注意红色框内的内容修改。 vi /etc/ssh/sshd_config # 别忘了放开防火墙22端口 firewall-cmd --zone=public --add-port=22/tcp --permanent # 重启网络 systemctl restart network #重启防火墙 systemctl restart firewalld # 试试看是否可以ping同度娘 ping baidu.com # OK，虚机架设篇就到这里。接下来就是激动人心的在虚机上建以太坊的框架了。 阅读更多","@type":"BlogPosting","url":"/2017/09/14/12c6d446d367ccabaa4741dd3fe55862.html","headline":"在CENTOS7上玩转Ethereum区块链(1)：虚机架设篇","dateModified":"2017-09-14T00:00:00+08:00","datePublished":"2017-09-14T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2017/09/14/12c6d446d367ccabaa4741dd3fe55862.html"},"@context":"http://schema.org"}</script>
+{"description":"一、虚机架设篇 # 首先在Windows10下安装VMWare Workstations，然后下载最新的Centos最简版的镜像文件创建Centos7的虚机。具体折腾的过程就不说了，提供以下下载信息： # VMWare WorkStations 12下载地址（注册码问度娘）：https://download3.vmware.com/software/wkst/file/VMware-workstation-full-12.5.7-5813279.exe # Centos7最简版本镜像文件下载地址：http://centos.cs.nctu.edu.tw/7/isos/x86_64/CentOS-7-x86_64-Minimal-1708.iso # 估计很多兄弟们第一次架设Centos虚机是上不了网的，原因是网络未配置 # 最简单的配置方式是使用桥接模式 # 同时使用vi（此时vim还未安装无法使用）编辑网络配置。 # vi/vim操作短训班：进入界面后，按“i””进入编辑状态，修改完后按“esc”键退出修改，并按“：”键进入cmd状态，在cmd下输入“wq”完成保存退出。长训班请联系度娘。 cd /etc/sysconfig/network-scripts ll | grep ifcfg # 修改网络配置，注意红框的内容，需将IPADDR和GATEWAY设置为与主机IP同网段的未占用的IP地址以及网关 vi ifcfg-ens33 # 直接使用虚机console很不爽，开放SSH服务直接使用SSH登录虚机。vi中是没有颜色的，我是图方便直接使用后续提到的vim打开的。注意红色框内的内容修改。 vi /etc/ssh/sshd_config # 别忘了放开防火墙22端口 firewall-cmd --zone=public --add-port=22/tcp --permanent # 重启网络 systemctl restart network #重启防火墙 systemctl restart firewalld # 试试看是否可以ping同度娘 ping baidu.com # OK，虚机架设篇就到这里。接下来就是激动人心的在虚机上建以太坊的框架了。 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2017/09/14/12c6d446d367ccabaa4741dd3fe55862.html","headline":"在CENTOS7上玩转Ethereum区块链(1)：虚机架设篇","dateModified":"2017-09-14T00:00:00+08:00","datePublished":"2017-09-14T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2017/09/14/12c6d446d367ccabaa4741dd3fe55862.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

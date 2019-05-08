@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/alionsss/article/details/87635685 文章目录 多项式回归示例（sklearn实现） 1. 导包 2. 原始数据生成与展示 3. 数据预处理 4. 建立模型，开始训练 5. 预测结果与展示 多项式回归示例（sklearn实现） 1. 导包 import numpy as np import matplotlib.pyplot as plt from sklearn.preprocessing import PolynomialFeatures from sklearn.linear_model import LinearRegression 2. 原始数据生成与展示 x_data = np.array([1, 2, 3, 4, 5, 6 ,7, 8, 9 ,10]) y_data = np.array([45, 55, 60, 85, 115, 140, 222, 350, 600, 1000]) plt.scatter(x_data, y_data) plt.show() 3. 数据预处理 x_data = x_data[:, np.newaxis] y_data = y_data[:, np.newaxis] # 多项式特征转换 poly_reg = PolynomialFeatures(degree=3) x_data_poly = poly_reg.fit_transform(x_data) 4. 建立模型，开始训练 model = LinearRegression() model.fit(x_data_poly, y_data) 5. 预测结果与展示 # 生成待预测的数据 x_test = np.linspace(1, 10, 50)[:, np.newaxis] x_test_poly = poly_reg.fit_transform(x_test) # 开始预测 predict_result = model.predict(x_test_poly) print(predict_result) # 作图 # 原始数据 plt.plot(x_data, y_data, &quot;b.&quot;) # 预测数据 plt.plot(x_test, predict_result, c=&quot;r&quot;) plt.show()" />
 <meta property="og:description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/alionsss/article/details/87635685 文章目录 多项式回归示例（sklearn实现） 1. 导包 2. 原始数据生成与展示 3. 数据预处理 4. 建立模型，开始训练 5. 预测结果与展示 多项式回归示例（sklearn实现） 1. 导包 import numpy as np import matplotlib.pyplot as plt from sklearn.preprocessing import PolynomialFeatures from sklearn.linear_model import LinearRegression 2. 原始数据生成与展示 x_data = np.array([1, 2, 3, 4, 5, 6 ,7, 8, 9 ,10]) y_data = np.array([45, 55, 60, 85, 115, 140, 222, 350, 600, 1000]) plt.scatter(x_data, y_data) plt.show() 3. 数据预处理 x_data = x_data[:, np.newaxis] y_data = y_data[:, np.newaxis] # 多项式特征转换 poly_reg = PolynomialFeatures(degree=3) x_data_poly = poly_reg.fit_transform(x_data) 4. 建立模型，开始训练 model = LinearRegression() model.fit(x_data_poly, y_data) 5. 预测结果与展示 # 生成待预测的数据 x_test = np.linspace(1, 10, 50)[:, np.newaxis] x_test_poly = poly_reg.fit_transform(x_test) # 开始预测 predict_result = model.predict(x_test_poly) print(predict_result) # 作图 # 原始数据 plt.plot(x_data, y_data, &quot;b.&quot;) # 预测数据 plt.plot(x_test, predict_result, c=&quot;r&quot;) plt.show()" />
+<link rel="canonical" href="https://mlh.app/2019/02/18/e32e0f890014e38a268a4f0d3c4be7e0.html" />
+<meta property="og:url" content="https://mlh.app/2019/02/18/e32e0f890014e38a268a4f0d3c4be7e0.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-02-18T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/alionsss/article/details/87635685 文章目录 多项式回归示例（sklearn实现） 1. 导包 2. 原始数据生成与展示 3. 数据预处理 4. 建立模型，开始训练 5. 预测结果与展示 多项式回归示例（sklearn实现） 1. 导包 import numpy as np import matplotlib.pyplot as plt from sklearn.preprocessing import PolynomialFeatures from sklearn.linear_model import LinearRegression 2. 原始数据生成与展示 x_data = np.array([1, 2, 3, 4, 5, 6 ,7, 8, 9 ,10]) y_data = np.array([45, 55, 60, 85, 115, 140, 222, 350, 600, 1000]) plt.scatter(x_data, y_data) plt.show() 3. 数据预处理 x_data = x_data[:, np.newaxis] y_data = y_data[:, np.newaxis] # 多项式特征转换 poly_reg = PolynomialFeatures(degree=3) x_data_poly = poly_reg.fit_transform(x_data) 4. 建立模型，开始训练 model = LinearRegression() model.fit(x_data_poly, y_data) 5. 预测结果与展示 # 生成待预测的数据 x_test = np.linspace(1, 10, 50)[:, np.newaxis] x_test_poly = poly_reg.fit_transform(x_test) # 开始预测 predict_result = model.predict(x_test_poly) print(predict_result) # 作图 # 原始数据 plt.plot(x_data, y_data, &quot;b.&quot;) # 预测数据 plt.plot(x_test, predict_result, c=&quot;r&quot;) plt.show()","@type":"BlogPosting","url":"/2019/02/18/e32e0f890014e38a268a4f0d3c4be7e0.html","headline":"多项式回归示例（sklearn实现）","dateModified":"2019-02-18T00:00:00+08:00","datePublished":"2019-02-18T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2019/02/18/e32e0f890014e38a268a4f0d3c4be7e0.html"},"@context":"http://schema.org"}</script>
+{"description":"版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/alionsss/article/details/87635685 文章目录 多项式回归示例（sklearn实现） 1. 导包 2. 原始数据生成与展示 3. 数据预处理 4. 建立模型，开始训练 5. 预测结果与展示 多项式回归示例（sklearn实现） 1. 导包 import numpy as np import matplotlib.pyplot as plt from sklearn.preprocessing import PolynomialFeatures from sklearn.linear_model import LinearRegression 2. 原始数据生成与展示 x_data = np.array([1, 2, 3, 4, 5, 6 ,7, 8, 9 ,10]) y_data = np.array([45, 55, 60, 85, 115, 140, 222, 350, 600, 1000]) plt.scatter(x_data, y_data) plt.show() 3. 数据预处理 x_data = x_data[:, np.newaxis] y_data = y_data[:, np.newaxis] # 多项式特征转换 poly_reg = PolynomialFeatures(degree=3) x_data_poly = poly_reg.fit_transform(x_data) 4. 建立模型，开始训练 model = LinearRegression() model.fit(x_data_poly, y_data) 5. 预测结果与展示 # 生成待预测的数据 x_test = np.linspace(1, 10, 50)[:, np.newaxis] x_test_poly = poly_reg.fit_transform(x_test) # 开始预测 predict_result = model.predict(x_test_poly) print(predict_result) # 作图 # 原始数据 plt.plot(x_data, y_data, &quot;b.&quot;) # 预测数据 plt.plot(x_test, predict_result, c=&quot;r&quot;) plt.show()","@type":"BlogPosting","url":"https://mlh.app/2019/02/18/e32e0f890014e38a268a4f0d3c4be7e0.html","headline":"多项式回归示例（sklearn实现）","dateModified":"2019-02-18T00:00:00+08:00","datePublished":"2019-02-18T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2019/02/18/e32e0f890014e38a268a4f0d3c4be7e0.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

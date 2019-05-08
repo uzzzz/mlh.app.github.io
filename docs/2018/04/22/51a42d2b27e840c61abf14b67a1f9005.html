@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="以太坊DApp开发有一个区别于传统应用开发的地方，就是你调用合约的方法有时不是免费的，需要支付gas。那么，在发送交易或者调用合约方法时，应该如何计算需要消耗多少gas呢？ 在以太坊中，使用estimateGas()方法来估算一个交易要消耗的gas消耗量。我们区分普通转账交易和合约方法交易，分别说明如何计算交易要消耗的gas。 怎么计算普通转账交易的gas消耗量？ 对于普通转账交易而言，使用web3.eth.estimateGas()方法来估计gas消耗量。例如： var from = web3.eth.accounts[1] var to = web3.eth.accounts[2] var quantity = web3.eth.estimateGas({ from:from, to:to, value:50000000000000}) console.log(&#39;大约要消耗gas：&#39;,quantity) var amount = quantity * web3.eth.gasPrice console.log(&#39;转出方的账户余额大约要减少：&#39;,amount,&#39;(wei)&#39;) 怎么计算调用合约方法交易的gas消耗量？ 对于合约方法交易而言，使用合约对象上该方法的estimateGas()调用来计算gas消耗量。例如，对于下面的合约： pragma solidity ^0.4.8; contract EzTest { uint public num; function setNum(uint newNum) { num = newNum; } } 可以在js中估算setNum()方法的gas消耗量。例如，下面的代码对setNum(4)调用要消耗的gas量进行估算： //inst 是EzTest合约的实例对象 inst.setNum.estimateGas(4, {from: web3.eth.accounts[1]}) 在线教程 通过上面的介绍，相信你已经了解了以太坊gas怎么计算。如果你正在学习以太坊DApp开发，可以尝试一下汇智网的在线互动教程： 以太坊DApp实战入门教程 以太坊去中心化电商DApp应用开发实战 阅读更多" />
 <meta property="og:description" content="以太坊DApp开发有一个区别于传统应用开发的地方，就是你调用合约的方法有时不是免费的，需要支付gas。那么，在发送交易或者调用合约方法时，应该如何计算需要消耗多少gas呢？ 在以太坊中，使用estimateGas()方法来估算一个交易要消耗的gas消耗量。我们区分普通转账交易和合约方法交易，分别说明如何计算交易要消耗的gas。 怎么计算普通转账交易的gas消耗量？ 对于普通转账交易而言，使用web3.eth.estimateGas()方法来估计gas消耗量。例如： var from = web3.eth.accounts[1] var to = web3.eth.accounts[2] var quantity = web3.eth.estimateGas({ from:from, to:to, value:50000000000000}) console.log(&#39;大约要消耗gas：&#39;,quantity) var amount = quantity * web3.eth.gasPrice console.log(&#39;转出方的账户余额大约要减少：&#39;,amount,&#39;(wei)&#39;) 怎么计算调用合约方法交易的gas消耗量？ 对于合约方法交易而言，使用合约对象上该方法的estimateGas()调用来计算gas消耗量。例如，对于下面的合约： pragma solidity ^0.4.8; contract EzTest { uint public num; function setNum(uint newNum) { num = newNum; } } 可以在js中估算setNum()方法的gas消耗量。例如，下面的代码对setNum(4)调用要消耗的gas量进行估算： //inst 是EzTest合约的实例对象 inst.setNum.estimateGas(4, {from: web3.eth.accounts[1]}) 在线教程 通过上面的介绍，相信你已经了解了以太坊gas怎么计算。如果你正在学习以太坊DApp开发，可以尝试一下汇智网的在线互动教程： 以太坊DApp实战入门教程 以太坊去中心化电商DApp应用开发实战 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/04/22/51a42d2b27e840c61abf14b67a1f9005.html" />
+<meta property="og:url" content="https://mlh.app/2018/04/22/51a42d2b27e840c61abf14b67a1f9005.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-04-22T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"以太坊DApp开发有一个区别于传统应用开发的地方，就是你调用合约的方法有时不是免费的，需要支付gas。那么，在发送交易或者调用合约方法时，应该如何计算需要消耗多少gas呢？ 在以太坊中，使用estimateGas()方法来估算一个交易要消耗的gas消耗量。我们区分普通转账交易和合约方法交易，分别说明如何计算交易要消耗的gas。 怎么计算普通转账交易的gas消耗量？ 对于普通转账交易而言，使用web3.eth.estimateGas()方法来估计gas消耗量。例如： var from = web3.eth.accounts[1] var to = web3.eth.accounts[2] var quantity = web3.eth.estimateGas({ from:from, to:to, value:50000000000000}) console.log(&#39;大约要消耗gas：&#39;,quantity) var amount = quantity * web3.eth.gasPrice console.log(&#39;转出方的账户余额大约要减少：&#39;,amount,&#39;(wei)&#39;) 怎么计算调用合约方法交易的gas消耗量？ 对于合约方法交易而言，使用合约对象上该方法的estimateGas()调用来计算gas消耗量。例如，对于下面的合约： pragma solidity ^0.4.8; contract EzTest { uint public num; function setNum(uint newNum) { num = newNum; } } 可以在js中估算setNum()方法的gas消耗量。例如，下面的代码对setNum(4)调用要消耗的gas量进行估算： //inst 是EzTest合约的实例对象 inst.setNum.estimateGas(4, {from: web3.eth.accounts[1]}) 在线教程 通过上面的介绍，相信你已经了解了以太坊gas怎么计算。如果你正在学习以太坊DApp开发，可以尝试一下汇智网的在线互动教程： 以太坊DApp实战入门教程 以太坊去中心化电商DApp应用开发实战 阅读更多","@type":"BlogPosting","url":"/2018/04/22/51a42d2b27e840c61abf14b67a1f9005.html","headline":"以太坊估算交易gas消耗量","dateModified":"2018-04-22T00:00:00+08:00","datePublished":"2018-04-22T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/04/22/51a42d2b27e840c61abf14b67a1f9005.html"},"@context":"http://schema.org"}</script>
+{"description":"以太坊DApp开发有一个区别于传统应用开发的地方，就是你调用合约的方法有时不是免费的，需要支付gas。那么，在发送交易或者调用合约方法时，应该如何计算需要消耗多少gas呢？ 在以太坊中，使用estimateGas()方法来估算一个交易要消耗的gas消耗量。我们区分普通转账交易和合约方法交易，分别说明如何计算交易要消耗的gas。 怎么计算普通转账交易的gas消耗量？ 对于普通转账交易而言，使用web3.eth.estimateGas()方法来估计gas消耗量。例如： var from = web3.eth.accounts[1] var to = web3.eth.accounts[2] var quantity = web3.eth.estimateGas({ from:from, to:to, value:50000000000000}) console.log(&#39;大约要消耗gas：&#39;,quantity) var amount = quantity * web3.eth.gasPrice console.log(&#39;转出方的账户余额大约要减少：&#39;,amount,&#39;(wei)&#39;) 怎么计算调用合约方法交易的gas消耗量？ 对于合约方法交易而言，使用合约对象上该方法的estimateGas()调用来计算gas消耗量。例如，对于下面的合约： pragma solidity ^0.4.8; contract EzTest { uint public num; function setNum(uint newNum) { num = newNum; } } 可以在js中估算setNum()方法的gas消耗量。例如，下面的代码对setNum(4)调用要消耗的gas量进行估算： //inst 是EzTest合约的实例对象 inst.setNum.estimateGas(4, {from: web3.eth.accounts[1]}) 在线教程 通过上面的介绍，相信你已经了解了以太坊gas怎么计算。如果你正在学习以太坊DApp开发，可以尝试一下汇智网的在线互动教程： 以太坊DApp实战入门教程 以太坊去中心化电商DApp应用开发实战 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/04/22/51a42d2b27e840c61abf14b67a1f9005.html","headline":"以太坊估算交易gas消耗量","dateModified":"2018-04-22T00:00:00+08:00","datePublished":"2018-04-22T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/04/22/51a42d2b27e840c61abf14b67a1f9005.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

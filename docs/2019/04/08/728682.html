@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="安装了anaconda，已经自带安装了nltk包，但是并没有安装nltk_data语料库，所以只有了算法，没有素材 nltk.download()下载连接不上或者网速太慢，用云盘下载zip到C盘： 链接：https://pan.baidu.com/s/1EelodBbekgK6-sWLc7bdyA 提取码：xemi 复制这段内容后打开百度网盘手机App，操作更方便哦 新建C:\nltk_data文件夹，下载下来的zip解压到这个目录下，注意解压之后会产生两层nltk_data文件夹，将里面的子文件夹拷出来，最后C:\nltk_data文件夹下面是这些东西就可以了： 测试： from nltk.corpus import brown print(brown.categories()) runfile(‘E:/机器学习/untitled0.py’, wdir=‘E:/机器学习’) [‘adventure’, ‘belles_lettres’, ‘editorial’, ‘fiction’, ‘government’, ‘hobbies’, ‘humor’, ‘learned’, ‘lore’, ‘mystery’, ‘news’, ‘religion’, ‘reviews’, ‘romance’, ‘science_fiction’] 成功 在下面代码编译时： import nltk sentence = &quot;hello,world!&quot; tokens = nltk.word_tokenize(sentence) print(tokens) 报错，发现原来是tokenizers下面的punkt压缩包未解压，解压后运行，报错： 编译器在搜索english.pickle文件的时候，在这个路径下面没有找到english.pickle文件，解决方法：把所有pickle文件拷到该路径下面去，就不会报错了 runfile(‘E:/机器学习/untitled0.py’, wdir=‘E:/机器学习’) [‘hello’, ‘,’, ‘world’, ‘!’]" />
 <meta property="og:description" content="安装了anaconda，已经自带安装了nltk包，但是并没有安装nltk_data语料库，所以只有了算法，没有素材 nltk.download()下载连接不上或者网速太慢，用云盘下载zip到C盘： 链接：https://pan.baidu.com/s/1EelodBbekgK6-sWLc7bdyA 提取码：xemi 复制这段内容后打开百度网盘手机App，操作更方便哦 新建C:\nltk_data文件夹，下载下来的zip解压到这个目录下，注意解压之后会产生两层nltk_data文件夹，将里面的子文件夹拷出来，最后C:\nltk_data文件夹下面是这些东西就可以了： 测试： from nltk.corpus import brown print(brown.categories()) runfile(‘E:/机器学习/untitled0.py’, wdir=‘E:/机器学习’) [‘adventure’, ‘belles_lettres’, ‘editorial’, ‘fiction’, ‘government’, ‘hobbies’, ‘humor’, ‘learned’, ‘lore’, ‘mystery’, ‘news’, ‘religion’, ‘reviews’, ‘romance’, ‘science_fiction’] 成功 在下面代码编译时： import nltk sentence = &quot;hello,world!&quot; tokens = nltk.word_tokenize(sentence) print(tokens) 报错，发现原来是tokenizers下面的punkt压缩包未解压，解压后运行，报错： 编译器在搜索english.pickle文件的时候，在这个路径下面没有找到english.pickle文件，解决方法：把所有pickle文件拷到该路径下面去，就不会报错了 runfile(‘E:/机器学习/untitled0.py’, wdir=‘E:/机器学习’) [‘hello’, ‘,’, ‘world’, ‘!’]" />
+<link rel="canonical" href="https://mlh.app/2019/04/08/728682.html" />
+<meta property="og:url" content="https://mlh.app/2019/04/08/728682.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-04-08T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"安装了anaconda，已经自带安装了nltk包，但是并没有安装nltk_data语料库，所以只有了算法，没有素材 nltk.download()下载连接不上或者网速太慢，用云盘下载zip到C盘： 链接：https://pan.baidu.com/s/1EelodBbekgK6-sWLc7bdyA 提取码：xemi 复制这段内容后打开百度网盘手机App，操作更方便哦 新建C:\\nltk_data文件夹，下载下来的zip解压到这个目录下，注意解压之后会产生两层nltk_data文件夹，将里面的子文件夹拷出来，最后C:\\nltk_data文件夹下面是这些东西就可以了： 测试： from nltk.corpus import brown print(brown.categories()) runfile(‘E:/机器学习/untitled0.py’, wdir=‘E:/机器学习’) [‘adventure’, ‘belles_lettres’, ‘editorial’, ‘fiction’, ‘government’, ‘hobbies’, ‘humor’, ‘learned’, ‘lore’, ‘mystery’, ‘news’, ‘religion’, ‘reviews’, ‘romance’, ‘science_fiction’] 成功 在下面代码编译时： import nltk sentence = &quot;hello,world!&quot; tokens = nltk.word_tokenize(sentence) print(tokens) 报错，发现原来是tokenizers下面的punkt压缩包未解压，解压后运行，报错： 编译器在搜索english.pickle文件的时候，在这个路径下面没有找到english.pickle文件，解决方法：把所有pickle文件拷到该路径下面去，就不会报错了 runfile(‘E:/机器学习/untitled0.py’, wdir=‘E:/机器学习’) [‘hello’, ‘,’, ‘world’, ‘!’]","@type":"BlogPosting","url":"/2019/04/08/728682.html","headline":"nltk安装，语料库nltk下载","dateModified":"2019-04-08T00:00:00+08:00","datePublished":"2019-04-08T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2019/04/08/728682.html"},"@context":"http://schema.org"}</script>
+{"description":"安装了anaconda，已经自带安装了nltk包，但是并没有安装nltk_data语料库，所以只有了算法，没有素材 nltk.download()下载连接不上或者网速太慢，用云盘下载zip到C盘： 链接：https://pan.baidu.com/s/1EelodBbekgK6-sWLc7bdyA 提取码：xemi 复制这段内容后打开百度网盘手机App，操作更方便哦 新建C:\\nltk_data文件夹，下载下来的zip解压到这个目录下，注意解压之后会产生两层nltk_data文件夹，将里面的子文件夹拷出来，最后C:\\nltk_data文件夹下面是这些东西就可以了： 测试： from nltk.corpus import brown print(brown.categories()) runfile(‘E:/机器学习/untitled0.py’, wdir=‘E:/机器学习’) [‘adventure’, ‘belles_lettres’, ‘editorial’, ‘fiction’, ‘government’, ‘hobbies’, ‘humor’, ‘learned’, ‘lore’, ‘mystery’, ‘news’, ‘religion’, ‘reviews’, ‘romance’, ‘science_fiction’] 成功 在下面代码编译时： import nltk sentence = &quot;hello,world!&quot; tokens = nltk.word_tokenize(sentence) print(tokens) 报错，发现原来是tokenizers下面的punkt压缩包未解压，解压后运行，报错： 编译器在搜索english.pickle文件的时候，在这个路径下面没有找到english.pickle文件，解决方法：把所有pickle文件拷到该路径下面去，就不会报错了 runfile(‘E:/机器学习/untitled0.py’, wdir=‘E:/机器学习’) [‘hello’, ‘,’, ‘world’, ‘!’]","@type":"BlogPosting","url":"https://mlh.app/2019/04/08/728682.html","headline":"nltk安装，语料库nltk下载","dateModified":"2019-04-08T00:00:00+08:00","datePublished":"2019-04-08T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2019/04/08/728682.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

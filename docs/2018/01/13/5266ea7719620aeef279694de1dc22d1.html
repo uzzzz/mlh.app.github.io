@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="安装环境：Linux Mint 18.1 折磨了我整整一个晚上，总算是装好了。因为一开始用的是网易云官网下载的1.1最新版本，装了很多遍，都发生闪退的现象，只能通过sudo 的方式在终端下打开，但是一关闭终端网易云就会跟着关闭，网上找了无数答案，最终结果：可能最新版存在一些bug吧，无法兼容。无奈退回1.0版本，完美运行，接下来就是安装的过程了 安装前准备工作，先下载网易云音乐1.0 deb文件，我已经打好包。 传送门：链接: https://pan.baidu.com/s/1i7b4QZN 密码: ktfk 下载后会有一个deb文件：&nbsp; netease-cloud-music_1.0.0_amd64_ubuntu16.04.deb cd 到该文件目录下： 安装deb文件：sudo dpkg -i netease-cloud-music_1.0.0_amd64_ubuntu16.04.deb 但是随之会出现一些依赖问题，如下： 输入：&nbsp;sudo apt-get install -f&nbsp; 解决依赖 啪啦啪啦一堆执行后，重新执行dpkg命令安装。 输入：sudo dpkg -i netease-cloud-music_1.0.0_amd64_ubuntu16.04.deb 等待一会后就可以愉快的使用啦。 如果还有闪退的现象，将netease-cloud-music.desktop 这个文件用notepadqq 或 nano 之类的打开。将Exec 那一行改为： Exec=netease-cloud-music --no-sandbox %U 保存 并重启。 如果还是不行的话，我帮你za了。 阅读更多" />
 <meta property="og:description" content="安装环境：Linux Mint 18.1 折磨了我整整一个晚上，总算是装好了。因为一开始用的是网易云官网下载的1.1最新版本，装了很多遍，都发生闪退的现象，只能通过sudo 的方式在终端下打开，但是一关闭终端网易云就会跟着关闭，网上找了无数答案，最终结果：可能最新版存在一些bug吧，无法兼容。无奈退回1.0版本，完美运行，接下来就是安装的过程了 安装前准备工作，先下载网易云音乐1.0 deb文件，我已经打好包。 传送门：链接: https://pan.baidu.com/s/1i7b4QZN 密码: ktfk 下载后会有一个deb文件：&nbsp; netease-cloud-music_1.0.0_amd64_ubuntu16.04.deb cd 到该文件目录下： 安装deb文件：sudo dpkg -i netease-cloud-music_1.0.0_amd64_ubuntu16.04.deb 但是随之会出现一些依赖问题，如下： 输入：&nbsp;sudo apt-get install -f&nbsp; 解决依赖 啪啦啪啦一堆执行后，重新执行dpkg命令安装。 输入：sudo dpkg -i netease-cloud-music_1.0.0_amd64_ubuntu16.04.deb 等待一会后就可以愉快的使用啦。 如果还有闪退的现象，将netease-cloud-music.desktop 这个文件用notepadqq 或 nano 之类的打开。将Exec 那一行改为： Exec=netease-cloud-music --no-sandbox %U 保存 并重启。 如果还是不行的话，我帮你za了。 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/01/13/5266ea7719620aeef279694de1dc22d1.html" />
+<meta property="og:url" content="https://mlh.app/2018/01/13/5266ea7719620aeef279694de1dc22d1.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-01-13T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"安装环境：Linux Mint 18.1 折磨了我整整一个晚上，总算是装好了。因为一开始用的是网易云官网下载的1.1最新版本，装了很多遍，都发生闪退的现象，只能通过sudo 的方式在终端下打开，但是一关闭终端网易云就会跟着关闭，网上找了无数答案，最终结果：可能最新版存在一些bug吧，无法兼容。无奈退回1.0版本，完美运行，接下来就是安装的过程了 安装前准备工作，先下载网易云音乐1.0 deb文件，我已经打好包。 传送门：链接: https://pan.baidu.com/s/1i7b4QZN 密码: ktfk 下载后会有一个deb文件：&nbsp; netease-cloud-music_1.0.0_amd64_ubuntu16.04.deb cd 到该文件目录下： 安装deb文件：sudo dpkg -i netease-cloud-music_1.0.0_amd64_ubuntu16.04.deb 但是随之会出现一些依赖问题，如下： 输入：&nbsp;sudo apt-get install -f&nbsp; 解决依赖 啪啦啪啦一堆执行后，重新执行dpkg命令安装。 输入：sudo dpkg -i netease-cloud-music_1.0.0_amd64_ubuntu16.04.deb 等待一会后就可以愉快的使用啦。 如果还有闪退的现象，将netease-cloud-music.desktop 这个文件用notepadqq 或 nano 之类的打开。将Exec 那一行改为： Exec=netease-cloud-music --no-sandbox %U 保存 并重启。 如果还是不行的话，我帮你za了。 阅读更多","@type":"BlogPosting","url":"/2018/01/13/5266ea7719620aeef279694de1dc22d1.html","headline":"Linux Mint 18.1 下安装网易云音乐1.0","dateModified":"2018-01-13T00:00:00+08:00","datePublished":"2018-01-13T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/01/13/5266ea7719620aeef279694de1dc22d1.html"},"@context":"http://schema.org"}</script>
+{"description":"安装环境：Linux Mint 18.1 折磨了我整整一个晚上，总算是装好了。因为一开始用的是网易云官网下载的1.1最新版本，装了很多遍，都发生闪退的现象，只能通过sudo 的方式在终端下打开，但是一关闭终端网易云就会跟着关闭，网上找了无数答案，最终结果：可能最新版存在一些bug吧，无法兼容。无奈退回1.0版本，完美运行，接下来就是安装的过程了 安装前准备工作，先下载网易云音乐1.0 deb文件，我已经打好包。 传送门：链接: https://pan.baidu.com/s/1i7b4QZN 密码: ktfk 下载后会有一个deb文件：&nbsp; netease-cloud-music_1.0.0_amd64_ubuntu16.04.deb cd 到该文件目录下： 安装deb文件：sudo dpkg -i netease-cloud-music_1.0.0_amd64_ubuntu16.04.deb 但是随之会出现一些依赖问题，如下： 输入：&nbsp;sudo apt-get install -f&nbsp; 解决依赖 啪啦啪啦一堆执行后，重新执行dpkg命令安装。 输入：sudo dpkg -i netease-cloud-music_1.0.0_amd64_ubuntu16.04.deb 等待一会后就可以愉快的使用啦。 如果还有闪退的现象，将netease-cloud-music.desktop 这个文件用notepadqq 或 nano 之类的打开。将Exec 那一行改为： Exec=netease-cloud-music --no-sandbox %U 保存 并重启。 如果还是不行的话，我帮你za了。 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/01/13/5266ea7719620aeef279694de1dc22d1.html","headline":"Linux Mint 18.1 下安装网易云音乐1.0","dateModified":"2018-01-13T00:00:00+08:00","datePublished":"2018-01-13T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/01/13/5266ea7719620aeef279694de1dc22d1.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

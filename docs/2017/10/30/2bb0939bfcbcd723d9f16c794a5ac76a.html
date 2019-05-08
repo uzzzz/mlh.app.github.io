@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 在这里，我将分享我这段时间学到的关于怎样搭建一个简单的beego项目，分享的东西仅仅是入门级别。 &nbsp; &nbsp; &nbsp;一，安装golang的开发工具和语言的编译工具（如果本步骤不会的话，请去golang中国社区查阅资料进行开发搭建） &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 我安装的是liteide，来开发golangweb &nbsp; &nbsp; 二：配置环境变量，使用golang开发的话两个特性比较的重要gopath和goroot，请注意区分，然后gopath还分为系统gopath和自定义gopath &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;三：安装beego（如果本步骤不会的话，后面连接便是beego的开发文档&nbsp; https://beego.me/docs/install/） &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;beego的安装分为两步，第一步安装beego的安装包，第二安装beego工具，缺一不可 &nbsp; &nbsp; 四：完成之后，使用beego工具新建beegoweb项目 &nbsp; &nbsp; 五：完成的项目的目录结构 阅读更多" />
 <meta property="og:description" content="&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 在这里，我将分享我这段时间学到的关于怎样搭建一个简单的beego项目，分享的东西仅仅是入门级别。 &nbsp; &nbsp; &nbsp;一，安装golang的开发工具和语言的编译工具（如果本步骤不会的话，请去golang中国社区查阅资料进行开发搭建） &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 我安装的是liteide，来开发golangweb &nbsp; &nbsp; 二：配置环境变量，使用golang开发的话两个特性比较的重要gopath和goroot，请注意区分，然后gopath还分为系统gopath和自定义gopath &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;三：安装beego（如果本步骤不会的话，后面连接便是beego的开发文档&nbsp; https://beego.me/docs/install/） &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;beego的安装分为两步，第一步安装beego的安装包，第二安装beego工具，缺一不可 &nbsp; &nbsp; 四：完成之后，使用beego工具新建beegoweb项目 &nbsp; &nbsp; 五：完成的项目的目录结构 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2017/10/30/2bb0939bfcbcd723d9f16c794a5ac76a.html" />
+<meta property="og:url" content="https://mlh.app/2017/10/30/2bb0939bfcbcd723d9f16c794a5ac76a.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-10-30T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 在这里，我将分享我这段时间学到的关于怎样搭建一个简单的beego项目，分享的东西仅仅是入门级别。 &nbsp; &nbsp; &nbsp;一，安装golang的开发工具和语言的编译工具（如果本步骤不会的话，请去golang中国社区查阅资料进行开发搭建） &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 我安装的是liteide，来开发golangweb &nbsp; &nbsp; 二：配置环境变量，使用golang开发的话两个特性比较的重要gopath和goroot，请注意区分，然后gopath还分为系统gopath和自定义gopath &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;三：安装beego（如果本步骤不会的话，后面连接便是beego的开发文档&nbsp; https://beego.me/docs/install/） &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;beego的安装分为两步，第一步安装beego的安装包，第二安装beego工具，缺一不可 &nbsp; &nbsp; 四：完成之后，使用beego工具新建beegoweb项目 &nbsp; &nbsp; 五：完成的项目的目录结构 阅读更多","@type":"BlogPosting","url":"/2017/10/30/2bb0939bfcbcd723d9f16c794a5ac76a.html","headline":"利用beego开发网站（一）","dateModified":"2017-10-30T00:00:00+08:00","datePublished":"2017-10-30T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2017/10/30/2bb0939bfcbcd723d9f16c794a5ac76a.html"},"@context":"http://schema.org"}</script>
+{"description":"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 在这里，我将分享我这段时间学到的关于怎样搭建一个简单的beego项目，分享的东西仅仅是入门级别。 &nbsp; &nbsp; &nbsp;一，安装golang的开发工具和语言的编译工具（如果本步骤不会的话，请去golang中国社区查阅资料进行开发搭建） &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 我安装的是liteide，来开发golangweb &nbsp; &nbsp; 二：配置环境变量，使用golang开发的话两个特性比较的重要gopath和goroot，请注意区分，然后gopath还分为系统gopath和自定义gopath &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;三：安装beego（如果本步骤不会的话，后面连接便是beego的开发文档&nbsp; https://beego.me/docs/install/） &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;beego的安装分为两步，第一步安装beego的安装包，第二安装beego工具，缺一不可 &nbsp; &nbsp; 四：完成之后，使用beego工具新建beegoweb项目 &nbsp; &nbsp; 五：完成的项目的目录结构 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2017/10/30/2bb0939bfcbcd723d9f16c794a5ac76a.html","headline":"利用beego开发网站（一）","dateModified":"2017-10-30T00:00:00+08:00","datePublished":"2017-10-30T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2017/10/30/2bb0939bfcbcd723d9f16c794a5ac76a.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

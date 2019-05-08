@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="版权声明：1、本BLOG的目的、形式及内容。 　　此BLOG为个人维护BLOG，内容均来自原创及互连网转载。最终目的为收集整理自己需要的文章技术等内容，不涉及商业用途。 2、有关原创文章的版权 　　本BLOG上原创文章未经本人许可，不得用于商业用途及传统媒体。网络媒体转载请注明出处，否则属于侵权行为。 3、有关本站侵权 　　本BLOG所转载的内容，均是本人未发现有对文章版权声明的文章且无来自传统媒体。如 https://blog.csdn.net/xq723310/article/details/80217520 &nbsp; &nbsp; 这一章节只是总结一下区块链中的结构，让大家对区块链的结构有一个全局的认识，对于结构中内容不做过多解释，会在后续章节中进行着重分析。 &nbsp;&nbsp;&nbsp;&nbsp;区块链是由包含交易信息的区块从后向前有序链接起来的数据结构。区块被从后向前有序地链接在这个链条，每个区块都指向前一个区块。其实它就是链表。 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;区块的结构 区块头是80字节，平均每个交易至少是250字节，且平均每个区块至少包含超过500个交易。 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;区块头 &nbsp; &nbsp; 区块哈希值的数据，这组元数据用于将该区块与区块链中前一个区块相连接。它是一个通过SHA256算法对区块头进两次哈希计算得到的数字指纹。产生的32字节哈希值被称为区块哈希值，但是更准确的名称是：区块头哈希值，因为只有区块头被用于计算。 &nbsp;&nbsp;&nbsp;&nbsp;merkle树根之前介绍过了，一种用来有效地总结区块中所有交易的数据结构。 &nbsp;&nbsp;&nbsp;&nbsp;难度、时间戳和nonce，这三者等到挖矿的时候在介绍。 &nbsp; 交易 交易输入 &nbsp; &nbsp; 交易输出 阅读更多 登录后自动展开" />
 <meta property="og:description" content="版权声明：1、本BLOG的目的、形式及内容。 　　此BLOG为个人维护BLOG，内容均来自原创及互连网转载。最终目的为收集整理自己需要的文章技术等内容，不涉及商业用途。 2、有关原创文章的版权 　　本BLOG上原创文章未经本人许可，不得用于商业用途及传统媒体。网络媒体转载请注明出处，否则属于侵权行为。 3、有关本站侵权 　　本BLOG所转载的内容，均是本人未发现有对文章版权声明的文章且无来自传统媒体。如 https://blog.csdn.net/xq723310/article/details/80217520 &nbsp; &nbsp; 这一章节只是总结一下区块链中的结构，让大家对区块链的结构有一个全局的认识，对于结构中内容不做过多解释，会在后续章节中进行着重分析。 &nbsp;&nbsp;&nbsp;&nbsp;区块链是由包含交易信息的区块从后向前有序链接起来的数据结构。区块被从后向前有序地链接在这个链条，每个区块都指向前一个区块。其实它就是链表。 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;区块的结构 区块头是80字节，平均每个交易至少是250字节，且平均每个区块至少包含超过500个交易。 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;区块头 &nbsp; &nbsp; 区块哈希值的数据，这组元数据用于将该区块与区块链中前一个区块相连接。它是一个通过SHA256算法对区块头进两次哈希计算得到的数字指纹。产生的32字节哈希值被称为区块哈希值，但是更准确的名称是：区块头哈希值，因为只有区块头被用于计算。 &nbsp;&nbsp;&nbsp;&nbsp;merkle树根之前介绍过了，一种用来有效地总结区块中所有交易的数据结构。 &nbsp;&nbsp;&nbsp;&nbsp;难度、时间戳和nonce，这三者等到挖矿的时候在介绍。 &nbsp; 交易 交易输入 &nbsp; &nbsp; 交易输出 阅读更多 登录后自动展开" />
+<link rel="canonical" href="https://mlh.app/2018/05/06/1eaca6f9c3c53b7feac76caa86aa03e8.html" />
+<meta property="og:url" content="https://mlh.app/2018/05/06/1eaca6f9c3c53b7feac76caa86aa03e8.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-05-06T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"版权声明：1、本BLOG的目的、形式及内容。 　　此BLOG为个人维护BLOG，内容均来自原创及互连网转载。最终目的为收集整理自己需要的文章技术等内容，不涉及商业用途。 2、有关原创文章的版权 　　本BLOG上原创文章未经本人许可，不得用于商业用途及传统媒体。网络媒体转载请注明出处，否则属于侵权行为。 3、有关本站侵权 　　本BLOG所转载的内容，均是本人未发现有对文章版权声明的文章且无来自传统媒体。如 https://blog.csdn.net/xq723310/article/details/80217520 &nbsp; &nbsp; 这一章节只是总结一下区块链中的结构，让大家对区块链的结构有一个全局的认识，对于结构中内容不做过多解释，会在后续章节中进行着重分析。 &nbsp;&nbsp;&nbsp;&nbsp;区块链是由包含交易信息的区块从后向前有序链接起来的数据结构。区块被从后向前有序地链接在这个链条，每个区块都指向前一个区块。其实它就是链表。 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;区块的结构 区块头是80字节，平均每个交易至少是250字节，且平均每个区块至少包含超过500个交易。 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;区块头 &nbsp; &nbsp; 区块哈希值的数据，这组元数据用于将该区块与区块链中前一个区块相连接。它是一个通过SHA256算法对区块头进两次哈希计算得到的数字指纹。产生的32字节哈希值被称为区块哈希值，但是更准确的名称是：区块头哈希值，因为只有区块头被用于计算。 &nbsp;&nbsp;&nbsp;&nbsp;merkle树根之前介绍过了，一种用来有效地总结区块中所有交易的数据结构。 &nbsp;&nbsp;&nbsp;&nbsp;难度、时间戳和nonce，这三者等到挖矿的时候在介绍。 &nbsp; 交易 交易输入 &nbsp; &nbsp; 交易输出 阅读更多 登录后自动展开","@type":"BlogPosting","url":"/2018/05/06/1eaca6f9c3c53b7feac76caa86aa03e8.html","headline":"区块链的数据结构","dateModified":"2018-05-06T00:00:00+08:00","datePublished":"2018-05-06T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/05/06/1eaca6f9c3c53b7feac76caa86aa03e8.html"},"@context":"http://schema.org"}</script>
+{"description":"版权声明：1、本BLOG的目的、形式及内容。 　　此BLOG为个人维护BLOG，内容均来自原创及互连网转载。最终目的为收集整理自己需要的文章技术等内容，不涉及商业用途。 2、有关原创文章的版权 　　本BLOG上原创文章未经本人许可，不得用于商业用途及传统媒体。网络媒体转载请注明出处，否则属于侵权行为。 3、有关本站侵权 　　本BLOG所转载的内容，均是本人未发现有对文章版权声明的文章且无来自传统媒体。如 https://blog.csdn.net/xq723310/article/details/80217520 &nbsp; &nbsp; 这一章节只是总结一下区块链中的结构，让大家对区块链的结构有一个全局的认识，对于结构中内容不做过多解释，会在后续章节中进行着重分析。 &nbsp;&nbsp;&nbsp;&nbsp;区块链是由包含交易信息的区块从后向前有序链接起来的数据结构。区块被从后向前有序地链接在这个链条，每个区块都指向前一个区块。其实它就是链表。 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;区块的结构 区块头是80字节，平均每个交易至少是250字节，且平均每个区块至少包含超过500个交易。 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;区块头 &nbsp; &nbsp; 区块哈希值的数据，这组元数据用于将该区块与区块链中前一个区块相连接。它是一个通过SHA256算法对区块头进两次哈希计算得到的数字指纹。产生的32字节哈希值被称为区块哈希值，但是更准确的名称是：区块头哈希值，因为只有区块头被用于计算。 &nbsp;&nbsp;&nbsp;&nbsp;merkle树根之前介绍过了，一种用来有效地总结区块中所有交易的数据结构。 &nbsp;&nbsp;&nbsp;&nbsp;难度、时间戳和nonce，这三者等到挖矿的时候在介绍。 &nbsp; 交易 交易输入 &nbsp; &nbsp; 交易输出 阅读更多 登录后自动展开","@type":"BlogPosting","url":"https://mlh.app/2018/05/06/1eaca6f9c3c53b7feac76caa86aa03e8.html","headline":"区块链的数据结构","dateModified":"2018-05-06T00:00:00+08:00","datePublished":"2018-05-06T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/05/06/1eaca6f9c3c53b7feac76caa86aa03e8.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

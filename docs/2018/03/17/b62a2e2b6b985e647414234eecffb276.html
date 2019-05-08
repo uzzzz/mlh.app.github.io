@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="本小节主要讨论基于gitbhub.com进行Bitcoin源代码的编译与安装，从而生成bitcoin 注意以下过程会是个比较漫长的过程，读者要做好心里准备，另外我的操作系统是mac&nbsp; 1. 安装依赖 首先需要安装相关依赖 brew install automake berkeley-db4 libtool boost --c++11 miniupnpc openssl pkg-config protobuf qt libevent 同时，安装RSVG依赖，在make deploy 生成image时会用到 2. 克隆源代码 把bitcoin的源代码下载下来 3. Config&nbsp; 配置 ./autogen.sh ./configure 4. make make 5. make deploy 6. 生成Bitcoin Core 客户端 第5步完成后，可以生成Bitcoin Core 客户端 打开Bitcoin Core 会进行欢迎页面，从欢迎页面中可以看到需要203G的空间来下载完整的比特币区块链 作者：温春水&nbsp; 致力于研究区块链技术 微信：wencs1314&nbsp; QQ群：612968783&nbsp; 加群和微信，免费获得高质量区块链学习资料 阅读更多" />
 <meta property="og:description" content="本小节主要讨论基于gitbhub.com进行Bitcoin源代码的编译与安装，从而生成bitcoin 注意以下过程会是个比较漫长的过程，读者要做好心里准备，另外我的操作系统是mac&nbsp; 1. 安装依赖 首先需要安装相关依赖 brew install automake berkeley-db4 libtool boost --c++11 miniupnpc openssl pkg-config protobuf qt libevent 同时，安装RSVG依赖，在make deploy 生成image时会用到 2. 克隆源代码 把bitcoin的源代码下载下来 3. Config&nbsp; 配置 ./autogen.sh ./configure 4. make make 5. make deploy 6. 生成Bitcoin Core 客户端 第5步完成后，可以生成Bitcoin Core 客户端 打开Bitcoin Core 会进行欢迎页面，从欢迎页面中可以看到需要203G的空间来下载完整的比特币区块链 作者：温春水&nbsp; 致力于研究区块链技术 微信：wencs1314&nbsp; QQ群：612968783&nbsp; 加群和微信，免费获得高质量区块链学习资料 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/03/17/b62a2e2b6b985e647414234eecffb276.html" />
+<meta property="og:url" content="https://mlh.app/2018/03/17/b62a2e2b6b985e647414234eecffb276.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-03-17T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"本小节主要讨论基于gitbhub.com进行Bitcoin源代码的编译与安装，从而生成bitcoin 注意以下过程会是个比较漫长的过程，读者要做好心里准备，另外我的操作系统是mac&nbsp; 1. 安装依赖 首先需要安装相关依赖 brew install automake berkeley-db4 libtool boost --c++11 miniupnpc openssl pkg-config protobuf qt libevent 同时，安装RSVG依赖，在make deploy 生成image时会用到 2. 克隆源代码 把bitcoin的源代码下载下来 3. Config&nbsp; 配置 ./autogen.sh ./configure 4. make make 5. make deploy 6. 生成Bitcoin Core 客户端 第5步完成后，可以生成Bitcoin Core 客户端 打开Bitcoin Core 会进行欢迎页面，从欢迎页面中可以看到需要203G的空间来下载完整的比特币区块链 作者：温春水&nbsp; 致力于研究区块链技术 微信：wencs1314&nbsp; QQ群：612968783&nbsp; 加群和微信，免费获得高质量区块链学习资料 阅读更多","@type":"BlogPosting","url":"/2018/03/17/b62a2e2b6b985e647414234eecffb276.html","headline":"05.区块链的那些事儿-Bitcoin源代码的编译与部署","dateModified":"2018-03-17T00:00:00+08:00","datePublished":"2018-03-17T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/03/17/b62a2e2b6b985e647414234eecffb276.html"},"@context":"http://schema.org"}</script>
+{"description":"本小节主要讨论基于gitbhub.com进行Bitcoin源代码的编译与安装，从而生成bitcoin 注意以下过程会是个比较漫长的过程，读者要做好心里准备，另外我的操作系统是mac&nbsp; 1. 安装依赖 首先需要安装相关依赖 brew install automake berkeley-db4 libtool boost --c++11 miniupnpc openssl pkg-config protobuf qt libevent 同时，安装RSVG依赖，在make deploy 生成image时会用到 2. 克隆源代码 把bitcoin的源代码下载下来 3. Config&nbsp; 配置 ./autogen.sh ./configure 4. make make 5. make deploy 6. 生成Bitcoin Core 客户端 第5步完成后，可以生成Bitcoin Core 客户端 打开Bitcoin Core 会进行欢迎页面，从欢迎页面中可以看到需要203G的空间来下载完整的比特币区块链 作者：温春水&nbsp; 致力于研究区块链技术 微信：wencs1314&nbsp; QQ群：612968783&nbsp; 加群和微信，免费获得高质量区块链学习资料 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/03/17/b62a2e2b6b985e647414234eecffb276.html","headline":"05.区块链的那些事儿-Bitcoin源代码的编译与部署","dateModified":"2018-03-17T00:00:00+08:00","datePublished":"2018-03-17T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/03/17/b62a2e2b6b985e647414234eecffb276.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

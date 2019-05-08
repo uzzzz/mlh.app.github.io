@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="为了更简洁方便地表示长串的数字，使用更少的符号，计算机系统会使用一种以数字和字母组成的大于十进制的表示法，比如十六进制，一个同样的数字，它的十六进制表示就会比十进制表示更加简洁。Base64使用了26个小写字母、26个大写字母、10个数字以及两个符号(“+”和“/”)，用于在电子邮件这样的基于文本的媒介中传输二进制数据。 Base58是一种基于文本的二进制编码格式，这种编码格式不仅实现了数据压缩，保持了易读性，还具有错误诊断功能。Base58是Base56编码格式的子集，同样使用了大小写字母和10个数字，但舍弃了一些容易错读和容易混淆的字符，具体是Base58不含Base64中的0（数字0）、O（大写字母o）、l（小写字母 L）、I（大写字母i），以及“+”和“/”两个字符。 Base58字母表: 123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz Base58Check 是一种用在比特币中的Base58 编码格式，比特币有内置的检查错误的编码。校验和是从编码的数据的哈希值中得到的，可以用来检测并避免转录和输入中产生的错误。使用Base58Check编码时，解码软件会计算数据的校验和并和编码中自带的校验和进行对比。二者不匹配则表明有错误产生，那么这个Base58Check的数据就是无效的。 Base58Check编码过程 1.首先对数据添加一个版本前缀，这个前缀用来识别编码的数据类型。例如，比特币地址的前缀是0（十六进制是0x00）。 2.对数据连续进行两次SHA256哈希算法 checksum = SHA256(SHA256(prefix+data)) 3.在产生的长度为32个字节（两次哈希云算）的哈希值中，取其前4个字节作为检验和添加到数据第一步产生的数据之后。 4.将数据进行Base58编码处理 下图描述了Base58Check的编码过程。 在比特币中，大多数需要向用户展示的数据都使用Base58Check编码，可以实现数据压缩，易读而且有错误检验。Base58Check编码中的版本前缀是用来创造易于辨别的格式，在Base58里的格式在Base58Check编码的有效载荷的开始包含了明确的属性。这些属性使用户可以轻松明确被编码的数据的类型以及如何使用它们。 Base58Check版本前缀和编码后的结果 阅读更多" />
 <meta property="og:description" content="为了更简洁方便地表示长串的数字，使用更少的符号，计算机系统会使用一种以数字和字母组成的大于十进制的表示法，比如十六进制，一个同样的数字，它的十六进制表示就会比十进制表示更加简洁。Base64使用了26个小写字母、26个大写字母、10个数字以及两个符号(“+”和“/”)，用于在电子邮件这样的基于文本的媒介中传输二进制数据。 Base58是一种基于文本的二进制编码格式，这种编码格式不仅实现了数据压缩，保持了易读性，还具有错误诊断功能。Base58是Base56编码格式的子集，同样使用了大小写字母和10个数字，但舍弃了一些容易错读和容易混淆的字符，具体是Base58不含Base64中的0（数字0）、O（大写字母o）、l（小写字母 L）、I（大写字母i），以及“+”和“/”两个字符。 Base58字母表: 123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz Base58Check 是一种用在比特币中的Base58 编码格式，比特币有内置的检查错误的编码。校验和是从编码的数据的哈希值中得到的，可以用来检测并避免转录和输入中产生的错误。使用Base58Check编码时，解码软件会计算数据的校验和并和编码中自带的校验和进行对比。二者不匹配则表明有错误产生，那么这个Base58Check的数据就是无效的。 Base58Check编码过程 1.首先对数据添加一个版本前缀，这个前缀用来识别编码的数据类型。例如，比特币地址的前缀是0（十六进制是0x00）。 2.对数据连续进行两次SHA256哈希算法 checksum = SHA256(SHA256(prefix+data)) 3.在产生的长度为32个字节（两次哈希云算）的哈希值中，取其前4个字节作为检验和添加到数据第一步产生的数据之后。 4.将数据进行Base58编码处理 下图描述了Base58Check的编码过程。 在比特币中，大多数需要向用户展示的数据都使用Base58Check编码，可以实现数据压缩，易读而且有错误检验。Base58Check编码中的版本前缀是用来创造易于辨别的格式，在Base58里的格式在Base58Check编码的有效载荷的开始包含了明确的属性。这些属性使用户可以轻松明确被编码的数据的类型以及如何使用它们。 Base58Check版本前缀和编码后的结果 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/07/23/6ce6e14719d9e28e2709cbb23858d132.html" />
+<meta property="og:url" content="https://mlh.app/2018/07/23/6ce6e14719d9e28e2709cbb23858d132.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-07-23T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"为了更简洁方便地表示长串的数字，使用更少的符号，计算机系统会使用一种以数字和字母组成的大于十进制的表示法，比如十六进制，一个同样的数字，它的十六进制表示就会比十进制表示更加简洁。Base64使用了26个小写字母、26个大写字母、10个数字以及两个符号(“+”和“/”)，用于在电子邮件这样的基于文本的媒介中传输二进制数据。 Base58是一种基于文本的二进制编码格式，这种编码格式不仅实现了数据压缩，保持了易读性，还具有错误诊断功能。Base58是Base56编码格式的子集，同样使用了大小写字母和10个数字，但舍弃了一些容易错读和容易混淆的字符，具体是Base58不含Base64中的0（数字0）、O（大写字母o）、l（小写字母 L）、I（大写字母i），以及“+”和“/”两个字符。 Base58字母表: 123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz Base58Check 是一种用在比特币中的Base58 编码格式，比特币有内置的检查错误的编码。校验和是从编码的数据的哈希值中得到的，可以用来检测并避免转录和输入中产生的错误。使用Base58Check编码时，解码软件会计算数据的校验和并和编码中自带的校验和进行对比。二者不匹配则表明有错误产生，那么这个Base58Check的数据就是无效的。 Base58Check编码过程 1.首先对数据添加一个版本前缀，这个前缀用来识别编码的数据类型。例如，比特币地址的前缀是0（十六进制是0x00）。 2.对数据连续进行两次SHA256哈希算法 checksum = SHA256(SHA256(prefix+data)) 3.在产生的长度为32个字节（两次哈希云算）的哈希值中，取其前4个字节作为检验和添加到数据第一步产生的数据之后。 4.将数据进行Base58编码处理 下图描述了Base58Check的编码过程。 在比特币中，大多数需要向用户展示的数据都使用Base58Check编码，可以实现数据压缩，易读而且有错误检验。Base58Check编码中的版本前缀是用来创造易于辨别的格式，在Base58里的格式在Base58Check编码的有效载荷的开始包含了明确的属性。这些属性使用户可以轻松明确被编码的数据的类型以及如何使用它们。 Base58Check版本前缀和编码后的结果 阅读更多","@type":"BlogPosting","url":"/2018/07/23/6ce6e14719d9e28e2709cbb23858d132.html","headline":"比特币中的Base58和Base58Check编码","dateModified":"2018-07-23T00:00:00+08:00","datePublished":"2018-07-23T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/07/23/6ce6e14719d9e28e2709cbb23858d132.html"},"@context":"http://schema.org"}</script>
+{"description":"为了更简洁方便地表示长串的数字，使用更少的符号，计算机系统会使用一种以数字和字母组成的大于十进制的表示法，比如十六进制，一个同样的数字，它的十六进制表示就会比十进制表示更加简洁。Base64使用了26个小写字母、26个大写字母、10个数字以及两个符号(“+”和“/”)，用于在电子邮件这样的基于文本的媒介中传输二进制数据。 Base58是一种基于文本的二进制编码格式，这种编码格式不仅实现了数据压缩，保持了易读性，还具有错误诊断功能。Base58是Base56编码格式的子集，同样使用了大小写字母和10个数字，但舍弃了一些容易错读和容易混淆的字符，具体是Base58不含Base64中的0（数字0）、O（大写字母o）、l（小写字母 L）、I（大写字母i），以及“+”和“/”两个字符。 Base58字母表: 123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz Base58Check 是一种用在比特币中的Base58 编码格式，比特币有内置的检查错误的编码。校验和是从编码的数据的哈希值中得到的，可以用来检测并避免转录和输入中产生的错误。使用Base58Check编码时，解码软件会计算数据的校验和并和编码中自带的校验和进行对比。二者不匹配则表明有错误产生，那么这个Base58Check的数据就是无效的。 Base58Check编码过程 1.首先对数据添加一个版本前缀，这个前缀用来识别编码的数据类型。例如，比特币地址的前缀是0（十六进制是0x00）。 2.对数据连续进行两次SHA256哈希算法 checksum = SHA256(SHA256(prefix+data)) 3.在产生的长度为32个字节（两次哈希云算）的哈希值中，取其前4个字节作为检验和添加到数据第一步产生的数据之后。 4.将数据进行Base58编码处理 下图描述了Base58Check的编码过程。 在比特币中，大多数需要向用户展示的数据都使用Base58Check编码，可以实现数据压缩，易读而且有错误检验。Base58Check编码中的版本前缀是用来创造易于辨别的格式，在Base58里的格式在Base58Check编码的有效载荷的开始包含了明确的属性。这些属性使用户可以轻松明确被编码的数据的类型以及如何使用它们。 Base58Check版本前缀和编码后的结果 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/07/23/6ce6e14719d9e28e2709cbb23858d132.html","headline":"比特币中的Base58和Base58Check编码","dateModified":"2018-07-23T00:00:00+08:00","datePublished":"2018-07-23T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/07/23/6ce6e14719d9e28e2709cbb23858d132.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

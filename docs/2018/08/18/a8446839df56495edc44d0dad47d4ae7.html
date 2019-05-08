@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="一&nbsp;点睛 直接对消息签名的方法是对整个消息的加密，非常耗时，这是因为公钥密码算法本来就非常慢。那么，能不能生成一种很短的数据来代替消息本身呢？当然有，那就是单向散列函数。 我们可以不必对整个消息进行加密（即对消息签名），而是先用单向散列函数求出消息的散列值，然后在将散列值进行加密（对散列值签名）就可以了。无论消息有多长，散列值永远都是这么短，因此对其进行加密（签名）就非常轻松了。 二&nbsp;签名和验证过程 1&nbsp;Alice用单向散列函数计算消息的散列值。 2&nbsp;Alice用自己的私钥对散列值进行加密。 用私钥加密散列值所得到的密文就是Alice对这条散列值的签名，由于只有Alice才持有自己的私钥，因此除了Alice外，其他人是无法生成相同的签名（密文）的。 3&nbsp;Alice将消息和签名发送给Bob。 4&nbsp;Bob用Alice的公钥对收到的签名进行解密。 如果收到的签名确实是用Alice的私钥进行加密而得到的密文（签名），那么Alice的公钥应该能够正确解密，解密的结果应该等于消息的散列值。如果收到的签名不是用Alice私钥进行加密而得到的密文，那么就无法用Alice的公钥正确解密（解密后得到是随机的）。 5&nbsp;Bob将签名解密后得到的散列值与Alice直接发送的消息的散列值进行对比。 如果两者一致，则签名验证成功；如果不一致，则签名验证失败。 三&nbsp;过程图&nbsp; 四&nbsp;时序图 &nbsp; 阅读更多" />
 <meta property="og:description" content="一&nbsp;点睛 直接对消息签名的方法是对整个消息的加密，非常耗时，这是因为公钥密码算法本来就非常慢。那么，能不能生成一种很短的数据来代替消息本身呢？当然有，那就是单向散列函数。 我们可以不必对整个消息进行加密（即对消息签名），而是先用单向散列函数求出消息的散列值，然后在将散列值进行加密（对散列值签名）就可以了。无论消息有多长，散列值永远都是这么短，因此对其进行加密（签名）就非常轻松了。 二&nbsp;签名和验证过程 1&nbsp;Alice用单向散列函数计算消息的散列值。 2&nbsp;Alice用自己的私钥对散列值进行加密。 用私钥加密散列值所得到的密文就是Alice对这条散列值的签名，由于只有Alice才持有自己的私钥，因此除了Alice外，其他人是无法生成相同的签名（密文）的。 3&nbsp;Alice将消息和签名发送给Bob。 4&nbsp;Bob用Alice的公钥对收到的签名进行解密。 如果收到的签名确实是用Alice的私钥进行加密而得到的密文（签名），那么Alice的公钥应该能够正确解密，解密的结果应该等于消息的散列值。如果收到的签名不是用Alice私钥进行加密而得到的密文，那么就无法用Alice的公钥正确解密（解密后得到是随机的）。 5&nbsp;Bob将签名解密后得到的散列值与Alice直接发送的消息的散列值进行对比。 如果两者一致，则签名验证成功；如果不一致，则签名验证失败。 三&nbsp;过程图&nbsp; 四&nbsp;时序图 &nbsp; 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/08/18/a8446839df56495edc44d0dad47d4ae7.html" />
+<meta property="og:url" content="https://mlh.app/2018/08/18/a8446839df56495edc44d0dad47d4ae7.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-18T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"一&nbsp;点睛 直接对消息签名的方法是对整个消息的加密，非常耗时，这是因为公钥密码算法本来就非常慢。那么，能不能生成一种很短的数据来代替消息本身呢？当然有，那就是单向散列函数。 我们可以不必对整个消息进行加密（即对消息签名），而是先用单向散列函数求出消息的散列值，然后在将散列值进行加密（对散列值签名）就可以了。无论消息有多长，散列值永远都是这么短，因此对其进行加密（签名）就非常轻松了。 二&nbsp;签名和验证过程 1&nbsp;Alice用单向散列函数计算消息的散列值。 2&nbsp;Alice用自己的私钥对散列值进行加密。 用私钥加密散列值所得到的密文就是Alice对这条散列值的签名，由于只有Alice才持有自己的私钥，因此除了Alice外，其他人是无法生成相同的签名（密文）的。 3&nbsp;Alice将消息和签名发送给Bob。 4&nbsp;Bob用Alice的公钥对收到的签名进行解密。 如果收到的签名确实是用Alice的私钥进行加密而得到的密文（签名），那么Alice的公钥应该能够正确解密，解密的结果应该等于消息的散列值。如果收到的签名不是用Alice私钥进行加密而得到的密文，那么就无法用Alice的公钥正确解密（解密后得到是随机的）。 5&nbsp;Bob将签名解密后得到的散列值与Alice直接发送的消息的散列值进行对比。 如果两者一致，则签名验证成功；如果不一致，则签名验证失败。 三&nbsp;过程图&nbsp; 四&nbsp;时序图 &nbsp; 阅读更多","@type":"BlogPosting","url":"/2018/08/18/a8446839df56495edc44d0dad47d4ae7.html","headline":"签名方法之——对消息的散列值签名的方法","dateModified":"2018-08-18T00:00:00+08:00","datePublished":"2018-08-18T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/08/18/a8446839df56495edc44d0dad47d4ae7.html"},"@context":"http://schema.org"}</script>
+{"description":"一&nbsp;点睛 直接对消息签名的方法是对整个消息的加密，非常耗时，这是因为公钥密码算法本来就非常慢。那么，能不能生成一种很短的数据来代替消息本身呢？当然有，那就是单向散列函数。 我们可以不必对整个消息进行加密（即对消息签名），而是先用单向散列函数求出消息的散列值，然后在将散列值进行加密（对散列值签名）就可以了。无论消息有多长，散列值永远都是这么短，因此对其进行加密（签名）就非常轻松了。 二&nbsp;签名和验证过程 1&nbsp;Alice用单向散列函数计算消息的散列值。 2&nbsp;Alice用自己的私钥对散列值进行加密。 用私钥加密散列值所得到的密文就是Alice对这条散列值的签名，由于只有Alice才持有自己的私钥，因此除了Alice外，其他人是无法生成相同的签名（密文）的。 3&nbsp;Alice将消息和签名发送给Bob。 4&nbsp;Bob用Alice的公钥对收到的签名进行解密。 如果收到的签名确实是用Alice的私钥进行加密而得到的密文（签名），那么Alice的公钥应该能够正确解密，解密的结果应该等于消息的散列值。如果收到的签名不是用Alice私钥进行加密而得到的密文，那么就无法用Alice的公钥正确解密（解密后得到是随机的）。 5&nbsp;Bob将签名解密后得到的散列值与Alice直接发送的消息的散列值进行对比。 如果两者一致，则签名验证成功；如果不一致，则签名验证失败。 三&nbsp;过程图&nbsp; 四&nbsp;时序图 &nbsp; 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/08/18/a8446839df56495edc44d0dad47d4ae7.html","headline":"签名方法之——对消息的散列值签名的方法","dateModified":"2018-08-18T00:00:00+08:00","datePublished":"2018-08-18T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/08/18/a8446839df56495edc44d0dad47d4ae7.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

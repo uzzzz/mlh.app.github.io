@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="安装go-ethereum 地址：https://github.com/ethereum/go-ethereum brew tap ethereum/ethereum brew install ethereum 启动 查看帮助命令： geth -h 以太坊客户端启动： geth --datadir &quot;~/ethdev&quot; --dev –datadir指定数据目录，–dev指定为开发模式这样就不用同步公有链上的区块，公有链的数据量几十个G太大了，共识速度 也比较慢。 启动成功后会在数据目录下生成geth和keystore两个文件夹，此时目录结构如下： 其中geth/chaindata中存放的是区块数据，keystore中存放的是账户数据。 登录 另打一个终端进入登录： geth --dev console 2&gt;&gt; file_to_log_output 进入开发模式的控制台，并把日志输出到 一个文本文件。 上面是登录成功的画面，登录成功以后可以查看帐户信息和创建新账户(通过personal.newAccount 传入密码即可创建一个新帐户并返回新的帐户地址)， 然后可以查看当前帐户的余额: 现在帐户guodapeng中没有余额，我们从帐户1转发10000个以太币到guodapeng帐户中： eth.sendTransaction({from: user1,to: guodapeng,value: web3.toWei(100000,&quot;ether&quot;)}) 转账后需要挖矿进行账本确认。 如果提示account is locked，由于默认帐户是锁定的，首要解锁帐户，然后再转帐。 阅读更多" />
 <meta property="og:description" content="安装go-ethereum 地址：https://github.com/ethereum/go-ethereum brew tap ethereum/ethereum brew install ethereum 启动 查看帮助命令： geth -h 以太坊客户端启动： geth --datadir &quot;~/ethdev&quot; --dev –datadir指定数据目录，–dev指定为开发模式这样就不用同步公有链上的区块，公有链的数据量几十个G太大了，共识速度 也比较慢。 启动成功后会在数据目录下生成geth和keystore两个文件夹，此时目录结构如下： 其中geth/chaindata中存放的是区块数据，keystore中存放的是账户数据。 登录 另打一个终端进入登录： geth --dev console 2&gt;&gt; file_to_log_output 进入开发模式的控制台，并把日志输出到 一个文本文件。 上面是登录成功的画面，登录成功以后可以查看帐户信息和创建新账户(通过personal.newAccount 传入密码即可创建一个新帐户并返回新的帐户地址)， 然后可以查看当前帐户的余额: 现在帐户guodapeng中没有余额，我们从帐户1转发10000个以太币到guodapeng帐户中： eth.sendTransaction({from: user1,to: guodapeng,value: web3.toWei(100000,&quot;ether&quot;)}) 转账后需要挖矿进行账本确认。 如果提示account is locked，由于默认帐户是锁定的，首要解锁帐户，然后再转帐。 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/01/26/354890e06b2b49ffa4fad6aaa1dbf63b.html" />
+<meta property="og:url" content="https://mlh.app/2018/01/26/354890e06b2b49ffa4fad6aaa1dbf63b.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-01-26T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"安装go-ethereum 地址：https://github.com/ethereum/go-ethereum brew tap ethereum/ethereum brew install ethereum 启动 查看帮助命令： geth -h 以太坊客户端启动： geth --datadir &quot;~/ethdev&quot; --dev –datadir指定数据目录，–dev指定为开发模式这样就不用同步公有链上的区块，公有链的数据量几十个G太大了，共识速度 也比较慢。 启动成功后会在数据目录下生成geth和keystore两个文件夹，此时目录结构如下： 其中geth/chaindata中存放的是区块数据，keystore中存放的是账户数据。 登录 另打一个终端进入登录： geth --dev console 2&gt;&gt; file_to_log_output 进入开发模式的控制台，并把日志输出到 一个文本文件。 上面是登录成功的画面，登录成功以后可以查看帐户信息和创建新账户(通过personal.newAccount 传入密码即可创建一个新帐户并返回新的帐户地址)， 然后可以查看当前帐户的余额: 现在帐户guodapeng中没有余额，我们从帐户1转发10000个以太币到guodapeng帐户中： eth.sendTransaction({from: user1,to: guodapeng,value: web3.toWei(100000,&quot;ether&quot;)}) 转账后需要挖矿进行账本确认。 如果提示account is locked，由于默认帐户是锁定的，首要解锁帐户，然后再转帐。 阅读更多","@type":"BlogPosting","url":"/2018/01/26/354890e06b2b49ffa4fad6aaa1dbf63b.html","headline":"通过以太坊搭建私有链（来发行个自己的加密货币吧）","dateModified":"2018-01-26T00:00:00+08:00","datePublished":"2018-01-26T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/01/26/354890e06b2b49ffa4fad6aaa1dbf63b.html"},"@context":"http://schema.org"}</script>
+{"description":"安装go-ethereum 地址：https://github.com/ethereum/go-ethereum brew tap ethereum/ethereum brew install ethereum 启动 查看帮助命令： geth -h 以太坊客户端启动： geth --datadir &quot;~/ethdev&quot; --dev –datadir指定数据目录，–dev指定为开发模式这样就不用同步公有链上的区块，公有链的数据量几十个G太大了，共识速度 也比较慢。 启动成功后会在数据目录下生成geth和keystore两个文件夹，此时目录结构如下： 其中geth/chaindata中存放的是区块数据，keystore中存放的是账户数据。 登录 另打一个终端进入登录： geth --dev console 2&gt;&gt; file_to_log_output 进入开发模式的控制台，并把日志输出到 一个文本文件。 上面是登录成功的画面，登录成功以后可以查看帐户信息和创建新账户(通过personal.newAccount 传入密码即可创建一个新帐户并返回新的帐户地址)， 然后可以查看当前帐户的余额: 现在帐户guodapeng中没有余额，我们从帐户1转发10000个以太币到guodapeng帐户中： eth.sendTransaction({from: user1,to: guodapeng,value: web3.toWei(100000,&quot;ether&quot;)}) 转账后需要挖矿进行账本确认。 如果提示account is locked，由于默认帐户是锁定的，首要解锁帐户，然后再转帐。 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/01/26/354890e06b2b49ffa4fad6aaa1dbf63b.html","headline":"通过以太坊搭建私有链（来发行个自己的加密货币吧）","dateModified":"2018-01-26T00:00:00+08:00","datePublished":"2018-01-26T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/01/26/354890e06b2b49ffa4fad6aaa1dbf63b.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

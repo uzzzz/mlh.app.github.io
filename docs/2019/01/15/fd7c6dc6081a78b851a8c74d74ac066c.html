@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/changingseasons/article/details/86499201 本文为随堂学习笔记 课程见慕课--&gt;个性化推荐算法实战入门必修课 User cf 给用户推荐相似兴趣用户感兴趣的物品 如何评价相似兴趣用户集合 找到集合用户感兴趣的而目标用户没行为过的item example 用户 u 和 v 的相似度&nbsp; N（u）用户u行为过的item的集合 用户u对item i 的推荐得分 rvi 表示用户v对item i的行为得分 u（i）表示对item i 行为过的用户集合 用户v是与用户u相似的前top k个用户，且有item i 被v行为过但没被u行为过 公式升级 1.理论意义:降低那些异常活跃物品对用户相似度的贡献 2.理论意义：不同用户对同一item行为的时间段不同应该给予时间惩罚 ​" />
 <meta property="og:description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/changingseasons/article/details/86499201 本文为随堂学习笔记 课程见慕课--&gt;个性化推荐算法实战入门必修课 User cf 给用户推荐相似兴趣用户感兴趣的物品 如何评价相似兴趣用户集合 找到集合用户感兴趣的而目标用户没行为过的item example 用户 u 和 v 的相似度&nbsp; N（u）用户u行为过的item的集合 用户u对item i 的推荐得分 rvi 表示用户v对item i的行为得分 u（i）表示对item i 行为过的用户集合 用户v是与用户u相似的前top k个用户，且有item i 被v行为过但没被u行为过 公式升级 1.理论意义:降低那些异常活跃物品对用户相似度的贡献 2.理论意义：不同用户对同一item行为的时间段不同应该给予时间惩罚 ​" />
+<link rel="canonical" href="https://mlh.app/2019/01/15/fd7c6dc6081a78b851a8c74d74ac066c.html" />
+<meta property="og:url" content="https://mlh.app/2019/01/15/fd7c6dc6081a78b851a8c74d74ac066c.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-01-15T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/changingseasons/article/details/86499201 本文为随堂学习笔记 课程见慕课--&gt;个性化推荐算法实战入门必修课 User cf 给用户推荐相似兴趣用户感兴趣的物品 如何评价相似兴趣用户集合 找到集合用户感兴趣的而目标用户没行为过的item example 用户 u 和 v 的相似度&nbsp; N（u）用户u行为过的item的集合 用户u对item i 的推荐得分 rvi 表示用户v对item i的行为得分 u（i）表示对item i 行为过的用户集合 用户v是与用户u相似的前top k个用户，且有item i 被v行为过但没被u行为过 公式升级 1.理论意义:降低那些异常活跃物品对用户相似度的贡献 2.理论意义：不同用户对同一item行为的时间段不同应该给予时间惩罚 ​","@type":"BlogPosting","url":"/2019/01/15/fd7c6dc6081a78b851a8c74d74ac066c.html","headline":"个性化推荐系统Note2：usercf的理论部分与理论升级","dateModified":"2019-01-15T00:00:00+08:00","datePublished":"2019-01-15T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2019/01/15/fd7c6dc6081a78b851a8c74d74ac066c.html"},"@context":"http://schema.org"}</script>
+{"description":"版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/changingseasons/article/details/86499201 本文为随堂学习笔记 课程见慕课--&gt;个性化推荐算法实战入门必修课 User cf 给用户推荐相似兴趣用户感兴趣的物品 如何评价相似兴趣用户集合 找到集合用户感兴趣的而目标用户没行为过的item example 用户 u 和 v 的相似度&nbsp; N（u）用户u行为过的item的集合 用户u对item i 的推荐得分 rvi 表示用户v对item i的行为得分 u（i）表示对item i 行为过的用户集合 用户v是与用户u相似的前top k个用户，且有item i 被v行为过但没被u行为过 公式升级 1.理论意义:降低那些异常活跃物品对用户相似度的贡献 2.理论意义：不同用户对同一item行为的时间段不同应该给予时间惩罚 ​","@type":"BlogPosting","url":"https://mlh.app/2019/01/15/fd7c6dc6081a78b851a8c74d74ac066c.html","headline":"个性化推荐系统Note2：usercf的理论部分与理论升级","dateModified":"2019-01-15T00:00:00+08:00","datePublished":"2019-01-15T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2019/01/15/fd7c6dc6081a78b851a8c74d74ac066c.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

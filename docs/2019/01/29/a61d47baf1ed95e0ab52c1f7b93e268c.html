@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Linux编程 点击右侧关注，免费入门到精通！ 译者丨诗书塞外 https://pynput.readthedocs.io/en/latest/ 这个库让你可以控制和监控输入设备。 对于每一种输入设备，它包含一个子包来控制和监控该种输入设备： pynput.mouse：包含控制和监控鼠标或者触摸板的类。 pynput.keyboard：包含控制和监控键盘的类。 上面提到的子包都已被引入到pynput库中。要使用上面的子包，从pynput中引入即可。 下面有详细的示例文档。 控制鼠标 使用pynput.mouse控制鼠标： 监控鼠标事件 使用pynput.mouse.Listener监控鼠标事件： 鼠标事件监听器是一个线程，所有的回调函数都会在独立的线程中运行。 调用pynput.mouse.Listener.stop，发起StopException异常，或者回调函数中返回False都会停止事件的监听。 控制键盘 像这样使用pynput.keyboard.Controller： 监控键盘事件 像这样使用pynput.keyboard.Listener： 键盘事件监听器是一个线程，所有的回调函数都会在独立的线程中运行。 调用pynput.keyboard.Listener.stop，发起StopException异常，或者回调函数中返回False都会停止事件的监听。 传递给回调函数的key参数是一个pynput.keyboard.Key类的实例。当特殊按键和普通按键一起按下时，数字字母按键的值会被放置在pynput.keyboard.KeyCode类的实例中，对于不知道的按键会返回None。 &nbsp;推荐↓↓↓&nbsp; 长 按 关 注 👉【16个技术公众号】都在这里！ 涵盖：程序员大咖、源码共读、程序员共读、数据结构与算法、黑客技术和网络安全、大数据科技、编程前端、Java、Python、Web编程开发、Android、iOS开发、Linux、数据库研发、幽默程序员等。 万水千山总是情，点个 “ 好看” 行不行" />
 <meta property="og:description" content="Linux编程 点击右侧关注，免费入门到精通！ 译者丨诗书塞外 https://pynput.readthedocs.io/en/latest/ 这个库让你可以控制和监控输入设备。 对于每一种输入设备，它包含一个子包来控制和监控该种输入设备： pynput.mouse：包含控制和监控鼠标或者触摸板的类。 pynput.keyboard：包含控制和监控键盘的类。 上面提到的子包都已被引入到pynput库中。要使用上面的子包，从pynput中引入即可。 下面有详细的示例文档。 控制鼠标 使用pynput.mouse控制鼠标： 监控鼠标事件 使用pynput.mouse.Listener监控鼠标事件： 鼠标事件监听器是一个线程，所有的回调函数都会在独立的线程中运行。 调用pynput.mouse.Listener.stop，发起StopException异常，或者回调函数中返回False都会停止事件的监听。 控制键盘 像这样使用pynput.keyboard.Controller： 监控键盘事件 像这样使用pynput.keyboard.Listener： 键盘事件监听器是一个线程，所有的回调函数都会在独立的线程中运行。 调用pynput.keyboard.Listener.stop，发起StopException异常，或者回调函数中返回False都会停止事件的监听。 传递给回调函数的key参数是一个pynput.keyboard.Key类的实例。当特殊按键和普通按键一起按下时，数字字母按键的值会被放置在pynput.keyboard.KeyCode类的实例中，对于不知道的按键会返回None。 &nbsp;推荐↓↓↓&nbsp; 长 按 关 注 👉【16个技术公众号】都在这里！ 涵盖：程序员大咖、源码共读、程序员共读、数据结构与算法、黑客技术和网络安全、大数据科技、编程前端、Java、Python、Web编程开发、Android、iOS开发、Linux、数据库研发、幽默程序员等。 万水千山总是情，点个 “ 好看” 行不行" />
+<link rel="canonical" href="https://mlh.app/2019/01/29/a61d47baf1ed95e0ab52c1f7b93e268c.html" />
+<meta property="og:url" content="https://mlh.app/2019/01/29/a61d47baf1ed95e0ab52c1f7b93e268c.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-01-29T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"Linux编程 点击右侧关注，免费入门到精通！ 译者丨诗书塞外 https://pynput.readthedocs.io/en/latest/ 这个库让你可以控制和监控输入设备。 对于每一种输入设备，它包含一个子包来控制和监控该种输入设备： pynput.mouse：包含控制和监控鼠标或者触摸板的类。 pynput.keyboard：包含控制和监控键盘的类。 上面提到的子包都已被引入到pynput库中。要使用上面的子包，从pynput中引入即可。 下面有详细的示例文档。 控制鼠标 使用pynput.mouse控制鼠标： 监控鼠标事件 使用pynput.mouse.Listener监控鼠标事件： 鼠标事件监听器是一个线程，所有的回调函数都会在独立的线程中运行。 调用pynput.mouse.Listener.stop，发起StopException异常，或者回调函数中返回False都会停止事件的监听。 控制键盘 像这样使用pynput.keyboard.Controller： 监控键盘事件 像这样使用pynput.keyboard.Listener： 键盘事件监听器是一个线程，所有的回调函数都会在独立的线程中运行。 调用pynput.keyboard.Listener.stop，发起StopException异常，或者回调函数中返回False都会停止事件的监听。 传递给回调函数的key参数是一个pynput.keyboard.Key类的实例。当特殊按键和普通按键一起按下时，数字字母按键的值会被放置在pynput.keyboard.KeyCode类的实例中，对于不知道的按键会返回None。 &nbsp;推荐↓↓↓&nbsp; 长 按 关 注 👉【16个技术公众号】都在这里！ 涵盖：程序员大咖、源码共读、程序员共读、数据结构与算法、黑客技术和网络安全、大数据科技、编程前端、Java、Python、Web编程开发、Android、iOS开发、Linux、数据库研发、幽默程序员等。 万水千山总是情，点个 “ 好看” 行不行","@type":"BlogPosting","url":"/2019/01/29/a61d47baf1ed95e0ab52c1f7b93e268c.html","headline":"神技能：Python控制键盘鼠标","dateModified":"2019-01-29T00:00:00+08:00","datePublished":"2019-01-29T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2019/01/29/a61d47baf1ed95e0ab52c1f7b93e268c.html"},"@context":"http://schema.org"}</script>
+{"description":"Linux编程 点击右侧关注，免费入门到精通！ 译者丨诗书塞外 https://pynput.readthedocs.io/en/latest/ 这个库让你可以控制和监控输入设备。 对于每一种输入设备，它包含一个子包来控制和监控该种输入设备： pynput.mouse：包含控制和监控鼠标或者触摸板的类。 pynput.keyboard：包含控制和监控键盘的类。 上面提到的子包都已被引入到pynput库中。要使用上面的子包，从pynput中引入即可。 下面有详细的示例文档。 控制鼠标 使用pynput.mouse控制鼠标： 监控鼠标事件 使用pynput.mouse.Listener监控鼠标事件： 鼠标事件监听器是一个线程，所有的回调函数都会在独立的线程中运行。 调用pynput.mouse.Listener.stop，发起StopException异常，或者回调函数中返回False都会停止事件的监听。 控制键盘 像这样使用pynput.keyboard.Controller： 监控键盘事件 像这样使用pynput.keyboard.Listener： 键盘事件监听器是一个线程，所有的回调函数都会在独立的线程中运行。 调用pynput.keyboard.Listener.stop，发起StopException异常，或者回调函数中返回False都会停止事件的监听。 传递给回调函数的key参数是一个pynput.keyboard.Key类的实例。当特殊按键和普通按键一起按下时，数字字母按键的值会被放置在pynput.keyboard.KeyCode类的实例中，对于不知道的按键会返回None。 &nbsp;推荐↓↓↓&nbsp; 长 按 关 注 👉【16个技术公众号】都在这里！ 涵盖：程序员大咖、源码共读、程序员共读、数据结构与算法、黑客技术和网络安全、大数据科技、编程前端、Java、Python、Web编程开发、Android、iOS开发、Linux、数据库研发、幽默程序员等。 万水千山总是情，点个 “ 好看” 行不行","@type":"BlogPosting","url":"https://mlh.app/2019/01/29/a61d47baf1ed95e0ab52c1f7b93e268c.html","headline":"神技能：Python控制键盘鼠标","dateModified":"2019-01-29T00:00:00+08:00","datePublished":"2019-01-29T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2019/01/29/a61d47baf1ed95e0ab52c1f7b93e268c.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

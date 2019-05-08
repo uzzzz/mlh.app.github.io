@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="前提:安装好hadoop（安装地址：https://mp.csdn.net/postedit/89816097） 说明：在hadoop-env.sh中export JAVA_HOME=你的java环境变量 &nbsp; 一：在安装的hadoop_home/etc/hadoop中修改四个配置文件； 分别是：core-site.xml&nbsp; &nbsp; hdfs-site.xml&nbsp; mapred-site.xml&nbsp; yarn-site.xml &nbsp; 二：修改的内容如下： 【core-site.xml】（说明：s201是域名&nbsp; &nbsp;可以理解为IP地址的别名；8020是端口号） &nbsp; &nbsp; 【hdfs-site.xml】 &nbsp;&nbsp; 【mapred-site.xml】（说明：如果没有mapred-site.xml文件，利用这个命令 cp mapred-&nbsp; &nbsp; &nbsp; &nbsp;queues.xml.template mapred-site.xml 产生一个） &nbsp; 【yarn-site.xml】（说明：s201是域名，理解为IP的别名）" />
 <meta property="og:description" content="前提:安装好hadoop（安装地址：https://mp.csdn.net/postedit/89816097） 说明：在hadoop-env.sh中export JAVA_HOME=你的java环境变量 &nbsp; 一：在安装的hadoop_home/etc/hadoop中修改四个配置文件； 分别是：core-site.xml&nbsp; &nbsp; hdfs-site.xml&nbsp; mapred-site.xml&nbsp; yarn-site.xml &nbsp; 二：修改的内容如下： 【core-site.xml】（说明：s201是域名&nbsp; &nbsp;可以理解为IP地址的别名；8020是端口号） &nbsp; &nbsp; 【hdfs-site.xml】 &nbsp;&nbsp; 【mapred-site.xml】（说明：如果没有mapred-site.xml文件，利用这个命令 cp mapred-&nbsp; &nbsp; &nbsp; &nbsp;queues.xml.template mapred-site.xml 产生一个） &nbsp; 【yarn-site.xml】（说明：s201是域名，理解为IP的别名）" />
+<link rel="canonical" href="https://mlh.app/2019/05/04/729599.html" />
+<meta property="og:url" content="https://mlh.app/2019/05/04/729599.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-05-04T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"前提:安装好hadoop（安装地址：https://mp.csdn.net/postedit/89816097） 说明：在hadoop-env.sh中export JAVA_HOME=你的java环境变量 &nbsp; 一：在安装的hadoop_home/etc/hadoop中修改四个配置文件； 分别是：core-site.xml&nbsp; &nbsp; hdfs-site.xml&nbsp; mapred-site.xml&nbsp; yarn-site.xml &nbsp; 二：修改的内容如下： 【core-site.xml】（说明：s201是域名&nbsp; &nbsp;可以理解为IP地址的别名；8020是端口号） &nbsp; &nbsp; 【hdfs-site.xml】 &nbsp;&nbsp; 【mapred-site.xml】（说明：如果没有mapred-site.xml文件，利用这个命令 cp mapred-&nbsp; &nbsp; &nbsp; &nbsp;queues.xml.template mapred-site.xml 产生一个） &nbsp; 【yarn-site.xml】（说明：s201是域名，理解为IP的别名）","@type":"BlogPosting","url":"/2019/05/04/729599.html","headline":"hadoop的完全分布式的简单配置","dateModified":"2019-05-04T00:00:00+08:00","datePublished":"2019-05-04T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2019/05/04/729599.html"},"@context":"http://schema.org"}</script>
+{"description":"前提:安装好hadoop（安装地址：https://mp.csdn.net/postedit/89816097） 说明：在hadoop-env.sh中export JAVA_HOME=你的java环境变量 &nbsp; 一：在安装的hadoop_home/etc/hadoop中修改四个配置文件； 分别是：core-site.xml&nbsp; &nbsp; hdfs-site.xml&nbsp; mapred-site.xml&nbsp; yarn-site.xml &nbsp; 二：修改的内容如下： 【core-site.xml】（说明：s201是域名&nbsp; &nbsp;可以理解为IP地址的别名；8020是端口号） &nbsp; &nbsp; 【hdfs-site.xml】 &nbsp;&nbsp; 【mapred-site.xml】（说明：如果没有mapred-site.xml文件，利用这个命令 cp mapred-&nbsp; &nbsp; &nbsp; &nbsp;queues.xml.template mapred-site.xml 产生一个） &nbsp; 【yarn-site.xml】（说明：s201是域名，理解为IP的别名）","@type":"BlogPosting","url":"https://mlh.app/2019/05/04/729599.html","headline":"hadoop的完全分布式的简单配置","dateModified":"2019-05-04T00:00:00+08:00","datePublished":"2019-05-04T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2019/05/04/729599.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="golang特性： Go原生支持并发（Concurrency），因此非常适合编写多线程程序。这是通过Go协程（Goroutine）和信道（Channel）实现的，我们将在以后的教程中讨论它们。 Golang 是编译型语言。源代码会被编译成可执行的本地二进制（Native binary）文件。这是解释型语言（比如在nodejs中使用的Javascript）无法做到的。 语言规范相当简单。整个规范只有一页，你甚至可以根据它写出自己的 Go 编译器：） Go 编译器支持静态链接。所有的代码可以被链接成一个“肥大”的二进制文件，因此可以很简单的将它部署到云服务器而不必担心依赖问题。 windows搭建golang环境 &nbsp;由于墙的存在，很多网址无法下载，推荐https://studygolang.com/dl去下载。 windows需要配置几个环境变量，我是下载的压缩文件，所以需要自己配置，通过安装程序安装的应该不需要设置环境变量，也可以去看下环境变量是否设置起。 主要就是这三个环境变量 GOBIN&nbsp;是安装go目录里面的bin文件夹 GOPATH是你的工作目录 GOROOT是安装go的根目录 另外需要把GOBIN加入到path里面 &nbsp; 到这里go的基本配置就ok了，另外需要注意的是，你的go项目文件，都是放在工作目录里面的src下面的，一个项目一个文件。 &nbsp; 通过git拿取的项目都放到这个目录里面，一些go的扩展，可以用go&nbsp;get -v&nbsp;地址&nbsp;安装（要先进到src目录下面通过go&nbsp;get&nbsp;安装）。 go的IDE工具，推荐用jetbrains发布的goland，很好用。 &nbsp; 以上就是我自己搭建go的环境流程，在此记录下来。 阅读更多" />
 <meta property="og:description" content="golang特性： Go原生支持并发（Concurrency），因此非常适合编写多线程程序。这是通过Go协程（Goroutine）和信道（Channel）实现的，我们将在以后的教程中讨论它们。 Golang 是编译型语言。源代码会被编译成可执行的本地二进制（Native binary）文件。这是解释型语言（比如在nodejs中使用的Javascript）无法做到的。 语言规范相当简单。整个规范只有一页，你甚至可以根据它写出自己的 Go 编译器：） Go 编译器支持静态链接。所有的代码可以被链接成一个“肥大”的二进制文件，因此可以很简单的将它部署到云服务器而不必担心依赖问题。 windows搭建golang环境 &nbsp;由于墙的存在，很多网址无法下载，推荐https://studygolang.com/dl去下载。 windows需要配置几个环境变量，我是下载的压缩文件，所以需要自己配置，通过安装程序安装的应该不需要设置环境变量，也可以去看下环境变量是否设置起。 主要就是这三个环境变量 GOBIN&nbsp;是安装go目录里面的bin文件夹 GOPATH是你的工作目录 GOROOT是安装go的根目录 另外需要把GOBIN加入到path里面 &nbsp; 到这里go的基本配置就ok了，另外需要注意的是，你的go项目文件，都是放在工作目录里面的src下面的，一个项目一个文件。 &nbsp; 通过git拿取的项目都放到这个目录里面，一些go的扩展，可以用go&nbsp;get -v&nbsp;地址&nbsp;安装（要先进到src目录下面通过go&nbsp;get&nbsp;安装）。 go的IDE工具，推荐用jetbrains发布的goland，很好用。 &nbsp; 以上就是我自己搭建go的环境流程，在此记录下来。 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/08/29/3dc25fbf021cd5c9404d1b1e27d24dfb.html" />
+<meta property="og:url" content="https://mlh.app/2018/08/29/3dc25fbf021cd5c9404d1b1e27d24dfb.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-29T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"golang特性： Go原生支持并发（Concurrency），因此非常适合编写多线程程序。这是通过Go协程（Goroutine）和信道（Channel）实现的，我们将在以后的教程中讨论它们。 Golang 是编译型语言。源代码会被编译成可执行的本地二进制（Native binary）文件。这是解释型语言（比如在nodejs中使用的Javascript）无法做到的。 语言规范相当简单。整个规范只有一页，你甚至可以根据它写出自己的 Go 编译器：） Go 编译器支持静态链接。所有的代码可以被链接成一个“肥大”的二进制文件，因此可以很简单的将它部署到云服务器而不必担心依赖问题。 windows搭建golang环境 &nbsp;由于墙的存在，很多网址无法下载，推荐https://studygolang.com/dl去下载。 windows需要配置几个环境变量，我是下载的压缩文件，所以需要自己配置，通过安装程序安装的应该不需要设置环境变量，也可以去看下环境变量是否设置起。 主要就是这三个环境变量 GOBIN&nbsp;是安装go目录里面的bin文件夹 GOPATH是你的工作目录 GOROOT是安装go的根目录 另外需要把GOBIN加入到path里面 &nbsp; 到这里go的基本配置就ok了，另外需要注意的是，你的go项目文件，都是放在工作目录里面的src下面的，一个项目一个文件。 &nbsp; 通过git拿取的项目都放到这个目录里面，一些go的扩展，可以用go&nbsp;get -v&nbsp;地址&nbsp;安装（要先进到src目录下面通过go&nbsp;get&nbsp;安装）。 go的IDE工具，推荐用jetbrains发布的goland，很好用。 &nbsp; 以上就是我自己搭建go的环境流程，在此记录下来。 阅读更多","@type":"BlogPosting","url":"/2018/08/29/3dc25fbf021cd5c9404d1b1e27d24dfb.html","headline":"GoLang下载安装","dateModified":"2018-08-29T00:00:00+08:00","datePublished":"2018-08-29T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/08/29/3dc25fbf021cd5c9404d1b1e27d24dfb.html"},"@context":"http://schema.org"}</script>
+{"description":"golang特性： Go原生支持并发（Concurrency），因此非常适合编写多线程程序。这是通过Go协程（Goroutine）和信道（Channel）实现的，我们将在以后的教程中讨论它们。 Golang 是编译型语言。源代码会被编译成可执行的本地二进制（Native binary）文件。这是解释型语言（比如在nodejs中使用的Javascript）无法做到的。 语言规范相当简单。整个规范只有一页，你甚至可以根据它写出自己的 Go 编译器：） Go 编译器支持静态链接。所有的代码可以被链接成一个“肥大”的二进制文件，因此可以很简单的将它部署到云服务器而不必担心依赖问题。 windows搭建golang环境 &nbsp;由于墙的存在，很多网址无法下载，推荐https://studygolang.com/dl去下载。 windows需要配置几个环境变量，我是下载的压缩文件，所以需要自己配置，通过安装程序安装的应该不需要设置环境变量，也可以去看下环境变量是否设置起。 主要就是这三个环境变量 GOBIN&nbsp;是安装go目录里面的bin文件夹 GOPATH是你的工作目录 GOROOT是安装go的根目录 另外需要把GOBIN加入到path里面 &nbsp; 到这里go的基本配置就ok了，另外需要注意的是，你的go项目文件，都是放在工作目录里面的src下面的，一个项目一个文件。 &nbsp; 通过git拿取的项目都放到这个目录里面，一些go的扩展，可以用go&nbsp;get -v&nbsp;地址&nbsp;安装（要先进到src目录下面通过go&nbsp;get&nbsp;安装）。 go的IDE工具，推荐用jetbrains发布的goland，很好用。 &nbsp; 以上就是我自己搭建go的环境流程，在此记录下来。 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/08/29/3dc25fbf021cd5c9404d1b1e27d24dfb.html","headline":"GoLang下载安装","dateModified":"2018-08-29T00:00:00+08:00","datePublished":"2018-08-29T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/08/29/3dc25fbf021cd5c9404d1b1e27d24dfb.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

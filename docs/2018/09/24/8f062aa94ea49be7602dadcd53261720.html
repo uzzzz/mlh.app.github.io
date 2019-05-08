@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/chengqiuming/article/details/82831835 一&nbsp;用RSA生成签名 在RSA中，被签名的消息、密钥以及最终生成的签名都是以数字形式表示的。在对文本进行签名时，需要事先对文本编码成数字。用RSA生成签名的过程可用下列公式来表述： 这里所使用的D和N就是签名者的私钥。签名就是对消息的D次方求mod&nbsp;N的结果，也就是说将消息和自己相乘D次，然后再除以N求余数，最后求得的余数就是签名。 生成签名后，发送者就可以将消息和签名发送给接收者了。 二&nbsp;用RSA验证签名 RSA的签名验证过程可用下列公式来表述： 这里所使用的E和N就是签名者的公钥。接收者计算签名的E次方并求mod&nbsp;N，得到“由签名求得的消息”，并将其与发送过来的“消息”内容进行对比，如果两者一致，则签名验证成功，否则签名验证失败。 RSA的签名生成和验证过程见下表： 三&nbsp;实战 我们通过具体的数字，用RSA来实际生成和验证签名。 公钥：E=5；N=323 私钥：D=29；N=323 由于N为323，因此消息需要为0~322这个范围内的整数。在这里假设我们需要对123这个消息进行签名。 1&nbsp;生成签名 下面用私钥（D，N）=（29,323）来生成消息123的签名。 消息的D次方&nbsp;mod&nbsp;N= 123的29次方&nbsp;mod 323 =157 签名是157.向接收者发送的内容为： （消息，签名）=（123,157）这两个数字。 2&nbsp;验证签名 接收者收到的内容为： （消息，签名）=（123,157） 用公钥（E，N）=（5,323）来计算由签名求得的消息。 签名的E次方&nbsp;mod&nbsp;N = 157的5次方&nbsp;mod 323=123 我们得到的消息123与发送者直接发过来的消息123是一致的，因此签名验证成功。 &nbsp; 阅读更多" />
 <meta property="og:description" content="版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/chengqiuming/article/details/82831835 一&nbsp;用RSA生成签名 在RSA中，被签名的消息、密钥以及最终生成的签名都是以数字形式表示的。在对文本进行签名时，需要事先对文本编码成数字。用RSA生成签名的过程可用下列公式来表述： 这里所使用的D和N就是签名者的私钥。签名就是对消息的D次方求mod&nbsp;N的结果，也就是说将消息和自己相乘D次，然后再除以N求余数，最后求得的余数就是签名。 生成签名后，发送者就可以将消息和签名发送给接收者了。 二&nbsp;用RSA验证签名 RSA的签名验证过程可用下列公式来表述： 这里所使用的E和N就是签名者的公钥。接收者计算签名的E次方并求mod&nbsp;N，得到“由签名求得的消息”，并将其与发送过来的“消息”内容进行对比，如果两者一致，则签名验证成功，否则签名验证失败。 RSA的签名生成和验证过程见下表： 三&nbsp;实战 我们通过具体的数字，用RSA来实际生成和验证签名。 公钥：E=5；N=323 私钥：D=29；N=323 由于N为323，因此消息需要为0~322这个范围内的整数。在这里假设我们需要对123这个消息进行签名。 1&nbsp;生成签名 下面用私钥（D，N）=（29,323）来生成消息123的签名。 消息的D次方&nbsp;mod&nbsp;N= 123的29次方&nbsp;mod 323 =157 签名是157.向接收者发送的内容为： （消息，签名）=（123,157）这两个数字。 2&nbsp;验证签名 接收者收到的内容为： （消息，签名）=（123,157） 用公钥（E，N）=（5,323）来计算由签名求得的消息。 签名的E次方&nbsp;mod&nbsp;N = 157的5次方&nbsp;mod 323=123 我们得到的消息123与发送者直接发过来的消息123是一致的，因此签名验证成功。 &nbsp; 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/09/24/8f062aa94ea49be7602dadcd53261720.html" />
+<meta property="og:url" content="https://mlh.app/2018/09/24/8f062aa94ea49be7602dadcd53261720.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-09-24T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/chengqiuming/article/details/82831835 一&nbsp;用RSA生成签名 在RSA中，被签名的消息、密钥以及最终生成的签名都是以数字形式表示的。在对文本进行签名时，需要事先对文本编码成数字。用RSA生成签名的过程可用下列公式来表述： 这里所使用的D和N就是签名者的私钥。签名就是对消息的D次方求mod&nbsp;N的结果，也就是说将消息和自己相乘D次，然后再除以N求余数，最后求得的余数就是签名。 生成签名后，发送者就可以将消息和签名发送给接收者了。 二&nbsp;用RSA验证签名 RSA的签名验证过程可用下列公式来表述： 这里所使用的E和N就是签名者的公钥。接收者计算签名的E次方并求mod&nbsp;N，得到“由签名求得的消息”，并将其与发送过来的“消息”内容进行对比，如果两者一致，则签名验证成功，否则签名验证失败。 RSA的签名生成和验证过程见下表： 三&nbsp;实战 我们通过具体的数字，用RSA来实际生成和验证签名。 公钥：E=5；N=323 私钥：D=29；N=323 由于N为323，因此消息需要为0~322这个范围内的整数。在这里假设我们需要对123这个消息进行签名。 1&nbsp;生成签名 下面用私钥（D，N）=（29,323）来生成消息123的签名。 消息的D次方&nbsp;mod&nbsp;N= 123的29次方&nbsp;mod 323 =157 签名是157.向接收者发送的内容为： （消息，签名）=（123,157）这两个数字。 2&nbsp;验证签名 接收者收到的内容为： （消息，签名）=（123,157） 用公钥（E，N）=（5,323）来计算由签名求得的消息。 签名的E次方&nbsp;mod&nbsp;N = 157的5次方&nbsp;mod 323=123 我们得到的消息123与发送者直接发过来的消息123是一致的，因此签名验证成功。 &nbsp; 阅读更多","@type":"BlogPosting","url":"/2018/09/24/8f062aa94ea49be7602dadcd53261720.html","headline":"通过RSA实现数字签名","dateModified":"2018-09-24T00:00:00+08:00","datePublished":"2018-09-24T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/09/24/8f062aa94ea49be7602dadcd53261720.html"},"@context":"http://schema.org"}</script>
+{"description":"版权声明：本文为博主原创文章，未经博主允许不得转载。 https://blog.csdn.net/chengqiuming/article/details/82831835 一&nbsp;用RSA生成签名 在RSA中，被签名的消息、密钥以及最终生成的签名都是以数字形式表示的。在对文本进行签名时，需要事先对文本编码成数字。用RSA生成签名的过程可用下列公式来表述： 这里所使用的D和N就是签名者的私钥。签名就是对消息的D次方求mod&nbsp;N的结果，也就是说将消息和自己相乘D次，然后再除以N求余数，最后求得的余数就是签名。 生成签名后，发送者就可以将消息和签名发送给接收者了。 二&nbsp;用RSA验证签名 RSA的签名验证过程可用下列公式来表述： 这里所使用的E和N就是签名者的公钥。接收者计算签名的E次方并求mod&nbsp;N，得到“由签名求得的消息”，并将其与发送过来的“消息”内容进行对比，如果两者一致，则签名验证成功，否则签名验证失败。 RSA的签名生成和验证过程见下表： 三&nbsp;实战 我们通过具体的数字，用RSA来实际生成和验证签名。 公钥：E=5；N=323 私钥：D=29；N=323 由于N为323，因此消息需要为0~322这个范围内的整数。在这里假设我们需要对123这个消息进行签名。 1&nbsp;生成签名 下面用私钥（D，N）=（29,323）来生成消息123的签名。 消息的D次方&nbsp;mod&nbsp;N= 123的29次方&nbsp;mod 323 =157 签名是157.向接收者发送的内容为： （消息，签名）=（123,157）这两个数字。 2&nbsp;验证签名 接收者收到的内容为： （消息，签名）=（123,157） 用公钥（E，N）=（5,323）来计算由签名求得的消息。 签名的E次方&nbsp;mod&nbsp;N = 157的5次方&nbsp;mod 323=123 我们得到的消息123与发送者直接发过来的消息123是一致的，因此签名验证成功。 &nbsp; 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/09/24/8f062aa94ea49be7602dadcd53261720.html","headline":"通过RSA实现数字签名","dateModified":"2018-09-24T00:00:00+08:00","datePublished":"2018-09-24T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/09/24/8f062aa94ea49be7602dadcd53261720.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

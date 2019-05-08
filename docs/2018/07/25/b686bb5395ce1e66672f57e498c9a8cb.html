@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 项目：交易平台 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 需求：交易接口的性能测试以及自动化 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 工具：jmeter（需配置websocket包至jmeter/lib/ext下；LR11以window socket的方式可录制但不好用，听说LR12好用） &nbsp; &nbsp; &nbsp; &nbsp;交易平台交易原理：用户登录后，输入买卖方式、币种、币量、支付密码等进行买卖；而交易时采用的是websocket通信方式（信息及时性更好）通过cookie传值判断用户登录状态及身份。 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 模拟惨景：多个用户登录后进行购买/售卖交易 &nbsp; &nbsp; &nbsp; &nbsp; （重点）难点：jmeter的websocket不能传cookie值！！ 问题出现：写好脚本执行后，发现返回值返回账号未登录的信息，请求里不包含cookie。 问题可能点： 1.cookie管理器未设置好，可能性1%（cookie管理器设置为自动保存cookie，在websocket之后添加http请求发现还是能够接收到cookie值，之后试了很多种方式，单独在websocket手动添加cookie等都行不通） 2.jmeter中websocket插件未装齐全，可能性1%（通过询问他人得知jmeter有一个插件管理工具Plugins Manage，从中可补充插件，补充好后问题仍旧，之后我把所有插件安装上还玩坏了jmeter，jmeter4.0也尝试过，还是无法解决问题） 3.项目接口本身的问题，可能性1%（询问开发多次，查看日志，抓包工具获取信息等方式，浏览器可正常传值cookie到websocket中） 网上的参考资料： &nbsp; 解决方案：与项目经理、开发沟通之后（讲述jmeter的websocket无法传入cookie原因后，也要讲述其他工具，如LR12要钱），决定在websocket中增加一个接口（根据登陆判断用户id，从其传入用户id可通过websocket验证） 如我判断有误，希望有大佬帮忙纠正，欢迎留言 阅读更多" />
 <meta property="og:description" content="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 项目：交易平台 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 需求：交易接口的性能测试以及自动化 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 工具：jmeter（需配置websocket包至jmeter/lib/ext下；LR11以window socket的方式可录制但不好用，听说LR12好用） &nbsp; &nbsp; &nbsp; &nbsp;交易平台交易原理：用户登录后，输入买卖方式、币种、币量、支付密码等进行买卖；而交易时采用的是websocket通信方式（信息及时性更好）通过cookie传值判断用户登录状态及身份。 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 模拟惨景：多个用户登录后进行购买/售卖交易 &nbsp; &nbsp; &nbsp; &nbsp; （重点）难点：jmeter的websocket不能传cookie值！！ 问题出现：写好脚本执行后，发现返回值返回账号未登录的信息，请求里不包含cookie。 问题可能点： 1.cookie管理器未设置好，可能性1%（cookie管理器设置为自动保存cookie，在websocket之后添加http请求发现还是能够接收到cookie值，之后试了很多种方式，单独在websocket手动添加cookie等都行不通） 2.jmeter中websocket插件未装齐全，可能性1%（通过询问他人得知jmeter有一个插件管理工具Plugins Manage，从中可补充插件，补充好后问题仍旧，之后我把所有插件安装上还玩坏了jmeter，jmeter4.0也尝试过，还是无法解决问题） 3.项目接口本身的问题，可能性1%（询问开发多次，查看日志，抓包工具获取信息等方式，浏览器可正常传值cookie到websocket中） 网上的参考资料： &nbsp; 解决方案：与项目经理、开发沟通之后（讲述jmeter的websocket无法传入cookie原因后，也要讲述其他工具，如LR12要钱），决定在websocket中增加一个接口（根据登陆判断用户id，从其传入用户id可通过websocket验证） 如我判断有误，希望有大佬帮忙纠正，欢迎留言 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2018/07/25/b686bb5395ce1e66672f57e498c9a8cb.html" />
+<meta property="og:url" content="https://mlh.app/2018/07/25/b686bb5395ce1e66672f57e498c9a8cb.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-07-25T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 项目：交易平台 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 需求：交易接口的性能测试以及自动化 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 工具：jmeter（需配置websocket包至jmeter/lib/ext下；LR11以window socket的方式可录制但不好用，听说LR12好用） &nbsp; &nbsp; &nbsp; &nbsp;交易平台交易原理：用户登录后，输入买卖方式、币种、币量、支付密码等进行买卖；而交易时采用的是websocket通信方式（信息及时性更好）通过cookie传值判断用户登录状态及身份。 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 模拟惨景：多个用户登录后进行购买/售卖交易 &nbsp; &nbsp; &nbsp; &nbsp; （重点）难点：jmeter的websocket不能传cookie值！！ 问题出现：写好脚本执行后，发现返回值返回账号未登录的信息，请求里不包含cookie。 问题可能点： 1.cookie管理器未设置好，可能性1%（cookie管理器设置为自动保存cookie，在websocket之后添加http请求发现还是能够接收到cookie值，之后试了很多种方式，单独在websocket手动添加cookie等都行不通） 2.jmeter中websocket插件未装齐全，可能性1%（通过询问他人得知jmeter有一个插件管理工具Plugins Manage，从中可补充插件，补充好后问题仍旧，之后我把所有插件安装上还玩坏了jmeter，jmeter4.0也尝试过，还是无法解决问题） 3.项目接口本身的问题，可能性1%（询问开发多次，查看日志，抓包工具获取信息等方式，浏览器可正常传值cookie到websocket中） 网上的参考资料： &nbsp; 解决方案：与项目经理、开发沟通之后（讲述jmeter的websocket无法传入cookie原因后，也要讲述其他工具，如LR12要钱），决定在websocket中增加一个接口（根据登陆判断用户id，从其传入用户id可通过websocket验证） 如我判断有误，希望有大佬帮忙纠正，欢迎留言 阅读更多","@type":"BlogPosting","url":"/2018/07/25/b686bb5395ce1e66672f57e498c9a8cb.html","headline":"（接口自动化）案例④：websocket通过cookie进行身份验证","dateModified":"2018-07-25T00:00:00+08:00","datePublished":"2018-07-25T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2018/07/25/b686bb5395ce1e66672f57e498c9a8cb.html"},"@context":"http://schema.org"}</script>
+{"description":"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 项目：交易平台 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 需求：交易接口的性能测试以及自动化 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 工具：jmeter（需配置websocket包至jmeter/lib/ext下；LR11以window socket的方式可录制但不好用，听说LR12好用） &nbsp; &nbsp; &nbsp; &nbsp;交易平台交易原理：用户登录后，输入买卖方式、币种、币量、支付密码等进行买卖；而交易时采用的是websocket通信方式（信息及时性更好）通过cookie传值判断用户登录状态及身份。 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 模拟惨景：多个用户登录后进行购买/售卖交易 &nbsp; &nbsp; &nbsp; &nbsp; （重点）难点：jmeter的websocket不能传cookie值！！ 问题出现：写好脚本执行后，发现返回值返回账号未登录的信息，请求里不包含cookie。 问题可能点： 1.cookie管理器未设置好，可能性1%（cookie管理器设置为自动保存cookie，在websocket之后添加http请求发现还是能够接收到cookie值，之后试了很多种方式，单独在websocket手动添加cookie等都行不通） 2.jmeter中websocket插件未装齐全，可能性1%（通过询问他人得知jmeter有一个插件管理工具Plugins Manage，从中可补充插件，补充好后问题仍旧，之后我把所有插件安装上还玩坏了jmeter，jmeter4.0也尝试过，还是无法解决问题） 3.项目接口本身的问题，可能性1%（询问开发多次，查看日志，抓包工具获取信息等方式，浏览器可正常传值cookie到websocket中） 网上的参考资料： &nbsp; 解决方案：与项目经理、开发沟通之后（讲述jmeter的websocket无法传入cookie原因后，也要讲述其他工具，如LR12要钱），决定在websocket中增加一个接口（根据登陆判断用户id，从其传入用户id可通过websocket验证） 如我判断有误，希望有大佬帮忙纠正，欢迎留言 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2018/07/25/b686bb5395ce1e66672f57e498c9a8cb.html","headline":"（接口自动化）案例④：websocket通过cookie进行身份验证","dateModified":"2018-07-25T00:00:00+08:00","datePublished":"2018-07-25T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2018/07/25/b686bb5395ce1e66672f57e498c9a8cb.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

@@ -11,11 +11,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="此库一直在发展中，新版越来越强大了，好像没什么朋友发布具体的上手过程，顺便写个： libzmq是c++语言开发的，正式版本在这里： https://github.com/zeromq/libzmq/releases 到这篇文件发布为止，正式稳定版是4.2.2 1，按照给出的链接下载zeromq-4.2.2.zip文件。 2，解压到D:\zeromq文件夹中， 3，用vs2015打开工程文件：”D:\zeromq\zeromq-4.2.2\builds\msvc\vs2015\libzmq.sln” 4，编译，最后提示7个项目中有6个没有成功编译。 在gitHub上找到答案，分析visualstudio的sln文件早期是由cmake生成的，用vs编译不完美，路径引用不正确。解决方案是：打开工程文件夹下的libzmq.import.props文件，这5个红线处，都去掉一串“..\libzmq”，变成这样： 5，保存。重新打开工程编译，pass. 另外，git clone最新的开发版(4.2.3)： https://github.com/zeromq/libzmq 用vs2015直接编译并没有出现上面的问题。 开个新win32_console工程试验一下： 1,c/c++额外的库包含路径添加： 2,链接器-额外的库包含路径添加： 3,链接器-输入-依赖项添加： 4,编译,pass,将”D:\zeromq\zeromq-4.2.2\bin\Win32\Debug\v140\dynamic\libzmq.dll”复制到生成的exe文件所在路径，执行，pass! 结束 阅读更多" />
 <meta property="og:description" content="此库一直在发展中，新版越来越强大了，好像没什么朋友发布具体的上手过程，顺便写个： libzmq是c++语言开发的，正式版本在这里： https://github.com/zeromq/libzmq/releases 到这篇文件发布为止，正式稳定版是4.2.2 1，按照给出的链接下载zeromq-4.2.2.zip文件。 2，解压到D:\zeromq文件夹中， 3，用vs2015打开工程文件：”D:\zeromq\zeromq-4.2.2\builds\msvc\vs2015\libzmq.sln” 4，编译，最后提示7个项目中有6个没有成功编译。 在gitHub上找到答案，分析visualstudio的sln文件早期是由cmake生成的，用vs编译不完美，路径引用不正确。解决方案是：打开工程文件夹下的libzmq.import.props文件，这5个红线处，都去掉一串“..\libzmq”，变成这样： 5，保存。重新打开工程编译，pass. 另外，git clone最新的开发版(4.2.3)： https://github.com/zeromq/libzmq 用vs2015直接编译并没有出现上面的问题。 开个新win32_console工程试验一下： 1,c/c++额外的库包含路径添加： 2,链接器-额外的库包含路径添加： 3,链接器-输入-依赖项添加： 4,编译,pass,将”D:\zeromq\zeromq-4.2.2\bin\Win32\Debug\v140\dynamic\libzmq.dll”复制到生成的exe文件所在路径，执行，pass! 结束 阅读更多" />
+<link rel="canonical" href="https://mlh.app/2017/02/21/5dc7550f51c518337b5085219596957e.html" />
+<meta property="og:url" content="https://mlh.app/2017/02/21/5dc7550f51c518337b5085219596957e.html" />
 <meta property="og:site_name" content="有组织在！" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-02-21T00:00:00+08:00" />
 <script type="application/ld+json">
-{"description":"此库一直在发展中，新版越来越强大了，好像没什么朋友发布具体的上手过程，顺便写个： libzmq是c++语言开发的，正式版本在这里： https://github.com/zeromq/libzmq/releases 到这篇文件发布为止，正式稳定版是4.2.2 1，按照给出的链接下载zeromq-4.2.2.zip文件。 2，解压到D:\\zeromq文件夹中， 3，用vs2015打开工程文件：”D:\\zeromq\\zeromq-4.2.2\\builds\\msvc\\vs2015\\libzmq.sln” 4，编译，最后提示7个项目中有6个没有成功编译。 在gitHub上找到答案，分析visualstudio的sln文件早期是由cmake生成的，用vs编译不完美，路径引用不正确。解决方案是：打开工程文件夹下的libzmq.import.props文件，这5个红线处，都去掉一串“..\\libzmq”，变成这样： 5，保存。重新打开工程编译，pass. 另外，git clone最新的开发版(4.2.3)： https://github.com/zeromq/libzmq 用vs2015直接编译并没有出现上面的问题。 开个新win32_console工程试验一下： 1,c/c++额外的库包含路径添加： 2,链接器-额外的库包含路径添加： 3,链接器-输入-依赖项添加： 4,编译,pass,将”D:\\zeromq\\zeromq-4.2.2\\bin\\Win32\\Debug\\v140\\dynamic\\libzmq.dll”复制到生成的exe文件所在路径，执行，pass! 结束 阅读更多","@type":"BlogPosting","url":"/2017/02/21/5dc7550f51c518337b5085219596957e.html","headline":"vs2015编译zeroMQ和应用","dateModified":"2017-02-21T00:00:00+08:00","datePublished":"2017-02-21T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2017/02/21/5dc7550f51c518337b5085219596957e.html"},"@context":"http://schema.org"}</script>
+{"description":"此库一直在发展中，新版越来越强大了，好像没什么朋友发布具体的上手过程，顺便写个： libzmq是c++语言开发的，正式版本在这里： https://github.com/zeromq/libzmq/releases 到这篇文件发布为止，正式稳定版是4.2.2 1，按照给出的链接下载zeromq-4.2.2.zip文件。 2，解压到D:\\zeromq文件夹中， 3，用vs2015打开工程文件：”D:\\zeromq\\zeromq-4.2.2\\builds\\msvc\\vs2015\\libzmq.sln” 4，编译，最后提示7个项目中有6个没有成功编译。 在gitHub上找到答案，分析visualstudio的sln文件早期是由cmake生成的，用vs编译不完美，路径引用不正确。解决方案是：打开工程文件夹下的libzmq.import.props文件，这5个红线处，都去掉一串“..\\libzmq”，变成这样： 5，保存。重新打开工程编译，pass. 另外，git clone最新的开发版(4.2.3)： https://github.com/zeromq/libzmq 用vs2015直接编译并没有出现上面的问题。 开个新win32_console工程试验一下： 1,c/c++额外的库包含路径添加： 2,链接器-额外的库包含路径添加： 3,链接器-输入-依赖项添加： 4,编译,pass,将”D:\\zeromq\\zeromq-4.2.2\\bin\\Win32\\Debug\\v140\\dynamic\\libzmq.dll”复制到生成的exe文件所在路径，执行，pass! 结束 阅读更多","@type":"BlogPosting","url":"https://mlh.app/2017/02/21/5dc7550f51c518337b5085219596957e.html","headline":"vs2015编译zeroMQ和应用","dateModified":"2017-02-21T00:00:00+08:00","datePublished":"2017-02-21T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlh.app/2017/02/21/5dc7550f51c518337b5085219596957e.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -28,13 +30,13 @@
     <![endif]-->
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123344652-3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-123344652-1');
+      gtag('config', 'UA-123344652-3');
     </script>
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
