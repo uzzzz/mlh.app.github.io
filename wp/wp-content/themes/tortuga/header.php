@@ -27,8 +27,7 @@
  	 s.parentNode.insertBefore(hm, s);
 	})();
 	</script>
-
-	<script data-ad-client="ca-pub-8889449066804352" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script data-ad-client="ca-pub-3220760898993054" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	
 </head>
 
